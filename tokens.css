@@ -1,0 +1,99 @@
+/* ============================================================
+   IASD Las Lomas — Design Tokens
+   Iglesia Adventista del Séptimo Día · Las Lomas
+   Paleta de la identidad visual: Cielo (teal) / Crema / Carbón.
+   ============================================================ */
+
+:root {
+  /* ---- Color: Cielo (teal · cielo y vidrio de la fachada) ---- */
+  --color-cielo-700: #3F6A78;  /* press / texto sobre crema */
+  --color-cielo-600: #517E8C;  /* hover */
+  --color-cielo-500: #6B98A6;  /* base · acento de marca */
+  --color-cielo-400: #8DB0BB;
+  --color-cielo-300: #B0C9D0;
+  --color-cielo-100: #DCE8EB;  /* superficie tintada */
+
+  /* ---- Color: Crema (superficies / fondo) ---- */
+  --color-crema-50:  #F6F4EE;
+  --color-crema-100: #EDEAE3;  /* fondo base */
+  --color-crema-200: #E1DCD0;  /* bordes */
+  --color-crema-300: #D0C9BA;
+
+  /* ---- Color: Carbón (tinta / superficies oscuras) ---- */
+  --color-carbon-900: #161616;
+  --color-carbon-800: #272727;  /* tinta base · fondo invertido */
+  --color-carbon-700: #3A3A3A;
+  --color-carbon-600: #4F4F4F;
+
+  /* ---- Color: Gris (texto secundario) ---- */
+  --color-gris-600: #5E5E5E;
+  --color-gris-500: #767676;  /* texto secundario */
+  --color-gris-400: #9A9A9A;
+  --color-gris-300: #BEBEBE;
+
+  /* ---- Roles semánticos ---- */
+  --bg:            var(--color-crema-100);
+  --bg-elevated:   var(--color-crema-50);
+  --bg-inverted:   var(--color-carbon-800);
+  --bg-tinted:     var(--color-cielo-100);
+  --ink:           var(--color-carbon-800);
+  --ink-soft:      var(--color-gris-600);
+  --ink-muted:     var(--color-gris-500);
+  --ink-on-dark:   var(--color-crema-100);
+  --accent:        var(--color-cielo-500);
+  --accent-hover:  var(--color-cielo-600);
+  --accent-press:  var(--color-cielo-700);
+  --on-accent:     var(--color-crema-50);
+  --border:        var(--color-crema-200);
+  --border-strong: var(--color-cielo-300);
+  --focus-ring:    color-mix(in srgb, var(--color-cielo-500) 55%, transparent);
+
+  /* ---- Tipografía ---- */
+  /* Principal de marca: Quasimoda Medium (comercial). Fallback web cercano:
+     Hanken Grotesk — sans geométrica humanista, se carga vía Google Fonts. */
+  --font-display: 'Quasimoda', 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body:    'Quasimoda', 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, sans-serif;
+  --font-script:  'Cormorant Garamond', Georgia, serif;  /* itálica de la seña (Iglesia Adventista…) */
+
+  --text-xs:   0.75rem;   /* 12 */
+  --text-sm:   0.875rem;  /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-lg:   1.25rem;   /* 20 */
+  --text-xl:   1.5625rem; /* 25 */
+  --text-2xl:  1.9375rem; /* 31 */
+  --text-3xl:  2.4375rem; /* 39 */
+  --text-4xl:  3.0625rem; /* 49 */
+
+  --tracking-tight:  -0.01em;
+  --tracking-wide:   0.06em;
+  --tracking-wider:  0.18em;  /* "LAS LOMAS" en caps espaciadas */
+  --leading-tight:   1.15;
+  --leading-normal:  1.55;
+
+  /* ---- Espaciado (base 4px) ---- */
+  --space-1: 0.25rem;  /* 4  */
+  --space-2: 0.5rem;   /* 8  */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+
+  /* ---- Radios (limpios / arquitectónicos) ---- */
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-xl:   14px;
+  --radius-pill: 999px;
+
+  /* ---- Bordes & líneas ---- */
+  --line-thin: 1px;
+  --line-med:  1.5px;
+  --line-bold: 2px;
+
+  /* ---- Elevación (fría, sutil) ---- */
+  --shadow-sm: 0 1px 2px rgba(39, 39, 39, 0.06);
+  --shadow-md: 0 4px 14px rgba(39, 39, 39, 0.10);
+  --shadow-lg: 0 12px 32px rgba(39, 39, 39, 0.14);
+}
