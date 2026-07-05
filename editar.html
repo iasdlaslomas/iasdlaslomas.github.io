@@ -193,6 +193,11 @@
   var contBloques = document.getElementById('bloques');
   var estado = document.getElementById('estado');
 
+  /* ---------- captura por bloque: ?bloque=escuela-sabatica | culto-divino | culto-joven ---------- */
+  var BLOQUES_FIJOS = { 'escuela-sabatica': 'Escuela Sabática', 'culto-divino': 'Culto Divino', 'culto-joven': 'Culto Joven' };
+  var BLOQUE_FIJO = BLOQUES_FIJOS[(new URLSearchParams(location.search).get('bloque') || '').toLowerCase()] || null;
+  function normTitulo(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim(); }
+
   /* ---------- utilidades ---------- */
   function proximoSabado() {
     var d = new Date();
@@ -525,7 +530,33 @@
     .catch(function () {});
   document.getElementById('fecha').addEventListener('change', pintarRol);
 
+  /* ---------- captura por bloque (enlace ?bloque=…) ---------- */
+  function configurarScope() {
+    if (!BLOQUE_FIJO) return;
+    document.getElementById('btn-bloque').hidden = true;
+    document.getElementById('btn-especial').hidden = true;
+    document.getElementById('btn-copiar').hidden = true;
+    document.querySelector('header .desc').textContent = 'Captura: ' + BLOQUE_FIJO;
+    document.querySelector('h1').textContent = BLOQUE_FIJO;
+    document.querySelector('.sub').innerHTML = 'Estás capturando <b>' + BLOQUE_FIJO +
+      '</b>. Llena tu parte y presiona <b>Publicar</b> — solo se actualiza este bloque, ' +
+      'sin tocar lo que capturan los demás.';
+  }
+  // En modo scope deja únicamente el bloque asignado y bloquea su título (para no romper la fusión)
+  function podarBloques() {
+    if (!BLOQUE_FIJO) return;
+    var elegido = null;
+    contBloques.querySelectorAll('.bloque').forEach(function (c) {
+      if (!elegido && normTitulo(c.querySelector('.titulo-in').value) === normTitulo(BLOQUE_FIJO)) elegido = c;
+      else c.remove();
+    });
+    if (!elegido) { elegido = nuevoBloque({ titulo: BLOQUE_FIJO }); contBloques.appendChild(elegido); }
+    var tin = elegido.querySelector('.titulo-in');
+    tin.value = BLOQUE_FIJO; tin.readOnly = true;
+  }
+
   /* ---------- precarga ---------- */
+  configurarScope();
   document.getElementById('fecha').value = proximoSabado();
   fetch(RUTA, { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
@@ -535,12 +566,18 @@
             return { inicio: x.hora, seccion: x.parte, encargado: x.encargado }; }) }]
         : null;
       if (!bloques) throw 0;
+      // si ya hay un programa publicado para un sábado futuro, todos convergen en esa fecha
+      if (BLOQUE_FIJO && p.fecha && p.fecha >= new Date().toISOString().slice(0, 10)) {
+        document.getElementById('fecha').value = p.fecha;
+      }
       bloques.forEach(function (b) { contBloques.appendChild(nuevoBloque(b)); });
+      podarBloques();
       pintarRol();
     })
     .catch(function () {
       [{ titulo: 'Escuela Sabática' }, { titulo: 'Culto Divino' }, { titulo: 'Programa de la tarde' }]
         .forEach(function (b) { contBloques.appendChild(nuevoBloque(b)); });
+      podarBloques();
       pintarRol();
     });
 
@@ -681,7 +718,7 @@
     return card;
   }
 
-  fetch(SOL, { cache: 'no-store' })
+  if (!BLOQUE_FIJO) fetch(SOL, { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (lista) {
       var pend = (lista || []).filter(function (s) { return s && s.estado === 'pendiente'; });
@@ -733,6 +770,40 @@
     });
   }
 
+  var ORDEN_BLOQUES = ['escuela sabatica', 'culto divino', 'culto joven'];
+  function ordenarBloques(bs) {
+    return bs.slice().sort(function (a, b) {
+      var ia = ORDEN_BLOQUES.indexOf(normTitulo(a.titulo)); if (ia < 0) ia = 99;
+      var ib = ORDEN_BLOQUES.indexOf(normTitulo(b.titulo)); if (ib < 0) ib = 99;
+      return ia - ib;
+    });
+  }
+  // Publica SOLO el bloque asignado: lee lo más reciente del sitio y reemplaza ese bloque
+  // sin tocar los demás. Misma fecha → fusiona; fecha nueva → empieza limpio (semana nueva).
+  function publicarBloqueConMerge(cab, fecha, miBloque) {
+    return fetch(apiDe(RUTA) + '?ref=' + RAMA, { headers: cab })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (actual) {
+        var datos = { version: 2, fecha: fecha, bloques: [] };
+        var prev = null;
+        if (actual && actual.content) { try { prev = deB64(actual.content); } catch (e) {} }
+        if (prev && prev.bloques && prev.fecha === fecha) {
+          datos.bloques = prev.bloques.filter(function (b) {
+            return normTitulo(b.titulo) !== normTitulo(miBloque.titulo);
+          });
+        }
+        datos.bloques.push(miBloque);
+        datos.bloques = ordenarBloques(datos.bloques);
+        var cuerpo = { message: 'Programa ' + fecha + ' — ' + miBloque.titulo,
+                       content: b64utf8(JSON.stringify(datos, null, 2) + '\n'), branch: RAMA };
+        if (actual && actual.sha) cuerpo.sha = actual.sha;
+        return fetch(apiDe(RUTA), { method: 'PUT', headers: cab, body: JSON.stringify(cuerpo) });
+      })
+      .then(function (r) {
+        if (!r.ok) return r.json().then(function (e) { throw new Error(e.message || ('HTTP ' + r.status)); });
+      });
+  }
+
   document.getElementById('btn-publicar').addEventListener('click', function () {
     var btn = this;
     var fecha = document.getElementById('fecha').value;
@@ -758,6 +829,13 @@
     });
     cadena
       .then(function () {
+        if (BLOQUE_FIJO) {
+          var card = contBloques.querySelector('.bloque');
+          var miBloque = card ? card._leer() : null;
+          if (!miBloque || !miBloque.partes.length) throw new Error('tu bloque no tiene partes capturadas');
+          aviso('Publicando «' + miBloque.titulo + '»…');
+          return publicarBloqueConMerge(cab, fecha, miBloque);
+        }
         var datos = armarJSON();
         if (!datos.bloques.length) throw new Error('no hay ningún bloque con partes capturadas');
         aviso('Publicando el programa…');
