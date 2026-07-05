@@ -57,6 +57,17 @@
   .slot .time { font-weight: 600; font-size: var(--text-base); color: var(--accent-press); width: 92px; flex: none; font-variant-numeric: tabular-nums; }
   .slot .what b { display: block; font-size: var(--text-base); font-weight: 600; }
   .slot .what span { font-size: var(--text-sm); color: var(--ink-muted); }
+  .slot .what .det { display: block; font-size: var(--text-xs); color: var(--ink-muted); margin-top: 2px; font-style: italic; }
+  .slot .what .rec { display: block; font-size: var(--text-xs); color: var(--accent-press); margin-top: 2px; font-weight: 600; }
+  .schedule + .schedule { margin-top: var(--space-5); }
+  .schedule .head .tema { font-family: var(--font-script); font-style: italic; font-size: var(--text-base); color: var(--color-cielo-300); margin-top: 2px; }
+  .schedule .head .ver-diseno { display: inline-block; margin-top: var(--space-2); font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-wide); color: var(--color-cielo-300); text-decoration: none; border: var(--line-thin) solid var(--color-carbon-600); border-radius: var(--radius-pill); padding: 5px 14px; }
+  .schedule .head .ver-diseno:hover { color: var(--ink-on-dark); border-color: var(--color-cielo-300); }
+  .schedule .pie { padding: var(--space-3) var(--space-5); background: var(--bg-tinted); font-size: var(--text-sm); color: var(--ink-soft); border-top: var(--line-thin) solid var(--border); }
+  .nota-prep { display: flex; gap: var(--space-3); align-items: start; background: var(--bg-tinted); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); margin-bottom: var(--space-5); font-size: var(--text-sm); color: var(--accent-press); }
+  .solicitar-cta { margin-top: var(--space-5); font-size: var(--text-sm); }
+  .solicitar-cta a { color: var(--accent-press); font-weight: 600; text-decoration: none; }
+  .solicitar-cta a:hover { text-decoration: underline; }
 
   footer { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-6) 0; margin-top: var(--space-8); }
   footer .wrap { display: flex; flex-wrap: wrap; gap: var(--space-5); align-items: center; justify-content: space-between; max-width: 1120px; }
@@ -102,12 +113,15 @@
     <h2 class="titulo">Anuncios</h2>
     <div id="anuncios-lista"></div>
     <p class="vacio" id="anuncios-vacio" hidden>No hay anuncios por ahora — vuelve pronto.</p>
+    <p class="solicitar-cta">📨 ¿Tu ministerio o grupo tiene un evento que anunciar? <a href="solicitar.html">Solicita un anuncio →</a> <span style="color:var(--ink-muted);">(se reciben hasta el miércoles previo)</span></p>
   </div>
 </section>
 
 <section id="programa" style="padding-top: 0;">
   <div class="wrap">
     <h2 class="titulo">Programa del sábado</h2>
+    <p class="nota-prep" id="nota-prep" hidden>📋 <span><b>Equipo de plataforma:</b> los recursos marcados en cada parte (micrófonos, pistas, proyección) se publican para prepararlos con anticipación y tener todo listo antes de iniciar el programa.</span></p>
+    <div id="programa-bloques"></div>
     <div class="schedule" id="programa-card" hidden>
       <div class="head">
         <div class="day" id="programa-fecha">Este sábado</div>
@@ -165,23 +179,98 @@
   fetch('programa.json', { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (p) {
-      if (!p || !p.partes || !p.partes.length) throw 0;
+      if (!p) throw 0;
       if (p.fecha && new Date(p.fecha + 'T23:59:59') < new Date()) throw 0;
-      var cont = document.getElementById('programa-lista');
-      p.partes.forEach(function (x) {
-        if (!x || !x.parte) return;
-        var s = document.createElement('div'); s.className = 'slot';
-        var t = document.createElement('div'); t.className = 'time'; t.textContent = x.hora || '·'; s.appendChild(t);
-        var w = document.createElement('div'); w.className = 'what';
-        var b = document.createElement('b'); b.textContent = x.parte; w.appendChild(b);
-        if (x.encargado) { var sp = document.createElement('span'); sp.textContent = x.encargado; w.appendChild(sp); }
-        s.appendChild(w); cont.appendChild(s);
-      });
-      if (p.fecha) {
+
+      function fechaLarga() {
+        if (!p.fecha) return 'Este sábado';
         var f = new Date(p.fecha + 'T12:00:00');
-        document.getElementById('programa-fecha').textContent = 'Sábado ' + f.toLocaleDateString('es-MX', { day: 'numeric', month: 'long' });
+        return 'Sábado ' + f.toLocaleDateString('es-MX', { day: 'numeric', month: 'long' });
       }
-      document.getElementById('programa-card').hidden = false;
+      function textoRecursos(r) {
+        var t = [];
+        if (r.microfonosVoz) t.push(r.microfonosVoz + (r.microfonosVoz === 1 ? ' micrófono de voz' : ' micrófonos de voz'));
+        if (r.microfonosInstrumento) t.push(r.microfonosInstrumento + (r.microfonosInstrumento === 1 ? ' micrófono de instrumento' : ' micrófonos de instrumento'));
+        if (r.otros) t.push(r.otros);
+        return t.join(' · ');
+      }
+
+      if (p.bloques && p.bloques.length) {
+        // Formato v2: una tarjeta por bloque (Escuela Sabática, Culto Divino, Culto Joven…).
+        var cont = document.getElementById('programa-bloques');
+        var pinto = false, hayRecursos = false;
+        p.bloques.forEach(function (bl) {
+          if (!bl || !bl.titulo) return;
+          var partes = (bl.partes || []).filter(function (x) { return x && x.seccion; });
+          if (!partes.length) return;
+          pinto = true;
+
+          var card = document.createElement('div'); card.className = 'schedule';
+          var head = document.createElement('div'); head.className = 'head';
+          var day = document.createElement('div'); day.className = 'day'; day.textContent = fechaLarga(); head.appendChild(day);
+          var tit = document.createElement('div'); tit.className = 'title'; tit.textContent = bl.titulo; head.appendChild(tit);
+          if (bl.tema) { var tm = document.createElement('div'); tm.className = 'tema'; tm.textContent = bl.tema; head.appendChild(tm); }
+          if (bl.enlace) {
+            var vd = document.createElement('a');
+            vd.className = 'ver-diseno'; vd.href = bl.enlace; vd.target = '_blank'; vd.rel = 'noopener';
+            vd.textContent = 'Ver programa diseñado ↗';
+            head.appendChild(vd);
+          }
+          card.appendChild(head);
+
+          partes.forEach(function (x) {
+            var s = document.createElement('div'); s.className = 'slot';
+            var t = document.createElement('div'); t.className = 'time';
+            t.textContent = x.inicio ? (x.inicio + (x.fin ? '–' + x.fin : '')) : '·';
+            s.appendChild(t);
+            var w = document.createElement('div'); w.className = 'what';
+            var b = document.createElement('b'); b.textContent = x.seccion; w.appendChild(b);
+            if (x.encargado) { var sp = document.createElement('span'); sp.textContent = x.encargado; w.appendChild(sp); }
+            if (x.detalle) { var d = document.createElement('span'); d.className = 'det'; d.textContent = x.detalle; w.appendChild(d); }
+            var rec = x.recursos ? textoRecursos(x.recursos) : (x.multimedia || '');
+            if (rec) {
+              hayRecursos = true;
+              var m = document.createElement('span'); m.className = 'rec'; m.textContent = '🎤 Recursos: ' + rec;
+              w.appendChild(m);
+            }
+            if (x.pista) {
+              hayRecursos = true;
+              var au = document.createElement('audio');
+              au.controls = true; au.preload = 'none'; au.src = x.pista;
+              au.style.cssText = 'display:block;margin-top:6px;width:100%;max-width:320px;height:32px;';
+              w.appendChild(au);
+            }
+            s.appendChild(w); card.appendChild(s);
+          });
+
+          var pie = [];
+          if (bl.piano) pie.push('Piano: ' + bl.piano);
+          if (bl.batuta) pie.push('Batuta: ' + bl.batuta);
+          if (pie.length) {
+            var pd = document.createElement('div'); pd.className = 'pie'; pd.textContent = pie.join(' · ');
+            card.appendChild(pd);
+          }
+          cont.appendChild(card);
+        });
+        if (!pinto) throw 0;
+        if (hayRecursos) document.getElementById('nota-prep').hidden = false;
+      } else if (p.partes && p.partes.length) {
+        // Formato v1 (compatibilidad).
+        var lista = document.getElementById('programa-lista');
+        p.partes.forEach(function (x) {
+          if (!x || !x.parte) return;
+          var s = document.createElement('div'); s.className = 'slot';
+          var t = document.createElement('div'); t.className = 'time'; t.textContent = x.hora || '·'; s.appendChild(t);
+          var w = document.createElement('div'); w.className = 'what';
+          var b = document.createElement('b'); b.textContent = x.parte; w.appendChild(b);
+          if (x.encargado) { var sp = document.createElement('span'); sp.textContent = x.encargado; w.appendChild(sp); }
+          s.appendChild(w); lista.appendChild(s);
+        });
+        document.getElementById('programa-fecha').textContent = fechaLarga();
+        document.getElementById('programa-card').hidden = false;
+      } else {
+        throw 0;
+      }
     })
     .catch(function () { document.getElementById('programa-vacio').hidden = false; });
 })();

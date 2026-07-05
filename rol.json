@@ -1,0 +1,44 @@
+{
+  "trimestre": "3er trimestre 2026",
+  "nota": "Los viernes (Recepción de sábado) no hay transmisión en vivo.",
+  "fechas": [
+    { "fecha": "2026-07-03", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Nicolás Beltrán", "anciano": "Antonio Treviño" },
+    { "fecha": "2026-07-04", "dia": "sabado", "predicador": "C.P. Mario Rodríguez", "anciano": "Antonio Treviño", "diacono": "Miguel Illingworth", "minutosMisioneros": "Ministerio Personal", "cultoJoven": "Directiva de Culto Joven", "agenda": "Mayordomía" },
+
+    { "fecha": "2026-07-10", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Pr. Jasai Cano", "anciano": "Luis Carlos Pérez" },
+    { "fecha": "2026-07-11", "dia": "sabado", "predicador": "Pr. Eliezer Luna", "anciano": "Luis Carlos Pérez", "diacono": "Jaime Ramos", "minutosMisioneros": "Mayordomía", "cultoJoven": "Directiva de Culto Joven", "agenda": "Culto joven por zonas" },
+
+    { "fecha": "2026-07-17", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Viviana Santos", "anciano": "Daysi Aranda" },
+    { "fecha": "2026-07-18", "dia": "sabado", "predicador": "Pr. Esteban Medina", "anciano": "Daysi Aranda", "diacono": "Roberto de Loera", "minutosMisioneros": "CAS", "cultoJoven": "Directiva de Culto Joven", "agenda": "Graduación AUPA" },
+
+    { "fecha": "2026-07-24", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Martin Naranjo", "anciano": "Nicolás Beltrán", "diacono": "José Barajas Chávez", "minutosMisioneros": "Secretaría", "agenda": "Primera etapa: Campaña de Evangelismo Público e Infantil (Bautismo)" },
+    { "fecha": "2026-07-25", "dia": "sabado", "predicador": "Pr. Jasai Cano", "anciano": "Nicolás Beltrán", "minutosMisioneros": "Ministerio Personal", "agenda": "Capacitación Evangelismo: Zertuche, Guadalupe, Filadelfia" },
+
+    { "fecha": "2026-07-31", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Pr. Jasai Cano", "anciano": "Missael Hernández" },
+    { "fecha": "2026-08-01", "dia": "sabado", "predicador": "Pr. Eliezer Luna", "anciano": "Missael Hernández", "diacono": "José Velázquez Robles", "minutosMisioneros": "Ministerio Personal", "cultoJoven": "Directiva de Culto Joven", "agenda": "Día del énfasis de Ministerio Infantil" },
+
+    { "fecha": "2026-08-07", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Pr. Antonio Palacios", "anciano": "José Velázquez" },
+    { "fecha": "2026-08-08", "dia": "sabado", "predicador": "Pr. Jasai Cano", "anciano": "José Velázquez", "diacono": "Roberto de Loera", "minutosMisioneros": "Mayordomía", "cultoJoven": "Directiva de Culto Joven", "agenda": "Evaluación MP-UMN" },
+
+    { "fecha": "2026-08-14", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Pr. Eliezer Luna", "anciano": "Antonio Treviño" },
+    { "fecha": "2026-08-15", "dia": "sabado", "predicador": "Pr. Antonio Palacios", "anciano": "Antonio Treviño", "diacono": "Martin Naranjo Izquierdo", "minutosMisioneros": "Ministerio Juvenil: Clubes", "cultoJoven": "Directiva de Culto Joven" },
+
+    { "fecha": "2026-08-21", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Daysi Aranda", "anciano": "Luis Carlos Pérez" },
+    { "fecha": "2026-08-22", "dia": "sabado", "predicador": "Pr. Esteban Medina", "anciano": "Luis Carlos Pérez", "diacono": "Alfonso Munguía", "minutosMisioneros": "Secretaría", "cultoJoven": "Directiva de Culto Joven", "agenda": "Día de prevención del abuso — MM" },
+
+    { "fecha": "2026-08-28", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Pr. Jasai Cano", "anciano": "Nicolás Beltrán", "diacono": "Nemuel Shamir", "minutosMisioneros": "CAS", "agenda": "Primera etapa: Campaña de Evangelismo Público e Infantil (Bautismo)" },
+    { "fecha": "2026-08-29", "dia": "sabado", "predicador": "Abimael Luna", "anciano": "Nicolás Beltrán", "agenda": "Semana de Publicaciones" },
+
+    { "fecha": "2026-09-04", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Nicolás Beltrán", "anciano": "José Velázquez" },
+    { "fecha": "2026-09-05", "dia": "sabado", "predicador": "Pr. Eliezer Luna", "anciano": "José Velázquez", "diacono": "Miguel Illingworth", "minutosMisioneros": "Ministerio Personal", "cultoJoven": "Directiva de Culto Joven" },
+
+    { "fecha": "2026-09-11", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "C.P. Mario Rodríguez", "anciano": "Daysi Aranda" },
+    { "fecha": "2026-09-12", "dia": "sabado", "predicador": "Pr. Roberto de Loera", "anciano": "Daysi Aranda", "diacono": "Jaime Ramos", "minutosMisioneros": "Mayordomía", "cultoJoven": "Directiva de Culto Joven" },
+
+    { "fecha": "2026-09-18", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Pr. Jasai Cano", "anciano": "Missael Hernández" },
+    { "fecha": "2026-09-19", "dia": "sabado", "predicador": "Día del Conquistador", "anciano": "Missael Hernández", "diacono": "Roberto de Loera", "minutosMisioneros": "CAS", "cultoJoven": "Directiva de Culto Joven" },
+
+    { "fecha": "2026-09-25", "dia": "viernes", "culto": "Recepción de sábado", "transmision": false, "predicador": "Pr. Eliezer Luna", "anciano": "Antonio Treviño" },
+    { "fecha": "2026-09-26", "dia": "sabado", "predicador": "Pr. Jasai Cano", "anciano": "Antonio Treviño", "diacono": "José Barajas Chávez", "minutosMisioneros": "Secretaría", "cultoJoven": "Directiva de Culto Joven" }
+  ]
+}

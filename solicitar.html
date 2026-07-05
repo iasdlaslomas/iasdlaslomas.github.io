@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitar un anuncio — IASD Las Lomas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: var(--leading-normal); }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 0 var(--space-5) var(--space-8); }
+
+  header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-crema-100) 92%, transparent); backdrop-filter: blur(10px); border-bottom: var(--line-thin) solid var(--border); }
+  .nav { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); max-width: 620px; margin: 0 auto; }
+  .nav a { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--ink); }
+  .nav svg { width: 36px; height: auto; stroke: var(--accent-press); flex: none; }
+  .nav .name { font-weight: 700; letter-spacing: var(--tracking-wider); font-size: var(--text-sm); text-transform: uppercase; }
+  .nav .desc { display: block; font-size: var(--text-xs); color: var(--ink-muted); }
+
+  h1 { font-size: var(--text-2xl); margin: var(--space-6) 0 var(--space-2); letter-spacing: var(--tracking-tight); }
+  .sub { color: var(--ink-muted); font-size: var(--text-sm); margin: 0 0 var(--space-5); }
+
+  .plazo { display: flex; gap: var(--space-3); align-items: start; background: var(--bg-tinted); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); margin-bottom: var(--space-6); font-size: var(--text-sm); color: var(--accent-press); }
+  .plazo.tarde { background: #FBF3E4; border-color: #E3C88F; color: #8A6A1F; }
+
+  label { display: block; font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--ink-soft); margin-bottom: 4px; }
+  input, textarea { width: 100%; font: inherit; font-size: var(--text-base); color: var(--ink); background: var(--bg-elevated); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-md); padding: 10px 12px; }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  textarea { min-height: 110px; resize: vertical; }
+  .campo { margin-bottom: var(--space-4); }
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+  @media (max-width: 520px) { .dos { grid-template-columns: 1fr; gap: 0; } }
+
+  button { font: inherit; font-weight: 600; border: none; border-radius: var(--radius-md); cursor: pointer; }
+  .btn-pub { background: var(--accent); color: var(--on-accent); padding: 14px 28px; font-size: var(--text-base); width: 100%; }
+  .btn-pub:hover { background: var(--accent-press); }
+  .btn-sec { background: var(--bg-tinted); color: var(--accent-press); border: var(--line-thin) solid var(--border-strong); padding: 10px 16px; font-size: var(--text-sm); width: 100%; margin-top: var(--space-3); }
+  #estado { display: block; margin-top: var(--space-4); font-size: var(--text-sm); font-weight: 600; min-height: 1.4em; }
+  #estado.ok { color: #4a7c2f; }
+  #estado.error { color: #b3261e; }
+  .gracias { background: var(--bg-elevated); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center; font-size: var(--text-base); }
+  .gracias b { display: block; font-size: var(--text-xl); margin-bottom: var(--space-2); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html">
+      <svg viewBox="0 0 160 120" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14,102 Q80,88 146,102"/><path d="M36,22 L54,16 L54,94 L36,94 Z"/><line x1="54" y1="12" x2="54" y2="94"/><line x1="42" y1="48" x2="98" y2="48"/><path d="M62,48 L110,48 L110,94 L62,94 Z"/><line x1="110" y1="48" x2="74" y2="94"/>
+      </svg>
+      <span>
+        <span class="name">Las Lomas</span>
+        <span class="desc">Solicitud de anuncios</span>
+      </span>
+    </a>
+  </div>
+</header>
+
+<div class="wrap">
+  <h1>Solicita un anuncio</h1>
+  <p class="sub">¿Tu ministerio o grupo tiene un evento que anunciar en el programa del sábado y en el sitio? Llena esta solicitud y el equipo la considerará.</p>
+
+  <p class="plazo" id="plazo"></p>
+
+  <form id="forma">
+    <div class="campo">
+      <label for="nombre">Tu nombre *</label>
+      <input id="nombre" required autocomplete="name">
+    </div>
+    <div class="dos">
+      <div class="campo">
+        <label for="ministerio">Ministerio o grupo</label>
+        <input id="ministerio" placeholder="Ej. Ministerio de la Mujer">
+      </div>
+      <div class="campo">
+        <label for="contacto">Teléfono (para dudas)</label>
+        <input id="contacto" type="tel" autocomplete="tel">
+      </div>
+    </div>
+    <div class="dos">
+      <div class="campo">
+        <label for="fecha-evento">Fecha del evento *</label>
+        <input id="fecha-evento" type="date" required>
+      </div>
+      <div class="campo">
+        <label for="lugar">Lugar *</label>
+        <input id="lugar" required placeholder="Ej. Templo Las Lomas / salón anexo">
+      </div>
+    </div>
+    <div class="campo">
+      <label for="descripcion">Descripción del evento *</label>
+      <textarea id="descripcion" required placeholder="Qué es, a qué hora, para quién, qué llevar…"></textarea>
+    </div>
+    <button class="btn-pub" id="btn-enviar" type="submit">Enviar solicitud</button>
+    <button class="btn-sec" id="btn-copiar" type="button">Copiar texto de la solicitud</button>
+    <span id="estado"></span>
+  </form>
+
+  <div class="gracias" id="gracias" hidden>
+    <b>✓ Solicitud enviada</b>
+    <span id="gracias-detalle"></span>
+  </div>
+</div>
+
+<script>
+(function () {
+  var OWNER = 'iasdlaslomas', REPO = 'iasdlaslomas.github.io', RUTA = 'solicitudes.json', RAMA = 'main';
+  var LS_TOKEN = 'laslomas_token';
+  // WhatsApp al que llegan las solicitudes cuando no hay conexión directa (número de la iglesia).
+  var WHATSAPP = '528113110306';
+
+  /* Sábado objetivo y su límite (miércoles previo, 11:59 pm). */
+  function objetivo() {
+    var d = new Date();
+    var sab = new Date(d);
+    sab.setDate(d.getDate() + ((6 - d.getDay() + 7) % 7 || 7));
+    var lim = new Date(sab);
+    lim.setDate(sab.getDate() - 3);
+    lim.setHours(23, 59, 59, 999);
+    var tarde = d > lim;
+    if (tarde) { sab.setDate(sab.getDate() + 7); lim.setDate(lim.getDate() + 7); }
+    return { sab: sab, lim: lim, tarde: tarde };
+  }
+  function larga(f) { return f.toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' }); }
+  function iso(f) { return f.getFullYear() + '-' + String(f.getMonth() + 1).padStart(2, '0') + '-' + String(f.getDate()).padStart(2, '0'); }
+
+  var obj = objetivo();
+  var plazo = document.getElementById('plazo');
+  if (obj.tarde) {
+    plazo.classList.add('tarde');
+    plazo.innerHTML = '⏰ <span>El límite para el sábado más próximo ya pasó (miércoles 11:59 pm). Tu solicitud se considerará para el <b>' + larga(obj.sab) + '</b>.</span>';
+  } else {
+    plazo.innerHTML = '🗓️ <span>Solicitudes para el programa del <b>' + larga(obj.sab) + '</b> — se reciben hasta el <b>' + larga(obj.lim) + ' a las 11:59 pm</b>.</span>';
+  }
+
+  function leer() {
+    return {
+      recibido: new Date().toISOString().slice(0, 16).replace('T', ' '),
+      paraSabado: iso(obj.sab),
+      nombre: document.getElementById('nombre').value.trim(),
+      ministerio: document.getElementById('ministerio').value.trim(),
+      contacto: document.getElementById('contacto').value.trim(),
+      fechaEvento: document.getElementById('fecha-evento').value,
+      lugar: document.getElementById('lugar').value.trim(),
+      descripcion: document.getElementById('descripcion').value.trim(),
+      estado: 'pendiente'
+    };
+  }
+
+  function texto(s) {
+    var fe = s.fechaEvento ? new Date(s.fechaEvento + 'T12:00:00') : null;
+    return '🔔 Solicitud de anuncio — IASD Las Lomas\n' +
+      'Para el programa del: ' + larga(obj.sab) + '\n' +
+      'Evento: ' + s.descripcion + '\n' +
+      (fe ? 'Fecha del evento: ' + larga(fe) + '\n' : '') +
+      'Lugar: ' + s.lugar + '\n' +
+      'Solicita: ' + s.nombre + (s.ministerio ? ' (' + s.ministerio + ')' : '') + (s.contacto ? ' · ' + s.contacto : '');
+  }
+
+  function aviso(msg, clase) {
+    var e = document.getElementById('estado');
+    e.textContent = msg; e.className = clase || '';
+  }
+
+  function gracias(detalle) {
+    document.getElementById('forma').hidden = true;
+    document.getElementById('plazo').hidden = true;
+    document.getElementById('gracias-detalle').textContent = detalle;
+    document.getElementById('gracias').hidden = false;
+  }
+
+  function b64utf8(str) {
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+
+  document.getElementById('forma').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var s = leer();
+    var token = localStorage.getItem(LS_TOKEN);
+    if (token) {
+      /* Con llave: guarda directo en la cola del sitio. */
+      aviso('Enviando…');
+      var api = 'https://api.github.com/repos/' + OWNER + '/' + REPO + '/contents/' + RUTA;
+      var cab = { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' };
+      fetch(api + '?ref=' + RAMA, { headers: cab })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (actual) {
+          var lista = [];
+          try { if (actual && actual.content) lista = JSON.parse(decodeURIComponent(escape(atob(actual.content)))); } catch (e) {}
+          if (!Array.isArray(lista)) lista = [];
+          lista.push(s);
+          var cuerpo = { message: 'Solicitud de anuncio: ' + s.nombre, content: b64utf8(JSON.stringify(lista, null, 2) + '\n'), branch: RAMA };
+          if (actual && actual.sha) cuerpo.sha = actual.sha;
+          return fetch(api, { method: 'PUT', headers: cab, body: JSON.stringify(cuerpo) });
+        })
+        .then(function (r) {
+          if (!r || !r.ok) throw 0;
+          gracias('Quedó registrada para el ' + larga(obj.sab) + '. El equipo la revisará.');
+        })
+        .catch(function () {
+          aviso('No se pudo guardar directo — se abrirá WhatsApp para enviarla.', 'error');
+          setTimeout(function () { window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto(s)), '_blank'); }, 900);
+        });
+    } else {
+      /* Sin llave: la solicitud viaja por WhatsApp al equipo. */
+      window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto(s)), '_blank');
+      gracias('Se abrió WhatsApp con tu solicitud lista — solo presiona enviar. Se considerará para el ' + larga(obj.sab) + '.');
+    }
+  });
+
+  document.getElementById('btn-copiar').addEventListener('click', function () {
+    var s = leer();
+    if (!s.descripcion && !s.lugar) { aviso('Llena la solicitud primero.', 'error'); return; }
+    (navigator.clipboard ? navigator.clipboard.writeText(texto(s)) : Promise.reject())
+      .then(function () { aviso('✓ Copiada — pégala donde la quieras enviar.', 'ok'); })
+      .catch(function () { prompt('Copia el texto:', texto(s)); });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,11 +1,64 @@
 {
-  "fecha": "2026-07-11",
-  "partes": [
-    { "hora": "9:30",  "parte": "Escuela Sabática",         "encargado": "[Nombre]" },
-    { "hora": "10:40", "parte": "Repaso de la lección",     "encargado": "[Nombre]" },
-    { "hora": "11:00", "parte": "Bienvenida y anuncios",    "encargado": "[Nombre]" },
-    { "hora": "11:15", "parte": "Alabanza",                 "encargado": "Ministerio de Música" },
-    { "hora": "11:40", "parte": "Mensaje",                  "encargado": "[Predicador]" },
-    { "hora": "17:00", "parte": "Sociedad de Jóvenes",      "encargado": "[Nombre]" }
+  "version": 2,
+  "fecha": "2026-06-27",
+  "bloques": [
+    {
+      "titulo": "Escuela Sabática",
+      "tema": "Hacia la eternidad",
+      "piano": "Alejandra Medina",
+      "batuta": "Edwin Illingworth",
+      "enlace": "https://canva.link/q84s1iyi4iilikq",
+      "partes": [
+        { "inicio": "9:30",  "fin": "9:32",  "seccion": "Bienvenida",                               "encargado": "Jerson Cruz" },
+        { "inicio": "9:32",  "fin": "9:36",  "seccion": "Himno #487 — Cristo, eres justo Rey",      "encargado": "Jerson Cruz", "detalle": "Dirige Edwin Illingworth", "multimedia": "Letra en pantalla" },
+        { "inicio": "9:36",  "fin": "9:39",  "seccion": "Lectura bíblica y oración de rodillas",    "encargado": "Jerson Cruz", "detalle": "1 Juan 3:2" },
+        { "inicio": "9:40",  "fin": "9:44",  "seccion": "Nuevo Horizonte",                          "encargado": "Edwin Illingworth", "detalle": "Mejoramiento: La revitalización de la iglesia" },
+        { "inicio": "9:44",  "fin": "9:48",  "seccion": "Himno #307 — Roca de la eternidad",        "encargado": "Jerson Cruz", "detalle": "Dirige Edwin Illingworth", "multimedia": "Letra en pantalla" },
+        { "inicio": "9:49",  "fin": "9:54",  "seccion": "Video Misionero",                          "encargado": "", "detalle": "«Doctor» Ibrahim", "multimedia": "Video" },
+        { "inicio": "9:55",  "fin": "10:30", "seccion": "Repaso de la lección y oración",           "encargado": "Jerson Cruz", "detalle": "Clase online: Juan Carlos Leor" },
+        { "inicio": "10:30", "fin": "10:55", "seccion": "Programa Ministerio Infantil",             "encargado": "Wilma Ahumada" },
+        { "inicio": "10:55", "fin": "10:56", "seccion": "Oración final y despedida",                "encargado": "Wilma Ahumada" }
+      ]
+    },
+    {
+      "titulo": "Culto Divino",
+      "tema": "Una mujer en misión — Ministerio de la Mujer",
+      "piano": "Alejandra Medina",
+      "batuta": "Lili",
+      "partes": [
+        { "inicio": "11:00", "fin": "11:03", "seccion": "Promocionales",                            "encargado": "Eliseo", "multimedia": "Anuncios" },
+        { "inicio": "11:03", "fin": "11:06", "seccion": "Himno #33",                                "encargado": "Grupo de Alabanza", "multimedia": "Micrófonos" },
+        { "inicio": "",      "fin": "",      "seccion": "Doxología",                                "encargado": "Grupo de Alabanza", "detalle": "Ensamble", "multimedia": "Micrófonos" },
+        { "inicio": "11:06", "fin": "11:07", "seccion": "Invocación",                               "encargado": "Daysi Aranda" },
+        { "inicio": "11:07", "fin": "11:08", "seccion": "Bienvenida",                               "encargado": "Laura Sauza", "detalle": "Se da la bienvenida a quienes están en el templo y conectados en Facebook y YouTube" },
+        { "inicio": "11:08", "fin": "11:11", "seccion": "Himno #559 — No te dé temor",              "encargado": "Dalia Sanchez", "detalle": "Grupo de alabanza", "multimedia": "Letra en pantalla" },
+        { "inicio": "11:11", "fin": "11:14", "seccion": "Himno #578 — El pueblo que a su Dios conoce", "encargado": "Dalia Sanchez", "detalle": "Grupo de alabanza", "multimedia": "Letra en pantalla" },
+        { "inicio": "11:14", "fin": "11:16", "seccion": "Oración de rodillas",                      "encargado": "Reyna Coronado" },
+        { "inicio": "11:16", "fin": "11:20", "seccion": "Diezmos y Ofrendas",                       "encargado": "Viviana Naranjo", "detalle": "Ofertorio: Gretta Hernández", "multimedia": "Micrófonos" },
+        { "inicio": "11:20", "fin": "11:24", "seccion": "Especial: Pon tu mirada",                  "encargado": "Dalia Sanchez", "detalle": "Especial: Alejandra Medina y Edwin Illingworth", "multimedia": "Micrófono" },
+        { "inicio": "11:24", "fin": "11:29", "seccion": "Rincón Infantil",                          "encargado": "Laura Sauza", "detalle": "Tiene el Rincón: Debanhy Acevedo", "multimedia": "Micrófonos" },
+        { "inicio": "11:29", "fin": "11:30", "seccion": "Lectura Bíblica: Juan 20:18",              "encargado": "Reyna Coronado" },
+        { "inicio": "11:30", "fin": "12:06", "seccion": "Tema: Una mujer en Misión",                "encargado": "Daysi Aranda", "detalle": "Durante el sermón: especiales «María Magdalena» y «Ven a mí», por Danna Torres", "multimedia": "Micrófono y pista" },
+        { "inicio": "12:06", "fin": "12:09", "seccion": "Canto final: Levántate y resplandece",     "encargado": "Viviana Naranjo", "detalle": "Grupo de alabanza", "multimedia": "Letra en pantalla" },
+        { "inicio": "12:09", "fin": "12:10", "seccion": "Oración final",                            "encargado": "Daysi Aranda" },
+        { "inicio": "12:10", "fin": "12:11", "seccion": "Cierre",                                   "encargado": "Laura Sauza", "detalle": "Se despide a la congregación y se agradece su presencia en el templo, Facebook y YouTube" }
+      ]
+    },
+    {
+      "titulo": "Culto Joven",
+      "tema": "¿Por qué seguir cargándolo?",
+      "partes": [
+        { "inicio": "17:00", "seccion": "Worship",           "encargado": "Gerson", "detalle": "2/3 cantos", "multimedia": "Micrófonos y cable para instrumentos" },
+        { "seccion": "Bienvenida" },
+        { "seccion": "Oración",                              "detalle": "Dividir en grupos" },
+        { "seccion": "Dinámica bíblica",                     "encargado": "Pendiente" },
+        { "seccion": "Worship",                              "encargado": "Gerson", "detalle": "1/2 cantos", "multimedia": "Micrófonos y cable para instrumentos" },
+        { "seccion": "Kahoot",                               "detalle": "Proyectar en pantalla", "multimedia": "Proyección" },
+        { "seccion": "Lectura bíblica: Mateo 11:28" },
+        { "seccion": "Tema: ¿Por qué seguir cargándolo?",    "encargado": "Carlos" },
+        { "seccion": "Canto final",                          "detalle": "Reproducir «El día perfecto»", "multimedia": "Pista" },
+        { "seccion": "Oración final" }
+      ]
+    }
   ]
 }

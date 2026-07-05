@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Editar programa — IASD Las Lomas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: var(--leading-normal); padding-bottom: 110px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 var(--space-5); }
+
+  header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-crema-100) 92%, transparent); backdrop-filter: blur(10px); border-bottom: var(--line-thin) solid var(--border); }
+  .nav { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-5); max-width: 880px; margin: 0 auto; }
+  .nav svg { width: 36px; height: auto; stroke: var(--accent-press); flex: none; }
+  .nav .name { font-weight: 700; letter-spacing: var(--tracking-wider); font-size: var(--text-sm); text-transform: uppercase; }
+  .nav .desc { display: block; font-size: var(--text-xs); color: var(--ink-muted); }
+
+  h1 { font-size: var(--text-2xl); margin: var(--space-6) 0 var(--space-2); letter-spacing: var(--tracking-tight); }
+  .sub { color: var(--ink-muted); font-size: var(--text-sm); margin: 0 0 var(--space-5); }
+
+  label { display: block; font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--ink-soft); margin-bottom: 4px; }
+  input, textarea { width: 100%; font: inherit; font-size: var(--text-base); color: var(--ink); background: var(--bg-elevated); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-md); padding: 9px 12px; }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  .fecha-caja { display: flex; align-items: end; gap: var(--space-4); margin-bottom: var(--space-4); flex-wrap: wrap; }
+  .fecha-caja > div { flex: none; }
+  .fecha-caja input { width: 190px; }
+
+  .rol-info { background: var(--bg-tinted); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4); margin-bottom: var(--space-6); font-size: var(--text-sm); color: var(--ink-soft); display: grid; gap: 4px; }
+  .rol-info b { color: var(--ink); }
+  .rol-info .rol-titulo { font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--accent-press); }
+  .rol-info .rol-vie { font-size: var(--text-xs); color: var(--ink-muted); }
+
+  .bloque { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin-bottom: var(--space-6); overflow: hidden; }
+  .bloque .cabeza { background: var(--bg-inverted); padding: var(--space-4) var(--space-5); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+  .bloque .cabeza label { color: var(--color-cielo-300); }
+  .bloque .cabeza input { background: color-mix(in srgb, var(--color-carbon-800) 60%, white 8%); border-color: transparent; color: var(--ink-on-dark); }
+  .bloque .cabeza .full { grid-column: 1 / -1; }
+  .bloque .cabeza .titulo-in { font-weight: 700; font-size: var(--text-lg); }
+  .cuerpo { padding: var(--space-4) var(--space-5); }
+
+  .fila { display: grid; grid-template-columns: 64px 64px 1.5fr 1fr 1.6fr auto; gap: 6px; align-items: start; padding: 8px 0; border-bottom: var(--line-thin) solid var(--border); }
+  .fila input { padding: 7px 9px; font-size: var(--text-sm); }
+  .fila .acciones { display: flex; gap: 2px; padding-top: 2px; }
+  .btn-mini.prendido { background: var(--bg-tinted); color: var(--accent-press); }
+
+  .recursos-panel { grid-column: 1 / -1; background: var(--bg-tinted); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4); display: grid; gap: var(--space-3); }
+  .recursos-panel[hidden] { display: none; }
+  .recursos-panel .nota { margin: 0; font-size: var(--text-xs); color: var(--accent-press); }
+  .recursos-campos { display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: end; }
+  .recursos-campos > div { flex: none; }
+  .recursos-campos .num { width: 76px; }
+  .recursos-campos .otros { flex: 1; min-width: 180px; }
+  .pista-chip { display: flex; align-items: center; gap: 8px; font-size: var(--text-xs); color: var(--ink-soft); background: var(--bg-elevated); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-md); padding: 5px 10px; width: fit-content; max-width: 100%; }
+  .pista-chip b { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .menu-img { position: fixed; bottom: 76px; left: var(--space-5); z-index: 40; background: var(--bg-elevated); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: var(--space-2); display: grid; gap: 2px; min-width: 240px; }
+  .menu-img button { background: transparent; text-align: left; padding: 9px 12px; font-size: var(--text-sm); color: var(--ink); border-radius: var(--radius-md); }
+  .menu-img button:hover { background: var(--bg-tinted); }
+  .encabezados { display: grid; grid-template-columns: 64px 64px 1.5fr 1fr 1.6fr auto; gap: 6px; padding: 4px 0; }
+  .encabezados span { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); }
+  @media (max-width: 720px) {
+    .encabezados { display: none; }
+    .fila { grid-template-columns: 1fr 1fr; padding: var(--space-3) 0; }
+    .fila .ancha { grid-column: 1 / -1; }
+    .fila input::placeholder { color: var(--ink-muted); }
+    .bloque .cabeza { grid-template-columns: 1fr; }
+  }
+  @media (min-width: 721px) { .fila input::placeholder { color: transparent; } }
+
+  button { font: inherit; font-weight: 600; border: none; border-radius: var(--radius-md); cursor: pointer; }
+  .btn-mini { background: transparent; color: var(--ink-muted); font-size: var(--text-base); padding: 4px 7px; border-radius: var(--radius-sm); }
+  .btn-mini:hover { background: var(--bg-tinted); color: var(--ink); }
+  .btn-sec { background: var(--bg-tinted); color: var(--accent-press); border: var(--line-thin) solid var(--border-strong); padding: 9px 16px; font-size: var(--text-sm); }
+  .btn-sec:hover { background: var(--border); }
+  .agregar { margin-top: var(--space-3); }
+
+  .barra { position: fixed; bottom: 0; left: 0; right: 0; z-index: 30; background: color-mix(in srgb, var(--color-crema-100) 94%, transparent); backdrop-filter: blur(10px); border-top: var(--line-thin) solid var(--border-strong); }
+  .barra .wrap { display: flex; gap: var(--space-3); align-items: center; padding-top: var(--space-3); padding-bottom: calc(var(--space-3) + env(safe-area-inset-bottom)); flex-wrap: wrap; }
+  .btn-pub { background: var(--accent); color: var(--on-accent); padding: 12px 26px; font-size: var(--text-base); }
+  .btn-pub:hover { background: var(--accent-press); }
+  .btn-pub:disabled { opacity: .55; cursor: wait; }
+  #estado { font-size: var(--text-sm); font-weight: 600; }
+  #estado.ok { color: var(--color-oliva-600, #4a7c2f); }
+  #estado.error { color: #b3261e; }
+
+  details.config { background: var(--bg-tinted); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); margin: var(--space-6) 0; }
+  details.config summary { cursor: pointer; font-weight: 600; font-size: var(--text-sm); color: var(--ink-soft); }
+  details.config .cont { margin-top: var(--space-4); display: grid; gap: var(--space-3); }
+  details.config p { margin: 0; font-size: var(--text-sm); color: var(--ink-soft); }
+  details.config a { color: var(--accent-press); }
+
+  .solicitud { background: var(--bg-elevated); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-md); padding: var(--space-4); display: grid; gap: 6px; font-size: var(--text-sm); }
+  .solicitud b { font-size: var(--text-base); }
+  .solicitud .meta { color: var(--ink-muted); font-size: var(--text-xs); }
+  .sol-btns { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: 4px; }
+  .sol-btns button:disabled { opacity: .55; cursor: wait; }
+  .tok-fila { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+  .tok-fila input { flex: 1; min-width: 220px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <svg viewBox="0 0 160 120" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M14,102 Q80,88 146,102"/><path d="M36,22 L54,16 L54,94 L36,94 Z"/><line x1="54" y1="12" x2="54" y2="94"/><line x1="42" y1="48" x2="98" y2="48"/><path d="M62,48 L110,48 L110,94 L62,94 Z"/><line x1="110" y1="48" x2="74" y2="94"/>
+    </svg>
+    <span>
+      <span class="name">Las Lomas</span>
+      <span class="desc">Panel del programa del sábado</span>
+    </span>
+  </div>
+</header>
+
+<div class="wrap">
+  <h1>Programa del sábado</h1>
+  <p class="sub">Llena los nombres, agrega o quita partes y presiona <b>Publicar</b>. El sitio se actualiza solo en 1–2 minutos. Los datos vienen precargados de la última semana publicada: solo cambia lo necesario.</p>
+
+  <div class="fecha-caja">
+    <div>
+      <label for="fecha">Fecha del sábado</label>
+      <input type="date" id="fecha">
+    </div>
+    <button class="btn-sec" id="btn-bloque" type="button">+ Agregar bloque (mañana / tarde / especial)</button>
+  </div>
+
+  <div class="rol-info" id="rol-info" hidden></div>
+
+  <div id="bloques"></div>
+
+  <details class="config" id="solicitudes-caja" hidden>
+    <summary>📨 Solicitudes de anuncios (<span id="sol-num">0 pendientes</span>)</summary>
+    <div class="cont">
+      <p>Llegaron desde <a href="solicitar.html" target="_blank">solicitar.html</a>. Al publicarlas se agregan como anuncio del sitio (expiran solas el día del evento); también puedes integrarlas al programa de arriba a mano.</p>
+      <div class="cont" id="sol-lista" style="margin-top:0;"></div>
+    </div>
+  </details>
+
+  <details class="config" id="config">
+    <summary>⚙️ Configuración — conexión con GitHub (solo la primera vez)</summary>
+    <div class="cont">
+      <p>Para que el botón <b>Publicar</b> funcione se necesita un <b>token de acceso</b> de GitHub. Pídelo al administrador del sitio o genera uno en
+      <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a>
+      (acceso solo al repositorio <code>iasdlaslomas.github.io</code>, permiso <b>Contents: Read and write</b>). Se guarda únicamente en este navegador.</p>
+      <div class="tok-fila">
+        <input type="password" id="token" placeholder="Pega aquí el token (github_pat_…)" autocomplete="off">
+        <button class="btn-sec" id="btn-token" type="button">Guardar token</button>
+        <button class="btn-sec" id="btn-token-borrar" type="button">Borrar</button>
+      </div>
+      <p>Si no tienes token, usa <b>Copiar JSON</b> y pégalo en
+      <a href="https://github.com/iasdlaslomas/iasdlaslomas.github.io/edit/main/programa.json" target="_blank" rel="noopener">la página de edición en GitHub</a>
+      (botón verde <i>Commit changes</i>).</p>
+    </div>
+  </details>
+</div>
+
+<datalist id="recursos-comunes">
+  <option value="Micrófonos"></option>
+  <option value="Micrófono"></option>
+  <option value="Cable para instrumentos"></option>
+  <option value="Micrófonos y cable para instrumentos"></option>
+  <option value="Pista"></option>
+  <option value="Micrófono y pista"></option>
+  <option value="Letra en pantalla"></option>
+  <option value="Proyección"></option>
+  <option value="Video"></option>
+</datalist>
+
+<div class="barra">
+  <div class="wrap">
+    <button class="btn-pub" id="btn-publicar" type="button">Publicar al sitio</button>
+    <button class="btn-sec" id="btn-imagen" type="button">🖼 Imagen para WhatsApp</button>
+    <button class="btn-sec" id="btn-copiar" type="button">Copiar JSON</button>
+    <span id="estado"></span>
+  </div>
+</div>
+
+<script>
+(function () {
+  var OWNER = 'iasdlaslomas', REPO = 'iasdlaslomas.github.io', RUTA = 'programa.json', RAMA = 'main';
+  var LS_TOKEN = 'laslomas_token';
+  var contBloques = document.getElementById('bloques');
+  var estado = document.getElementById('estado');
+
+  /* ---------- utilidades ---------- */
+  function proximoSabado() {
+    var d = new Date();
+    d.setDate(d.getDate() + (6 - d.getDay() + 7) % 7);
+    return d.toISOString().slice(0, 10);
+  }
+  function aviso(msg, clase) {
+    estado.textContent = msg;
+    estado.className = clase || '';
+  }
+  function campo(valor, placeholder, clase, etiquetaMovil) {
+    var i = document.createElement('input');
+    i.type = 'text'; i.value = valor || ''; i.placeholder = etiquetaMovil || placeholder || '';
+    if (clase) i.className = clase;
+    return i;
+  }
+
+  /* ---------- construcción del formulario ---------- */
+  function nuevaFila(cuerpo, p) {
+    p = p || {};
+    var f = document.createElement('div'); f.className = 'fila';
+    f.appendChild(campo(p.inicio, '', '', 'Inicio'));
+    f.appendChild(campo(p.fin, '', '', 'Fin'));
+    f.appendChild(campo(p.seccion, '', 'ancha seccion-in', 'Actividad / sección (Himno, Especial, Rincón Infantil…)'));
+    f.appendChild(campo(p.encargado, '', '', 'Encargado'));
+    f.appendChild(campo(p.detalle, '', 'ancha', 'Especificaciones (quién canta, ofertorio…)'));
+
+    /* --- Recursos (opcional, plegado): micrófonos, pista, otros --- */
+    var rec = p.recursos || {};
+    f._pista = { ruta: p.pista || '', archivo: null };
+
+    var panel = document.createElement('div'); panel.className = 'recursos-panel'; panel.hidden = true;
+    var nota = document.createElement('p'); nota.className = 'nota';
+    nota.textContent = '📋 Para preparar con anticipación: el equipo de plataforma ve estos recursos y deja todo listo antes de iniciar el programa.';
+    panel.appendChild(nota);
+
+    var campos = document.createElement('div'); campos.className = 'recursos-campos';
+    function campoNum(etiqueta, valor) {
+      var caja = document.createElement('div');
+      var l = document.createElement('label'); l.textContent = etiqueta; caja.appendChild(l);
+      var i = document.createElement('input'); i.type = 'number'; i.min = '0'; i.className = 'num';
+      i.value = valor > 0 ? valor : ''; i.placeholder = '0';
+      caja.appendChild(i); campos.appendChild(caja);
+      return i;
+    }
+    var inMicVoz = campoNum('Mic. voz', rec.microfonosVoz);
+    var inMicInst = campoNum('Mic. instrumento', rec.microfonosInstrumento);
+    var cajaOtros = document.createElement('div'); cajaOtros.className = 'otros';
+    var lOtros = document.createElement('label'); lOtros.textContent = 'Otros recursos'; cajaOtros.appendChild(lOtros);
+    var inOtros = campo(rec.otros || p.multimedia || '', '', '', 'Proyección, letra en pantalla, cables…');
+    inOtros.setAttribute('list', 'recursos-comunes');
+    cajaOtros.appendChild(inOtros); campos.appendChild(cajaOtros);
+    panel.appendChild(campos);
+
+    var selector = document.createElement('input');
+    selector.type = 'file'; selector.accept = 'audio/*,.mp3,.m4a,.wav,.aac,.ogg';
+    selector.style.display = 'none';
+    var filaPista = document.createElement('div'); filaPista.className = 'recursos-campos';
+    var bPista = document.createElement('button'); bPista.type = 'button'; bPista.className = 'btn-sec';
+    bPista.textContent = '🎵 Subir pista (archivo de audio)';
+    bPista.addEventListener('click', function () { selector.click(); });
+    var chip = document.createElement('div'); chip.className = 'pista-chip'; chip.hidden = true;
+    filaPista.appendChild(bPista); filaPista.appendChild(chip); filaPista.appendChild(selector);
+    panel.appendChild(filaPista);
+
+    function pintarChip() {
+      chip.innerHTML = '';
+      var hay = f._pista.archivo || f._pista.ruta;
+      chip.hidden = !hay;
+      bPista.hidden = !!hay;
+      if (!hay) return;
+      var b = document.createElement('b');
+      b.textContent = '🎵 ' + (f._pista.archivo ? f._pista.archivo.name + ' (se sube al publicar)' : f._pista.ruta.split('/').pop());
+      chip.appendChild(b);
+      var q = document.createElement('button'); q.type = 'button'; q.className = 'btn-mini'; q.textContent = '✕'; q.title = 'Quitar pista';
+      q.addEventListener('click', function () { f._pista = { ruta: '', archivo: null }; pintarChip(); });
+      chip.appendChild(q);
+    }
+    selector.addEventListener('change', function () {
+      var file = selector.files[0];
+      if (!file) return;
+      var esAudio = /^audio\//.test(file.type) || /\.(mp3|m4a|wav|aac|ogg)$/i.test(file.name);
+      if (!esAudio) { aviso('Solo archivos de audio (mp3, m4a, wav…) — no enlaces de YouTube.', 'error'); selector.value = ''; return; }
+      if (file.size > 30 * 1024 * 1024) { aviso('La pista pesa más de 30 MB — comprímela a mp3.', 'error'); selector.value = ''; return; }
+      f._pista.archivo = file;
+      pintarChip();
+      aviso('');
+    });
+
+    f._recursos = function () {
+      var r = {};
+      var voz = parseInt(inMicVoz.value, 10), inst = parseInt(inMicInst.value, 10);
+      if (voz > 0) r.microfonosVoz = voz;
+      if (inst > 0) r.microfonosInstrumento = inst;
+      if (inOtros.value.trim()) r.otros = inOtros.value.trim();
+      return r;
+    };
+
+    var tieneRecursos = rec.microfonosVoz || rec.microfonosInstrumento || rec.otros || p.multimedia || p.pista;
+    var bRec;
+    var acc = document.createElement('div'); acc.className = 'acciones';
+    [['🎤', function () { panel.hidden = !panel.hidden; bRec.classList.toggle('prendido', !panel.hidden); }, 'Recursos: micrófonos, pista, proyección…'],
+     ['↑', function () { var ant = f.previousElementSibling; if (ant && ant.classList.contains('fila')) cuerpo.insertBefore(f, ant); }],
+     ['↓', function () { var sig = f.nextElementSibling; if (sig && sig.classList.contains('fila')) cuerpo.insertBefore(sig, f); }],
+     ['✕', function () { if (confirm('¿Quitar esta parte?')) f.remove(); }]
+    ].forEach(function (par, idx) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'btn-mini'; b.textContent = par[0];
+      if (par[2]) b.title = par[2];
+      b.addEventListener('click', par[1]); acc.appendChild(b);
+      if (idx === 0) bRec = b;
+    });
+    f.appendChild(acc);
+    f.appendChild(panel);
+    if (tieneRecursos) { panel.hidden = false; bRec.classList.add('prendido'); }
+    pintarChip();
+    return f;
+  }
+
+  function nuevoBloque(datos) {
+    datos = datos || {};
+    var card = document.createElement('div'); card.className = 'bloque';
+
+    var cab = document.createElement('div'); cab.className = 'cabeza';
+    function cabCampo(clase, etiqueta, valor, extra) {
+      var caja = document.createElement('div'); if (clase) caja.className = clase;
+      var l = document.createElement('label'); l.textContent = etiqueta; caja.appendChild(l);
+      var i = campo(valor, etiqueta); if (extra) i.className = extra; caja.appendChild(i);
+      cab.appendChild(caja);
+      return i;
+    }
+    var inTitulo = cabCampo('full', 'Bloque', datos.titulo || '', 'titulo-in');
+    var inTema = cabCampo('full', 'Tema del programa', datos.tema || '');
+    var inPiano = cabCampo('', 'Piano', datos.piano || '');
+    var inBatuta = cabCampo('', 'Batuta / dirige', datos.batuta || '');
+    var inEnlace = cabCampo('full', 'Enlace del diseño (Canva, presentación…)', datos.enlace || '');
+    inEnlace.placeholder = 'https://canva.link/…';
+    card.appendChild(cab);
+
+    var cuerpo = document.createElement('div'); cuerpo.className = 'cuerpo';
+    var enc = document.createElement('div'); enc.className = 'encabezados';
+    ['Inicio', 'Fin', 'Actividad', 'Encargado', 'Especificaciones', ''].forEach(function (t) {
+      var s = document.createElement('span'); s.textContent = t; enc.appendChild(s);
+    });
+    cuerpo.appendChild(enc);
+    (datos.partes && datos.partes.length ? datos.partes : [{}]).forEach(function (p) {
+      cuerpo.appendChild(nuevaFila(cuerpo, p));
+    });
+
+    var pieBtns = document.createElement('div'); pieBtns.className = 'agregar';
+    var bAdd = document.createElement('button'); bAdd.type = 'button'; bAdd.className = 'btn-sec'; bAdd.textContent = '+ Agregar parte';
+    bAdd.addEventListener('click', function () { cuerpo.insertBefore(nuevaFila(cuerpo, {}), pieBtns); });
+    var bDel = document.createElement('button'); bDel.type = 'button'; bDel.className = 'btn-sec'; bDel.textContent = 'Quitar bloque'; bDel.style.marginLeft = '8px';
+    bDel.addEventListener('click', function () { if (confirm('¿Quitar todo el bloque «' + (inTitulo.value || 'sin título') + '»?')) card.remove(); });
+    pieBtns.appendChild(bAdd); pieBtns.appendChild(bDel);
+    cuerpo.appendChild(pieBtns);
+    card.appendChild(cuerpo);
+
+    card._leer = function () {
+      var partes = [];
+      cuerpo.querySelectorAll('.fila').forEach(function (f) {
+        var c = f.querySelectorAll('input');
+        var p = { inicio: c[0].value.trim(), fin: c[1].value.trim(), seccion: c[2].value.trim(),
+                  encargado: c[3].value.trim(), detalle: c[4].value.trim(),
+                  pista: (f._pista && f._pista.ruta) || '' };
+        if (!p.seccion && !p.encargado) return;
+        Object.keys(p).forEach(function (k) { if (!p[k]) delete p[k]; });
+        if (!p.seccion) p.seccion = '(sin nombre)';
+        var r = f._recursos ? f._recursos() : {};
+        if (Object.keys(r).length) p.recursos = r;
+        partes.push(p);
+      });
+      var b = { titulo: inTitulo.value.trim(), tema: inTema.value.trim(),
+                piano: inPiano.value.trim(), batuta: inBatuta.value.trim(),
+                enlace: inEnlace.value.trim(), partes: partes };
+      if (b.enlace && !/^https?:\/\//.test(b.enlace)) b.enlace = 'https://' + b.enlace;
+      if (!b.tema) delete b.tema;
+      if (!b.piano) delete b.piano;
+      if (!b.batuta) delete b.batuta;
+      if (!b.enlace) delete b.enlace;
+      return b;
+    };
+    return card;
+  }
+
+  function armarJSON() {
+    var bloques = [];
+    contBloques.querySelectorAll('.bloque').forEach(function (card) {
+      var b = card._leer();
+      if (b.titulo && b.partes.length) bloques.push(b);
+    });
+    return { version: 2, fecha: document.getElementById('fecha').value, bloques: bloques };
+  }
+
+  /* ---------- rol del trimestre (predicador, anciano y diácono en turno) ---------- */
+  var rolDatos = null;
+  var rolCaja = document.getElementById('rol-info');
+
+  // Lo que el capturista escribe a mano no se vuelve a sobrescribir al cambiar la fecha
+  contBloques.addEventListener('input', function (e) {
+    if (e.target && e.target.tagName === 'INPUT') e.target.dataset.manual = '1';
+  });
+
+  function rolDe(fecha) {
+    if (!rolDatos || !fecha) return null;
+    var lista = rolDatos.fechas.filter(function (e) { return e.fecha === fecha; });
+    return lista.length ? lista[0] : null;
+  }
+  function lineaRol(e) {
+    var t = [];
+    if (e.predicador) t.push('Predica: <b>' + e.predicador + '</b>');
+    if (e.anciano) t.push('Anciano en turno: <b>' + e.anciano + '</b>');
+    if (e.diacono) t.push('Diácono en turno: <b>' + e.diacono + '</b>');
+    if (e.minutosMisioneros) t.push('Minutos misioneros: <b>' + e.minutosMisioneros + '</b>');
+    if (e.agenda) t.push(e.agenda);
+    return t.join(' · ');
+  }
+  // Escribe un valor del rol en un campo, salvo que el capturista ya lo haya editado a mano
+  function poner(input, valor) {
+    if (!valor || input.dataset.manual === '1' || input.value === valor) return false;
+    input.value = valor;
+    return true;
+  }
+
+  // Prellena el bloque «Culto Divino»: predicador en la fila del sermón,
+  // y filas «Anciano en turno» / «Diácono en turno» al inicio del bloque.
+  function aplicarRol() {
+    var sab = rolDe(document.getElementById('fecha').value);
+    if (!sab) return false;
+    var objetivo = null;
+    contBloques.querySelectorAll('.bloque').forEach(function (c) {
+      if (!objetivo && /culto\s*divino/i.test(c.querySelector('.titulo-in').value)) objetivo = c;
+    });
+    if (!objetivo) return false;
+    var cuerpo = objetivo.querySelector('.cuerpo');
+    var cambio = false;
+
+    function filaDe(re) {
+      var res = null;
+      cuerpo.querySelectorAll('.fila').forEach(function (f) {
+        if (!res && re.test(f.querySelectorAll('input')[2].value)) res = f;
+      });
+      return res;
+    }
+
+    var fSermon = filaDe(/^\s*(tema|serm[oó]n|predicaci)/i);
+    if (fSermon) cambio = poner(fSermon.querySelectorAll('input')[3], sab.predicador) || cambio;
+
+    var enc = cuerpo.querySelector('.encabezados');
+    [['Diácono en turno', /^\s*di[aá]cono/i, sab.diacono],
+     ['Anciano en turno', /^\s*anciano/i, sab.anciano]].forEach(function (par) {
+      if (!par[2]) return;
+      var f = filaDe(par[1]);
+      if (f) { cambio = poner(f.querySelectorAll('input')[3], par[2]) || cambio; return; }
+      cuerpo.insertBefore(nuevaFila(cuerpo, { seccion: par[0], encargado: par[2] }), enc.nextSibling);
+      cambio = true;
+    });
+    return cambio;
+  }
+
+  function pintarRol() {
+    if (!rolDatos) { rolCaja.hidden = true; return; }
+    var fecha = document.getElementById('fecha').value;
+    var sab = rolDe(fecha);
+    var d = new Date(fecha + 'T12:00:00');
+    d.setDate(d.getDate() - 1);
+    var vie = rolDe(d.toISOString().slice(0, 10));
+    rolCaja.hidden = !sab && !vie;
+    if (rolCaja.hidden) return;
+    var html = '<span class="rol-titulo">📖 Rol del trimestre — ' + rolDatos.trimestre + '</span>';
+    if (sab) html += '<span>' + lineaRol(sab) + '</span>';
+    if (vie) html += '<span class="rol-vie">Viernes (' + (vie.culto || 'Recepción de sábado') + ', sin transmisión en vivo): ' + lineaRol(vie) + '</span>';
+    if (sab && aplicarRol()) html += '<span class="rol-vie">✎ Predicador, anciano y diácono quedaron prellenados en «Culto Divino» — revisa y ajusta si hace falta.</span>';
+    rolCaja.innerHTML = html;
+  }
+  fetch('rol.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (d) { if (d && d.fechas) { rolDatos = d; pintarRol(); } })
+    .catch(function () {});
+  document.getElementById('fecha').addEventListener('change', pintarRol);
+
+  /* ---------- precarga ---------- */
+  document.getElementById('fecha').value = proximoSabado();
+  fetch(RUTA, { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (p) {
+      var bloques = (p && p.bloques) ? p.bloques
+        : (p && p.partes) ? [{ titulo: 'Programa', partes: p.partes.map(function (x) {
+            return { inicio: x.hora, seccion: x.parte, encargado: x.encargado }; }) }]
+        : null;
+      if (!bloques) throw 0;
+      bloques.forEach(function (b) { contBloques.appendChild(nuevoBloque(b)); });
+      pintarRol();
+    })
+    .catch(function () {
+      [{ titulo: 'Escuela Sabática' }, { titulo: 'Culto Divino' }, { titulo: 'Programa de la tarde' }]
+        .forEach(function (b) { contBloques.appendChild(nuevoBloque(b)); });
+      pintarRol();
+    });
+
+  document.getElementById('btn-bloque').addEventListener('click', function () {
+    contBloques.appendChild(nuevoBloque({ titulo: '' }));
+    contBloques.lastElementChild.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  /* ---------- token ---------- */
+  var inToken = document.getElementById('token');
+  inToken.value = localStorage.getItem(LS_TOKEN) || '';
+  document.getElementById('btn-token').addEventListener('click', function () {
+    localStorage.setItem(LS_TOKEN, inToken.value.trim());
+    aviso('Token guardado en este navegador.', 'ok');
+  });
+  document.getElementById('btn-token-borrar').addEventListener('click', function () {
+    localStorage.removeItem(LS_TOKEN); inToken.value = '';
+    aviso('Token borrado.', 'ok');
+  });
+
+  /* ---------- solicitudes de anuncios (llegan de solicitar.html) ---------- */
+  var SOL = 'solicitudes.json', ANU = 'anuncios.json';
+  var solCaja = document.getElementById('solicitudes-caja');
+  var solLista = document.getElementById('sol-lista');
+  var solPendientes = 0;
+
+  function deB64(contenido) {
+    return JSON.parse(decodeURIComponent(escape(atob(contenido))));
+  }
+  function fechaCorta(isoF) {
+    if (!isoF) return '';
+    return new Date(isoF + 'T12:00:00').toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' });
+  }
+  function cabecerasApi() {
+    var token = localStorage.getItem(LS_TOKEN);
+    if (!token) {
+      document.getElementById('config').open = true;
+      aviso('Falta el token de GitHub para atender solicitudes.', 'error');
+      return null;
+    }
+    return { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' };
+  }
+
+  function marcarSolicitud(sol, nuevoEstado, cab) {
+    return fetch(apiDe(SOL) + '?ref=' + RAMA, { headers: cab })
+      .then(function (r) { if (!r.ok) throw new Error('no se pudo leer solicitudes.json'); return r.json(); })
+      .then(function (actual) {
+        var lista = deB64(actual.content);
+        lista.forEach(function (x) {
+          if (x && x.recibido === sol.recibido && x.nombre === sol.nombre) x.estado = nuevoEstado;
+        });
+        var cuerpo = { message: 'Solicitud ' + nuevoEstado + ': ' + sol.nombre,
+                       content: b64utf8(JSON.stringify(lista, null, 2) + '\n'), branch: RAMA, sha: actual.sha };
+        return fetch(apiDe(SOL), { method: 'PUT', headers: cab, body: JSON.stringify(cuerpo) });
+      })
+      .then(function (r) { if (!r.ok) throw new Error('no se pudo actualizar la solicitud'); });
+  }
+
+  function publicarComoAnuncio(sol, cab) {
+    return fetch(apiDe(ANU) + '?ref=' + RAMA, { headers: cab })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (actual) {
+        var lista = [];
+        try { if (actual) lista = deB64(actual.content); } catch (e) {}
+        if (!Array.isArray(lista)) lista = [];
+        var titulo = sol.descripcion.length > 70 ? sol.descripcion.slice(0, 67) + '…' : sol.descripcion;
+        var anuncio = {
+          etiqueta: sol.ministerio || 'Próximamente',
+          titulo: titulo,
+          detalle: [fechaCorta(sol.fechaEvento), sol.lugar].filter(Boolean).join(' · ')
+        };
+        if (sol.fechaEvento) anuncio.hasta = sol.fechaEvento;
+        lista.unshift(anuncio);
+        var cuerpo = { message: 'Anuncio desde solicitud de ' + sol.nombre,
+                       content: b64utf8(JSON.stringify(lista, null, 2) + '\n'), branch: RAMA };
+        if (actual && actual.sha) cuerpo.sha = actual.sha;
+        return fetch(apiDe(ANU), { method: 'PUT', headers: cab, body: JSON.stringify(cuerpo) });
+      })
+      .then(function (r) { if (!r.ok) throw new Error('no se pudo escribir en anuncios.json'); });
+  }
+
+  function tarjetaSolicitud(sol) {
+    var card = document.createElement('div'); card.className = 'solicitud';
+    var b = document.createElement('b'); b.textContent = sol.descripcion; card.appendChild(b);
+    var linea = document.createElement('span');
+    linea.textContent = [fechaCorta(sol.fechaEvento), sol.lugar].filter(Boolean).join(' · ');
+    card.appendChild(linea);
+    var meta = document.createElement('span'); meta.className = 'meta';
+    meta.textContent = 'Solicita: ' + sol.nombre + (sol.ministerio ? ' (' + sol.ministerio + ')' : '') +
+      (sol.contacto ? ' · ' + sol.contacto : '') +
+      (sol.paraSabado ? ' — para el programa del ' + fechaCorta(sol.paraSabado) : '');
+    card.appendChild(meta);
+
+    var btns = document.createElement('div'); btns.className = 'sol-btns';
+    function accion(texto, trabajo, confirmar) {
+      var bt = document.createElement('button'); bt.type = 'button'; bt.className = 'btn-sec'; bt.textContent = texto;
+      bt.addEventListener('click', function () {
+        if (confirmar && !confirm(confirmar)) return;
+        var cab = cabecerasApi(); if (!cab) return;
+        btns.querySelectorAll('button').forEach(function (x) { x.disabled = true; });
+        aviso('Guardando…');
+        trabajo(cab)
+          .then(function () {
+            card.remove();
+            solPendientes--;
+            document.getElementById('sol-num').textContent = solPendientes + (solPendientes === 1 ? ' pendiente' : ' pendientes');
+            if (solPendientes <= 0) solCaja.hidden = true;
+            aviso('✓ Solicitud atendida.', 'ok');
+          })
+          .catch(function (e) {
+            btns.querySelectorAll('button').forEach(function (x) { x.disabled = false; });
+            aviso('Error: ' + e.message, 'error');
+          });
+      });
+      btns.appendChild(bt);
+    }
+    accion('📣 Publicar como anuncio', function (cab) {
+      return publicarComoAnuncio(sol, cab).then(function () { return marcarSolicitud(sol, 'publicada', cab); });
+    });
+    accion('✓ Atendida (sin anuncio)', function (cab) { return marcarSolicitud(sol, 'atendida', cab); });
+    accion('✕ Descartar', function (cab) { return marcarSolicitud(sol, 'descartada', cab); },
+      '¿Descartar la solicitud de ' + sol.nombre + '?');
+    card.appendChild(btns);
+    return card;
+  }
+
+  fetch(SOL, { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (lista) {
+      var pend = (lista || []).filter(function (s) { return s && s.estado === 'pendiente'; });
+      if (!pend.length) return;
+      solPendientes = pend.length;
+      document.getElementById('sol-num').textContent = pend.length + (pend.length === 1 ? ' pendiente' : ' pendientes');
+      solCaja.hidden = false;
+      solCaja.open = true;
+      pend.forEach(function (s) { solLista.appendChild(tarjetaSolicitud(s)); });
+    })
+    .catch(function () { /* sin solicitudes.json → la sección queda oculta */ });
+
+  /* ---------- publicar ---------- */
+  function b64utf8(str) {
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+  function b64bytes(bytes) {
+    var bin = '';
+    for (var i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return btoa(bin);
+  }
+  function apiDe(ruta) { return 'https://api.github.com/repos/' + OWNER + '/' + REPO + '/contents/' + ruta; }
+
+  function guardarArchivo(ruta, contenidoB64, mensaje, cab) {
+    return fetch(apiDe(ruta) + '?ref=' + RAMA, { headers: cab })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (actual) {
+        var cuerpo = { message: mensaje, content: contenidoB64, branch: RAMA };
+        if (actual && actual.sha) cuerpo.sha = actual.sha;
+        return fetch(apiDe(ruta), { method: 'PUT', headers: cab, body: JSON.stringify(cuerpo) });
+      })
+      .then(function (r) {
+        if (!r.ok) return r.json().then(function (e) { throw new Error(e.message || ('HTTP ' + r.status)); });
+      });
+  }
+
+  function subirPista(fila, fecha, cab, num, total) {
+    var file = fila._pista.archivo;
+    aviso('Subiendo pista ' + num + ' de ' + total + ': ' + file.name + '…');
+    var nombre = file.name.toLowerCase().replace(/[^a-z0-9._-]+/g, '-');
+    var ruta = 'pistas/' + fecha + '/' + nombre;
+    return file.arrayBuffer().then(function (buf) {
+      return guardarArchivo(ruta, b64bytes(new Uint8Array(buf)), 'Pista ' + nombre + ' (' + fecha + ')', cab);
+    }).then(function () {
+      fila._pista.ruta = ruta;
+      fila._pista.archivo = null;
+    });
+  }
+
+  document.getElementById('btn-publicar').addEventListener('click', function () {
+    var btn = this;
+    var fecha = document.getElementById('fecha').value;
+    if (!fecha) { aviso('Falta la fecha del sábado.', 'error'); return; }
+    var token = localStorage.getItem(LS_TOKEN);
+    if (!token) {
+      document.getElementById('config').open = true;
+      aviso('Falta el token de GitHub — ábrelo en Configuración, o usa «Copiar JSON».', 'error');
+      return;
+    }
+    var cab = { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' };
+
+    var pendientes = [];
+    contBloques.querySelectorAll('.fila').forEach(function (f) {
+      if (f._pista && f._pista.archivo) pendientes.push(f);
+    });
+
+    btn.disabled = true;
+    aviso('Publicando…');
+    var cadena = Promise.resolve();
+    pendientes.forEach(function (f, i) {
+      cadena = cadena.then(function () { return subirPista(f, fecha, cab, i + 1, pendientes.length); });
+    });
+    cadena
+      .then(function () {
+        var datos = armarJSON();
+        if (!datos.bloques.length) throw new Error('no hay ningún bloque con partes capturadas');
+        aviso('Publicando el programa…');
+        return guardarArchivo(RUTA, b64utf8(JSON.stringify(datos, null, 2) + '\n'), 'Programa del sábado ' + datos.fecha, cab);
+      })
+      .then(function () {
+        aviso('✓ Publicado' + (pendientes.length ? ' con ' + pendientes.length + ' pista(s)' : '') + '. El sitio se actualiza en 1–2 minutos.', 'ok');
+      })
+      .catch(function (e) {
+        aviso('No se pudo publicar: ' + e.message + '. Revisa el token o usa «Copiar JSON».', 'error');
+      })
+      .then(function () { btn.disabled = false; });
+  });
+
+  /* ---------- imagen para WhatsApp ---------- */
+  var COLOR = { fondo: '#F6F4EE', carbon: '#272727', gris: '#767676', gris600: '#5E5E5E',
+                cielo700: '#3F6A78', cielo500: '#6B98A6', cielo300: '#B0C9D0' };
+
+  function partirLineas(ctx, texto, maxW) {
+    var palabras = String(texto).split(/\s+/), lineas = [], actual = '';
+    palabras.forEach(function (pal) {
+      var prueba = actual ? actual + ' ' + pal : pal;
+      if (ctx.measureText(prueba).width > maxW && actual) { lineas.push(actual); actual = pal; }
+      else actual = prueba;
+    });
+    if (actual) lineas.push(actual);
+    return lineas;
+  }
+
+  function textoRecursos(r, pista) {
+    var t = [];
+    if (r) {
+      if (r.microfonosVoz) t.push(r.microfonosVoz + ' mic. de voz');
+      if (r.microfonosInstrumento) t.push(r.microfonosInstrumento + ' mic. de instrumento');
+      if (r.otros) t.push(r.otros);
+    }
+    if (pista) t.push('pista: ' + String(pista).split('/').pop());
+    return t.join(' · ');
+  }
+
+  // Recorre el layout; si dibujar=false solo mide. Devuelve la altura final.
+  function pintarBloque(ctx, bloque, fechaTexto, dibujar) {
+    var W = 1080, M = 72, anchoTexto = W - M * 2;
+    var colHora = 200, xTexto = M + colHora, anchoSec = W - M - xTexto;
+    function linea(texto, fuente, color, x, alto, maxW) {
+      ctx.font = fuente;
+      var ls = partirLineas(ctx, texto, maxW);
+      ls.forEach(function (l) {
+        y += alto;
+        if (dibujar) { ctx.fillStyle = color; ctx.fillText(l, x, y); }
+      });
+      return ls.length;
+    }
+    var y = M + 20;
+    if (dibujar) {
+      ctx.fillStyle = COLOR.cielo500; ctx.fillRect(0, 0, W, 14);
+      ctx.fillStyle = COLOR.cielo700; ctx.font = '700 30px "Hanken Grotesk"';
+      ctx.fillText('I A S D   L A S   L O M A S', M, y);
+    }
+    y += 54;
+    if (dibujar) { ctx.fillStyle = COLOR.gris; ctx.font = '600 30px "Hanken Grotesk"'; ctx.fillText(fechaTexto, M, y); }
+    y += 26;
+    linea(bloque.titulo, '700 66px "Hanken Grotesk"', COLOR.carbon, M, 76, anchoTexto);
+    if (bloque.tema) { y += 6; linea(bloque.tema, 'italic 600 42px "Cormorant Garamond"', COLOR.cielo700, M, 50, anchoTexto); }
+    y += 36;
+    if (dibujar) {
+      ctx.strokeStyle = COLOR.cielo300; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(M, y); ctx.lineTo(W - M, y); ctx.stroke();
+    }
+    y += 12;
+    (bloque.partes || []).forEach(function (p) {
+      if (!p || !p.seccion) return;
+      var yAntes = y;
+      linea(p.seccion, '700 34px "Hanken Grotesk"', COLOR.carbon, xTexto, 46, anchoSec);
+      if (dibujar) {
+        var hora = p.inicio ? (p.inicio + (p.fin ? '–' + p.fin : '')) : '·';
+        ctx.fillStyle = COLOR.cielo700; ctx.font = '700 30px "Hanken Grotesk"';
+        ctx.fillText(hora, M, yAntes + 46);
+      }
+      if (p.encargado) linea(p.encargado, '400 30px "Hanken Grotesk"', COLOR.gris600, xTexto, 40, anchoSec);
+      if (p.detalle) linea(p.detalle, 'italic 400 27px "Hanken Grotesk"', COLOR.gris, xTexto, 36, anchoSec);
+      var rec = textoRecursos(p.recursos, p.pista);
+      if (rec) linea('🎤 ' + rec, '600 25px "Hanken Grotesk"', COLOR.cielo700, xTexto, 34, anchoSec);
+      y += 26;
+    });
+    var pie = [];
+    if (bloque.piano) pie.push('Piano: ' + bloque.piano);
+    if (bloque.batuta) pie.push('Batuta: ' + bloque.batuta);
+    if (pie.length) { y += 30; linea(pie.join('  ·  '), '600 27px "Hanken Grotesk"', COLOR.gris600, M, 36, anchoTexto); }
+    y += 52;
+    if (dibujar) {
+      ctx.fillStyle = COLOR.gris; ctx.font = '400 25px "Hanken Grotesk"';
+      ctx.fillText('iasdlaslomas.com', M, y);
+    }
+    y += 40;
+    if (dibujar) ctx.fillStyle = COLOR.cielo500;
+    if (dibujar) ctx.fillRect(0, y - 14, W, 14);
+    return y;
+  }
+
+  function dibujarBloque(bloque, fechaTexto) {
+    var cv = document.createElement('canvas'); cv.width = 1080; cv.height = 100;
+    var alto = pintarBloque(cv.getContext('2d'), bloque, fechaTexto, false);
+    cv.height = alto;
+    var ctx = cv.getContext('2d');
+    ctx.fillStyle = COLOR.fondo; ctx.fillRect(0, 0, cv.width, cv.height);
+    pintarBloque(ctx, bloque, fechaTexto, true);
+    return cv;
+  }
+
+  function generarImagenes(indices) {
+    var fecha = document.getElementById('fecha').value || proximoSabado();
+    var f = new Date(fecha + 'T12:00:00');
+    var fechaTexto = 'Sábado ' + f.toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' });
+    var cards = contBloques.querySelectorAll('.bloque');
+    var bloques = [];
+    indices.forEach(function (i) {
+      if (!cards[i]) return;
+      var b = cards[i]._leer();
+      if (b.titulo && b.partes.length) bloques.push(b);
+    });
+    if (!bloques.length) { aviso('Ese bloque no tiene partes capturadas.', 'error'); return; }
+    aviso('Generando imagen…');
+    document.fonts.ready
+      .then(function () {
+        return Promise.all(bloques.map(function (b) {
+          return new Promise(function (res, rej) {
+            dibujarBloque(b, fechaTexto).toBlob(function (blob) {
+              if (!blob) return rej(new Error('el navegador no pudo crear la imagen'));
+              var nombre = ('programa-' + b.titulo + '-' + fecha + '.png').toLowerCase()
+                .normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9.-]+/g, '-');
+              res(new File([blob], nombre, { type: 'image/png' }));
+            }, 'image/png');
+          });
+        }));
+      })
+      .then(function (files) {
+        if (navigator.canShare && navigator.canShare({ files: files })) {
+          return navigator.share({ files: files, title: 'Programa del sábado' })
+            .then(function () { aviso('✓ Compartido.', 'ok'); });
+        }
+        files.forEach(function (file) {
+          var a = document.createElement('a');
+          a.href = URL.createObjectURL(file); a.download = file.name;
+          document.body.appendChild(a); a.click(); a.remove();
+        });
+        aviso('✓ Imagen descargada — adjúntala en WhatsApp.', 'ok');
+      })
+      .catch(function (e) {
+        if (e && e.name === 'AbortError') { aviso(''); return; }
+        aviso('No se pudo generar la imagen: ' + (e.message || e), 'error');
+      });
+  }
+
+  var menuImg = null;
+  document.getElementById('btn-imagen').addEventListener('click', function () {
+    if (menuImg) { menuImg.remove(); menuImg = null; return; }
+    menuImg = document.createElement('div'); menuImg.className = 'menu-img';
+    var cards = contBloques.querySelectorAll('.bloque');
+    cards.forEach(function (c, i) {
+      var t = c.querySelector('.titulo-in').value.trim() || ('Bloque ' + (i + 1));
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = '🖼 ' + t;
+      b.addEventListener('click', function () { menuImg.remove(); menuImg = null; generarImagenes([i]); });
+      menuImg.appendChild(b);
+    });
+    if (cards.length > 1) {
+      var todos = document.createElement('button'); todos.type = 'button';
+      todos.textContent = '🖼 Todos los bloques (' + cards.length + ' imágenes)';
+      todos.addEventListener('click', function () {
+        menuImg.remove(); menuImg = null;
+        generarImagenes(Array.from(cards).map(function (_, i) { return i; }));
+      });
+      menuImg.appendChild(todos);
+    }
+    document.body.appendChild(menuImg);
+  });
+
+  /* ---------- copiar (plan B sin token) ---------- */
+  document.getElementById('btn-copiar').addEventListener('click', function () {
+    var hayPistas = false;
+    contBloques.querySelectorAll('.fila').forEach(function (f) { if (f._pista && f._pista.archivo) hayPistas = true; });
+    if (hayPistas) { aviso('Ojo: las pistas de audio solo se suben con «Publicar al sitio», no con copiar/pegar.', 'error'); }
+    var texto = JSON.stringify(armarJSON(), null, 2) + '\n';
+    (navigator.clipboard ? navigator.clipboard.writeText(texto) : Promise.reject())
+      .then(function () {
+        aviso('✓ JSON copiado. Pégalo en GitHub (enlace en Configuración) y presiona Commit changes.', 'ok');
+        document.getElementById('config').open = true;
+      })
+      .catch(function () {
+        prompt('Copia el texto:', texto);
+      });
+  });
+})();
+</script>
+</body>
+</html>
