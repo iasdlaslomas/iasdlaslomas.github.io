@@ -111,8 +111,12 @@
 (function () {
   var OWNER = 'iasdlaslomas', REPO = 'iasdlaslomas.github.io', RUTA = 'solicitudes.json', RAMA = 'main';
   var LS_TOKEN = 'laslomas_token';
-  // WhatsApp al que llegan las solicitudes cuando no hay conexión directa (número de la iglesia).
-  var WHATSAPP = '528113110306';
+  // Correo al que llegan las solicitudes del formulario público.
+  var CORREO = 'laslomascomunicacion@gmail.com';
+  function abrirCorreo(s) {
+    var asunto = 'Solicitud de anuncio — ' + (s.nombre || 'IASD Las Lomas');
+    window.location.href = 'mailto:' + CORREO + '?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(texto(s));
+  }
 
   /* Sábado objetivo y su límite (miércoles previo, 11:59 pm). */
   function objetivo() {
@@ -205,13 +209,13 @@
           gracias('Quedó registrada para el ' + larga(obj.sab) + '. El equipo la revisará.');
         })
         .catch(function () {
-          aviso('No se pudo guardar directo — se abrirá WhatsApp para enviarla.', 'error');
-          setTimeout(function () { window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto(s)), '_blank'); }, 900);
+          aviso('No se pudo guardar directo — se abrirá el correo para enviarla.', 'error');
+          setTimeout(function () { abrirCorreo(s); }, 900);
         });
     } else {
-      /* Sin llave: la solicitud viaja por WhatsApp al equipo. */
-      window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto(s)), '_blank');
-      gracias('Se abrió WhatsApp con tu solicitud lista — solo presiona enviar. Se considerará para el ' + larga(obj.sab) + '.');
+      /* Sin llave: la solicitud viaja por correo al equipo. */
+      abrirCorreo(s);
+      gracias('Se abrió tu correo con la solicitud lista — solo presiona enviar. Se considerará para el ' + larga(obj.sab) + '.');
     }
   });
 

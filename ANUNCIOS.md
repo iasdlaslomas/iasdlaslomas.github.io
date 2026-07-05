@@ -1,5 +1,21 @@
 # Cómo publicar anuncios en iasdlaslomas.com
 
+## Solicitudes de la congregación (lo nuevo)
+
+Cualquier ministerio o hermano puede pedir un anuncio en
+**https://iasdlaslomas.com/solicitar.html** (nombre, fecha del evento, lugar y
+descripción). Reglas:
+
+- **Límite: el miércoles previo a las 11:59 pm.** Después de esa hora, la solicitud
+  corre automáticamente para el siguiente sábado (la página se lo avisa a quien llena).
+- Quien tiene la llave del panel en su navegador: la solicitud se guarda directa en
+  `solicitudes.json`. Quien no: se abre el **correo** con la solicitud ya redactada
+  hacia `laslomascomunicacion@gmail.com`, lista para enviarse al equipo.
+- Las pendientes aparecen en **editar.html → 📨 Solicitudes de anuncios**, donde se
+  pueden **📣 Publicar como anuncio** (se agrega a `anuncios.json` y expira solo el
+  día del evento), marcar **✓ Atendida** o **✕ Descartar**. Al armar el programa se
+  tienen a la vista para integrarlas.
+
 Los anuncios del sitio viven en el archivo **`anuncios.json`** de este repositorio.
 Para editarlo solo necesitas una cuenta de GitHub con acceso (no hay que instalar nada):
 
