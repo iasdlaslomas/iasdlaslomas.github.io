@@ -114,6 +114,16 @@
   #anuncios[hidden] { display: none; }
   .ver-todo { display: inline-block; margin-top: var(--space-5); font-weight: 600; font-size: var(--text-sm); color: var(--accent-press); text-decoration: none; border-bottom: var(--line-med) solid var(--border-strong); padding-bottom: 2px; }
   .ver-todo:hover { border-color: var(--accent-press); }
+
+  /* ---- Conoce a nuestro pastor ---- */
+  .pastor-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .pastor-foto { margin: 0; }
+  .pastor-foto img { width: 100%; max-width: 440px; display: block; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: var(--line-thin) solid var(--border); }
+  .pastor-texto .verse-pull { font-family: var(--font-script); font-style: italic; font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--accent-press); margin: 0 0 var(--space-4); line-height: 1.3; }
+  .pastor-texto .verse-pull .ref { font-family: var(--font-body); font-style: normal; font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; font-weight: 700; color: var(--ink-muted); }
+  .pastor-texto p { color: var(--ink-soft); max-width: 52ch; margin: 0 0 var(--space-4); }
+  .pastor-texto b { color: var(--ink); }
+  @media (max-width: 820px) { .pastor-grid { grid-template-columns: 1fr; } .pastor-foto img { margin: 0 auto; } }
   .banner { display: flex; align-items: center; gap: var(--space-5); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6); margin-bottom: var(--space-4); }
   .banner .lead { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; opacity: .85; }
   .banner h3 { margin: 2px 0 0; font-size: var(--text-xl); font-weight: 600; line-height: var(--leading-tight); }
@@ -416,10 +426,33 @@
   </div>
 </section>
 
-<section id="contacto">
+<section id="pastor">
   <div class="wrap">
     <div class="sec-head">
       <span class="num">05</span>
+      <div>
+        <span class="kicker">Conoce a nuestro pastor</span>
+        <h2 class="sec-title">Pr. Eliezer Luna</h2>
+      </div>
+      <div class="rule-line"></div>
+    </div>
+    <div class="pastor-grid">
+      <figure class="pastor-foto">
+        <img src="pastor.jpg" alt="Pr. Eliezer Luna, pastor del distrito El Centenario, con su familia" loading="lazy">
+      </figure>
+      <div class="pastor-texto">
+        <p class="verse-pull">“Apacienta mis ovejas.” <span class="ref">— Juan 21:17</span></p>
+        <p>El pastor <b>Eliezer Luna</b> dirige el distrito <b>El Centenario</b> de la Asociación del Noreste, que incluye a Las Lomas junto con las iglesias La Hacienda, Vicente Guerrero y San Ángel.</p>
+        <p>Junto a su esposa y sus hijos — la familia Luna Salomón — acompaña a nuestra congregación en la predicación, el cuidado pastoral y la vida de la iglesia. Cada sábado lo encuentras saludando en la entrada o después del culto; acércate, le dará mucho gusto conocerte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">06</span>
       <div>
         <span class="kicker">Visítanos</span>
         <h2 class="sec-title">Ubicación y contacto</h2>
