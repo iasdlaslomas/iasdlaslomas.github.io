@@ -110,6 +110,21 @@
   .slot.hl { background: var(--bg-tinted); }
   .pill { margin-left: auto; font-size: var(--text-xs); font-weight: 600; color: var(--on-accent); background: var(--accent); padding: 3px 10px; border-radius: var(--radius-pill); flex: none; }
 
+  /* ---- Anuncios (banners del DS, alimentados por anuncios.json) ---- */
+  #anuncios[hidden] { display: none; }
+  .banner { display: flex; align-items: center; gap: var(--space-5); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6); margin-bottom: var(--space-4); }
+  .banner .lead { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; opacity: .85; }
+  .banner h3 { margin: 2px 0 0; font-size: var(--text-xl); font-weight: 600; line-height: var(--leading-tight); }
+  .banner p { margin: 4px 0 0; font-size: var(--text-sm); opacity: .9; }
+  .banner .cta { margin-left: auto; flex: none; font-weight: 600; font-size: var(--text-sm); padding: 11px 20px; border-radius: var(--radius-md); white-space: nowrap; text-decoration: none; }
+  .banner-accent { background: var(--accent); color: var(--on-accent); }
+  .banner-accent .cta { background: var(--on-accent); color: var(--accent-press); }
+  .banner-ink { background: var(--bg-inverted); color: var(--ink-on-dark); }
+  .banner-ink .cta { background: var(--accent); color: var(--on-accent); }
+  .banner-tint { background: var(--bg-tinted); color: var(--ink); border: var(--line-thin) solid var(--border-strong); }
+  .banner-tint .cta { background: var(--accent); color: var(--on-accent); }
+  @media (max-width: 640px) { .banner { flex-direction: column; align-items: flex-start; } .banner .cta { margin-left: 0; } }
+
   /* ---- Ministerios ---- */
   .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
   @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
@@ -179,6 +194,7 @@
     <nav>
       <a href="#que-esperar">Qué esperar</a>
       <a href="#horarios">Horarios</a>
+      <a href="#anuncios" hidden data-anuncios-link>Anuncios</a>
       <a href="#ministerios">Ministerios</a>
       <a href="#en-vivo">En vivo</a>
       <a class="btn btn-primary btn-md" href="#contacto">Cómo llegar</a>
@@ -286,10 +302,24 @@
   </div>
 </section>
 
-<section id="ministerios">
+<section id="anuncios" hidden>
   <div class="wrap">
     <div class="sec-head">
       <span class="num">03</span>
+      <div>
+        <span class="kicker">Anuncios</span>
+        <h2 class="sec-title">Esta semana en Las Lomas</h2>
+      </div>
+      <div class="rule-line"></div>
+    </div>
+    <div id="anuncios-lista"></div>
+  </div>
+</section>
+
+<section id="ministerios">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="num">04</span>
       <div>
         <span class="kicker">Ministerios</span>
         <h2 class="sec-title">Un lugar para cada persona</h2>
@@ -359,7 +389,7 @@
 <section id="contacto">
   <div class="wrap">
     <div class="sec-head">
-      <span class="num">04</span>
+      <span class="num">05</span>
       <div>
         <span class="kicker">Visítanos</span>
         <h2 class="sec-title">Ubicación y contacto</h2>
@@ -399,5 +429,56 @@
   </div>
 </footer>
 
+<script>
+// Sección de anuncios: se alimenta de anuncios.json (editable en GitHub).
+// Si el archivo no existe, está vacío o todos los anuncios vencieron, la sección se oculta sola.
+(function () {
+  var estilos = ['banner-accent', 'banner-ink', 'banner-tint'];
+  fetch('anuncios.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (lista) {
+      var hoy = new Date();
+      var activos = (lista || []).filter(function (a) {
+        return a && a.titulo && (!a.hasta || new Date(a.hasta + 'T23:59:59') >= hoy);
+      });
+      if (!activos.length) return;
+      var cont = document.getElementById('anuncios-lista');
+      activos.forEach(function (a, i) {
+        var b = document.createElement('div');
+        b.className = 'banner ' + (estilos.indexOf('banner-' + a.estilo) >= 0 ? 'banner-' + a.estilo : estilos[i % estilos.length]);
+        var caja = document.createElement('div');
+        if (a.etiqueta) {
+          var lead = document.createElement('div');
+          lead.className = 'lead';
+          lead.textContent = a.etiqueta;
+          caja.appendChild(lead);
+        }
+        var h = document.createElement('h3');
+        h.textContent = a.titulo;
+        caja.appendChild(h);
+        if (a.detalle) {
+          var p = document.createElement('p');
+          p.textContent = a.detalle;
+          caja.appendChild(p);
+        }
+        b.appendChild(caja);
+        if (a.enlace) {
+          var cta = document.createElement('a');
+          cta.className = 'cta';
+          cta.href = a.enlace;
+          cta.target = '_blank';
+          cta.rel = 'noopener';
+          cta.textContent = a.boton || 'Más información';
+          b.appendChild(cta);
+        }
+        cont.appendChild(b);
+      });
+      document.getElementById('anuncios').hidden = false;
+      var link = document.querySelector('[data-anuncios-link]');
+      if (link) link.hidden = false;
+    })
+    .catch(function () { /* sin anuncios.json → la sección queda oculta */ });
+})();
+</script>
 </body>
 </html>

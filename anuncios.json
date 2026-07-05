@@ -1,0 +1,17 @@
+[
+  {
+    "etiqueta": "Este sábado",
+    "titulo": "Bienvenido a nuestro nuevo sitio web",
+    "detalle": "Comparte iasdlaslomas.com con tu familia y amigos.",
+    "estilo": "accent",
+    "hasta": "2026-07-18"
+  },
+  {
+    "etiqueta": "Transmisión en vivo",
+    "titulo": "Culto Divino cada sábado 11:00",
+    "detalle": "Acompáñanos por YouTube si no puedes asistir.",
+    "enlace": "https://www.youtube.com/@IASDLasLomas",
+    "boton": "Ver canal",
+    "estilo": "tint"
+  }
+]
