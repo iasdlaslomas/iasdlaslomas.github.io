@@ -106,6 +106,9 @@
   .sol-btns button:disabled { opacity: .55; cursor: wait; }
   .tok-fila { display: flex; gap: var(--space-2); flex-wrap: wrap; }
   .tok-fila input { flex: 1; min-width: 220px; }
+  .gen-fila { display: flex; gap: var(--space-3); align-items: center; justify-content: space-between; background: var(--bg-elevated); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-md); padding: 8px 12px; font-size: var(--text-sm); }
+  .gen-fila span { font-weight: 600; }
+  .gen-fila button { flex: none; }
 </style>
 </head>
 <body>
@@ -158,6 +161,10 @@
         <button class="btn-sec" id="btn-token" type="button">Guardar token</button>
         <button class="btn-sec" id="btn-token-borrar" type="button">Borrar</button>
       </div>
+      <div id="gen-enlaces" hidden style="display:grid; gap:var(--space-3);">
+        <p>🔗 <b>Enlaces personales para el equipo</b> — cada uno trae el acceso adentro: la persona lo abre una vez desde su celular y queda lista, sin pegar ni ver ningún token. <b>Mándalos por privado, no en grupos.</b></p>
+        <div id="gen-lista" style="display:grid; gap:var(--space-2);"></div>
+      </div>
       <p>Si no tienes token, usa <b>Copiar JSON</b> y pégalo en
       <a href="https://github.com/iasdlaslomas/iasdlaslomas.github.io/edit/main/programa.json" target="_blank" rel="noopener">la página de edición en GitHub</a>
       (botón verde <i>Commit changes</i>).</p>
@@ -197,6 +204,19 @@
   var BLOQUES_FIJOS = { 'escuela-sabatica': 'Escuela Sabática', 'culto-divino': 'Culto Divino', 'culto-joven': 'Culto Joven' };
   var BLOQUE_FIJO = BLOQUES_FIJOS[(new URLSearchParams(location.search).get('bloque') || '').toLowerCase()] || null;
   function normTitulo(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim(); }
+
+  // Token incrustado en el enlace (#t=…): se guarda solo y se limpia de la barra de direcciones.
+  // Va en el fragmento (#), que el navegador no envía a ningún servidor.
+  var tokenIncrustado = false;
+  (function () {
+    var m = /[#&]t=([^&]+)/.exec(location.hash);
+    if (!m) return;
+    try {
+      localStorage.setItem(LS_TOKEN, decodeURIComponent(m[1]));
+      tokenIncrustado = true;
+      history.replaceState(null, '', location.pathname + location.search);
+    } catch (e) {}
+  })();
 
   /* ---------- utilidades ---------- */
   function proximoSabado() {
@@ -536,6 +556,7 @@
     document.getElementById('btn-bloque').hidden = true;
     document.getElementById('btn-especial').hidden = true;
     document.getElementById('btn-copiar').hidden = true;
+    document.getElementById('config').hidden = true;
     document.querySelector('header .desc').textContent = 'Captura: ' + BLOQUE_FIJO;
     document.querySelector('h1').textContent = BLOQUE_FIJO;
     document.querySelector('.sub').innerHTML = 'Estás capturando <b>' + BLOQUE_FIJO +
@@ -603,14 +624,46 @@
   /* ---------- token ---------- */
   var inToken = document.getElementById('token');
   inToken.value = localStorage.getItem(LS_TOKEN) || '';
+
+  // Genera los enlaces personales del equipo (con el token adentro) — solo en el panel completo
+  var EQUIPO = [
+    { slug: 'escuela-sabatica', quien: 'Escuela Sabática (Fernando / Yurixi)' },
+    { slug: 'culto-divino', quien: 'Culto Divino (Pr. Jasai)' },
+    { slug: 'culto-joven', quien: 'Culto Joven (Carlos)' }
+  ];
+  function pintarEnlacesEquipo() {
+    var caja = document.getElementById('gen-enlaces'), lista = document.getElementById('gen-lista');
+    var tk = (localStorage.getItem(LS_TOKEN) || '').trim();
+    if (BLOQUE_FIJO || !tk) { caja.hidden = true; return; }
+    var base = location.origin + location.pathname;
+    lista.innerHTML = '';
+    EQUIPO.forEach(function (p) {
+      var enlace = base + '?bloque=' + p.slug + '#t=' + encodeURIComponent(tk);
+      var fila = document.createElement('div'); fila.className = 'gen-fila';
+      var etq = document.createElement('span'); etq.textContent = p.quien; fila.appendChild(etq);
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'btn-sec'; b.textContent = 'Copiar enlace';
+      b.addEventListener('click', function () {
+        (navigator.clipboard ? navigator.clipboard.writeText(enlace) : Promise.reject())
+          .then(function () { b.textContent = '✓ Copiado'; setTimeout(function () { b.textContent = 'Copiar enlace'; }, 1500); })
+          .catch(function () { prompt('Copia el enlace:', enlace); });
+      });
+      fila.appendChild(b); lista.appendChild(fila);
+    });
+    caja.hidden = false;
+  }
+  pintarEnlacesEquipo();
+
   document.getElementById('btn-token').addEventListener('click', function () {
     localStorage.setItem(LS_TOKEN, inToken.value.trim());
     aviso('Token guardado en este navegador.', 'ok');
+    pintarEnlacesEquipo();
   });
   document.getElementById('btn-token-borrar').addEventListener('click', function () {
     localStorage.removeItem(LS_TOKEN); inToken.value = '';
     aviso('Token borrado.', 'ok');
+    pintarEnlacesEquipo();
   });
+  if (tokenIncrustado) aviso('✓ Quedó configurado — llena tu parte y presiona Publicar.', 'ok');
 
   /* ---------- solicitudes de anuncios (llegan de solicitar.html) ---------- */
   var SOL = 'solicitudes.json', ANU = 'anuncios.json';
@@ -810,6 +863,10 @@
     if (!fecha) { aviso('Falta la fecha del sábado.', 'error'); return; }
     var token = localStorage.getItem(LS_TOKEN);
     if (!token) {
+      if (BLOQUE_FIJO) {
+        aviso('Abre otra vez el enlace que te enviaron por WhatsApp (ahí viene tu acceso).', 'error');
+        return;
+      }
       document.getElementById('config').open = true;
       aviso('Falta el token de GitHub — ábrelo en Configuración, o usa «Copiar JSON».', 'error');
       return;
