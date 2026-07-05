@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anuncios — IASD Las Lomas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: var(--leading-normal); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 var(--space-6); }
+  section { padding: clamp(2.5rem, 6vh, 4rem) 0; }
+
+  header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-crema-100) 90%, transparent); backdrop-filter: blur(10px); border-bottom: var(--line-thin) solid var(--border); }
+  .nav { display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) 0; max-width: 1120px; margin: 0 auto; padding-left: var(--space-6); padding-right: var(--space-6); }
+  .brand { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--ink); }
+  .brand svg { width: 40px; height: auto; stroke: var(--accent-press); }
+  .brand .name { font-weight: 700; letter-spacing: var(--tracking-wider); font-size: var(--text-sm); text-transform: uppercase; }
+  .brand .desc { display: block; font-family: var(--font-script); font-style: italic; font-size: var(--text-xs); letter-spacing: 0; text-transform: none; color: var(--ink-muted); }
+  .nav nav { margin-left: auto; display: flex; gap: var(--space-5); align-items: center; }
+  .nav nav a { color: var(--ink-soft); text-decoration: none; font-size: var(--text-sm); font-weight: 600; }
+  .nav nav a:hover, .nav nav a.actual { color: var(--accent-press); }
+  @media (max-width: 820px) { .nav nav a:not(.actual) { display: none; } }
+
+  .hero-mini { background: var(--bg-inverted); color: var(--ink-on-dark); padding: clamp(2.5rem, 6vh, 4rem) 0; }
+  .hero-mini .kicker { color: var(--color-cielo-300); }
+  .hero-mini h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: var(--space-2) 0 0; letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
+  .kicker { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; font-weight: 700; color: var(--accent-press); }
+  .loma { display: block; width: 100%; height: 48px; }
+
+  .banner { display: flex; align-items: center; gap: var(--space-5); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6); margin-bottom: var(--space-4); }
+  .banner .lead { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; opacity: .85; }
+  .banner h3 { margin: 2px 0 0; font-size: var(--text-xl); font-weight: 600; line-height: var(--leading-tight); }
+  .banner p { margin: 4px 0 0; font-size: var(--text-sm); opacity: .9; }
+  .banner .cta { margin-left: auto; flex: none; font-weight: 600; font-size: var(--text-sm); padding: 11px 20px; border-radius: var(--radius-md); white-space: nowrap; text-decoration: none; }
+  .banner-accent { background: var(--accent); color: var(--on-accent); }
+  .banner-accent .cta { background: var(--on-accent); color: var(--accent-press); }
+  .banner-ink { background: var(--bg-inverted); color: var(--ink-on-dark); }
+  .banner-ink .cta { background: var(--accent); color: var(--on-accent); }
+  .banner-tint { background: var(--bg-tinted); color: var(--ink); border: var(--line-thin) solid var(--border-strong); }
+  .banner-tint .cta { background: var(--accent); color: var(--on-accent); }
+  .banner img.foto { width: 148px; border-radius: var(--radius-md); flex: none; display: block; }
+  @media (max-width: 640px) { .banner { flex-direction: column; align-items: flex-start; } .banner .cta { margin-left: 0; } .banner img.foto { width: 100%; } }
+  .vacio { color: var(--ink-muted); font-size: var(--text-base); background: var(--bg-elevated); border: var(--line-thin) dashed var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center; }
+
+  h2.titulo { font-size: var(--text-2xl); font-weight: 600; letter-spacing: var(--tracking-tight); margin: 0 0 var(--space-5); }
+  .schedule { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+  .schedule .head { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-4) var(--space-5); }
+  .schedule .head .day { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-cielo-300); }
+  .schedule .head .title { font-size: var(--text-xl); font-weight: 600; margin-top: 2px; }
+  .slot { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4) var(--space-5); border-bottom: var(--line-thin) solid var(--border); }
+  .slot:last-child { border-bottom: none; }
+  .slot .time { font-weight: 600; font-size: var(--text-base); color: var(--accent-press); width: 92px; flex: none; font-variant-numeric: tabular-nums; }
+  .slot .what b { display: block; font-size: var(--text-base); font-weight: 600; }
+  .slot .what span { font-size: var(--text-sm); color: var(--ink-muted); }
+
+  footer { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-6) 0; margin-top: var(--space-8); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: var(--space-5); align-items: center; justify-content: space-between; max-width: 1120px; }
+  footer small { color: var(--color-gris-400); font-size: var(--text-xs); }
+  footer a { color: var(--color-cielo-300); text-decoration: none; font-size: var(--text-sm); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 160 120" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14,102 Q80,88 146,102"/><path d="M36,22 L54,16 L54,94 L36,94 Z"/><line x1="54" y1="12" x2="54" y2="94"/><line x1="42" y1="48" x2="98" y2="48"/><path d="M62,48 L110,48 L110,94 L62,94 Z"/><line x1="110" y1="48" x2="74" y2="94"/>
+      </svg>
+      <span>
+        <span class="name">Las Lomas</span>
+        <span class="desc">Iglesia Adventista del Séptimo Día</span>
+      </span>
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="anuncios.html" class="actual">Anuncios</a>
+      <a href="ministerios.html">Ministerios</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-mini">
+  <div class="wrap">
+    <span class="kicker">Vida de iglesia</span>
+    <h1>Anuncios y programa</h1>
+  </div>
+</div>
+<svg class="loma" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,48 L0,40 Q720,-22 1440,40 L1440,48 Z" fill="var(--color-carbon-800)" transform="scale(1,-1) translate(0,-48)"/>
+</svg>
+
+<section>
+  <div class="wrap">
+    <h2 class="titulo">Anuncios</h2>
+    <div id="anuncios-lista"></div>
+    <p class="vacio" id="anuncios-vacio" hidden>No hay anuncios por ahora — vuelve pronto.</p>
+  </div>
+</section>
+
+<section id="programa" style="padding-top: 0;">
+  <div class="wrap">
+    <h2 class="titulo">Programa del sábado</h2>
+    <div class="schedule" id="programa-card" hidden>
+      <div class="head">
+        <div class="day" id="programa-fecha">Este sábado</div>
+        <div class="title">Encargados del programa</div>
+      </div>
+      <div id="programa-lista"></div>
+    </div>
+    <p class="vacio" id="programa-vacio" hidden>El programa de este sábado aún no se publica.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al inicio</a>
+    <small>© 2026 IASD Las Lomas · iasdlaslomas.com</small>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var estilos = ['banner-accent', 'banner-ink', 'banner-tint'];
+  fetch('anuncios.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (lista) {
+      var hoy = new Date();
+      var activos = (lista || []).filter(function (a) {
+        return a && a.titulo && (!a.hasta || new Date(a.hasta + 'T23:59:59') >= hoy);
+      });
+      if (!activos.length) { document.getElementById('anuncios-vacio').hidden = false; return; }
+      var cont = document.getElementById('anuncios-lista');
+      activos.forEach(function (a, i) {
+        var b = document.createElement('div');
+        b.className = 'banner ' + (estilos.indexOf('banner-' + a.estilo) >= 0 ? 'banner-' + a.estilo : estilos[i % estilos.length]);
+        if (a.imagen) {
+          var img = document.createElement('img');
+          img.className = 'foto'; img.src = a.imagen; img.alt = a.titulo; img.loading = 'lazy';
+          b.appendChild(img);
+        }
+        var caja = document.createElement('div');
+        if (a.etiqueta) { var lead = document.createElement('div'); lead.className = 'lead'; lead.textContent = a.etiqueta; caja.appendChild(lead); }
+        var h = document.createElement('h3'); h.textContent = a.titulo; caja.appendChild(h);
+        if (a.detalle) { var p = document.createElement('p'); p.textContent = a.detalle; caja.appendChild(p); }
+        b.appendChild(caja);
+        if (a.enlace) {
+          var cta = document.createElement('a');
+          cta.className = 'cta'; cta.href = a.enlace; cta.target = '_blank'; cta.rel = 'noopener';
+          cta.textContent = a.boton || 'Más información';
+          b.appendChild(cta);
+        }
+        cont.appendChild(b);
+      });
+    })
+    .catch(function () { document.getElementById('anuncios-vacio').hidden = false; });
+
+  fetch('programa.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (p) {
+      if (!p || !p.partes || !p.partes.length) throw 0;
+      if (p.fecha && new Date(p.fecha + 'T23:59:59') < new Date()) throw 0;
+      var cont = document.getElementById('programa-lista');
+      p.partes.forEach(function (x) {
+        if (!x || !x.parte) return;
+        var s = document.createElement('div'); s.className = 'slot';
+        var t = document.createElement('div'); t.className = 'time'; t.textContent = x.hora || '·'; s.appendChild(t);
+        var w = document.createElement('div'); w.className = 'what';
+        var b = document.createElement('b'); b.textContent = x.parte; w.appendChild(b);
+        if (x.encargado) { var sp = document.createElement('span'); sp.textContent = x.encargado; w.appendChild(sp); }
+        s.appendChild(w); cont.appendChild(s);
+      });
+      if (p.fecha) {
+        var f = new Date(p.fecha + 'T12:00:00');
+        document.getElementById('programa-fecha').textContent = 'Sábado ' + f.toLocaleDateString('es-MX', { day: 'numeric', month: 'long' });
+      }
+      document.getElementById('programa-card').hidden = false;
+    })
+    .catch(function () { document.getElementById('programa-vacio').hidden = false; });
+})();
+</script>
+</body>
+</html>

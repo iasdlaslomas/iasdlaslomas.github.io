@@ -112,6 +112,8 @@
 
   /* ---- Anuncios (banners del DS, alimentados por anuncios.json) ---- */
   #anuncios[hidden] { display: none; }
+  .ver-todo { display: inline-block; margin-top: var(--space-5); font-weight: 600; font-size: var(--text-sm); color: var(--accent-press); text-decoration: none; border-bottom: var(--line-med) solid var(--border-strong); padding-bottom: 2px; }
+  .ver-todo:hover { border-color: var(--accent-press); }
   .banner { display: flex; align-items: center; gap: var(--space-5); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6); margin-bottom: var(--space-4); }
   .banner .lead { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; opacity: .85; }
   .banner h3 { margin: 2px 0 0; font-size: var(--text-xl); font-weight: 600; line-height: var(--leading-tight); }
@@ -197,8 +199,8 @@
     <nav>
       <a href="#que-esperar">Qué esperar</a>
       <a href="#horarios">Horarios</a>
-      <a href="#anuncios" hidden data-anuncios-link>Anuncios</a>
-      <a href="#ministerios">Ministerios</a>
+      <a href="anuncios.html">Anuncios</a>
+      <a href="ministerios.html">Ministerios</a>
       <a href="#en-vivo">En vivo</a>
       <a class="btn btn-primary btn-md" href="#contacto">Cómo llegar</a>
     </nav>
@@ -323,6 +325,7 @@
       <div class="rule-line"></div>
     </div>
     <div id="anuncios-lista"></div>
+    <a class="ver-todo" href="anuncios.html">Ver todos los anuncios y el programa →</a>
   </div>
 </section>
 
@@ -378,6 +381,7 @@
         <a class="fb" href="https://www.facebook.com/ministeriodefutboladventista" target="_blank" rel="noopener">Facebook →</a>
       </article>
     </div>
+    <a class="ver-todo" href="ministerios.html">Conoce cada ministerio a detalle →</a>
   </div>
 </section>
 
@@ -460,6 +464,8 @@
         return a && a.titulo && (!a.hasta || new Date(a.hasta + 'T23:59:59') >= hoy);
       });
       if (!activos.length) return;
+      // La portada muestra máximo 3; la lista completa vive en anuncios.html
+      activos = activos.slice(0, 3);
       var cont = document.getElementById('anuncios-lista');
       activos.forEach(function (a, i) {
         var b = document.createElement('div');
@@ -500,8 +506,6 @@
         cont.appendChild(b);
       });
       document.getElementById('anuncios').hidden = false;
-      var link = document.querySelector('[data-anuncios-link]');
-      if (link) link.hidden = false;
     })
     .catch(function () { /* sin anuncios.json → la sección queda oculta */ });
 })();
