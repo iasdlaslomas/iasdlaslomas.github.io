@@ -129,7 +129,7 @@
   @media (max-width: 640px) { .banner { flex-direction: column; align-items: flex-start; } .banner .cta { margin-left: 0; } .banner img.foto { width: 100%; } }
 
   /* ---- Ministerios ---- */
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-5); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
   @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
   .mcard a.fb { display: inline-block; margin-top: var(--space-2); font-size: var(--text-sm); font-weight: 600; color: var(--accent-press); text-decoration: none; }
@@ -380,6 +380,14 @@
         <p>Deporte, compañerismo y testimonio dentro y fuera de la cancha.</p>
         <a class="fb" href="https://www.facebook.com/ministeriodefutboladventista" target="_blank" rel="noopener">Facebook →</a>
       </article>
+      <article class="mcard">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 39 C11 30 8.5 19.5 14.5 14.5 C19 11 24 14.5 24 19 C24 14.5 29 11 33.5 14.5 C39.5 19.5 37 30 24 39 Z"/><path d="M24 20 L24 29"/><path d="M19.5 24.5 L28.5 24.5"/></svg>
+        </div>
+        <h3>CAS Las Lomas</h3>
+        <p>Centro de Atención Social: salud, educación y bienestar integral para la comunidad.</p>
+        <a class="fb" href="https://www.caslaslomas.org/" target="_blank" rel="noopener">caslaslomas.org →</a>
+      </article>
     </div>
     <a class="ver-todo" href="ministerios.html">Conoce cada ministerio a detalle →</a>
   </div>
@@ -510,36 +518,62 @@
     .catch(function () { /* sin anuncios.json → la sección queda oculta */ });
 })();
 
-// Programa del sábado: se alimenta de programa.json (editable en GitHub).
+// Programa del sábado: se alimenta de programa.json (se publica desde editar.html).
 // Se oculta solo si no hay archivo o la fecha ya pasó.
 (function () {
+  function slot(cont, hora, titulo, sub) {
+    var s = document.createElement('div');
+    s.className = 'slot';
+    var t = document.createElement('div');
+    t.className = 'time';
+    t.textContent = hora || '·';
+    s.appendChild(t);
+    var w = document.createElement('div');
+    w.className = 'what';
+    var b = document.createElement('b');
+    b.textContent = titulo;
+    w.appendChild(b);
+    if (sub) {
+      var sp = document.createElement('span');
+      sp.textContent = sub;
+      w.appendChild(sp);
+    }
+    s.appendChild(w);
+    cont.appendChild(s);
+  }
   fetch('programa.json', { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (p) {
-      if (!p || !p.partes || !p.partes.length) return;
+      if (!p) return;
       if (p.fecha && new Date(p.fecha + 'T23:59:59') < new Date()) return;
       var cont = document.getElementById('programa-lista');
-      p.partes.forEach(function (x) {
-        if (!x || !x.parte) return;
-        var s = document.createElement('div');
-        s.className = 'slot';
-        var t = document.createElement('div');
-        t.className = 'time';
-        t.textContent = x.hora || '·';
-        s.appendChild(t);
-        var w = document.createElement('div');
-        w.className = 'what';
-        var b = document.createElement('b');
-        b.textContent = x.parte;
-        w.appendChild(b);
-        if (x.encargado) {
-          var sp = document.createElement('span');
-          sp.textContent = x.encargado;
-          w.appendChild(sp);
-        }
-        s.appendChild(w);
-        cont.appendChild(s);
-      });
+      if (p.bloques && p.bloques.length) {
+        // Formato v2: un renglón-resumen por bloque, detalle en anuncios.html.
+        p.bloques.forEach(function (bl) {
+          if (!bl || !bl.titulo) return;
+          var partes = (bl.partes || []).filter(function (x) { return x && x.seccion; });
+          if (!partes.length) return;
+          var ini = '';
+          for (var i = 0; i < partes.length && !ini; i++) ini = partes[i].inicio || '';
+          slot(cont, ini, bl.titulo, bl.tema || '');
+        });
+        var ver = document.createElement('div');
+        ver.className = 'slot';
+        var a = document.createElement('a');
+        a.href = 'anuncios.html#programa';
+        a.textContent = 'Ver el programa completo →';
+        a.style.cssText = 'font-weight:600;font-size:var(--text-sm);color:var(--accent-press);text-decoration:none;';
+        ver.appendChild(a);
+        cont.appendChild(ver);
+      } else if (p.partes && p.partes.length) {
+        // Formato v1 (compatibilidad).
+        p.partes.forEach(function (x) {
+          if (!x || !x.parte) return;
+          slot(cont, x.hora, x.parte, x.encargado || '');
+        });
+      } else {
+        return;
+      }
       if (p.fecha) {
         var f = new Date(p.fecha + 'T12:00:00');
         document.getElementById('programa-fecha').textContent =
