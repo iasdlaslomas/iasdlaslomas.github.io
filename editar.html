@@ -37,7 +37,11 @@
   .rol-info .rol-vie { font-size: var(--text-xs); color: var(--ink-muted); }
 
   .bloque { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin-bottom: var(--space-6); overflow: hidden; }
-  .bloque .cabeza { background: var(--bg-inverted); padding: var(--space-4) var(--space-5); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+  .bloque .cabeza { background: var(--bg-inverted); padding: var(--space-4) var(--space-5); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); position: relative; }
+  .bloque .cabeza > div:first-child { padding-right: 44px; }
+  .btn-plegar { position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: var(--color-cielo-300); font-size: 18px; line-height: 1; padding: 6px 10px; border-radius: var(--radius-sm); cursor: pointer; }
+  .btn-plegar:hover { background: color-mix(in srgb, white 14%, transparent); }
+  .bloque.plegado .cabeza { padding-top: var(--space-3); padding-bottom: var(--space-3); }
   .bloque .cabeza label { color: var(--color-cielo-300); }
   .bloque .cabeza input { background: color-mix(in srgb, var(--color-carbon-800) 60%, white 8%); border-color: transparent; color: var(--ink-on-dark); }
   .bloque .cabeza .full { grid-column: 1 / -1; }
@@ -127,7 +131,8 @@
       <label for="fecha">Fecha del sábado</label>
       <input type="date" id="fecha">
     </div>
-    <button class="btn-sec" id="btn-bloque" type="button">+ Agregar bloque (mañana / tarde / especial)</button>
+    <button class="btn-sec" id="btn-bloque" type="button">+ Agregar bloque vacío</button>
+    <button class="btn-sec" id="btn-especial" type="button">✨ Programa especial</button>
   </div>
 
   <div class="rol-info" id="rol-info" hidden></div>
@@ -209,8 +214,10 @@
   function nuevaFila(cuerpo, p) {
     p = p || {};
     var f = document.createElement('div'); f.className = 'fila';
-    f.appendChild(campo(p.inicio, '', '', 'Inicio'));
-    f.appendChild(campo(p.fin, '', '', 'Fin'));
+    var inIni = campo(p.inicio, '', '', 'Inicio'); inIni.dataset.prev = inIni.value;
+    var inFin = campo(p.fin, '', '', 'Fin'); inFin.dataset.prev = inFin.value;
+    f.appendChild(inIni);
+    f.appendChild(inFin);
     f.appendChild(campo(p.seccion, '', 'ancha seccion-in', 'Actividad / sección (Himno, Especial, Rincón Infantil…)'));
     f.appendChild(campo(p.encargado, '', '', 'Encargado'));
     f.appendChild(campo(p.detalle, '', 'ancha', 'Especificaciones (quién canta, ofertorio…)'));
@@ -290,8 +297,8 @@
     var bRec;
     var acc = document.createElement('div'); acc.className = 'acciones';
     [['🎤', function () { panel.hidden = !panel.hidden; bRec.classList.toggle('prendido', !panel.hidden); }, 'Recursos: micrófonos, pista, proyección…'],
-     ['↑', function () { var ant = f.previousElementSibling; if (ant && ant.classList.contains('fila')) cuerpo.insertBefore(f, ant); }],
-     ['↓', function () { var sig = f.nextElementSibling; if (sig && sig.classList.contains('fila')) cuerpo.insertBefore(sig, f); }],
+     ['↑', function () { var ant = f.previousElementSibling; if (ant && ant.classList.contains('fila')) { cuerpo.insertBefore(f, ant); reflujoBloque(cuerpo); } }],
+     ['↓', function () { var sig = f.nextElementSibling; if (sig && sig.classList.contains('fila')) { cuerpo.insertBefore(sig, f); reflujoBloque(cuerpo); } }],
      ['✕', function () { if (confirm('¿Quitar esta parte?')) f.remove(); }]
     ].forEach(function (par, idx) {
       var b = document.createElement('button'); b.type = 'button'; b.className = 'btn-mini'; b.textContent = par[0];
@@ -324,6 +331,18 @@
     var inBatuta = cabCampo('', 'Batuta / dirige', datos.batuta || '');
     var inEnlace = cabCampo('full', 'Enlace del diseño (Canva, presentación…)', datos.enlace || '');
     inEnlace.placeholder = 'https://canva.link/…';
+
+    var btnPlegar = document.createElement('button');
+    btnPlegar.type = 'button'; btnPlegar.className = 'btn-plegar'; btnPlegar.textContent = '▾';
+    btnPlegar.title = 'Plegar / desplegar bloque';
+    btnPlegar.addEventListener('click', function () {
+      var plegado = !cuerpo.hidden;
+      cuerpo.hidden = plegado;
+      cab.querySelectorAll('div').forEach(function (caja, i) { if (i > 0) caja.hidden = plegado; });
+      card.classList.toggle('plegado', plegado);
+      btnPlegar.textContent = plegado ? '▸' : '▾';
+    });
+    cab.appendChild(btnPlegar);
     card.appendChild(cab);
 
     var cuerpo = document.createElement('div'); cuerpo.className = 'cuerpo';
@@ -381,6 +400,60 @@
     return { version: 2, fecha: document.getElementById('fecha').value, bloques: bloques };
   }
 
+  /* ---------- horarios en cascada ---------- */
+  function minutosDe(t) {
+    var m = /^(\d{1,2}):(\d{2})$/.exec(String(t || '').trim());
+    return m ? (+m[1]) * 60 + (+m[2]) : null;
+  }
+  function horaTexto(min) {
+    min = ((min % 1440) + 1440) % 1440;
+    return Math.floor(min / 60) + ':' + ('0' + (min % 60)).slice(-2);
+  }
+  // Recorre los horarios de las filas desde `idx`, empezando en `cursor` (minutos),
+  // conservando la duración de cada fila. Las filas sin horario no se tocan.
+  function correrDesde(filas, idx, cursor) {
+    for (var i = idx; i < filas.length; i++) {
+      var c = filas[i].querySelectorAll('input');
+      var ini = minutosDe(c[0].value), fin = minutosDe(c[1].value);
+      if (ini == null && fin == null) continue;
+      c[0].value = horaTexto(cursor); c[0].dataset.prev = c[0].value;
+      if (ini == null || fin == null) return; // duración desconocida: hasta aquí se puede recorrer
+      cursor += Math.max(0, fin - ini);
+      c[1].value = horaTexto(cursor); c[1].dataset.prev = c[1].value;
+    }
+  }
+  // Tras mover filas: la primera fila con horario ancla y todo lo demás se recorre en su nuevo orden
+  function reflujoBloque(cuerpo) {
+    var filas = Array.prototype.slice.call(cuerpo.querySelectorAll('.fila'));
+    for (var i = 0; i < filas.length; i++) {
+      var ini = minutosDe(filas[i].querySelectorAll('input')[0].value);
+      if (ini != null) { correrDesde(filas, i, ini); return; }
+    }
+  }
+  // Al editar un horario a mano: la fila editada manda y las siguientes se recorren
+  contBloques.addEventListener('focusin', function (e) {
+    if (e.target.tagName === 'INPUT') e.target.dataset.prev = e.target.value;
+  });
+  contBloques.addEventListener('change', function (e) {
+    var f = e.target.closest ? e.target.closest('.fila') : null;
+    if (!f) return;
+    var c = f.querySelectorAll('input');
+    var esInicio = e.target === c[0], esFin = e.target === c[1];
+    if (!esInicio && !esFin) return;
+    var ini = minutosDe(c[0].value), fin = minutosDe(c[1].value);
+    if (esInicio && ini != null) {
+      // al mover el inicio se conserva la duración que tenía la fila
+      var prevIni = minutosDe(e.target.dataset.prev);
+      if (prevIni != null && fin != null) { fin = ini + Math.max(0, fin - prevIni); c[1].value = horaTexto(fin); }
+    }
+    if (ini != null && fin != null && fin < ini) { fin = ini; c[1].value = horaTexto(fin); }
+    c[0].dataset.prev = c[0].value; c[1].dataset.prev = c[1].value;
+    var cursor = fin != null ? fin : ini;
+    if (cursor == null) return;
+    var filas = Array.prototype.slice.call(f.parentElement.querySelectorAll('.fila'));
+    correrDesde(filas, filas.indexOf(f) + 1, cursor);
+  });
+
   /* ---------- rol del trimestre (predicador, anciano y diácono en turno) ---------- */
   var rolDatos = null;
   var rolCaja = document.getElementById('rol-info');
@@ -411,8 +484,8 @@
     return true;
   }
 
-  // Prellena el bloque «Culto Divino»: predicador en la fila del sermón,
-  // y filas «Anciano en turno» / «Diácono en turno» al inicio del bloque.
+  // Prellena el bloque «Culto Divino»: el predicador del rol en la fila del sermón.
+  // El anciano y el diácono en turno solo se muestran en la tarjeta del rol (arriba).
   function aplicarRol() {
     var sab = rolDe(document.getElementById('fecha').value);
     if (!sab) return false;
@@ -421,28 +494,12 @@
       if (!objetivo && /culto\s*divino/i.test(c.querySelector('.titulo-in').value)) objetivo = c;
     });
     if (!objetivo) return false;
-    var cuerpo = objetivo.querySelector('.cuerpo');
     var cambio = false;
-
-    function filaDe(re) {
-      var res = null;
-      cuerpo.querySelectorAll('.fila').forEach(function (f) {
-        if (!res && re.test(f.querySelectorAll('input')[2].value)) res = f;
-      });
-      return res;
-    }
-
-    var fSermon = filaDe(/^\s*(tema|serm[oó]n|predicaci)/i);
-    if (fSermon) cambio = poner(fSermon.querySelectorAll('input')[3], sab.predicador) || cambio;
-
-    var enc = cuerpo.querySelector('.encabezados');
-    [['Diácono en turno', /^\s*di[aá]cono/i, sab.diacono],
-     ['Anciano en turno', /^\s*anciano/i, sab.anciano]].forEach(function (par) {
-      if (!par[2]) return;
-      var f = filaDe(par[1]);
-      if (f) { cambio = poner(f.querySelectorAll('input')[3], par[2]) || cambio; return; }
-      cuerpo.insertBefore(nuevaFila(cuerpo, { seccion: par[0], encargado: par[2] }), enc.nextSibling);
-      cambio = true;
+    objetivo.querySelectorAll('.cuerpo .fila').forEach(function (f) {
+      var c = f.querySelectorAll('input');
+      // limpiar filas «Anciano/Diácono en turno» que haya insertado una versión anterior del panel
+      if (/^\s*(anciano|di[aá]cono) en turno\s*$/i.test(c[2].value) && !c[2].dataset.manual && !c[3].dataset.manual) { f.remove(); return; }
+      if (!cambio && /^\s*(tema|serm[oó]n|predicaci)/i.test(c[2].value)) cambio = poner(c[3], sab.predicador);
     });
     return cambio;
   }
@@ -459,7 +516,7 @@
     var html = '<span class="rol-titulo">📖 Rol del trimestre — ' + rolDatos.trimestre + '</span>';
     if (sab) html += '<span>' + lineaRol(sab) + '</span>';
     if (vie) html += '<span class="rol-vie">Viernes (' + (vie.culto || 'Recepción de sábado') + ', sin transmisión en vivo): ' + lineaRol(vie) + '</span>';
-    if (sab && aplicarRol()) html += '<span class="rol-vie">✎ Predicador, anciano y diácono quedaron prellenados en «Culto Divino» — revisa y ajusta si hace falta.</span>';
+    if (sab && aplicarRol()) html += '<span class="rol-vie">✎ Predicador prellenado en la fila del sermón de «Culto Divino» — revisa y ajusta si hace falta.</span>';
     rolCaja.innerHTML = html;
   }
   fetch('rol.json', { cache: 'no-store' })
@@ -489,6 +546,20 @@
 
   document.getElementById('btn-bloque').addEventListener('click', function () {
     contBloques.appendChild(nuevoBloque({ titulo: '' }));
+    contBloques.lastElementChild.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  document.getElementById('btn-especial').addEventListener('click', function () {
+    var nombre = prompt('Nombre del programa especial (ej. Tarde musical, Semana de oración, Sábado de énfasis…)');
+    if (!nombre || !nombre.trim()) return;
+    contBloques.appendChild(nuevoBloque({ titulo: nombre.trim(), partes: [
+      { seccion: 'Bienvenida' },
+      { seccion: 'Himno de apertura' },
+      { seccion: 'Oración' },
+      { seccion: 'Desarrollo del programa' },
+      { seccion: 'Himno final' },
+      { seccion: 'Oración final' }
+    ] }));
     contBloques.lastElementChild.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
