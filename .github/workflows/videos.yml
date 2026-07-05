@@ -1,0 +1,39 @@
+name: Actualizar videos de YouTube
+on:
+  schedule:
+    - cron: "0 20 * * 6,0"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar videos.json desde el RSS del canal
+        run: |
+          python3 - <<'EOF'
+          import urllib.request, xml.etree.ElementTree as ET, json
+          url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCZPjUD9mMpgXYXcZ-YE1S1w"
+          xml = urllib.request.urlopen(url, timeout=30).read().decode()
+          ns = {'a':'http://www.w3.org/2005/Atom','yt':'http://www.youtube.com/xml/schemas/2015'}
+          root = ET.fromstring(xml)
+          videos = []
+          for e in root.findall('a:entry', ns):
+              t = e.find('a:title', ns).text or ''
+              tl = t.lower()
+              if 'culto joven' in tl or 'sociedad de j' in tl: cat = 'joven'
+              elif 'culto divino' in tl or 'escuela sab' in tl: cat = 'divino'
+              else: cat = 'especial'
+              videos.append({'id': e.find('yt:videoId', ns).text, 'titulo': t,
+                             'fecha': e.find('a:published', ns).text[:10], 'cat': cat})
+          json.dump({'videos': videos[:30]}, open('videos.json','w'), ensure_ascii=False, indent=1)
+          EOF
+      - name: Publicar si cambio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add videos.json
+          git diff --cached --quiet || git commit -m "Actualizar videos de YouTube"
+          git push
+
