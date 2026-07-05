@@ -39,3 +39,22 @@ Cada anuncio va entre llaves `{ }`, separado por comas, dentro de los corchetes 
 - Si el archivo queda vacío así: `[]` — la sección de anuncios se oculta del sitio.
 - Si algo sale mal y la sección desaparece, revisa que no falte o sobre una coma.
 - Puedes verificar el formato pegando el contenido en https://jsonlint.com
+
+## Anuncios con imagen (diseños de Canva)
+
+Si el anuncio tiene un diseño hecho en Canva:
+
+1. En Canva descarga la imagen como **JPG** (calidad estándar es suficiente).
+2. En GitHub: **Add file → Upload files** y sube la imagen (ej. `semana-oracion.jpg`).
+3. En `anuncios.json` agrega el campo `"imagen"` al anuncio:
+
+```json
+{
+  "titulo": "Semana de oración",
+  "detalle": "Del 21 al 27 de julio, 19:30.",
+  "imagen": "semana-oracion.jpg",
+  "hasta": "2026-07-27"
+}
+```
+
+La imagen aparece como miniatura dentro del anuncio.

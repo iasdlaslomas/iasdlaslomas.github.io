@@ -123,12 +123,15 @@
   .banner-ink .cta { background: var(--accent); color: var(--on-accent); }
   .banner-tint { background: var(--bg-tinted); color: var(--ink); border: var(--line-thin) solid var(--border-strong); }
   .banner-tint .cta { background: var(--accent); color: var(--on-accent); }
-  @media (max-width: 640px) { .banner { flex-direction: column; align-items: flex-start; } .banner .cta { margin-left: 0; } }
+  .banner img.foto { width: 148px; border-radius: var(--radius-md); flex: none; display: block; }
+  @media (max-width: 640px) { .banner { flex-direction: column; align-items: flex-start; } .banner .cta { margin-left: 0; } .banner img.foto { width: 100%; } }
 
   /* ---- Ministerios ---- */
-  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-5); }
   @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+  .mcard a.fb { display: inline-block; margin-top: var(--space-2); font-size: var(--text-sm); font-weight: 600; color: var(--accent-press); text-decoration: none; }
+  .mcard a.fb:hover { text-decoration: underline; }
   .mcard { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--shadow-sm); transition: box-shadow .2s ease, transform .2s ease; position: relative; overflow: hidden; }
   .mcard:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
   .mcard::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: var(--line-bold); background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
@@ -278,7 +281,7 @@
       </div>
       <div class="rule-line"></div>
     </div>
-    <div style="max-width: 620px;">
+    <div class="two-col">
       <div class="schedule">
         <div class="head">
           <div class="day">Sábado · Día del Señor</div>
@@ -297,6 +300,13 @@
           <div class="time">17:00</div>
           <div class="what"><b>Sociedad de Jóvenes</b><span>Alabanza, testimonios y comunión</span></div>
         </div>
+      </div>
+      <div class="schedule" id="programa-card" hidden>
+        <div class="head">
+          <div class="day" id="programa-fecha">Este sábado</div>
+          <div class="title">Encargados del programa</div>
+        </div>
+        <div id="programa-lista"></div>
       </div>
     </div>
   </div>
@@ -358,6 +368,14 @@
         <h3>Ministerio de Música</h3>
         <p>Coro y músicos que acompañan la adoración de cada sábado.</p>
         <span class="meta">Ensayos · [día]</span>
+      </article>
+      <article class="mcard">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 17 L30.5 21.5 L28 29 L20 29 L17.5 21.5 Z"/><path d="M24 17 L24 8.5"/><path d="M30.5 21.5 L38.5 19"/><path d="M28 29 L33 35.5"/><path d="M20 29 L15 35.5"/><path d="M17.5 21.5 L9.5 19"/></svg>
+        </div>
+        <h3>Fútbol Adventista</h3>
+        <p>Deporte, compañerismo y testimonio dentro y fuera de la cancha.</p>
+        <a class="fb" href="https://www.facebook.com/ministeriodefutboladventista" target="_blank" rel="noopener">Facebook →</a>
       </article>
     </div>
   </div>
@@ -446,6 +464,14 @@
       activos.forEach(function (a, i) {
         var b = document.createElement('div');
         b.className = 'banner ' + (estilos.indexOf('banner-' + a.estilo) >= 0 ? 'banner-' + a.estilo : estilos[i % estilos.length]);
+        if (a.imagen) {
+          var img = document.createElement('img');
+          img.className = 'foto';
+          img.src = a.imagen;
+          img.alt = a.titulo;
+          img.loading = 'lazy';
+          b.appendChild(img);
+        }
         var caja = document.createElement('div');
         if (a.etiqueta) {
           var lead = document.createElement('div');
@@ -478,6 +504,46 @@
       if (link) link.hidden = false;
     })
     .catch(function () { /* sin anuncios.json → la sección queda oculta */ });
+})();
+
+// Programa del sábado: se alimenta de programa.json (editable en GitHub).
+// Se oculta solo si no hay archivo o la fecha ya pasó.
+(function () {
+  fetch('programa.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (p) {
+      if (!p || !p.partes || !p.partes.length) return;
+      if (p.fecha && new Date(p.fecha + 'T23:59:59') < new Date()) return;
+      var cont = document.getElementById('programa-lista');
+      p.partes.forEach(function (x) {
+        if (!x || !x.parte) return;
+        var s = document.createElement('div');
+        s.className = 'slot';
+        var t = document.createElement('div');
+        t.className = 'time';
+        t.textContent = x.hora || '·';
+        s.appendChild(t);
+        var w = document.createElement('div');
+        w.className = 'what';
+        var b = document.createElement('b');
+        b.textContent = x.parte;
+        w.appendChild(b);
+        if (x.encargado) {
+          var sp = document.createElement('span');
+          sp.textContent = x.encargado;
+          w.appendChild(sp);
+        }
+        s.appendChild(w);
+        cont.appendChild(s);
+      });
+      if (p.fecha) {
+        var f = new Date(p.fecha + 'T12:00:00');
+        document.getElementById('programa-fecha').textContent =
+          'Sábado ' + f.toLocaleDateString('es-MX', { day: 'numeric', month: 'long' });
+      }
+      document.getElementById('programa-card').hidden = false;
+    })
+    .catch(function () { /* sin programa.json → la tarjeta queda oculta */ });
 })();
 </script>
 </body>

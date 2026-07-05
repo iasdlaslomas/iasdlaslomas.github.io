@@ -1,0 +1,11 @@
+{
+  "fecha": "2026-07-11",
+  "partes": [
+    { "hora": "9:30",  "parte": "Escuela Sabática",         "encargado": "[Nombre]" },
+    { "hora": "10:40", "parte": "Repaso de la lección",     "encargado": "[Nombre]" },
+    { "hora": "11:00", "parte": "Bienvenida y anuncios",    "encargado": "[Nombre]" },
+    { "hora": "11:15", "parte": "Alabanza",                 "encargado": "Ministerio de Música" },
+    { "hora": "11:40", "parte": "Mensaje",                  "encargado": "[Predicador]" },
+    { "hora": "17:00", "parte": "Sociedad de Jóvenes",      "encargado": "[Nombre]" }
+  ]
+}
