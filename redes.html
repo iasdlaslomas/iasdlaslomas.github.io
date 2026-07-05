@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Videos y redes — IASD Las Lomas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: var(--leading-normal); }
+  .wrap { max-width: 1024px; margin: 0 auto; padding: 0 var(--space-6); }
+  section { padding: clamp(2.5rem, 6vh, 4rem) 0; }
+
+  header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-crema-100) 90%, transparent); backdrop-filter: blur(10px); border-bottom: var(--line-thin) solid var(--border); }
+  .nav { display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) var(--space-6); max-width: 1120px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--ink); }
+  .brand svg { width: 40px; height: auto; stroke: var(--accent-press); }
+  .brand .name { font-weight: 700; letter-spacing: var(--tracking-wider); font-size: var(--text-sm); text-transform: uppercase; }
+  .brand .desc { display: block; font-family: var(--font-script); font-style: italic; font-size: var(--text-xs); letter-spacing: 0; text-transform: none; color: var(--ink-muted); }
+  .nav nav { margin-left: auto; display: flex; gap: var(--space-5); align-items: center; }
+  .nav nav a { color: var(--ink-soft); text-decoration: none; font-size: var(--text-sm); font-weight: 600; }
+  .nav nav a:hover, .nav nav a.actual { color: var(--accent-press); }
+  @media (max-width: 820px) { .nav nav a:not(.actual) { display: none; } }
+
+  .hero-mini { background: var(--bg-inverted); color: var(--ink-on-dark); padding: clamp(2.5rem, 6vh, 4rem) 0; }
+  .hero-mini .kicker { color: var(--color-cielo-300); }
+  .hero-mini h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: var(--space-2) 0 0; letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
+  .hero-mini p { color: var(--color-crema-200); margin: var(--space-3) 0 0; max-width: 52ch; }
+  .kicker { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; font-weight: 700; color: var(--accent-press); }
+  .loma { display: block; width: 100%; height: 48px; }
+
+  h2.titulo { font-size: var(--text-2xl); font-weight: 600; letter-spacing: var(--tracking-tight); margin: 0; }
+  .cat-head { display: flex; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-5); }
+  .cat-head .rule-line { flex: 1; height: var(--line-thin); background: var(--border-strong); align-self: center; }
+
+  .vgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+  @media (max-width: 900px) { .vgrid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .vgrid { grid-template-columns: 1fr; } }
+  .video { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); text-decoration: none; color: var(--ink); display: flex; flex-direction: column; transition: box-shadow .2s ease, transform .2s ease; }
+  .video:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  .video .thumb { position: relative; aspect-ratio: 16/9; background: var(--color-carbon-900); }
+  .video .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .video .thumb .play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .video .thumb .play span { width: 48px; height: 48px; border-radius: var(--radius-pill); background: color-mix(in srgb, var(--color-carbon-900) 70%, transparent); display: flex; align-items: center; justify-content: center; }
+  .video .thumb .play svg { width: 18px; height: 18px; fill: var(--color-crema-100); margin-left: 3px; }
+  .video .body { padding: var(--space-4); }
+  .video h3 { margin: 0 0 var(--space-1); font-size: var(--text-base); font-weight: 600; line-height: var(--leading-tight); }
+  .video .fecha { font-size: var(--text-xs); color: var(--ink-muted); letter-spacing: var(--tracking-wide); text-transform: uppercase; font-weight: 600; }
+  .vacio { color: var(--ink-muted); background: var(--bg-elevated); border: var(--line-thin) dashed var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-5); text-align: center; }
+
+  .redes-band { background: var(--bg-inverted); color: var(--ink-on-dark); }
+  .redes-band .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .redes-band h2 { font-size: var(--text-2xl); margin: 0 0 var(--space-3); }
+  .redes-band p { color: var(--color-crema-200); margin: 0 0 var(--space-5); max-width: 44ch; }
+  .redes-band .botones { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+  .btn { font-family: var(--font-body); font-weight: 600; letter-spacing: var(--tracking-wide); border: var(--line-med) solid transparent; border-radius: var(--radius-md); cursor: pointer; line-height: 1; display: inline-flex; align-items: center; gap: var(--space-2); text-decoration: none; font-size: var(--text-sm); padding: 12px 22px; }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-on-dark { background: transparent; color: var(--ink-on-dark); border-color: var(--color-crema-300); }
+  .btn-on-dark:hover { background: var(--ink-on-dark); color: var(--ink); }
+  .fb-plugin { border: var(--line-thin) solid var(--color-carbon-600); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-carbon-900); min-height: 500px; }
+  .fb-plugin iframe { width: 100%; height: 500px; border: 0; display: block; }
+  @media (max-width: 820px) { .redes-band .wrap { grid-template-columns: 1fr; } }
+
+  footer { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-6) 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: var(--space-5); align-items: center; justify-content: space-between; max-width: 1120px; }
+  footer small { color: var(--color-gris-400); font-size: var(--text-xs); }
+  footer a { color: var(--color-cielo-300); text-decoration: none; font-size: var(--text-sm); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 160 120" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14,102 Q80,88 146,102"/><path d="M36,22 L54,16 L54,94 L36,94 Z"/><line x1="54" y1="12" x2="54" y2="94"/><line x1="42" y1="48" x2="98" y2="48"/><path d="M62,48 L110,48 L110,94 L62,94 Z"/><line x1="110" y1="48" x2="74" y2="94"/>
+      </svg>
+      <span>
+        <span class="name">Las Lomas</span>
+        <span class="desc">Iglesia Adventista del Séptimo Día</span>
+      </span>
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="anuncios.html">Anuncios</a>
+      <a href="ministerios.html">Ministerios</a>
+      <a href="redes.html" class="actual">Redes</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-mini">
+  <div class="wrap">
+    <span class="kicker">Videos y redes sociales</span>
+    <h1>Revive cada programa</h1>
+    <p>Los cultos y programas más recientes del canal de la iglesia — haz clic en cualquier video para verlo en YouTube.</p>
+  </div>
+</div>
+<svg class="loma" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,48 L0,40 Q720,-22 1440,40 L1440,48 Z" fill="var(--color-carbon-800)" transform="scale(1,-1) translate(0,-48)"/>
+</svg>
+
+<section id="divino">
+  <div class="wrap">
+    <div class="cat-head"><h2 class="titulo">Escuela Sabática y Culto Divino</h2><div class="rule-line"></div></div>
+    <div class="vgrid" id="lista-divino"></div>
+  </div>
+</section>
+
+<section id="joven" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="cat-head"><h2 class="titulo">Culto Joven</h2><div class="rule-line"></div></div>
+    <div class="vgrid" id="lista-joven"></div>
+  </div>
+</section>
+
+<section id="especiales" style="padding-top: 0;" hidden>
+  <div class="wrap">
+    <div class="cat-head"><h2 class="titulo">Programas especiales</h2><div class="rule-line"></div></div>
+    <div class="vgrid" id="lista-especial"></div>
+  </div>
+</section>
+
+<section class="redes-band">
+  <div class="wrap">
+    <div>
+      <h2>Síguenos en redes</h2>
+      <p>Transmisiones en vivo, anuncios y la vida de la iglesia día a día. Síguenos para no perderte nada.</p>
+      <div class="botones">
+        <a class="btn btn-primary" href="https://www.youtube.com/@IASDLasLomas" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn btn-on-dark" href="https://www.facebook.com/IASDLasLomas" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-on-dark" href="https://www.instagram.com/iasdlaslomas/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="fb-plugin">
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIASDLasLomas&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false" title="Facebook — IASD Las Lomas" loading="lazy" allow="encrypted-media" scrolling="no"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al inicio</a>
+    <small>© 2026 IASD Las Lomas · iasdlaslomas.com</small>
+  </div>
+</footer>
+
+<script>
+// Los videos vienen de videos.json, que un robot de GitHub (Actions) regenera
+// automáticamente desde el RSS del canal de YouTube. Ver .github/workflows/videos.yml
+(function () {
+  var MAX = 6;
+  fetch('videos.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (data) {
+      var cats = { divino: [], joven: [], especial: [] };
+      (data.videos || []).forEach(function (v) {
+        if (v && v.id && cats[v.cat]) cats[v.cat].push(v);
+      });
+      Object.keys(cats).forEach(function (cat) {
+        var cont = document.getElementById('lista-' + cat);
+        if (!cont) return;
+        var lista = cats[cat].slice(0, MAX);
+        if (!lista.length) {
+          if (cat === 'especial') return; // la sección queda oculta
+          var p = document.createElement('p');
+          p.className = 'vacio';
+          p.textContent = 'Pronto habrá videos aquí.';
+          cont.appendChild(p);
+          return;
+        }
+        if (cat === 'especial') document.getElementById('especiales').hidden = false;
+        lista.forEach(function (v) {
+          var a = document.createElement('a');
+          a.className = 'video';
+          a.href = 'https://www.youtube.com/watch?v=' + v.id;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          var th = document.createElement('div');
+          th.className = 'thumb';
+          var img = document.createElement('img');
+          img.src = 'https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg';
+          img.alt = v.titulo;
+          img.loading = 'lazy';
+          th.appendChild(img);
+          var play = document.createElement('div');
+          play.className = 'play';
+          play.innerHTML = '<span><svg viewBox="0 0 24 24"><path d="M6 4 L20 12 L6 20 Z"/></svg></span>';
+          th.appendChild(play);
+          a.appendChild(th);
+          var body = document.createElement('div');
+          body.className = 'body';
+          var h = document.createElement('h3');
+          h.textContent = v.titulo;
+          body.appendChild(h);
+          if (v.fecha) {
+            var f = new Date(v.fecha + 'T12:00:00');
+            var fe = document.createElement('div');
+            fe.className = 'fecha';
+            fe.textContent = f.toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' });
+            body.appendChild(fe);
+          }
+          a.appendChild(body);
+          cont.appendChild(a);
+        });
+      });
+    })
+    .catch(function () {
+      ['divino', 'joven'].forEach(function (cat) {
+        var p = document.createElement('p');
+        p.className = 'vacio';
+        p.innerHTML = 'Visita nuestro <a href="https://www.youtube.com/@IASDLasLomas" target="_blank" rel="noopener">canal de YouTube</a> para ver los programas.';
+        document.getElementById('lista-' + cat).appendChild(p);
+      });
+    });
+})();
+</script>
+</body>
+</html>
