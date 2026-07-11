@@ -1,0 +1,851 @@
+{
+ "eventos": [
+  {
+   "inicio": "2026-07-20",
+   "titulo": "Cierre de inscripciones — ON FIRE Junior Camp",
+   "categoria": "iglesia",
+   "detalle": "forms.gle/XeixQ3PMi7aGZLBA7"
+  },
+  {
+   "inicio": "2026-08-02",
+   "fin": "2026-08-09",
+   "titulo": "ON FIRE — Junior Summer Camp 2026",
+   "categoria": "iglesia",
+   "detalle": "Campamento La Morita · 10 a 15 años"
+  },
+  {
+   "inicio": "2025-10-01",
+   "titulo": "Caravana de la Victoria",
+   "categoria": "asociacion",
+   "fin": "2025-10-11"
+  },
+  {
+   "inicio": "2025-10-03",
+   "titulo": "Recepción de sábado en familia",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-10-04",
+   "titulo": "Capacitación nuevos dirigentes zona metro",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-10-04",
+   "titulo": "Colportores DIA",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-10-04",
+   "titulo": "Día de ayuno y oración, sábado en tu comunidad",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-10-10",
+   "titulo": "Fin de semana mundial del ministerio de campus públicos",
+   "categoria": "asociacion",
+   "fin": "2025-10-12"
+  },
+  {
+   "inicio": "2025-10-11",
+   "titulo": "Día de la Familia Pastoral",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-10-12",
+   "titulo": "Entrenamiento evangelistas UMN",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-10-12",
+   "titulo": "Semana de oración infantil",
+   "categoria": "asociacion",
+   "fin": "2025-10-17"
+  },
+  {
+   "inicio": "2025-10-12",
+   "titulo": "Congreso Regional de Colportores Noreste-Regio, Mazatlán",
+   "categoria": "asociacion",
+   "fin": "2025-10-16"
+  },
+  {
+   "inicio": "2025-10-19",
+   "titulo": "Reunión de SIEMA",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-10-18",
+   "titulo": "Día del niño adventista",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-10-25",
+   "titulo": "Capacitación de maestros de escuela sabática zona metro",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-11-01",
+   "titulo": "Capacitación de maestros de escuela sabática zona sur",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-11-02",
+   "titulo": "Operación bálsamo",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-11-08",
+   "titulo": "Concierto de gratitud JA",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-11-09",
+   "titulo": "Curso Básico de Colportores",
+   "categoria": "asociacion",
+   "fin": "2025-11-15"
+  },
+  {
+   "inicio": "2025-11-14",
+   "titulo": "Camporee de Guías Mayores",
+   "categoria": "asociacion",
+   "fin": "2025-11-16"
+  },
+  {
+   "inicio": "2025-11-22",
+   "titulo": "Evangelismo con Pastores de USA",
+   "categoria": "asociacion",
+   "fin": "2025-11-29"
+  },
+  {
+   "inicio": "2025-11-24",
+   "titulo": "Lanzamientos de evangelismo 2026 UMN",
+   "categoria": "asociacion",
+   "fin": "2025-11-27"
+  },
+  {
+   "inicio": "2025-11-26",
+   "titulo": "Junta Directiva de fin de año",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-11-29",
+   "titulo": "Concilios de Mayordomía por zonas por la tarde",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-11-30",
+   "titulo": "Semana de Mayordomía y Gratitud – Adultos e infantil",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-01",
+   "titulo": "Semana de Mayordomía y Gratitud– adultos e infantil",
+   "categoria": "asociacion",
+   "fin": "2025-12-06"
+  },
+  {
+   "inicio": "2025-12-06",
+   "titulo": "Capacitación Evangelismo zona sierra",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-07",
+   "titulo": "Evaluación MP",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-12",
+   "titulo": "Retiro para Solteros",
+   "categoria": "asociacion",
+   "fin": "2025-12-14"
+  },
+  {
+   "inicio": "2025-12-13",
+   "titulo": "Festival de Talento Infantil",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-13",
+   "titulo": "Ofrenda de Gratitud",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-14",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-15",
+   "titulo": "Reunión de gratitud colportores",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-20",
+   "titulo": "Operación Emanuel",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-20",
+   "titulo": "Sábado de Restitución del Diezmo",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-21",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-27",
+   "titulo": "Ofrenda de Gratitud",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2025-12-31",
+   "titulo": "Ofrenda de Gratitud",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-01-02",
+   "titulo": "Recepción de sábado en familia",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-01-03",
+   "titulo": "Día mundial de ayuno y oración y sábado en tu comunidad",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-01-07",
+   "titulo": "Diez días de oración (Adultos, Jóvenes, Mujeres, Niños y Adolescentes)",
+   "categoria": "asociacion",
+   "fin": "2026-01-17"
+  },
+  {
+   "inicio": "2026-01-10",
+   "titulo": "Concilio de Secretarios de Iglesia Local Virtual",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-01-11",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-01-16",
+   "titulo": "Cumbre de Liderazgo JA",
+   "categoria": "asociacion",
+   "fin": "2026-01-18"
+  },
+  {
+   "inicio": "2026-01-18",
+   "titulo": "Curso de colportaje avanzado",
+   "categoria": "asociacion",
+   "fin": "2026-01-21"
+  },
+  {
+   "inicio": "2026-01-18",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-01-24",
+   "titulo": "Capacitaciones nuevos dirigentes zona metropolitana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-01-25",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-01-31",
+   "titulo": "Capacitaciones nuevos dirigentes zona sur",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-01",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-07",
+   "titulo": "Escuela de Evangelismo en GP",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-07",
+   "titulo": "Semana del hogar cristiano",
+   "categoria": "asociacion",
+   "fin": "2026-02-14"
+  },
+  {
+   "inicio": "2026-02-08",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-14",
+   "titulo": "Congreso de ancianos y SEDAS",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-14",
+   "titulo": "Día del anciano y encargado de iglesia",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-15",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-15",
+   "titulo": "Curso básico de colportaje",
+   "categoria": "asociacion",
+   "fin": "2026-02-20"
+  },
+  {
+   "inicio": "2026-02-21",
+   "titulo": "Santa Convocación",
+   "categoria": "asociacion",
+   "fin": "2026-02-28"
+  },
+  {
+   "inicio": "2026-02-21",
+   "titulo": "Culto joven amor y amistad Fesja NL",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-21",
+   "titulo": "Servicios comunitarios zona metropolitana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-22",
+   "titulo": "Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-22",
+   "titulo": "Taller EBV Virtual - DIA",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-02-28",
+   "titulo": "Culto joven amor y amistad Fesja Sur",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-03-01",
+   "titulo": "Finaliza Reto Mente Sana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-03-07",
+   "titulo": "Congreso de Min. de la Mujer",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-03-07",
+   "titulo": "Día Internacional de Oración de la Mujer",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-03-08",
+   "titulo": "Congreso de Colportores UMN",
+   "categoria": "asociacion",
+   "fin": "2026-03-12"
+  },
+  {
+   "inicio": "2026-03-08",
+   "titulo": "Evaluación MP",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-03-14",
+   "titulo": "Graduación evangelistas UMN",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-03-13",
+   "titulo": "Camporee de Aventureros",
+   "categoria": "asociacion",
+   "fin": "2026-03-15"
+  },
+  {
+   "inicio": "2026-03-16",
+   "titulo": "Semana de evangelismo juvenil",
+   "categoria": "asociacion",
+   "fin": "2026-03-21"
+  },
+  {
+   "inicio": "2026-03-15",
+   "titulo": "Semana de Retos JA",
+   "categoria": "asociacion",
+   "fin": "2026-03-20"
+  },
+  {
+   "inicio": "2026-03-21",
+   "titulo": "Día mundial de la juventud adventista",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-03-21",
+   "titulo": "Entrega del Libro Misionero",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-03-28",
+   "titulo": "Concilio de diáconos y diaconisas por zonas por la tarde",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-04-01",
+   "titulo": "Camporee de Conquistadores UMN",
+   "categoria": "asociacion",
+   "fin": "2026-04-05"
+  },
+  {
+   "inicio": "2026-04-11",
+   "titulo": "Evaluación MP",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-04-11",
+   "titulo": "Laboratorio MIA",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-04-11",
+   "titulo": "Salud espiritual en GP",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-04-12",
+   "titulo": "Laboratorio EBV - Noreste",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-04-18",
+   "titulo": "1ª Etapa Evangelismo Público e Infantil",
+   "categoria": "asociacion",
+   "fin": "2026-04-25"
+  },
+  {
+   "inicio": "2026-04-18",
+   "titulo": "Día del colportor",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-04-23",
+   "titulo": "Operación Caleb",
+   "categoria": "asociacion",
+   "fin": "2026-04-26"
+  },
+  {
+   "inicio": "2026-04-26",
+   "titulo": "Congreso de Comunicación - Noreste",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-05-02",
+   "titulo": "Día de los niños en riesgo",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-05-09",
+   "titulo": "Evaluación MP",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-05-09",
+   "titulo": "Iglesia del Mañana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-05-13",
+   "titulo": "Evangelismo por aventureros",
+   "categoria": "asociacion",
+   "fin": "2026-05-16"
+  },
+  {
+   "inicio": "2026-05-16",
+   "titulo": "Día mundial del aventurero",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-05-17",
+   "titulo": "Celebración del día del aventurero virtual",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-05-19",
+   "titulo": "Curso básico de colportores",
+   "categoria": "asociacion",
+   "fin": "2026-05-22"
+  },
+  {
+   "inicio": "2026-05-23",
+   "titulo": "2ª Etapa Evangelismo Público e Infantil",
+   "categoria": "asociacion",
+   "fin": "2026-05-30"
+  },
+  {
+   "inicio": "2026-06-05",
+   "titulo": "Fesja NL Sur",
+   "categoria": "asociacion",
+   "fin": "2026-06-07"
+  },
+  {
+   "inicio": "2026-06-07",
+   "titulo": "Sesión Quinquenal UMN",
+   "categoria": "asociacion",
+   "fin": "2026-06-10"
+  },
+  {
+   "inicio": "2026-06-12",
+   "titulo": "Fesja NL",
+   "categoria": "asociacion",
+   "fin": "2026-06-14"
+  },
+  {
+   "inicio": "2026-06-13",
+   "titulo": "Día de énfasis de MM (Orar por mujeres viudas)",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-06-20",
+   "titulo": "Tour de nuevo bautizados",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-06-21",
+   "titulo": "Retiro espiritual colportores",
+   "categoria": "asociacion",
+   "fin": "2026-06-23"
+  },
+  {
+   "inicio": "2026-06-23",
+   "titulo": "Día mundial de las viudas",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-06-27",
+   "titulo": "Congreso de Matrimonios",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-06-28",
+   "titulo": "Reunión de Necesidades Especiales zona metropolitana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-07-05",
+   "titulo": "Sesión Cuadrienal Noreste",
+   "categoria": "asociacion",
+   "fin": "2026-07-06"
+  },
+  {
+   "inicio": "2026-07-11",
+   "titulo": "Culto joven por zonas",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-07-13",
+   "titulo": "Reunión de Colportores Evaluación Medio Año",
+   "categoria": "asociacion",
+   "fin": "2026-07-14"
+  },
+  {
+   "inicio": "2026-07-18",
+   "titulo": "Graduación AUPA",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-07-19",
+   "titulo": "Campamento de verano para menores",
+   "categoria": "asociacion",
+   "fin": "2026-07-26"
+  },
+  {
+   "inicio": "2026-07-25",
+   "titulo": "Capacitación evangelismo zona Guadalupe (Zertuche, Filadelfia,",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-08-01",
+   "titulo": "Capacitación evangelismo China y Valle del Pilón",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-08-01",
+   "titulo": "Día de énfasis de Min. infantil",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-08-08",
+   "titulo": "Evaluación MP - UMN",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-08-09",
+   "titulo": "Semana de oración JA",
+   "categoria": "asociacion",
+   "fin": "2026-08-15"
+  },
+  {
+   "inicio": "2026-08-15",
+   "titulo": "Capacitación evangelismo zona 1 Montemorelos (Universidad, Cercado,",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-08-22",
+   "titulo": "Día de Prevención del abuso MM (Enditnow)",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-08-29",
+   "titulo": "Semana de publicaciones",
+   "categoria": "asociacion",
+   "fin": "2026-08-31"
+  },
+  {
+   "inicio": "2026-08-29",
+   "titulo": "Capacitación evangelismo zona 2 Montemorelos (Del Pueblo, Sabinos,",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-08-30",
+   "titulo": "Reunión de necesidades especiales zona sur",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-08-30",
+   "titulo": "Semana de publicaciones",
+   "categoria": "asociacion",
+   "fin": "2026-08-31"
+  },
+  {
+   "inicio": "2026-09-01",
+   "titulo": "Semana de publicaciones",
+   "categoria": "asociacion",
+   "fin": "2026-09-05"
+  },
+  {
+   "inicio": "2026-09-11",
+   "titulo": "Fin de semana de evangelismo en GP",
+   "categoria": "asociacion",
+   "fin": "2026-09-12"
+  },
+  {
+   "inicio": "2026-09-13",
+   "titulo": "Semana de la voz del conquistador",
+   "categoria": "asociacion",
+   "fin": "2026-09-18"
+  },
+  {
+   "inicio": "2026-09-19",
+   "titulo": "Día mundial del conquistador",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-09-19",
+   "titulo": "Evaluación MP UMN",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-09-20",
+   "titulo": "Semana de la unidad familiar",
+   "categoria": "asociacion",
+   "fin": "2026-09-26"
+  },
+  {
+   "inicio": "2026-09-25",
+   "titulo": "Hogares de Esperanza",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-09-27",
+   "titulo": "Hogares de Esperanza",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-09-27",
+   "titulo": "Servicios comunitarios zona metropolitana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-01",
+   "titulo": "Caravana de la Victoria",
+   "categoria": "asociacion",
+   "fin": "2026-10-10"
+  },
+  {
+   "inicio": "2026-10-02",
+   "titulo": "Recepción de sábado en familia",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-03",
+   "titulo": "Día mundial de ayuno y oración y sábado en tu comunidad",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-03",
+   "titulo": "Revisión de Cuadernillos zona metropolitana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-04",
+   "titulo": "Revisión de Cuadernillos zona sur",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-10",
+   "titulo": "Día de la familia ministerial",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-10",
+   "titulo": "Evaluación MP",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-11",
+   "titulo": "Semana de oración infantil",
+   "categoria": "asociacion",
+   "fin": "2026-10-16"
+  },
+  {
+   "inicio": "2026-10-17",
+   "titulo": "Día del niño adventista",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-16",
+   "titulo": "Fin de semana mundial del ministerio en campus públicos",
+   "categoria": "asociacion",
+   "fin": "2026-10-18"
+  },
+  {
+   "inicio": "2026-10-18",
+   "titulo": "Certificación de clubes zona metropolitana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-18",
+   "titulo": "Reunión de colportores - Evaluación",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-10-24",
+   "titulo": "Evangelismo Público e Infantil",
+   "categoria": "asociacion",
+   "fin": "2026-10-31"
+  },
+  {
+   "inicio": "2026-10-25",
+   "titulo": "Certificación de clubes zona Sur",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-11-01",
+   "titulo": "Semana de oración para colportores virtual",
+   "categoria": "asociacion",
+   "fin": "2026-11-07"
+  },
+  {
+   "inicio": "2026-11-02",
+   "titulo": "Operación Bálsamo",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-11-07",
+   "titulo": "Evaluación MP UMN",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-11-07",
+   "titulo": "Inscripción Programa de Salud UMN",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-11-07",
+   "titulo": "Lanzamiento de evangelismo UMN",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-11-13",
+   "titulo": "Camporee de Guías Mayores",
+   "categoria": "asociacion",
+   "fin": "2026-11-15"
+  },
+  {
+   "inicio": "2026-11-20",
+   "titulo": "Fin de semana de evangelismo en GP",
+   "categoria": "asociacion",
+   "fin": "2026-11-22"
+  },
+  {
+   "inicio": "2026-11-28",
+   "titulo": "Capacitación de maestros de escuela sabática zona metropolitana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-11-28",
+   "titulo": "Congreso de Mayordomía",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-11-29",
+   "titulo": "Laboratorio Infantil de Escuela Sabática",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-12-04",
+   "titulo": "Cumbre de Liderazgo JA",
+   "categoria": "asociacion",
+   "fin": "2026-12-06"
+  },
+  {
+   "inicio": "2026-12-05",
+   "titulo": "Rendición de cuentas MP",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-12-05",
+   "titulo": "Semana de mayordomía y gratitud – Adultos e Infantil",
+   "categoria": "asociacion",
+   "fin": "2026-12-12"
+  },
+  {
+   "inicio": "2026-12-12",
+   "titulo": "Operación Emanuel",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-12-12",
+   "titulo": "Reunión de necesidades especiales zona metropolitana",
+   "categoria": "asociacion"
+  },
+  {
+   "inicio": "2026-12-14",
+   "titulo": "Reunión de gratitud de colportores",
+   "categoria": "asociacion"
+  }
+ ],
+ "recurrentes": [
+  {
+   "diaSemana": 3,
+   "titulo": "Study & Running · 6:30 PM",
+   "detalle": "Parque Central TEC"
+  },
+  {
+   "diaSemana": 5,
+   "titulo": "Recepción de sábado · 7:00 PM"
+  },
+  {
+   "diaSemana": 6,
+   "titulo": "Escuela Sabática 9:30 · Culto Divino 11:00 · Culto Joven 18:30"
+  }
+ ]
+}
