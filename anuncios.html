@@ -55,6 +55,8 @@
   .vacio { color: var(--ink-muted); font-size: var(--text-base); background: var(--bg-elevated); border: var(--line-thin) dashed var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center; }
 
   h2.titulo { font-size: var(--text-2xl); font-weight: 600; letter-spacing: var(--tracking-tight); margin: 0 0 var(--space-5); }
+  h2.titulo a.abrir-canva { display: inline-block; vertical-align: middle; margin-left: var(--space-4); font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-wide); color: var(--accent-press); text-decoration: none; border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-pill); padding: 4px 14px; }
+  h2.titulo a.abrir-canva:hover { background: var(--bg-tinted); }
   .schedule { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
   .schedule .head { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-4) var(--space-5); }
   .schedule .head .day { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-cielo-300); }
@@ -162,6 +164,20 @@
       var activos = (lista || []).filter(function (a) {
         return a && a.titulo && (!a.hasta || new Date(a.hasta + 'T23:59:59') >= hoy);
       });
+      // Entrada especial {"tipo":"canva","enlace":...}: botón para ver el deck original.
+      var canva = (lista || []).find(function (a) {
+        return a && a.tipo === 'canva' && a.enlace && (!a.hasta || new Date(a.hasta + 'T23:59:59') >= hoy);
+      });
+      if (canva) {
+        var h2an = document.querySelector('h2.titulo');
+        if (h2an) {
+          var ac = document.createElement('a');
+          ac.className = 'abrir-canva';
+          ac.href = canva.enlace; ac.target = '_blank'; ac.rel = 'noopener';
+          ac.textContent = 'Ver versión de Canva ↗';
+          h2an.appendChild(ac);
+        }
+      }
       if (!activos.length) { document.getElementById('anuncios-vacio').hidden = false; return; }
       var cont = document.getElementById('anuncios-lista');
       activos.forEach(function (a, i) {

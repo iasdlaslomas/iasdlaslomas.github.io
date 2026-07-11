@@ -1,82 +1,87 @@
 [
-  {
-    "etiqueta": "Club Soldiers · 10 a 15 años",
-    "titulo": "ON FIRE — Junior Summer Camp 2026",
-    "detalle": "Del 2 al 9 de agosto en el Campamento La Morita. Talleres de natación, música, arquitectura, repostería, pintura y actuación. Costo total $3,550. Cierre de inscripciones: 20 de julio.",
-    "enlace": "https://forms.gle/XeixQ3PMi7aGZLBA7",
-    "boton": "Inscribirse",
-    "estilo": "accent",
-    "hasta": "2026-07-20"
-  },
-  {
-    "etiqueta": "Escuela Sabática infantil",
-    "titulo": "Pedido de lecciones · 1er trimestre 2027",
-    "detalle": "Solicita las lecciones de las divisiones infantiles (enero–marzo 2027) en un sobre de diezmo con tu nombre, el importe y las divisiones: Bebés $110, Principiantes $88, Jardín $64, Primarios $64, Menores $53, Adolescentes $64, Jóvenes $42.",
-    "estilo": "tint",
-    "hasta": "2026-07-31"
-  },
-  {
-    "etiqueta": "Hoy · sábado 11",
-    "titulo": "Junta Directiva · 4:30 PM",
-    "detalle": "Se convoca a la Junta Directiva este sábado 11 de julio a las 4:30 PM.",
-    "estilo": "ink",
-    "hasta": "2026-07-11"
-  },
-  {
-    "etiqueta": "Club Soldiers · Hoy",
-    "titulo": "Visita al Asilo · 5:00 PM",
-    "detalle": "Acompaña al Club Soldiers en la visita al asilo esta tarde.",
-    "estilo": "tint",
-    "hasta": "2026-07-11"
-  },
-  {
-    "etiqueta": "Hoy · durante el culto",
-    "titulo": "Clase bíblica en el Salón de Jardín de Infantes",
-    "detalle": "Durante el tema del culto divino, para quienes desean aprender más de la Biblia (es necesario saber leer y escribir).",
-    "estilo": "accent",
-    "hasta": "2026-07-11"
-  },
-  {
-    "etiqueta": "Cada día · 5:00 AM y 2:00 PM",
-    "titulo": "Motivos de oración",
-    "detalle": "El derramamiento del Espíritu Santo, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos. Únete todos los días a las 5:00 AM y 2:00 PM.",
-    "estilo": "ink",
-    "hasta": "2026-08-31"
-  },
-  {
-    "etiqueta": "Todos los miércoles",
-    "titulo": "Study & Running · 6:30 PM",
-    "detalle": "Corre con propósito, crece en fe. Nos vemos en el Parque Central TEC. ¡Intégrate al grupo!",
-    "estilo": "tint",
-    "hasta": "2026-08-31"
-  },
-  {
-    "etiqueta": "Viernes · 7:00 PM",
-    "titulo": "Recepción de sábado",
-    "detalle": "Recibe el sábado en comunidad cada viernes por la tarde.",
-    "estilo": "ink",
-    "hasta": "2026-08-31"
-  },
-  {
-    "etiqueta": "Feligresía",
-    "titulo": "¿Comenzando o regresando? Actualiza tus datos",
-    "detalle": "Si estás comenzando a asistir o dejaste de asistir un tiempo, actualiza tus datos con el equipo de comunicación.",
-    "estilo": "tint",
-    "hasta": "2026-08-31"
-  },
-  {
-    "etiqueta": "Nuestro sitio",
-    "titulo": "Bienvenido a nuestro nuevo sitio web",
-    "detalle": "Comparte iasdlaslomas.com con tu familia y amigos.",
-    "estilo": "accent",
-    "hasta": "2026-07-18"
-  },
-  {
-    "etiqueta": "Transmisión en vivo",
-    "titulo": "Culto Divino cada sábado 11:00",
-    "detalle": "Acompáñanos por YouTube si no puedes asistir.",
-    "enlace": "https://www.youtube.com/@IASDLasLomas",
-    "boton": "Ver canal",
-    "estilo": "tint"
-  }
+ {
+  "etiqueta": "Club Soldiers · 10 a 15 años",
+  "titulo": "ON FIRE — Junior Summer Camp 2026",
+  "detalle": "Del 2 al 9 de agosto en el Campamento La Morita. Talleres de natación, música, arquitectura, repostería, pintura y actuación. Costo total $3,550. Cierre de inscripciones: 20 de julio.",
+  "enlace": "https://forms.gle/XeixQ3PMi7aGZLBA7",
+  "boton": "Inscribirse",
+  "estilo": "accent",
+  "hasta": "2026-07-20"
+ },
+ {
+  "etiqueta": "Escuela Sabática infantil",
+  "titulo": "Pedido de lecciones · 1er trimestre 2027",
+  "detalle": "Solicita las lecciones de las divisiones infantiles (enero–marzo 2027) en un sobre de diezmo con tu nombre, el importe y las divisiones: Bebés $110, Principiantes $88, Jardín $64, Primarios $64, Menores $53, Adolescentes $64, Jóvenes $42.",
+  "estilo": "tint",
+  "hasta": "2026-07-31"
+ },
+ {
+  "etiqueta": "Hoy · sábado 11",
+  "titulo": "Junta Directiva · 4:30 PM",
+  "detalle": "Se convoca a la Junta Directiva este sábado 11 de julio a las 4:30 PM.",
+  "estilo": "ink",
+  "hasta": "2026-07-11"
+ },
+ {
+  "etiqueta": "Club Soldiers · Hoy",
+  "titulo": "Visita al Asilo · 5:00 PM",
+  "detalle": "Acompaña al Club Soldiers en la visita al asilo esta tarde.",
+  "estilo": "tint",
+  "hasta": "2026-07-11"
+ },
+ {
+  "etiqueta": "Hoy · durante el culto",
+  "titulo": "Clase bíblica en el Salón de Jardín de Infantes",
+  "detalle": "Durante el tema del culto divino, para quienes desean aprender más de la Biblia (es necesario saber leer y escribir).",
+  "estilo": "accent",
+  "hasta": "2026-07-11"
+ },
+ {
+  "etiqueta": "Cada día · 5:00 AM y 2:00 PM",
+  "titulo": "Motivos de oración",
+  "detalle": "El derramamiento del Espíritu Santo, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos. Únete todos los días a las 5:00 AM y 2:00 PM.",
+  "estilo": "ink",
+  "hasta": "2026-08-31"
+ },
+ {
+  "etiqueta": "Todos los miércoles",
+  "titulo": "Study & Running · 6:30 PM",
+  "detalle": "Corre con propósito, crece en fe. Nos vemos en el Parque Central TEC. ¡Intégrate al grupo!",
+  "estilo": "tint",
+  "hasta": "2026-08-31"
+ },
+ {
+  "etiqueta": "Viernes · 7:00 PM",
+  "titulo": "Recepción de sábado",
+  "detalle": "Recibe el sábado en comunidad cada viernes por la tarde.",
+  "estilo": "ink",
+  "hasta": "2026-08-31"
+ },
+ {
+  "etiqueta": "Feligresía",
+  "titulo": "¿Comenzando o regresando? Actualiza tus datos",
+  "detalle": "Si estás comenzando a asistir o dejaste de asistir un tiempo, actualiza tus datos con el equipo de comunicación.",
+  "estilo": "tint",
+  "hasta": "2026-08-31"
+ },
+ {
+  "etiqueta": "Nuestro sitio",
+  "titulo": "Bienvenido a nuestro nuevo sitio web",
+  "detalle": "Comparte iasdlaslomas.com con tu familia y amigos.",
+  "estilo": "accent",
+  "hasta": "2026-07-18"
+ },
+ {
+  "etiqueta": "Transmisión en vivo",
+  "titulo": "Culto Divino cada sábado 11:00",
+  "detalle": "Acompáñanos por YouTube si no puedes asistir.",
+  "enlace": "https://www.youtube.com/@IASDLasLomas",
+  "boton": "Ver canal",
+  "estilo": "tint"
+ },
+ {
+  "tipo": "canva",
+  "enlace": "https://canva.link/ixrl7geaj5kzzl0",
+  "hasta": "2026-07-11"
+ }
 ]
