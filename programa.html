@@ -108,7 +108,6 @@
 
 <section id="programa">
   <div class="wrap">
-    <p class="nota-prep" id="nota-prep" hidden>📋 <span><b>Equipo de plataforma:</b> los recursos marcados en cada parte (micrófonos, pistas, proyección) se publican para prepararlos con anticipación y tener todo listo antes de iniciar el programa.</span></p>
     <div id="programa-bloques"></div>
     <div class="schedule" id="programa-card" hidden>
       <div class="head">
@@ -247,7 +246,6 @@
           cont.appendChild(card);
         });
         if (!pinto) throw 0;
-        if (hayRecursos) document.getElementById('nota-prep').hidden = false;
       } else if (p.partes && p.partes.length) {
         // Formato v1 (compatibilidad).
         var lista = document.getElementById('programa-lista');
