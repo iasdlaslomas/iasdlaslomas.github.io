@@ -40,6 +40,17 @@
     { "inicio": "12:09", "fin": "12:10", "seccion": "Oración final", "encargado": "Pr. Esteban Medina" },
     { "inicio": "12:10", "fin": "12:11", "seccion": "Cierre", "encargado": "Ángeles Godínez" }
    ]
+  },
+  {
+   "titulo": "Clausura EBV 2026",
+   "tema": "El Cofre del Tesoro",
+   "partes": [
+    {
+     "inicio": "5:00 PM",
+     "seccion": "Clausura de la Escuela Bíblica de Vacaciones",
+     "detalle": "Participación de los niños de la EBV. Hoy no hay culto joven — ¡toda la familia es bienvenida!"
+    }
+   ]
   }
  ]
 }
