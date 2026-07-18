@@ -1,224 +1,44 @@
 {
  "version": 2,
- "fecha": "2026-07-11",
+ "fecha": "2026-07-18",
  "bloques": [
   {
    "titulo": "Escuela Sabática",
-   "tema": "El mensaje de la cruz",
+   "tema": "Unidad en Cristo",
    "piano": "Alejandra Medina",
-   "batuta": "Roberto de Loera",
+   "batuta": "Jersón Cruz",
    "partes": [
-    {
-     "inicio": "9:30",
-     "fin": "9:32",
-     "seccion": "Bienvenida",
-     "encargado": "Mateo Palacios"
-    },
-    {
-     "inicio": "9:32",
-     "fin": "9:36",
-     "seccion": "Himno #299 — Hay vida en mirar",
-     "encargado": "Mateo Palacios",
-     "detalle": "Anuncia Mateo Palacios · dirige Roberto de Loera",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "9:36",
-     "fin": "9:39",
-     "seccion": "Lectura bíblica y oración de rodillas",
-     "encargado": "Antonio Palacios",
-     "detalle": "1 Corintios 1:18 — «El mensaje de la cruz es locura para los que se pierden, pero para los que se salvan es poder de Dios»"
-    },
-    {
-     "inicio": "9:40",
-     "fin": "9:44",
-     "seccion": "Nuevo Horizonte",
-     "encargado": "Danna Torres",
-     "detalle": "Discipulado: Discipulado inteligente"
-    },
-    {
-     "inicio": "9:44",
-     "fin": "9:48",
-     "seccion": "Himno #138 — De mi amante salvador",
-     "encargado": "Daisy",
-     "detalle": "Anuncia Daisy · dirige Roberto de Loera",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "9:49",
-     "fin": "9:54",
-     "seccion": "Misionero",
-     "encargado": "Uziel Díaz",
-     "detalle": "«Un té por un celular»"
-    },
-    {
-     "inicio": "9:55",
-     "fin": "10:40",
-     "seccion": "Repaso de la lección y oración",
-     "encargado": "Daisy",
-     "detalle": "Clase online",
-     "multimedia": "Transmisión en vivo"
-    },
-    {
-     "inicio": "10:40",
-     "fin": "10:43",
-     "seccion": "Himno #562 — Esparcid la luz de Cristo",
-     "encargado": "Daisy",
-     "detalle": "Anuncia Daisy · dirige Roberto de Loera",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "10:43",
-     "fin": "10:45",
-     "seccion": "Oración final y despedida",
-     "encargado": "Antonio Palacios"
-    }
+    { "inicio": "9:30", "fin": "9:32", "seccion": "Bienvenida", "encargado": "Carlos Murrieta" },
+    { "inicio": "9:32", "fin": "9:35", "seccion": "Himno #3 — Unidos en espíritu", "encargado": "Carlos Murrieta", "detalle": "Anuncia Carlos Murrieta", "multimedia": "Letra en pantalla" },
+    { "inicio": "9:35", "fin": "9:37", "seccion": "Lectura bíblica y oración de rodillas", "encargado": "Carlos Murrieta", "detalle": "1 Corintios 1:10 — «Les ruego hermanos, por el nombre de nuestro Señor Jesucristo, que hablen todos una misma cosa y que no haya entre ustedes divisiones. Antes, estén perfectamente unidos en una misma mente y un mismo parecer»" },
+    { "inicio": "9:37", "fin": "9:41", "seccion": "Nuevo Horizonte", "encargado": "Viviana Naranjo", "detalle": "Inversión: ofrenda de cumpleaños y agradecimiento" },
+    { "inicio": "9:42", "fin": "9:45", "seccion": "Himno #485 — Unidos en verdad", "multimedia": "Letra en pantalla" },
+    { "inicio": "9:46", "fin": "9:48", "seccion": "Misionero", "detalle": "Video: «Una pareja formada en el cielo»" },
+    { "inicio": "9:48", "fin": "10:40", "seccion": "Repaso de la lección y oración", "encargado": "Carlos Murrieta", "detalle": "Clase online: Antonio Palacios", "multimedia": "Transmisión en vivo" },
+    { "inicio": "10:40", "fin": "10:43", "seccion": "Especial", "encargado": "Gerzon Ramírez", "detalle": "Anuncia Carlos Murrieta" },
+    { "inicio": "10:44", "fin": "10:46", "seccion": "Oración final y despedida", "encargado": "Carlos Murrieta" }
    ]
   },
   {
    "titulo": "Culto Divino",
-   "tema": "Un regalo divino",
+   "tema": "Una parábola",
    "piano": "Alejandra Medina",
    "partes": [
-    {
-     "inicio": "11:00",
-     "fin": "11:03",
-     "seccion": "Promocionales",
-     "encargado": "Eliseo"
-    },
-    {
-     "inicio": "11:03",
-     "fin": "11:06",
-     "seccion": "Himno #33 — Doxología",
-     "encargado": "Roberto de Loera",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "11:06",
-     "fin": "11:07",
-     "seccion": "Invocación",
-     "encargado": "Pr. Eliezer Luna"
-    },
-    {
-     "inicio": "11:07",
-     "fin": "11:08",
-     "seccion": "Bienvenida",
-     "encargado": "Mario Rodríguez"
-    },
-    {
-     "inicio": "11:08",
-     "fin": "11:11",
-     "seccion": "Himno #147 — A Dios sea gloria",
-     "encargado": "Nicolás Beltrán",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "11:11",
-     "fin": "11:14",
-     "seccion": "Himno #366 — En Cristo hallo amigo",
-     "encargado": "Nicolás Beltrán",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "11:14",
-     "fin": "11:16",
-     "seccion": "Oración de rodillas",
-     "encargado": "Mario Rodríguez"
-    },
-    {
-     "inicio": "11:16",
-     "fin": "11:20",
-     "seccion": "Diezmos y ofrendas",
-     "encargado": "Nicolás Beltrán"
-    },
-    {
-     "inicio": "11:20",
-     "fin": "11:24",
-     "seccion": "Especial"
-    },
-    {
-     "inicio": "11:24",
-     "fin": "11:29",
-     "seccion": "Rincón Infantil",
-     "encargado": "Mario Rodríguez"
-    },
-    {
-     "inicio": "11:29",
-     "fin": "11:30",
-     "seccion": "Lectura bíblica",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Éxodo 20:8-11"
-    },
-    {
-     "inicio": "11:30",
-     "fin": "12:06",
-     "seccion": "Tema: «Un regalo divino»",
-     "encargado": "Pr. Eliezer Luna"
-    },
-    {
-     "inicio": "12:06",
-     "fin": "12:09",
-     "seccion": "Himno #538 — Hoy es el día de reposo",
-     "encargado": "Mario Rodríguez",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "12:09",
-     "fin": "12:10",
-     "seccion": "Oración final",
-     "encargado": "Pr. Eliezer Luna"
-    },
-    {
-     "inicio": "12:10",
-     "fin": "12:11",
-     "seccion": "Cierre",
-     "encargado": "Nicolás Beltrán"
-    }
-   ]
-  },
-  {
-   "titulo": "Culto Joven",
-   "tema": "Job 9–15",
-   "partes": [
-    {
-     "inicio": "18:30",
-     "seccion": "Worship",
-     "encargado": "Jerson",
-     "detalle": "2/3 cantos"
-    },
-    {
-     "seccion": "Bienvenida",
-     "encargado": "Carlos"
-    },
-    {
-     "seccion": "Dinámica",
-     "encargado": "Uziel Díaz"
-    },
-    {
-     "seccion": "Worship",
-     "encargado": "Jerson",
-     "detalle": "1 canto"
-    },
-    {
-     "seccion": "Kahoot",
-     "encargado": "Vanessa"
-    },
-    {
-     "seccion": "Lectura bíblica",
-     "encargado": "Carlos"
-    },
-    {
-     "seccion": "Reflexión",
-     "encargado": "Ptr. Antonio"
-    },
-    {
-     "seccion": "Canto final — «El día perfecto»",
-     "encargado": "Carlos"
-    },
-    {
-     "seccion": "Oración final",
-     "encargado": "Ptr. Antonio"
-    }
+    { "inicio": "11:00", "fin": "11:03", "seccion": "Promocionales", "encargado": "Eliseo" },
+    { "inicio": "11:03", "fin": "11:06", "seccion": "Himno #33 — Doxología", "encargado": "Gerson Cruz", "multimedia": "Letra en pantalla" },
+    { "inicio": "11:06", "fin": "11:07", "seccion": "Invocación", "encargado": "Pr. Esteban Medina" },
+    { "inicio": "11:07", "fin": "11:08", "seccion": "Bienvenida", "encargado": "Mario Rodríguez" },
+    { "inicio": "11:08", "fin": "11:11", "seccion": "Himno #12 — Todos juntos reunidos", "encargado": "Ángeles Godínez", "multimedia": "Letra en pantalla" },
+    { "inicio": "11:11", "fin": "11:14", "seccion": "Himno #269 — Prefiero a mi Cristo", "encargado": "Ángeles Godínez", "multimedia": "Letra en pantalla" },
+    { "inicio": "11:14", "fin": "11:16", "seccion": "Oración de rodillas", "encargado": "Mario Rodríguez" },
+    { "inicio": "11:16", "fin": "11:20", "seccion": "Diezmos y ofrendas", "encargado": "Ángeles Godínez", "detalle": "Ofertorio: Mateo Palacios" },
+    { "inicio": "11:20", "fin": "11:24", "seccion": "Especial" },
+    { "inicio": "11:24", "fin": "11:29", "seccion": "Rincón Infantil", "encargado": "Mario Rodríguez", "detalle": "Tiene el rincón: Ángeles Godínez" },
+    { "inicio": "11:29", "fin": "11:30", "seccion": "Lectura bíblica", "encargado": "Ángeles Godínez", "detalle": "Lucas 16:19-25" },
+    { "inicio": "11:30", "fin": "12:06", "seccion": "Tema: «Una parábola»", "encargado": "Pr. Esteban Medina" },
+    { "inicio": "12:06", "fin": "12:09", "seccion": "Himno #212 — A tu puerta Cristo está", "encargado": "Mario Rodríguez", "multimedia": "Letra en pantalla" },
+    { "inicio": "12:09", "fin": "12:10", "seccion": "Oración final", "encargado": "Pr. Esteban Medina" },
+    { "inicio": "12:10", "fin": "12:11", "seccion": "Cierre", "encargado": "Ángeles Godínez" }
    ]
   }
  ]

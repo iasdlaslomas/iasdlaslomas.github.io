@@ -1,5 +1,12 @@
 [
  {
+  "etiqueta": "Hoy · durante el culto",
+  "titulo": "La Fe de Jesús · niños y adolescentes",
+  "detalle": "Clase bíblica hoy durante el tema del culto divino, en el Salón de Jardín de Infantes. Para niños y adolescentes interesados en aprender más de la Biblia (es necesario saber leer y escribir).",
+  "estilo": "accent",
+  "hasta": "2026-07-18"
+ },
+ {
   "etiqueta": "Club Soldiers · 10 a 15 años",
   "titulo": "ON FIRE — Junior Summer Camp 2026",
   "detalle": "Del 2 al 9 de agosto en el Campamento La Morita. Talleres de natación, música, arquitectura, repostería, pintura y actuación. Costo total $3,550. Cierre de inscripciones: 20 de julio.",
@@ -16,30 +23,9 @@
   "hasta": "2026-07-31"
  },
  {
-  "etiqueta": "Hoy · sábado 11",
-  "titulo": "Junta Directiva · 4:30 PM",
-  "detalle": "Se convoca a la Junta Directiva este sábado 11 de julio a las 4:30 PM.",
-  "estilo": "ink",
-  "hasta": "2026-07-11"
- },
- {
-  "etiqueta": "Club Soldiers · Hoy",
-  "titulo": "Visita al Asilo · 5:00 PM",
-  "detalle": "Acompaña al Club Soldiers en la visita al asilo esta tarde.",
-  "estilo": "tint",
-  "hasta": "2026-07-11"
- },
- {
-  "etiqueta": "Hoy · durante el culto",
-  "titulo": "Clase bíblica en el Salón de Jardín de Infantes",
-  "detalle": "Durante el tema del culto divino, para quienes desean aprender más de la Biblia (es necesario saber leer y escribir).",
-  "estilo": "accent",
-  "hasta": "2026-07-11"
- },
- {
-  "etiqueta": "Cada día · 5:00 AM y 2:00 PM",
-  "titulo": "Motivos de oración",
-  "detalle": "El derramamiento del Espíritu Santo, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos. Únete todos los días a las 5:00 AM y 2:00 PM.",
+  "etiqueta": "Cada día · 5 AM, 2 PM y 9 PM",
+  "titulo": "Plan de Oración 529",
+  "detalle": "Únete donde te encuentres: casa, trabajo, escuela o viaje. Motivos: el derramamiento del Espíritu Santo en nuestra vida, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos (bautismo).",
   "estilo": "ink",
   "hasta": "2026-08-31"
  },
@@ -58,9 +44,9 @@
   "hasta": "2026-08-31"
  },
  {
-  "etiqueta": "Feligresía",
+  "etiqueta": "Secretaría de Iglesia",
   "titulo": "¿Comenzando o regresando? Actualiza tus datos",
-  "detalle": "Si estás comenzando a asistir o dejaste de asistir un tiempo, actualiza tus datos con el equipo de comunicación.",
+  "detalle": "Si estás comenzando a asistir o dejaste de asistir un tiempo, actualiza tus datos o tramita tu carta de membresía con la Secretaría de Iglesia.",
   "estilo": "tint",
   "hasta": "2026-08-31"
  },
@@ -81,7 +67,7 @@
  },
  {
   "tipo": "canva",
-  "enlace": "https://canva.link/ixrl7geaj5kzzl0",
-  "hasta": "2026-07-11"
+  "enlace": "https://canva.link/gs6bkbk26io1isk",
+  "hasta": "2026-07-18"
  }
 ]
