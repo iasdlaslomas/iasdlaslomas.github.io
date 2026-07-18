@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anuncios — IASD Las Lomas</title>
+<title>Programa del sábado — IASD Las Lomas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
@@ -39,24 +39,9 @@
   .kicker { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; font-weight: 700; color: var(--accent-press); }
   .loma { display: block; width: 100%; height: 48px; }
 
-  .banner { display: flex; align-items: center; gap: var(--space-5); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6); margin-bottom: var(--space-4); }
-  .banner .lead { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; opacity: .85; }
-  .banner h3 { margin: 2px 0 0; font-size: var(--text-xl); font-weight: 600; line-height: var(--leading-tight); }
-  .banner p { margin: 4px 0 0; font-size: var(--text-sm); opacity: .9; }
-  .banner .cta { margin-left: auto; flex: none; font-weight: 600; font-size: var(--text-sm); padding: 11px 20px; border-radius: var(--radius-md); white-space: nowrap; text-decoration: none; }
-  .banner-accent { background: var(--accent); color: var(--on-accent); }
-  .banner-accent .cta { background: var(--on-accent); color: var(--accent-press); }
-  .banner-ink { background: var(--bg-inverted); color: var(--ink-on-dark); }
-  .banner-ink .cta { background: var(--accent); color: var(--on-accent); }
-  .banner-tint { background: var(--bg-tinted); color: var(--ink); border: var(--line-thin) solid var(--border-strong); }
-  .banner-tint .cta { background: var(--accent); color: var(--on-accent); }
-  .banner img.foto { width: 148px; border-radius: var(--radius-md); flex: none; display: block; }
-  @media (max-width: 640px) { .banner { flex-direction: column; align-items: flex-start; } .banner .cta { margin-left: 0; } .banner img.foto { width: 100%; } }
   .vacio { color: var(--ink-muted); font-size: var(--text-base); background: var(--bg-elevated); border: var(--line-thin) dashed var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center; }
 
   h2.titulo { font-size: var(--text-2xl); font-weight: 600; letter-spacing: var(--tracking-tight); margin: 0 0 var(--space-5); }
-  h2.titulo a.abrir-canva { display: inline-block; vertical-align: middle; margin-left: var(--space-4); font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-wide); color: var(--accent-press); text-decoration: none; border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-pill); padding: 4px 14px; }
-  h2.titulo a.abrir-canva:hover { background: var(--bg-tinted); }
   .schedule { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
   .schedule .head { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-4) var(--space-5); }
   .schedule .head .day { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-cielo-300); }
@@ -76,9 +61,6 @@
   .schedule .head .ver-diseno:hover { color: var(--ink-on-dark); border-color: var(--color-cielo-300); }
   .schedule .pie { padding: var(--space-3) var(--space-5); background: var(--bg-tinted); font-size: var(--text-sm); color: var(--ink-soft); border-top: var(--line-thin) solid var(--border); }
   .nota-prep { display: flex; gap: var(--space-3); align-items: start; background: var(--bg-tinted); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); margin-bottom: var(--space-5); font-size: var(--text-sm); color: var(--accent-press); }
-  .solicitar-cta { margin-top: var(--space-5); font-size: var(--text-sm); }
-  .solicitar-cta a { color: var(--accent-press); font-weight: 600; text-decoration: none; }
-  .solicitar-cta a:hover { text-decoration: underline; }
 
   footer { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-6) 0; margin-top: var(--space-8); }
   footer .wrap { display: flex; flex-wrap: wrap; gap: var(--space-5); align-items: center; justify-content: space-between; max-width: 1120px; }
@@ -104,8 +86,8 @@
     </button>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="anuncios.html" class="actual">Anuncios</a>
-      <a href="programa.html">Programa</a>
+      <a href="anuncios.html">Anuncios</a>
+      <a href="programa.html" class="actual">Programa</a>
       <a href="calendario.html">Calendario</a>
       <a href="ministerios.html">Ministerios</a>
       <a href="redes.html">Redes</a>
@@ -117,25 +99,25 @@
 <div class="hero-mini">
   <div class="wrap">
     <span class="kicker">Vida de iglesia</span>
-    <h1>Anuncios</h1>
+    <h1>Programa del sábado</h1>
   </div>
 </div>
 <svg class="loma" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
   <path d="M0,48 L0,40 Q720,-22 1440,40 L1440,48 Z" fill="var(--color-carbon-800)" transform="scale(1,-1) translate(0,-48)"/>
 </svg>
 
-<section>
+<section id="programa">
   <div class="wrap">
-    <h2 class="titulo">Anuncios</h2>
-    <div id="anuncios-lista"></div>
-    <p class="vacio" id="anuncios-vacio" hidden>No hay anuncios por ahora — vuelve pronto.</p>
-    <p class="solicitar-cta">📨 ¿Tu ministerio o grupo tiene un evento que anunciar? <a href="solicitar.html">Solicita un anuncio →</a> <span style="color:var(--ink-muted);">(se reciben hasta el miércoles previo)</span></p>
-  </div>
-</section>
-
-<section id="programa" style="padding-top: 0;">
-  <div class="wrap">
-    <p class="vacio">📋 El programa del sábado ahora tiene su propia página: <a href="programa.html" style="color:var(--accent-press);font-weight:600;">ver el programa →</a></p>
+    <p class="nota-prep" id="nota-prep" hidden>📋 <span><b>Equipo de plataforma:</b> los recursos marcados en cada parte (micrófonos, pistas, proyección) se publican para prepararlos con anticipación y tener todo listo antes de iniciar el programa.</span></p>
+    <div id="programa-bloques"></div>
+    <div class="schedule" id="programa-card" hidden>
+      <div class="head">
+        <div class="day" id="programa-fecha">Este sábado</div>
+        <div class="title">Encargados del programa</div>
+      </div>
+      <div id="programa-lista"></div>
+    </div>
+    <p class="vacio" id="programa-vacio" hidden>El programa de este sábado aún no se publica.</p>
   </div>
 </section>
 
@@ -148,54 +130,143 @@
 
 <script>
 (function () {
-  var estilos = ['banner-accent', 'banner-ink', 'banner-tint'];
-  fetch('anuncios.json', { cache: 'no-store' })
+  fetch('programa.json', { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
-    .then(function (lista) {
-      var hoy = new Date();
-      var activos = (lista || []).filter(function (a) {
-        return a && a.titulo && (!a.hasta || new Date(a.hasta + 'T23:59:59') >= hoy);
-      });
-      // Entrada especial {"tipo":"canva","enlace":...}: botón para ver el deck original.
-      var canva = (lista || []).find(function (a) {
-        return a && a.tipo === 'canva' && a.enlace && (!a.hasta || new Date(a.hasta + 'T23:59:59') >= hoy);
-      });
-      if (canva) {
-        var h2an = document.querySelector('h2.titulo');
-        if (h2an) {
-          var ac = document.createElement('a');
-          ac.className = 'abrir-canva';
-          ac.href = canva.enlace; ac.target = '_blank'; ac.rel = 'noopener';
-          ac.textContent = 'Ver versión de Canva ↗';
-          h2an.appendChild(ac);
-        }
-      }
-      if (!activos.length) { document.getElementById('anuncios-vacio').hidden = false; return; }
-      var cont = document.getElementById('anuncios-lista');
-      activos.forEach(function (a, i) {
-        var b = document.createElement('div');
-        b.className = 'banner ' + (estilos.indexOf('banner-' + a.estilo) >= 0 ? 'banner-' + a.estilo : estilos[i % estilos.length]);
-        if (a.imagen) {
-          var img = document.createElement('img');
-          img.className = 'foto'; img.src = a.imagen; img.alt = a.titulo; img.loading = 'lazy';
-          b.appendChild(img);
-        }
-        var caja = document.createElement('div');
-        if (a.etiqueta) { var lead = document.createElement('div'); lead.className = 'lead'; lead.textContent = a.etiqueta; caja.appendChild(lead); }
-        var h = document.createElement('h3'); h.textContent = a.titulo; caja.appendChild(h);
-        if (a.detalle) { var p = document.createElement('p'); p.textContent = a.detalle; caja.appendChild(p); }
-        b.appendChild(caja);
-        if (a.enlace) {
-          var cta = document.createElement('a');
-          cta.className = 'cta'; cta.href = a.enlace; cta.target = '_blank'; cta.rel = 'noopener';
-          cta.textContent = a.boton || 'Más información';
-          b.appendChild(cta);
-        }
-        cont.appendChild(b);
-      });
-    })
-    .catch(function () { document.getElementById('anuncios-vacio').hidden = false; });
+    .then(function (p) {
+      if (!p) throw 0;
+      if (p.fecha && new Date(p.fecha + 'T23:59:59') < new Date()) throw 0;
 
+      function fechaLarga() {
+        if (!p.fecha) return 'Este sábado';
+        var f = new Date(p.fecha + 'T12:00:00');
+        return 'Sábado ' + f.toLocaleDateString('es-MX', { day: 'numeric', month: 'long' });
+      }
+      function textoRecursos(r) {
+        var t = [];
+        if (r.microfonosVoz) t.push(r.microfonosVoz + (r.microfonosVoz === 1 ? ' micrófono de voz' : ' micrófonos de voz'));
+        if (r.microfonosInstrumento) t.push(r.microfonosInstrumento + (r.microfonosInstrumento === 1 ? ' micrófono de instrumento' : ' micrófonos de instrumento'));
+        if (r.otros) t.push(r.otros);
+        return t.join(' · ');
+      }
+
+      // Enlaces a fuentes oficiales (no copiamos letras ni texto bíblico: derechos de autor).
+      function chipAbrir(url, texto) {
+        var a = document.createElement('a');
+        a.className = 'abrir';
+        a.href = url; a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = texto;
+        return a;
+      }
+      function urlHimno(texto) {
+        var m = /himno\s*#?\s*(\d+)/i.exec(texto || '');
+        return m ? 'https://www.nuevohimnario.com/Himno?no=' + m[1] : null;
+      }
+      var LIBROS = {'genesis':'GEN','exodo':'EXO','levitico':'LEV','numeros':'NUM','deuteronomio':'DEU','josue':'JOS','jueces':'JDG','rut':'RUT','1 samuel':'1SA','2 samuel':'2SA','1 reyes':'1KI','2 reyes':'2KI','1 cronicas':'1CH','2 cronicas':'2CH','esdras':'EZR','nehemias':'NEH','ester':'EST','job':'JOB','salmo':'PSA','salmos':'PSA','proverbios':'PRO','eclesiastes':'ECC','cantares':'SNG','isaias':'ISA','jeremias':'JER','lamentaciones':'LAM','ezequiel':'EZK','daniel':'DAN','oseas':'HOS','joel':'JOL','amos':'AMO','abdias':'OBA','jonas':'JON','miqueas':'MIC','nahum':'NAM','habacuc':'HAB','sofonias':'ZEP','hageo':'HAG','zacarias':'ZEC','malaquias':'MAL','mateo':'MAT','marcos':'MRK','lucas':'LUK','juan':'JHN','hechos':'ACT','romanos':'ROM','1 corintios':'1CO','2 corintios':'2CO','galatas':'GAL','efesios':'EPH','filipenses':'PHP','colosenses':'COL','1 tesalonicenses':'1TH','2 tesalonicenses':'2TH','1 timoteo':'1TI','2 timoteo':'2TI','tito':'TIT','filemon':'PHM','hebreos':'HEB','santiago':'JAS','1 pedro':'1PE','2 pedro':'2PE','1 juan':'1JN','2 juan':'2JN','3 juan':'3JN','judas':'JUD','apocalipsis':'REV'};
+      function sinAcentos(s) { return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+      function urlVersiculo(texto) {
+        if (!texto) return null;
+        var re = /((?:[123]\s+)?[A-Za-z\u00c0-\u017e]+)\s+(\d+)(?:\s*:\s*(\d+(?:\s*-\s*\d+)?)|\s*[\u2013-]\s*\d+)?/g;
+        var m;
+        while ((m = re.exec(texto)) !== null) {
+          var libro = LIBROS[sinAcentos(m[1]).replace(/\s+/g, ' ').trim()];
+          if (!libro) continue;
+          var url = 'https://www.bible.com/es/bible/149/' + libro + '.' + m[2];
+          if (m[3]) url += '.' + m[3].replace(/\s/g, '');
+          return url + '.RVR1960';
+        }
+        return null;
+      }
+
+      if (p.bloques && p.bloques.length) {
+        // Formato v2: una tarjeta por bloque (Escuela Sabática, Culto Divino, Culto Joven…).
+        var cont = document.getElementById('programa-bloques');
+        var pinto = false, hayRecursos = false;
+        p.bloques.forEach(function (bl) {
+          if (!bl || !bl.titulo) return;
+          var partes = (bl.partes || []).filter(function (x) { return x && x.seccion; });
+          if (!partes.length) return;
+          pinto = true;
+
+          var card = document.createElement('div'); card.className = 'schedule';
+          var head = document.createElement('div'); head.className = 'head';
+          var day = document.createElement('div'); day.className = 'day'; day.textContent = fechaLarga(); head.appendChild(day);
+          var tit = document.createElement('div'); tit.className = 'title'; tit.textContent = bl.titulo; head.appendChild(tit);
+          if (bl.tema) { var tm = document.createElement('div'); tm.className = 'tema'; tm.textContent = bl.tema; head.appendChild(tm); }
+          if (bl.tema) {
+            var uvt = urlVersiculo(bl.tema);
+            if (uvt) {
+              var at = chipAbrir(uvt, 'Ver pasaje ↗');
+              at.className = 'ver-diseno';
+              head.appendChild(at);
+            }
+          }
+          if (bl.enlace) {
+            var vd = document.createElement('a');
+            vd.className = 'ver-diseno'; vd.href = bl.enlace; vd.target = '_blank'; vd.rel = 'noopener';
+            vd.textContent = 'Ver programa diseñado ↗';
+            head.appendChild(vd);
+          }
+          card.appendChild(head);
+
+          partes.forEach(function (x) {
+            var s = document.createElement('div'); s.className = 'slot';
+            var t = document.createElement('div'); t.className = 'time';
+            t.textContent = x.inicio ? (x.inicio + (x.fin ? '–' + x.fin : '')) : '·';
+            s.appendChild(t);
+            var w = document.createElement('div'); w.className = 'what';
+            var b = document.createElement('b'); b.textContent = x.seccion; w.appendChild(b);
+            if (x.encargado) { var sp = document.createElement('span'); sp.textContent = x.encargado; w.appendChild(sp); }
+            if (x.detalle) { var d = document.createElement('span'); d.className = 'det'; d.textContent = x.detalle; w.appendChild(d); }
+            var uh = urlHimno(x.seccion);
+            if (uh) w.appendChild(chipAbrir(uh, 'Ver letra ↗'));
+            var uv = urlVersiculo(((x.seccion || '') + ' | ' + (x.detalle || '')));
+            if (uv && !uh) w.appendChild(chipAbrir(uv, 'Ver versículo ↗'));
+            var rec = x.recursos ? textoRecursos(x.recursos) : (x.multimedia || '');
+            if (rec) {
+              hayRecursos = true;
+              var m = document.createElement('span'); m.className = 'rec'; m.textContent = '🎤 Recursos: ' + rec;
+              w.appendChild(m);
+            }
+            if (x.pista) {
+              hayRecursos = true;
+              var au = document.createElement('audio');
+              au.controls = true; au.preload = 'none'; au.src = x.pista;
+              au.style.cssText = 'display:block;margin-top:6px;width:100%;max-width:320px;height:32px;';
+              w.appendChild(au);
+            }
+            s.appendChild(w); card.appendChild(s);
+          });
+
+          var pie = [];
+          if (bl.piano) pie.push('Piano: ' + bl.piano);
+          if (bl.batuta) pie.push('Batuta: ' + bl.batuta);
+          if (pie.length) {
+            var pd = document.createElement('div'); pd.className = 'pie'; pd.textContent = pie.join(' · ');
+            card.appendChild(pd);
+          }
+          cont.appendChild(card);
+        });
+        if (!pinto) throw 0;
+        if (hayRecursos) document.getElementById('nota-prep').hidden = false;
+      } else if (p.partes && p.partes.length) {
+        // Formato v1 (compatibilidad).
+        var lista = document.getElementById('programa-lista');
+        p.partes.forEach(function (x) {
+          if (!x || !x.parte) return;
+          var s = document.createElement('div'); s.className = 'slot';
+          var t = document.createElement('div'); t.className = 'time'; t.textContent = x.hora || '·'; s.appendChild(t);
+          var w = document.createElement('div'); w.className = 'what';
+          var b = document.createElement('b'); b.textContent = x.parte; w.appendChild(b);
+          if (x.encargado) { var sp = document.createElement('span'); sp.textContent = x.encargado; w.appendChild(sp); }
+          s.appendChild(w); lista.appendChild(s);
+        });
+        document.getElementById('programa-fecha').textContent = fechaLarga();
+        document.getElementById('programa-card').hidden = false;
+      } else {
+        throw 0;
+      }
+    })
+    .catch(function () { document.getElementById('programa-vacio').hidden = false; });
 })();
 </script>
 <script>
