@@ -1,19 +1,6 @@
 {
  "eventos": [
   {
-   "inicio": "2026-07-20",
-   "titulo": "Cierre de inscripciones — ON FIRE Junior Camp",
-   "categoria": "iglesia",
-   "detalle": "forms.gle/XeixQ3PMi7aGZLBA7"
-  },
-  {
-   "inicio": "2026-08-02",
-   "fin": "2026-08-09",
-   "titulo": "ON FIRE — Junior Summer Camp 2026",
-   "categoria": "iglesia",
-   "detalle": "Campamento La Morita · 10 a 15 años"
-  },
-  {
    "inicio": "2025-10-01",
    "titulo": "Caravana de la Victoria",
    "categoria": "asociacion",
@@ -524,12 +511,6 @@
    "inicio": "2026-07-18",
    "titulo": "Graduación AUPA",
    "categoria": "asociacion"
-  },
-  {
-   "inicio": "2026-07-19",
-   "titulo": "Campamento de verano para menores",
-   "categoria": "asociacion",
-   "fin": "2026-07-26"
   },
   {
    "inicio": "2026-07-25",
