@@ -1,6 +1,12 @@
 {
  "videos": [
   {
+   "id": "qVtQvOKs-Zc",
+   "titulo": "Escuela Sabática y Culto Divino | 18 de julio de 2026",
+   "fecha": "2026-07-25",
+   "cat": "divino"
+  },
+  {
    "id": "sWiT3QJrkyY",
    "titulo": "Clausura EBV",
    "fecha": "2026-07-19",
@@ -83,12 +89,6 @@
    "titulo": "Culto Joven",
    "fecha": "2026-06-07",
    "cat": "joven"
-  },
-  {
-   "id": "zC8SLtf_7vA",
-   "titulo": "Escuela Sabática y Culto Divino",
-   "fecha": "2026-06-07",
-   "cat": "divino"
   }
  ]
 }
