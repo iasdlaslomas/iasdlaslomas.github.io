@@ -1,17 +1,31 @@
 [
  {
-  "etiqueta": "Hoy · 5:00 PM",
-  "titulo": "Clausura EBV 2026 — El Cofre del Tesoro",
-  "detalle": "Hoy no hay culto joven: celebramos la clausura de la Escuela Bíblica de Vacaciones a las 5:00 PM. Ven a ver lo que los niños aprendieron esta semana. ¡Toda la familia es bienvenida!",
+  "etiqueta": "Hoy · 4:00 PM",
+  "titulo": "Servicio Comunitario Dorcas",
+  "detalle": "Nos reunimos hoy a las 4:00 PM en el Hospital Metropolitano para servir a la comunidad. ¡Acompáñanos!",
   "estilo": "accent",
-  "hasta": "2026-07-18"
+  "hasta": "2026-07-25"
+ },
+ {
+  "etiqueta": "Hoy · Culto Joven 6:30 PM",
+  "titulo": "Evidencias del Creador en las ciencias",
+  "detalle": "Con el Lic. Daniel Alejandro Enríquez. Base bíblica: Job 23–29.",
+  "estilo": "ink",
+  "hasta": "2026-07-25"
  },
  {
   "etiqueta": "Hoy · durante el culto",
   "titulo": "La Fe de Jesús · niños y adolescentes",
   "detalle": "Clase bíblica hoy durante el tema del culto divino, en el Salón de Jardín de Infantes. Para niños y adolescentes interesados en aprender más de la Biblia (es necesario saber leer y escribir).",
-  "estilo": "accent",
-  "hasta": "2026-07-18"
+  "estilo": "tint",
+  "hasta": "2026-07-25"
+ },
+ {
+  "etiqueta": "Miércoles · 8:00 PM",
+  "titulo": "Noches de Oración por Zoom",
+  "detalle": "Un espacio especial para ti: un momento de reflexión, un espacio para conectarte y un momento para hablar con Dios. Te esperamos junto con toda la familia.",
+  "estilo": "ink",
+  "hasta": "2026-08-31"
  },
  {
   "etiqueta": "Escuela Sabática infantil",
@@ -24,7 +38,7 @@
   "etiqueta": "Cada día · 5 AM, 2 PM y 9 PM",
   "titulo": "Plan de Oración 529",
   "detalle": "Únete donde te encuentres: casa, trabajo, escuela o viaje. Motivos: el derramamiento del Espíritu Santo en nuestra vida, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos (bautismo).",
-  "estilo": "ink",
+  "estilo": "accent",
   "hasta": "2026-08-31"
  },
  {
@@ -49,23 +63,16 @@
   "hasta": "2026-08-31"
  },
  {
-  "etiqueta": "Nuestro sitio",
-  "titulo": "Bienvenido a nuestro nuevo sitio web",
-  "detalle": "Comparte iasdlaslomas.com con tu familia y amigos.",
-  "estilo": "accent",
-  "hasta": "2026-07-18"
- },
- {
   "etiqueta": "Transmisión en vivo",
   "titulo": "En vivo cada sábado desde las 9:30",
   "detalle": "Escuela Sabática y Culto Divino por YouTube, si no puedes asistir.",
   "enlace": "https://www.youtube.com/@IASDLasLomas",
   "boton": "Ver canal",
-  "estilo": "tint"
+  "estilo": "accent"
  },
  {
   "tipo": "canva",
-  "enlace": "https://canva.link/gs6bkbk26io1isk",
-  "hasta": "2026-07-18"
+  "enlace": "https://canva.link/p6adybdqq3fi75v",
+  "hasta": "2026-07-25"
  }
 ]
