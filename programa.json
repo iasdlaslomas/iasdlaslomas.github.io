@@ -1,83 +1,84 @@
 {
  "version": 2,
- "fecha": "2026-07-25",
+ "fecha": "2026-08-01",
  "bloques": [
   {
    "titulo": "Escuela Sabática",
-   "tema": "El pecado en la iglesia",
-   "piano": "Alejandra Medina",
-   "batuta": "Kenneth Rojas",
+   "tema": "Todo para la gloria de Dios",
+   "piano": "Lily Báez",
+   "batuta": "Carlos Murrieta",
    "partes": [
     {
      "inicio": "9:30",
      "fin": "9:32",
      "seccion": "Bienvenida",
-     "encargado": "Moisés Hernández"
+     "encargado": "Sofía Rojas"
     },
     {
      "inicio": "9:32",
      "fin": "9:35",
-     "seccion": "Himno #351 — Yo tengo gozo",
-     "encargado": "Moisés Hernández",
-     "detalle": "Anuncia Moisés Hernández · dirige Kenneth Rojas",
+     "seccion": "Himno #28 — Tu pueblo jubiloso",
+     "encargado": "Sofía Rojas",
+     "detalle": "Anuncia Sofía Rojas · dirige Carlos Murrieta",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:35",
      "fin": "9:37",
      "seccion": "Lectura bíblica y oración de rodillas",
-     "encargado": "Moisés Hernández",
-     "detalle": "1 Corintios 6:19-20 — «¿No saben que su cuerpo es templo del Espíritu Santo, que está en ustedes, que tienen de Dios, y que no son sus propios dueños? Porque han sido comprados por precio; por tanto, glorifiquen a Dios en su cuerpo y en su espíritu, los cuales son de Dios»"
+     "encargado": "Sofía Rojas",
+     "detalle": "1 Corintios 10:31 — «Así, si comen, o beben, o hacen otra cosa, háganlo todo para la gloria de Dios»"
     },
     {
      "inicio": "9:37",
      "fin": "9:41",
      "seccion": "Nuevo Horizonte",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Mejoramiento: ¿Cómo se puede mejorar la Escuela Sabática?"
+     "encargado": "Josabeth Mendoza",
+     "detalle": "Evangelismo: Sazonemos nuestro mundo para Cristo"
     },
     {
      "inicio": "9:42",
      "fin": "9:45",
-     "seccion": "Himno #350 — Andando en la luz de Dios",
-     "encargado": "Moisés Hernández",
-     "detalle": "Anuncia Moisés Hernández · dirige Kenneth Rojas",
+     "seccion": "Himno #8 — ¡Suenen dulces himnos!",
+     "encargado": "Josabeth Mendoza",
+     "detalle": "Anuncia Josabeth Mendoza · dirige Carlos Murrieta",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:46",
      "fin": "9:48",
      "seccion": "Misionero",
-     "encargado": "Diego Ramírez",
-     "detalle": "«El sueño de Enoc, parte 1»"
+     "encargado": "Ximena Rojas",
+     "detalle": "«El sueño de Enoc, parte 2»"
     },
     {
      "inicio": "9:48",
      "fin": "10:40",
      "seccion": "Repaso de la lección y oración",
-     "encargado": "Moisés Hernández",
-     "detalle": "Clase online: Mario Rodríguez",
+     "encargado": "Yosedith Barajas",
+     "detalle": "Clase online: Antonio Palacios",
      "multimedia": "Transmisión en vivo"
     },
     {
      "inicio": "10:40",
      "fin": "10:43",
-     "seccion": "Especial",
-     "encargado": "Carlos Murrieta",
-     "detalle": "Anuncia Moisés Hernández"
+     "seccion": "Himno #77 — Sea exaltado",
+     "encargado": "Cristina Treviño",
+     "detalle": "Anuncia Cristina Treviño",
+     "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "10:44",
      "fin": "10:46",
      "seccion": "Oración final y despedida",
-     "encargado": "Moisés Hernández"
+     "encargado": "Cristina Treviño"
     }
    ]
   },
   {
    "titulo": "Culto Divino",
-   "tema": "¿Dónde estás?",
-   "piano": "Alejandra Medina",
+   "tema": "El compromiso cristiano",
+   "piano": "Lily Báez",
    "partes": [
     {
      "inicio": "11:00",
@@ -89,105 +90,91 @@
      "inicio": "11:03",
      "fin": "11:06",
      "seccion": "Himno #33 — Doxología",
-     "encargado": "Kenneth Rojas",
+     "encargado": "Carlos Murrieta",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:06",
      "fin": "11:07",
      "seccion": "Invocación",
-     "encargado": "Pr. Jasai Cano"
+     "encargado": "Pr. Esteban Medina"
     },
     {
      "inicio": "11:07",
      "fin": "11:08",
      "seccion": "Bienvenida",
-     "encargado": "Mario Rodríguez"
+     "encargado": "Aracely Calderón"
     },
     {
      "inicio": "11:08",
      "fin": "11:11",
-     "seccion": "Himno #103 — Jesús resucitado",
-     "encargado": "Nicolás Beltrán",
+     "seccion": "Himno #156 — A Cristo coronad",
+     "encargado": "Wilma Ahumada",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:11",
      "fin": "11:14",
-     "seccion": "Himno #547 — Sábado es",
-     "encargado": "Nicolás Beltrán",
+     "seccion": "Himno #184 — Nunca te rindas",
+     "encargado": "Wilma Ahumada",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:14",
      "fin": "11:16",
      "seccion": "Oración de rodillas",
-     "encargado": "Mario Rodríguez"
+     "encargado": "Aracely Calderón"
     },
     {
      "inicio": "11:16",
      "fin": "11:20",
      "seccion": "Diezmos y ofrendas",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Ofertorio: Ensamble"
+     "encargado": "Wilma Ahumada",
+     "detalle": "Ofertorio: Lili Pereda"
     },
     {
      "inicio": "11:20",
      "fin": "11:24",
-     "seccion": "Especial",
-     "encargado": "Mario Rodríguez",
-     "detalle": "Tiene el especial: Carlos Murrieta"
+     "seccion": "Especial"
     },
     {
      "inicio": "11:24",
      "fin": "11:29",
      "seccion": "Rincón Infantil",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Tiene el rincón: Uziel Díaz"
+     "encargado": "Wilma Ahumada",
+     "detalle": "Tiene el rincón: Fernando Meza"
     },
     {
      "inicio": "11:29",
      "fin": "11:30",
      "seccion": "Lectura bíblica",
-     "encargado": "Mario Rodríguez",
-     "detalle": "Génesis 3:8-10"
+     "encargado": "Aracely Calderón",
+     "detalle": "Juan 1:29-34"
     },
     {
      "inicio": "11:30",
      "fin": "12:06",
-     "seccion": "Tema: «¿Dónde estás?»",
-     "encargado": "Pr. Jasai Cano"
+     "seccion": "Tema: «El compromiso cristiano»",
+     "encargado": "Pr. Esteban Medina"
     },
     {
      "inicio": "12:06",
      "fin": "12:09",
-     "seccion": "Himno #244 — Padre, Dios",
-     "encargado": "Nicolás Beltrán",
+     "seccion": "Himno #249 — Tal como soy",
+     "encargado": "Aracely Calderón",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "12:09",
      "fin": "12:10",
      "seccion": "Oración final",
-     "encargado": "Pr. Jasai Cano"
+     "encargado": "Pr. Esteban Medina"
     },
     {
      "inicio": "12:10",
      "fin": "12:11",
      "seccion": "Cierre",
-     "encargado": "Mario Rodríguez"
-    }
-   ]
-  },
-  {
-   "titulo": "Culto Joven",
-   "tema": "Evidencias del Creador en las ciencias",
-   "partes": [
-    {
-     "inicio": "6:30 PM",
-     "seccion": "Evidencias del Creador en las ciencias",
-     "encargado": "Lic. Daniel Alejandro Enríquez",
-     "detalle": "Job 23-29"
+     "encargado": "Aracely Calderón"
     }
    ]
   }
