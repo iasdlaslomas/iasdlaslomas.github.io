@@ -1,66 +1,59 @@
 [
  {
-  "etiqueta": "Hoy · 4:00 PM",
-  "titulo": "Servicio Comunitario Dorcas",
-  "detalle": "Nos reunimos hoy a las 4:00 PM en el Hospital Metropolitano para servir a la comunidad. ¡Acompáñanos!",
+  "etiqueta": "Hoy · 4:30 PM",
+  "titulo": "Junta Directiva",
+  "detalle": "Se convoca a la Junta Directiva hoy sábado 8 de agosto a las 4:30 PM.",
+  "estilo": "ink",
+  "hasta": "2026-08-08"
+ },
+ {
+  "etiqueta": "Hoy · Culto Joven 6:00 PM",
+  "titulo": "Premiación",
+  "detalle": "Cerramos con la premiación del Kahoot. ¡No te lo pierdas!",
   "estilo": "accent",
-  "hasta": "2026-07-25"
+  "hasta": "2026-08-08"
  },
  {
-  "etiqueta": "Hoy · Culto Joven 6:30 PM",
-  "titulo": "Evidencias del Creador en las ciencias",
-  "detalle": "Con el Lic. Daniel Alejandro Enríquez. Base bíblica: Job 23–29.",
-  "estilo": "ink",
-  "hasta": "2026-07-25"
- },
- {
-  "etiqueta": "Hoy · durante el culto",
-  "titulo": "La Fe de Jesús · niños y adolescentes",
-  "detalle": "Clase bíblica hoy durante el tema del culto divino, en el Salón de Jardín de Infantes. Para niños y adolescentes interesados en aprender más de la Biblia (es necesario saber leer y escribir).",
+  "etiqueta": "Ministerio Juvenil · 29 de agosto",
+  "titulo": "Conexión Bíblica 2026",
+  "detalle": "Un encuentro que transforma tu vida y tu relación con Dios, organizado por la Asociación del Noreste. Libro de estudio: Daniel. Categoría Jóvenes: Daniel 1–12 (RVR 1995) y Profetas y Reyes, capítulos 39 al 44.",
   "estilo": "tint",
-  "hasta": "2026-07-25"
- },
- {
-  "etiqueta": "Miércoles · 8:00 PM",
-  "titulo": "Noches de Oración por Zoom",
-  "detalle": "Un espacio especial para ti: un momento de reflexión, un espacio para conectarte y un momento para hablar con Dios. Te esperamos junto con toda la familia.",
-  "estilo": "ink",
-  "hasta": "2026-08-31"
- },
- {
-  "etiqueta": "Escuela Sabática infantil",
-  "titulo": "Pedido de lecciones · 1er trimestre 2027",
-  "detalle": "Solicita las lecciones de las divisiones infantiles (enero–marzo 2027) en un sobre de diezmo con tu nombre, el importe y las divisiones: Bebés $110, Principiantes $88, Jardín $64, Primarios $64, Menores $53, Adolescentes $64, Jóvenes $42.",
-  "estilo": "tint",
-  "hasta": "2026-07-31"
+  "hasta": "2026-08-29"
  },
  {
   "etiqueta": "Cada día · 5 AM, 2 PM y 9 PM",
   "titulo": "Plan de Oración 529",
   "detalle": "Únete donde te encuentres: casa, trabajo, escuela o viaje. Motivos: el derramamiento del Espíritu Santo en nuestra vida, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos (bautismo).",
-  "estilo": "accent",
-  "hasta": "2026-08-31"
+  "estilo": "ink",
+  "hasta": "2026-09-30"
+ },
+ {
+  "etiqueta": "Miércoles · 8:00 PM",
+  "titulo": "Noches de Oración por Zoom",
+  "detalle": "Un espacio especial para ti: un momento de reflexión, un espacio para conectarte y un momento para hablar con Dios. Te esperamos junto con toda la familia.",
+  "estilo": "tint",
+  "hasta": "2026-09-30"
  },
  {
   "etiqueta": "Todos los miércoles",
   "titulo": "Study & Running · 6:30 PM",
   "detalle": "Corre con propósito, crece en fe. Nos vemos en el Parque Central TEC. ¡Intégrate al grupo!",
-  "estilo": "tint",
-  "hasta": "2026-08-31"
+  "estilo": "accent",
+  "hasta": "2026-09-30"
  },
  {
   "etiqueta": "Viernes · 7:00 PM",
   "titulo": "Recepción de sábado",
   "detalle": "Recibe el sábado en comunidad cada viernes por la tarde.",
   "estilo": "ink",
-  "hasta": "2026-08-31"
+  "hasta": "2026-09-30"
  },
  {
   "etiqueta": "Secretaría de Iglesia",
   "titulo": "¿Comenzando o regresando? Actualiza tus datos",
   "detalle": "Si estás comenzando a asistir o dejaste de asistir un tiempo, actualiza tus datos o tramita tu carta de membresía con la Secretaría de Iglesia.",
   "estilo": "tint",
-  "hasta": "2026-08-31"
+  "hasta": "2026-09-30"
  },
  {
   "etiqueta": "Transmisión en vivo",
@@ -72,7 +65,7 @@
  },
  {
   "tipo": "canva",
-  "enlace": "https://canva.link/p6adybdqq3fi75v",
-  "hasta": "2026-07-25"
+  "enlace": "https://canva.link/o8kxxghxkx57j2o",
+  "hasta": "2026-08-08"
  }
 ]

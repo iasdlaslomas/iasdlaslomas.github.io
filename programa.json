@@ -177,6 +177,16 @@
      "encargado": "Nicolás Beltrán"
     }
    ]
+  },
+  {
+   "titulo": "Culto Joven",
+   "partes": [
+    {
+     "inicio": "6:00 PM",
+     "seccion": "Premiación",
+     "detalle": "Cierre con la premiación del Kahoot"
+    }
+   ]
   }
  ]
 }
