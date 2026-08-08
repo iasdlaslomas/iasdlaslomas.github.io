@@ -1,84 +1,83 @@
 {
  "version": 2,
- "fecha": "2026-08-01",
+ "fecha": "2026-08-08",
  "bloques": [
   {
    "titulo": "Escuela Sabática",
-   "tema": "Todo para la gloria de Dios",
-   "piano": "Lily Báez",
-   "batuta": "Carlos Murrieta",
+   "tema": "Dones espirituales",
+   "piano": "Luis Carlos Pérez",
+   "batuta": "Lizbeth Landeros",
    "partes": [
     {
      "inicio": "9:30",
      "fin": "9:32",
      "seccion": "Bienvenida",
-     "encargado": "Sofía Rojas"
+     "encargado": "Lilian Pereda"
     },
     {
      "inicio": "9:32",
      "fin": "9:35",
-     "seccion": "Himno #28 — Tu pueblo jubiloso",
-     "encargado": "Sofía Rojas",
-     "detalle": "Anuncia Sofía Rojas · dirige Carlos Murrieta",
+     "seccion": "Himno #282 — Brilla Jesús",
+     "encargado": "Lilian Pereda",
+     "detalle": "Anuncia Lilian Pereda",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:35",
      "fin": "9:37",
      "seccion": "Lectura bíblica y oración de rodillas",
-     "encargado": "Sofía Rojas",
-     "detalle": "1 Corintios 10:31 — «Así, si comen, o beben, o hacen otra cosa, háganlo todo para la gloria de Dios»"
+     "encargado": "Carlos Murrieta",
+     "detalle": "1 Corintios 14:1 — «Seguid el amor; y procurad los dones espirituales, pero sobre todo que profeticéis»"
     },
     {
      "inicio": "9:37",
      "fin": "9:41",
      "seccion": "Nuevo Horizonte",
-     "encargado": "Josabeth Mendoza",
-     "detalle": "Evangelismo: Sazonemos nuestro mundo para Cristo"
+     "encargado": "Michelle García",
+     "detalle": "Discipulado: cómo cerrar la «puerta trasera» de la iglesia"
     },
     {
      "inicio": "9:42",
      "fin": "9:45",
-     "seccion": "Himno #8 — ¡Suenen dulces himnos!",
-     "encargado": "Josabeth Mendoza",
-     "detalle": "Anuncia Josabeth Mendoza · dirige Carlos Murrieta",
-     "multimedia": "Letra en pantalla"
+     "seccion": "Especial",
+     "encargado": "Jerson Cruz",
+     "detalle": "Anuncia Lilian Pereda"
     },
     {
      "inicio": "9:46",
      "fin": "9:48",
      "seccion": "Misionero",
-     "encargado": "Ximena Rojas",
-     "detalle": "«El sueño de Enoc, parte 2»"
+     "encargado": "Miguel Illingworth",
+     "detalle": "«Un permiso de construcción muy difícil»"
     },
     {
      "inicio": "9:48",
      "fin": "10:40",
      "seccion": "Repaso de la lección y oración",
-     "encargado": "Yosedith Barajas",
-     "detalle": "Clase online: Antonio Palacios",
+     "encargado": "Carlos Murrieta",
+     "detalle": "Clase online: Nóe Meza",
      "multimedia": "Transmisión en vivo"
     },
     {
      "inicio": "10:40",
      "fin": "10:43",
-     "seccion": "Himno #77 — Sea exaltado",
-     "encargado": "Cristina Treviño",
-     "detalle": "Anuncia Cristina Treviño",
+     "seccion": "Himno #183 — No me olvide de ti",
+     "encargado": "Lilian Pereda",
+     "detalle": "Anuncia Lilian Pereda",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "10:44",
      "fin": "10:46",
      "seccion": "Oración final y despedida",
-     "encargado": "Cristina Treviño"
+     "encargado": "Carlos Murrieta"
     }
    ]
   },
   {
    "titulo": "Culto Divino",
-   "tema": "El compromiso cristiano",
-   "piano": "Lily Báez",
+   "tema": "Estar con Cristo",
+   "piano": "Luis Carlos Pérez",
    "partes": [
     {
      "inicio": "11:00",
@@ -90,91 +89,92 @@
      "inicio": "11:03",
      "fin": "11:06",
      "seccion": "Himno #33 — Doxología",
-     "encargado": "Carlos Murrieta",
+     "encargado": "Lizbeth Landeros",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:06",
      "fin": "11:07",
      "seccion": "Invocación",
-     "encargado": "Pr. Esteban Medina"
+     "encargado": "Pr. Eliezer Luna"
     },
     {
      "inicio": "11:07",
      "fin": "11:08",
      "seccion": "Bienvenida",
-     "encargado": "Aracely Calderón"
+     "encargado": "Nicolás Beltrán"
     },
     {
      "inicio": "11:08",
      "fin": "11:11",
-     "seccion": "Himno #156 — A Cristo coronad",
-     "encargado": "Wilma Ahumada",
+     "seccion": "Himno #477 — Los que aman al Señor",
+     "encargado": "Antonio Treviño",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:11",
      "fin": "11:14",
-     "seccion": "Himno #184 — Nunca te rindas",
-     "encargado": "Wilma Ahumada",
+     "seccion": "Himno #29 — Del culto el tiempo llega",
+     "encargado": "Antonio Treviño",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:14",
      "fin": "11:16",
      "seccion": "Oración de rodillas",
-     "encargado": "Aracely Calderón"
+     "encargado": "Nicolás Beltrán"
     },
     {
      "inicio": "11:16",
      "fin": "11:20",
      "seccion": "Diezmos y ofrendas",
-     "encargado": "Wilma Ahumada",
-     "detalle": "Ofertorio: Lili Pereda"
+     "encargado": "Antonio Treviño"
     },
     {
      "inicio": "11:20",
      "fin": "11:24",
-     "seccion": "Especial"
+     "seccion": "Especial",
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Tiene el especial: Jerson Cruz"
     },
     {
      "inicio": "11:24",
      "fin": "11:29",
      "seccion": "Rincón Infantil",
-     "encargado": "Wilma Ahumada",
-     "detalle": "Tiene el rincón: Fernando Meza"
+     "encargado": "Antonio Treviño",
+     "detalle": "Tiene el rincón: Lizeth Barrientos"
     },
     {
      "inicio": "11:29",
      "fin": "11:30",
      "seccion": "Lectura bíblica",
-     "encargado": "Aracely Calderón",
-     "detalle": "Juan 1:29-34"
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Gálatas 2:20"
     },
     {
      "inicio": "11:30",
      "fin": "12:06",
-     "seccion": "Tema: «El compromiso cristiano»",
-     "encargado": "Pr. Esteban Medina"
+     "seccion": "Tema: «Estar con Cristo»",
+     "encargado": "Pr. Eliezer Luna"
     },
     {
      "inicio": "12:06",
      "fin": "12:09",
-     "seccion": "Himno #249 — Tal como soy",
-     "encargado": "Aracely Calderón",
+     "seccion": "Himno #380 — Ando con Cristo",
+     "encargado": "Antonio Treviño",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "12:09",
      "fin": "12:10",
      "seccion": "Oración final",
-     "encargado": "Pr. Esteban Medina"
+     "encargado": "Pr. Eliezer Luna"
     },
     {
      "inicio": "12:10",
      "fin": "12:11",
      "seccion": "Cierre",
-     "encargado": "Aracely Calderón"
+     "encargado": "Nicolás Beltrán"
     }
    ]
   }
