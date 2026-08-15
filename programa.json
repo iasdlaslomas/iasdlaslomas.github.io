@@ -1,83 +1,84 @@
 {
  "version": 2,
- "fecha": "2026-08-08",
+ "fecha": "2026-08-15",
  "bloques": [
   {
    "titulo": "Escuela Sabática",
-   "tema": "Dones espirituales",
+   "tema": "Un retrato del amor",
    "piano": "Luis Carlos Pérez",
-   "batuta": "Lizbeth Landeros",
+   "batuta": "Roberto de Loera",
    "partes": [
     {
      "inicio": "9:30",
      "fin": "9:32",
      "seccion": "Bienvenida",
-     "encargado": "Lilian Pereda"
+     "encargado": "Josabeth Mendoza"
     },
     {
      "inicio": "9:32",
      "fin": "9:35",
-     "seccion": "Himno #282 — Brilla Jesús",
-     "encargado": "Lilian Pereda",
-     "detalle": "Anuncia Lilian Pereda",
+     "seccion": "Himno #53 — Oh amor de Dios",
+     "encargado": "Josabeth Mendoza",
+     "detalle": "Anuncia Josabeth Mendoza",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:35",
      "fin": "9:37",
      "seccion": "Lectura bíblica y oración de rodillas",
-     "encargado": "Carlos Murrieta",
-     "detalle": "1 Corintios 14:1 — «Seguid el amor; y procurad los dones espirituales, pero sobre todo que profeticéis»"
+     "encargado": "Josabeth Mendoza",
+     "detalle": "1 Corintios 13:13 — «Ahora permanecen estos tres dones: la fe, la esperanza y el amor. Pero el mayor es el amor»"
     },
     {
      "inicio": "9:37",
      "fin": "9:41",
      "seccion": "Nuevo Horizonte",
-     "encargado": "Michelle García",
-     "detalle": "Discipulado: cómo cerrar la «puerta trasera» de la iglesia"
+     "encargado": "Wendy Mendoza",
+     "detalle": "Inversión: una parábola que enseña a invertir y negociar"
     },
     {
      "inicio": "9:42",
      "fin": "9:45",
      "seccion": "Especial",
-     "encargado": "Jerson Cruz",
-     "detalle": "Anuncia Lilian Pereda"
+     "encargado": "Miguel Julián Alvarado Carrión",
+     "detalle": "«Falta poco para vernos»"
     },
     {
      "inicio": "9:46",
      "fin": "9:48",
      "seccion": "Misionero",
-     "encargado": "Miguel Illingworth",
-     "detalle": "«Un permiso de construcción muy difícil»"
+     "encargado": "Aracely Calderón",
+     "detalle": "«El primer jardín de infancia adventista»"
     },
     {
      "inicio": "9:48",
      "fin": "10:40",
      "seccion": "Repaso de la lección y oración",
-     "encargado": "Carlos Murrieta",
-     "detalle": "Clase online: Nóe Meza",
+     "encargado": "Aracely Calderón",
+     "detalle": "Clase online: Antonio Palacios",
      "multimedia": "Transmisión en vivo"
     },
     {
      "inicio": "10:40",
      "fin": "10:43",
-     "seccion": "Himno #183 — No me olvide de ti",
-     "encargado": "Lilian Pereda",
-     "detalle": "Anuncia Lilian Pereda",
+     "seccion": "Himno #362 — Con sin igual amor",
+     "encargado": "Roberto de Loera",
+     "detalle": "Anuncia Roberto de Loera",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "10:44",
      "fin": "10:46",
      "seccion": "Oración final y despedida",
-     "encargado": "Carlos Murrieta"
+     "encargado": "Josabeth Mendoza"
     }
    ]
   },
   {
    "titulo": "Culto Divino",
-   "tema": "Estar con Cristo",
+   "tema": "Acaba la carrera con gozo",
    "piano": "Luis Carlos Pérez",
+   "batuta": "Roberto de Loera",
    "partes": [
     {
      "inicio": "11:00",
@@ -89,92 +90,105 @@
      "inicio": "11:03",
      "fin": "11:06",
      "seccion": "Himno #33 — Doxología",
-     "encargado": "Lizbeth Landeros",
+     "encargado": "Roberto de Loera",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:06",
      "fin": "11:07",
      "seccion": "Invocación",
-     "encargado": "Pr. Eliezer Luna"
+     "encargado": "Pr. Antonio Palacios"
     },
     {
      "inicio": "11:07",
      "fin": "11:08",
      "seccion": "Bienvenida",
-     "encargado": "Nicolás Beltrán"
+     "encargado": "Moisés Hernández",
+     "detalle": "Se da la bienvenida a las personas en el templo y a quienes están conectados en Facebook y YouTube"
     },
     {
      "inicio": "11:08",
      "fin": "11:11",
-     "seccion": "Himno #477 — Los que aman al Señor",
-     "encargado": "Antonio Treviño",
+     "seccion": "Himno #77 — Sea exaltado",
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Dirige: Roberto de Loera",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:11",
      "fin": "11:14",
-     "seccion": "Himno #29 — Del culto el tiempo llega",
-     "encargado": "Antonio Treviño",
+     "seccion": "Himno #53 — Oh amor de Dios",
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Dirige: Roberto de Loera",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:14",
      "fin": "11:16",
      "seccion": "Oración de rodillas",
-     "encargado": "Nicolás Beltrán"
+     "encargado": "Moisés Hernández"
     },
     {
      "inicio": "11:16",
      "fin": "11:20",
      "seccion": "Diezmos y ofrendas",
-     "encargado": "Antonio Treviño"
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Ofertorio: N/A",
+     "multimedia": "Micrófonos"
     },
     {
      "inicio": "11:20",
      "fin": "11:24",
      "seccion": "Especial",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Tiene el especial: Jerson Cruz"
+     "encargado": "Moisés Hernández",
+     "detalle": "Tiene el especial: Danna Torres",
+     "multimedia": "Micrófono"
     },
     {
      "inicio": "11:24",
      "fin": "11:29",
      "seccion": "Rincón Infantil",
-     "encargado": "Antonio Treviño",
-     "detalle": "Tiene el rincón: Lizeth Barrientos"
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Tiene el rincón: Daysi Palacios",
+     "multimedia": "Micrófonos"
     },
     {
      "inicio": "11:29",
      "fin": "11:30",
      "seccion": "Lectura bíblica",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Gálatas 2:20"
+     "encargado": "Moisés Hernández",
+     "detalle": "Hechos 20:24"
     },
     {
      "inicio": "11:30",
      "fin": "12:06",
-     "seccion": "Tema: «Estar con Cristo»",
-     "encargado": "Pr. Eliezer Luna"
+     "seccion": "Tema: «Acaba la carrera con gozo»",
+     "encargado": "Pr. Antonio Palacios"
     },
     {
      "inicio": "12:06",
      "fin": "12:09",
-     "seccion": "Himno #380 — Ando con Cristo",
-     "encargado": "Antonio Treviño",
+     "seccion": "Himno #267 — Que mi vida entera esté",
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Dirige: Roberto de Loera",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "12:09",
      "fin": "12:10",
      "seccion": "Oración final",
-     "encargado": "Pr. Eliezer Luna"
+     "encargado": "Pr. Antonio Palacios"
     },
     {
      "inicio": "12:10",
      "fin": "12:11",
      "seccion": "Cierre",
-     "encargado": "Nicolás Beltrán"
+     "encargado": "Moisés Hernández",
+     "detalle": "Se despide a la congregación y se agradece su presencia en el templo, en Facebook y YouTube"
+    },
+    {
+     "seccion": "Curso bíblico",
+     "detalle": "Hoy durante el tema del culto divino, en el Salón de Jardín de Infantes. Importante saber leer y escribir y estar interesados en aprender más de la Biblia"
     }
    ]
   },
@@ -183,8 +197,9 @@
    "partes": [
     {
      "inicio": "6:00 PM",
-     "seccion": "Premiación",
-     "detalle": "Cierre con la premiación del Kahoot"
+     "seccion": "Culto Joven",
+     "encargado": "Directiva de Culto Joven",
+     "detalle": "Salmos 1–7"
     }
    ]
   }
