@@ -205,6 +205,51 @@
      "detalle": "Se despide a la congregación y se agradece su presencia en el templo, en Facebook y YouTube"
     }
    ]
+  },
+  {
+   "titulo": "Culto Joven",
+   "lema": "Jóvenes con propósito, corazones dispuestos",
+   "partes": [
+    {
+     "seccion": "Servicio de canto",
+     "encargado": "Jerson",
+     "multimedia": "Micrófonos · letra en pantalla"
+    },
+    {
+     "seccion": "Dirección y bienvenida",
+     "encargado": "Liz"
+    },
+    {
+     "seccion": "Dinámica de oración",
+     "encargado": "Camila"
+    },
+    {
+     "seccion": "Dinámica de integración",
+     "encargado": "Vanesa"
+    },
+    {
+     "seccion": "Cantos",
+     "encargado": "Jerson",
+     "multimedia": "Micrófonos · letra en pantalla"
+    },
+    {
+     "seccion": "Kahoot",
+     "encargado": "Edwin",
+     "multimedia": "Proyección"
+    },
+    {
+     "seccion": "Tema",
+     "encargado": "Wilmar Ahumada"
+    },
+    {
+     "seccion": "Canto final",
+     "encargado": "Jerson"
+    },
+    {
+     "seccion": "Oración final",
+     "encargado": "Wilmar"
+    }
+   ]
   }
  ]
 }
