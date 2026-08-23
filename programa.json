@@ -1,205 +1,208 @@
 {
  "version": 2,
- "fecha": "2026-08-15",
+ "fecha": "2026-08-22",
  "bloques": [
   {
    "titulo": "Escuela Sabática",
-   "tema": "Un retrato del amor",
-   "piano": "Luis Carlos Pérez",
-   "batuta": "Roberto de Loera",
+   "piano": "Ale Medina",
+   "batuta": "Ale Mena",
    "partes": [
     {
      "inicio": "9:30",
      "fin": "9:32",
      "seccion": "Bienvenida",
-     "encargado": "Josabeth Mendoza"
+     "encargado": "Camila Ramírez"
     },
     {
      "inicio": "9:32",
      "fin": "9:35",
-     "seccion": "Himno #53 — Oh amor de Dios",
-     "encargado": "Josabeth Mendoza",
-     "detalle": "Anuncia Josabeth Mendoza",
+     "seccion": "Himno #103 — Jesús resucitado",
+     "encargado": "Camila Ramírez",
+     "detalle": "Anuncia: Camila Ramírez",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:35",
      "fin": "9:37",
      "seccion": "Lectura bíblica y oración de rodillas",
-     "encargado": "Josabeth Mendoza",
-     "detalle": "1 Corintios 13:13 — «Ahora permanecen estos tres dones: la fe, la esperanza y el amor. Pero el mayor es el amor»"
+     "encargado": "Camila Ramírez",
+     "detalle": "1 Corintios 15:14, 17 (NBV) — «Y si Cristo no resucitó, vana es entonces nuestra predicación, vana es también vuestra fe… Y si Cristo no resucitó, vuestra fe es vana; aún estáis en vuestros pecados»"
     },
     {
      "inicio": "9:37",
      "fin": "9:41",
      "seccion": "Nuevo Horizonte",
-     "encargado": "Wendy Mendoza",
-     "detalle": "Inversión: una parábola que enseña a invertir y negociar"
+     "encargado": "Diego Ramírez",
+     "detalle": "Mejoramiento: leer, predicar, enseñar"
     },
     {
      "inicio": "9:42",
      "fin": "9:45",
-     "seccion": "Especial",
-     "encargado": "Miguel Julián Alvarado Carrión",
-     "detalle": "«Falta poco para vernos»"
+     "seccion": "Himno #160 — Viene otra vez nuestro Salvador",
+     "encargado": "Camila Ramírez",
+     "detalle": "Anuncia: Camila Ramírez",
+     "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:46",
      "fin": "9:48",
      "seccion": "Misionero",
-     "encargado": "Aracely Calderón",
-     "detalle": "«El primer jardín de infancia adventista»"
+     "encargado": "Uziel Díaz",
+     "detalle": "«El libro favorito de Sofía»"
     },
     {
      "inicio": "9:48",
      "fin": "10:40",
      "seccion": "Repaso de la lección y oración",
-     "encargado": "Aracely Calderón",
-     "detalle": "Clase online: Antonio Palacios",
+     "encargado": "Viviana Naranjo",
+     "detalle": "Clase online: Noe Meza",
      "multimedia": "Transmisión en vivo"
     },
     {
      "inicio": "10:40",
      "fin": "10:43",
-     "seccion": "Himno #362 — Con sin igual amor",
-     "encargado": "Roberto de Loera",
-     "detalle": "Anuncia Roberto de Loera",
-     "multimedia": "Letra en pantalla"
+     "seccion": "Especial: Anahí y Gabriel Cortés Marroquín",
+     "encargado": "Camila Ramírez",
+     "detalle": "Anuncia: Camila Ramírez",
+     "multimedia": "Micrófonos"
     },
     {
      "inicio": "10:44",
      "fin": "10:46",
      "seccion": "Oración final y despedida",
-     "encargado": "Josabeth Mendoza"
+     "encargado": "Camila Ramírez"
     }
    ]
   },
   {
    "titulo": "Culto Divino",
-   "tema": "Acaba la carrera con gozo",
-   "piano": "Luis Carlos Pérez",
-   "batuta": "Roberto de Loera",
+   "tema": "Movidos a compasión",
+   "piano": "Alejandra Medina",
+   "batuta": "Lizbeth Landeros y Ale Mena",
    "partes": [
+    {
+     "inicio": "10:55",
+     "fin": "11:00",
+     "seccion": "Promocionales",
+     "encargado": "Eliseo",
+     "multimedia": "Anuncios"
+    },
     {
      "inicio": "11:00",
      "fin": "11:03",
-     "seccion": "Promocionales",
-     "encargado": "Eliseo"
+     "seccion": "Doxología",
+     "detalle": "Dirigen: Lizbeth Landeros y Ale Mena · Piano: Alejandra Medina"
     },
     {
      "inicio": "11:03",
+     "fin": "11:04",
+     "seccion": "Invocación",
+     "encargado": "Hna. Marisol Marroquín"
+    },
+    {
+     "inicio": "11:04",
+     "fin": "11:05",
+     "seccion": "Bienvenida",
+     "encargado": "Reyna Coronado",
+     "detalle": "Leer el porqué del programa"
+    },
+    {
+     "inicio": "11:05",
      "fin": "11:06",
-     "seccion": "Himno #33 — Doxología",
-     "encargado": "Roberto de Loera",
-     "multimedia": "Letra en pantalla"
+     "seccion": "Himnos iniciales",
+     "encargado": "Reyna Coronado"
     },
     {
      "inicio": "11:06",
-     "fin": "11:07",
-     "seccion": "Invocación",
-     "encargado": "Pr. Antonio Palacios"
-    },
-    {
-     "inicio": "11:07",
      "fin": "11:08",
-     "seccion": "Bienvenida",
-     "encargado": "Moisés Hernández",
-     "detalle": "Se da la bienvenida a las personas en el templo y a quienes están conectados en Facebook y YouTube"
+     "seccion": "Himno #74 — Grande es Jehová",
+     "detalle": "Dirigen: Lizbeth Landeros y Ale Mena · Piano: Alejandra Medina",
+     "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:08",
-     "fin": "11:11",
-     "seccion": "Himno #77 — Sea exaltado",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Dirige: Roberto de Loera",
-     "multimedia": "Letra en pantalla"
+     "fin": "11:10",
+     "seccion": "Himno tema — «Basta de silencio»",
+     "multimedia": "PROYECTAR (video/letra en pantalla)"
     },
     {
-     "inicio": "11:11",
-     "fin": "11:14",
-     "seccion": "Himno #53 — Oh amor de Dios",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Dirige: Roberto de Loera",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "11:14",
-     "fin": "11:16",
+     "inicio": "11:10",
+     "fin": "11:12",
      "seccion": "Oración de rodillas",
-     "encargado": "Moisés Hernández"
+     "encargado": "Viviana Naranjo"
+    },
+    {
+     "inicio": "11:12",
+     "fin": "11:16",
+     "seccion": "Diezmos y ofrendas / oración al finalizar",
+     "encargado": "Reyna Coronado",
+     "detalle": "Ofertorio mientras se reciben los diezmos y ofrendas: Hna. Alejandra Medina — «Dios descendió»"
     },
     {
      "inicio": "11:16",
-     "fin": "11:20",
-     "seccion": "Diezmos y ofrendas",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Ofertorio: N/A",
+     "fin": "11:18",
+     "seccion": "Canto especial: «Pródigo»",
+     "encargado": "Viviana Naranjo",
+     "detalle": "Tienen el especial: Anahí y Gabriel Cortés Marroquín",
      "multimedia": "Micrófonos"
     },
     {
-     "inicio": "11:20",
-     "fin": "11:24",
-     "seccion": "Especial",
-     "encargado": "Moisés Hernández",
-     "detalle": "Tiene el especial: Danna Torres",
-     "multimedia": "Micrófono"
-    },
-    {
-     "inicio": "11:24",
-     "fin": "11:29",
+     "inicio": "11:18",
+     "fin": "11:22",
      "seccion": "Rincón Infantil",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Tiene el rincón: Daysi Palacios",
+     "encargado": "Viviana Naranjo",
+     "detalle": "Tiene el rincón: Geraldine Illingworth Ríos",
      "multimedia": "Micrófonos"
     },
     {
-     "inicio": "11:29",
-     "fin": "11:30",
+     "inicio": "11:22",
+     "fin": "11:23",
      "seccion": "Lectura bíblica",
-     "encargado": "Moisés Hernández",
-     "detalle": "Hechos 20:24"
+     "encargado": "Reyna Coronado",
+     "detalle": "Mateo 9:36 — «Al ver las multitudes, tuvo compasión de ellas»"
     },
     {
-     "inicio": "11:30",
-     "fin": "12:06",
-     "seccion": "Tema: «Acaba la carrera con gozo»",
-     "encargado": "Pr. Antonio Palacios"
+     "inicio": "11:23",
+     "fin": "11:53",
+     "seccion": "Tema: «Movidos a compasión»",
+     "encargado": "Hna. Marisol Marroquín",
+     "detalle": "Anuncia: Reyna Coronado"
     },
     {
-     "inicio": "12:06",
-     "fin": "12:09",
-     "seccion": "Himno #267 — Que mi vida entera esté",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Dirige: Roberto de Loera",
+     "inicio": "11:53",
+     "fin": "11:55",
+     "seccion": "Canto para llamado: «Vasijas rotas»",
+     "encargado": "Hna. Marisol Marroquín",
+     "detalle": "Tienen el especial: Anahí y Gabriel Cortés Marroquín",
+     "multimedia": "Micrófonos"
+    },
+    {
+     "inicio": "11:55",
+     "fin": "11:56",
+     "seccion": "Agradecimiento y reconocimiento",
+     "encargado": "Reyna Coronado",
+     "detalle": "Se agradece a la predicadora, se entrega reconocimiento y regalo. Sube Laura Sauza"
+    },
+    {
+     "inicio": "11:56",
+     "fin": "11:58",
+     "seccion": "Himno final #496 — Sus manos somos",
+     "encargado": "Viviana Naranjo",
+     "detalle": "Dirigen: Lizbeth Landeros y Ale Mena · Piano: Alejandra Medina",
      "multimedia": "Letra en pantalla"
     },
     {
-     "inicio": "12:09",
-     "fin": "12:10",
+     "inicio": "11:58",
+     "fin": "11:59",
      "seccion": "Oración final",
-     "encargado": "Pr. Antonio Palacios"
+     "encargado": "Hna. Marisol Marroquín"
     },
     {
-     "inicio": "12:10",
-     "fin": "12:11",
+     "inicio": "11:59",
+     "fin": "12:00",
      "seccion": "Cierre",
-     "encargado": "Moisés Hernández",
+     "encargado": "Viviana Naranjo",
      "detalle": "Se despide a la congregación y se agradece su presencia en el templo, en Facebook y YouTube"
-    },
-    {
-     "seccion": "Curso bíblico",
-     "detalle": "Hoy durante el tema del culto divino, en el Salón de Jardín de Infantes. Importante saber leer y escribir y estar interesados en aprender más de la Biblia"
-    }
-   ]
-  },
-  {
-   "titulo": "Culto Joven",
-   "partes": [
-    {
-     "inicio": "6:00 PM",
-     "seccion": "Culto Joven",
-     "encargado": "Directiva de Culto Joven",
-     "detalle": "Salmos 1–7"
     }
    ]
   }
