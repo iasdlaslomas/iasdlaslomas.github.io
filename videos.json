@@ -1,6 +1,12 @@
 {
  "videos": [
   {
+   "id": "DmRZtN0URVg",
+   "titulo": "Escuela Sabática y Culto Divino | 29 de Agosto de 2026",
+   "fecha": "2026-08-29",
+   "cat": "divino"
+  },
+  {
    "id": "HlEV11W_cnw",
    "titulo": "Culto Joven | 22 de Agosto de 2026",
    "fecha": "2026-08-23",
@@ -83,12 +89,6 @@
    "titulo": "Escuela Sabática y Culto Divino | 18 de julio de 2026",
    "fecha": "2026-07-19",
    "cat": "divino"
-  },
-  {
-   "id": "bVFWqCSjLVg",
-   "titulo": "Culto Joven | 4 de julio de 2026",
-   "fecha": "2026-07-12",
-   "cat": "joven"
   }
  ]
 }
