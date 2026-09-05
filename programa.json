@@ -7,7 +7,6 @@
    "tema": "El ministerio cristiano auténtico",
    "piano": "Cristina Treviño",
    "batuta": "Nicolás Beltrán",
-   "enlace": "https://canva.link/96x5bmn3bi37rt5",
    "partes": [
     {
      "inicio": "9:30",
@@ -73,6 +72,112 @@
      "fin": "10:46",
      "seccion": "Oración final y despedida",
      "encargado": "Alejandro González Galicia"
+    }
+   ]
+  },
+  {
+   "titulo": "Culto Divino",
+   "tema": "Mensajeros de Esperanza",
+   "piano": "Cristina Treviño",
+   "partes": [
+    {
+     "inicio": "11:00",
+     "fin": "11:03",
+     "seccion": "Promocionales",
+     "encargado": "Eliseo",
+     "multimedia": "Anuncios"
+    },
+    {
+     "inicio": "11:03",
+     "fin": "11:06",
+     "seccion": "Himno #33 y Doxología",
+     "encargado": "Nicolás Beltrán",
+     "multimedia": "Letra en pantalla"
+    },
+    {
+     "inicio": "11:06",
+     "fin": "11:07",
+     "seccion": "Invocación",
+     "encargado": "C.P. Andrés Ríos"
+    },
+    {
+     "inicio": "11:07",
+     "fin": "11:08",
+     "seccion": "Bienvenida",
+     "encargado": "Pr. Eliezer Luna"
+    },
+    {
+     "inicio": "11:08",
+     "fin": "11:11",
+     "seccion": "Himno #485 — Unidos en verdad",
+     "encargado": "José Velázquez",
+     "multimedia": "Letra en pantalla"
+    },
+    {
+     "inicio": "11:11",
+     "fin": "11:14",
+     "seccion": "Himno #425 — Día en día",
+     "encargado": "José Velázquez",
+     "multimedia": "Letra en pantalla"
+    },
+    {
+     "inicio": "11:14",
+     "fin": "11:16",
+     "seccion": "Oración de rodillas",
+     "encargado": "Pr. Eliezer Luna"
+    },
+    {
+     "inicio": "11:16",
+     "fin": "11:20",
+     "seccion": "Diezmos y ofrendas",
+     "encargado": "José Velázquez",
+     "multimedia": "Micrófonos"
+    },
+    {
+     "inicio": "11:20",
+     "fin": "11:24",
+     "seccion": "Especial",
+     "multimedia": "Micrófono y pista"
+    },
+    {
+     "inicio": "11:24",
+     "fin": "11:29",
+     "seccion": "Rincón Infantil",
+     "encargado": "Pr. Eliezer Luna",
+     "multimedia": "Micrófonos"
+    },
+    {
+     "inicio": "11:29",
+     "fin": "11:30",
+     "seccion": "Lectura bíblica",
+     "encargado": "Pr. Eliezer Luna",
+     "detalle": "Proverbios 29:18"
+    },
+    {
+     "inicio": "11:30",
+     "fin": "12:06",
+     "seccion": "Tema: El espíritu de profecía",
+     "encargado": "C.P. Andrés Ríos",
+     "multimedia": "Transmisión en vivo"
+    },
+    {
+     "inicio": "12:06",
+     "fin": "12:09",
+     "seccion": "Himno #492 — Trabajad, trabajad",
+     "encargado": "José Velázquez",
+     "multimedia": "Letra en pantalla"
+    },
+    {
+     "inicio": "12:09",
+     "fin": "12:10",
+     "seccion": "Oración final",
+     "encargado": "C.P. Andrés Ríos"
+    },
+    {
+     "inicio": "12:10",
+     "fin": "12:11",
+     "seccion": "Cierre",
+     "encargado": "Pr. Eliezer Luna"
     }
    ]
   }
