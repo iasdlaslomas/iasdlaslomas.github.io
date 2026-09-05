@@ -1,232 +1,78 @@
 {
  "version": 2,
- "fecha": "2026-08-29",
+ "fecha": "2026-09-05",
  "bloques": [
   {
    "titulo": "Escuela Sabática",
-   "tema": "Un ministerio impulsado por el amor",
-   "piano": "Ale Medina",
-   "batuta": "Kenneth Rojas",
+   "tema": "El ministerio cristiano auténtico",
+   "piano": "Cristina Treviño",
+   "batuta": "Nicolás Beltrán",
+   "enlace": "https://canva.link/96x5bmn3bi37rt5",
    "partes": [
     {
      "inicio": "9:30",
      "fin": "9:32",
      "seccion": "Bienvenida",
-     "encargado": "Wilma Ahumada"
+     "encargado": "Alejandro González Galicia"
     },
     {
      "inicio": "9:32",
      "fin": "9:35",
-     "seccion": "Himno #492 — ¡Trabajad! ¡Trabajad!",
-     "encargado": "Wilma Ahumada",
-     "detalle": "Anuncia: Wilma Ahumada",
+     "seccion": "Himno #193 — Dios nos ha dado promesa",
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Anuncia: Nicolás Beltrán",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:35",
      "fin": "9:37",
      "seccion": "Lectura bíblica y oración de rodillas",
-     "encargado": "Wilma Ahumada",
-     "detalle": "2 Corintios 2:4 — «Porque por la mucha tribulación y angustia del corazón les escribí con muchas lágrimas; no para que sean contristados, sino para que supiesen cuánto los amo»"
+     "encargado": "Alejandro González Galicia",
+     "detalle": "2 Corintios 4:8-10 — «Que estamos atribulados en todo, mas no angustiados; en apuros, mas no desesperados; perseguidos, mas no desamparados; derribados, pero no destruidos; llevando en el cuerpo siempre por todas partes la muerte de Jesús, para que también la vida de Jesús se manifieste en nuestros cuerpos»"
     },
     {
      "inicio": "9:37",
      "fin": "9:41",
      "seccion": "Nuevo Horizonte",
-     "encargado": "Miriam Montiel",
-     "detalle": "Evangelismo — Énfasis en la obra misionera mundial"
+     "encargado": "Yanet González Camacho",
+     "detalle": "Evangelismo — Uno es el que siembra y el otro el que siega"
     },
     {
      "inicio": "9:42",
      "fin": "9:45",
-     "seccion": "Canto especial: Jimena Dávila",
-     "encargado": "Wilma Ahumada",
-     "detalle": "Anuncia: Wilma Ahumada",
-     "multimedia": "Micrófonos"
+     "seccion": "Himno #344 — Entonad un himno",
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Anuncia: Nicolás Beltrán",
+     "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:46",
      "fin": "9:48",
      "seccion": "10 minutos misioneros",
-     "encargado": "Michelle García"
+     "encargado": "David Cedillo Deantes",
+     "detalle": "Ministerio de Publicaciones"
     },
     {
      "inicio": "9:48",
      "fin": "10:40",
      "seccion": "Repaso de la lección y oración",
-     "encargado": "Viviana Naranjo",
-     "detalle": "Clase online: Nicolás Beltrán",
+     "encargado": "David Cedillo Deantes",
+     "detalle": "Clase online: Noé Meza",
      "multimedia": "Transmisión en vivo"
     },
     {
      "inicio": "10:40",
      "fin": "10:43",
-     "seccion": "Especial: Lily Báez",
-     "encargado": "Wilma Ahumada",
-     "detalle": "Anuncia: Wilma Ahumada",
-     "multimedia": "Micrófonos"
+     "seccion": "Himno #577 — Yo quiero trabajar",
+     "encargado": "Nicolás Beltrán",
+     "detalle": "Anuncia: Nicolás Beltrán",
+     "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "10:44",
      "fin": "10:46",
      "seccion": "Oración final y despedida",
-     "encargado": "Wilma Ahumada"
-    }
-   ]
-  },
-  {
-   "titulo": "Culto Divino",
-   "tema": "Mensajeros de esperanza",
-   "piano": "Alejandra Medina",
-   "partes": [
-    {
-     "inicio": "11:00",
-     "fin": "11:03",
-     "seccion": "Promocionales",
-     "encargado": "Eliseo",
-     "multimedia": "Anuncios"
-    },
-    {
-     "inicio": "11:03",
-     "fin": "11:06",
-     "seccion": "Himno #33 y Doxología",
-     "encargado": "Kenneth Rojas",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "11:06",
-     "fin": "11:07",
-     "seccion": "Invocación",
-     "encargado": "Pr. Saúl Hernández"
-    },
-    {
-     "inicio": "11:07",
-     "fin": "11:08",
-     "seccion": "Bienvenida",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Se da la bienvenida a quienes están en el templo y a los conectados en Facebook y YouTube"
-    },
-    {
-     "inicio": "11:08",
-     "fin": "11:11",
-     "seccion": "Himno #154 — Dad gloria al Cordero Rey",
-     "encargado": "Enrique Delgado",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "11:11",
-     "fin": "11:14",
-     "seccion": "Himno #443 — Hay un lugar do quiero estar",
-     "encargado": "Enrique Delgado",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "11:14",
-     "fin": "11:16",
-     "seccion": "Oración de rodillas",
-     "encargado": "Nicolás Beltrán"
-    },
-    {
-     "inicio": "11:16",
-     "fin": "11:20",
-     "seccion": "Diezmos y ofrendas",
-     "encargado": "Enrique Delgado",
-     "multimedia": "Micrófonos"
-    },
-    {
-     "inicio": "11:20",
-     "fin": "11:24",
-     "seccion": "Especial",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Tiene el especial: Lily Báez",
-     "multimedia": "Micrófono y pista"
-    },
-    {
-     "inicio": "11:24",
-     "fin": "11:29",
-     "seccion": "Rincón Infantil",
-     "encargado": "Enrique Delgado",
-     "detalle": "Tiene el rincón: Alexander Álvarez",
-     "multimedia": "Micrófonos"
-    },
-    {
-     "inicio": "11:29",
-     "fin": "11:30",
-     "seccion": "Lectura bíblica",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Hechos 8:34-35"
-    },
-    {
-     "inicio": "11:30",
-     "fin": "12:06",
-     "seccion": "Tema: «Mensajeros de esperanza»",
-     "encargado": "Pr. Saúl Hernández"
-    },
-    {
-     "inicio": "12:06",
-     "fin": "12:09",
-     "seccion": "Himno #561 — Oigo del Señor la voz llamando",
-     "encargado": "Enrique Delgado",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "12:09",
-     "fin": "12:10",
-     "seccion": "Oración final",
-     "encargado": "Pr. Saúl Hernández"
-    },
-    {
-     "inicio": "12:10",
-     "fin": "12:11",
-     "seccion": "Cierre",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Se despide a la congregación y se agradece su presencia en el templo, en Facebook y YouTube"
-    }
-   ]
-  },
-  {
-   "titulo": "Culto Joven",
-   "tema": "Ganó perdiendo",
-   "partes": [
-    {
-     "seccion": "Servicio de canto",
-     "encargado": "Jerson",
-     "multimedia": "Micrófonos · letra en pantalla"
-    },
-    {
-     "seccion": "Dirección y bienvenida",
-     "encargado": "Vivi"
-    },
-    {
-     "seccion": "Dinámica de oración",
-     "encargado": "Diego"
-    },
-    {
-     "seccion": "Dinámica de integración",
-     "encargado": "Geraldine"
-    },
-    {
-     "seccion": "Cantos",
-     "encargado": "Jerson",
-     "multimedia": "Micrófonos · letra en pantalla"
-    },
-    {
-     "seccion": "Kahoot",
-     "encargado": "Edwin",
-     "multimedia": "Proyección"
-    },
-    {
-     "seccion": "Tema",
-     "encargado": "Missael Hernández",
-     "detalle": "«Ganó perdiendo» — A veces, el mayor triunfo es confiar en Dios (Filipenses 2:6)"
-    },
-    {
-     "seccion": "Canto final",
-     "encargado": "Jerson"
-    },
-    {
-     "seccion": "Oración final",
-     "encargado": "Missael Hernández"
+     "encargado": "Alejandro González Galicia"
     }
    ]
   }
