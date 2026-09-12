@@ -178,8 +178,8 @@
    "batuta": "Fernando Meza"
   },
   {
-   "titulo": "Noche Mexicana",
-   "tema": "Programa especial — Distrito Poniente",
+   "titulo": "Culto Joven",
+   "tema": "Libertad en Cristo · 6:00 PM",
    "partes": [
     {
      "seccion": "Worship",
@@ -219,8 +219,9 @@
      "detalle": "IASD Lomas"
     },
     {
-     "seccion": "Tema",
-     "encargado": "Pr. Jorge Antonio Dzul Ramírez"
+     "seccion": "Tema: «Libertad en Cristo»",
+     "encargado": "Pr. Jorge Antonio Dzul Ramírez",
+     "detalle": "Juan 8:36 — «Así que, si el Hijo os libertare, seréis verdaderamente libres»"
     },
     {
      "seccion": "Canto",
@@ -229,8 +230,13 @@
     {
      "seccion": "Oración final",
      "encargado": "Pr. Jorge Antonio Dzul Ramírez"
+    },
+    {
+     "seccion": "Convivio y sociales",
+     "detalle": "Al finalizar el programa"
     }
-   ]
+   ],
+   "enlace": "https://canva.link/369jbsklbjeya24"
   }
  ]
 }
