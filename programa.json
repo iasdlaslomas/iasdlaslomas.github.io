@@ -1,183 +1,234 @@
 {
  "version": 2,
- "fecha": "2026-09-05",
+ "fecha": "2026-09-12",
  "bloques": [
   {
    "titulo": "Escuela Sabática",
-   "tema": "El ministerio cristiano auténtico",
-   "piano": "Cristina Treviño",
-   "batuta": "Nicolás Beltrán",
+   "tema": "Mayordomía y Misión",
+   "piano": "Alejandra Medina",
+   "batuta": "Fernando Meza",
    "partes": [
     {
      "inicio": "9:30",
      "fin": "9:32",
      "seccion": "Bienvenida",
-     "encargado": "Alejandro González Galicia"
+     "encargado": "Missael Hernández"
     },
     {
      "inicio": "9:32",
      "fin": "9:35",
-     "seccion": "Himno #193 — Dios nos ha dado promesa",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Anuncia: Nicolás Beltrán",
+     "seccion": "Himno #502 — Brilla en el sitio donde estés",
+     "encargado": "",
+     "detalle": "Anuncia: — · Dirige: —",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:35",
      "fin": "9:37",
      "seccion": "Lectura bíblica y oración de rodillas",
-     "encargado": "Alejandro González Galicia",
-     "detalle": "2 Corintios 4:8-10 — «Que estamos atribulados en todo, mas no angustiados; en apuros, mas no desesperados; perseguidos, mas no desamparados; derribados, pero no destruidos; llevando en el cuerpo siempre por todas partes la muerte de Jesús, para que también la vida de Jesús se manifieste en nuestros cuerpos»"
+     "encargado": "Shamir Pinedo",
+     "detalle": "2 Corintios 8:9 — «Porque ya conocen la gracia de nuestro Señor Jesucristo, que por amor a ustedes se hizo pobre, siendo rico; para que ustedes fuesen enriquecidos con su pobreza»"
     },
     {
      "inicio": "9:37",
      "fin": "9:41",
      "seccion": "Nuevo Horizonte",
-     "encargado": "Yanet González Camacho",
-     "detalle": "Evangelismo — Uno es el que siembra y el otro el que siega"
+     "encargado": "Edwin Illingworth",
+     "detalle": "Discipulado — Nuestra gran comisión: el discipulado"
     },
     {
      "inicio": "9:42",
      "fin": "9:45",
-     "seccion": "Himno #344 — Entonad un himno",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Anuncia: Nicolás Beltrán",
+     "seccion": "Himno #270 — Meditar en Jesús",
+     "encargado": "Fernando Meza",
+     "detalle": "Anuncia: Fernando Meza · Dirige: —",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:46",
      "fin": "9:48",
-     "seccion": "10 minutos misioneros",
-     "encargado": "David Cedillo Deantes",
-     "detalle": "Ministerio de Publicaciones"
+     "seccion": "Misionero",
+     "encargado": "Vane Gómez",
+     "detalle": "«La maestra que lloró»"
     },
     {
      "inicio": "9:48",
      "fin": "10:40",
      "seccion": "Repaso de la lección y oración",
-     "encargado": "David Cedillo Deantes",
-     "detalle": "Clase online: Noé Meza",
+     "encargado": "Missael Hernández",
+     "detalle": "Clase online: Mario Rodríguez",
      "multimedia": "Transmisión en vivo"
     },
     {
      "inicio": "10:40",
      "fin": "10:43",
-     "seccion": "Himno #577 — Yo quiero trabajar",
-     "encargado": "Nicolás Beltrán",
-     "detalle": "Anuncia: Nicolás Beltrán",
-     "multimedia": "Letra en pantalla"
+     "seccion": "Especial",
+     "encargado": "Gina Michelle",
+     "detalle": "Anuncia: Fernando Meza · Dirige: —"
     },
     {
      "inicio": "10:44",
      "fin": "10:46",
      "seccion": "Oración final y despedida",
-     "encargado": "Alejandro González Galicia"
+     "encargado": "Fernando Meza"
     }
    ]
   },
   {
    "titulo": "Culto Divino",
-   "tema": "Mensajeros de Esperanza",
-   "piano": "Cristina Treviño",
+   "tema": "Un auténtico líder religioso",
+   "piano": "Alejandra Medina",
    "partes": [
     {
      "inicio": "11:00",
      "fin": "11:03",
      "seccion": "Promocionales",
-     "encargado": "Eliseo",
-     "multimedia": "Anuncios"
+     "encargado": "Eliseo"
     },
     {
      "inicio": "11:03",
      "fin": "11:06",
      "seccion": "Himno #33 y Doxología",
-     "encargado": "Nicolás Beltrán",
+     "encargado": "Fernando Meza",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:06",
      "fin": "11:07",
      "seccion": "Invocación",
-     "encargado": "C.P. Andrés Ríos"
+     "encargado": "Pr. Roberto de Loera"
     },
     {
      "inicio": "11:07",
      "fin": "11:08",
      "seccion": "Bienvenida",
-     "encargado": "Pr. Eliezer Luna"
+     "encargado": "Antonio Treviño"
     },
     {
      "inicio": "11:08",
      "fin": "11:11",
-     "seccion": "Himno #485 — Unidos en verdad",
-     "encargado": "José Velázquez",
+     "seccion": "Himno #374 — Dulce comunión",
+     "encargado": "Mario Rodríguez",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:11",
      "fin": "11:14",
-     "seccion": "Himno #425 — Día en día",
-     "encargado": "José Velázquez",
+     "seccion": "Himno #362 — Con sin igual amor",
+     "encargado": "Mario Rodríguez",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:14",
      "fin": "11:16",
      "seccion": "Oración de rodillas",
-     "encargado": "Pr. Eliezer Luna"
+     "encargado": "Antonio Treviño"
     },
     {
      "inicio": "11:16",
      "fin": "11:20",
      "seccion": "Diezmos y ofrendas",
-     "encargado": "José Velázquez",
-     "multimedia": "Micrófonos"
+     "encargado": "Mario Rodríguez"
     },
     {
      "inicio": "11:20",
      "fin": "11:24",
      "seccion": "Especial",
-     "multimedia": "Micrófono y pista"
+     "encargado": "Antonio Treviño"
     },
     {
      "inicio": "11:24",
      "fin": "11:29",
      "seccion": "Rincón Infantil",
-     "encargado": "Pr. Eliezer Luna",
-     "multimedia": "Micrófonos"
+     "encargado": "Mario Rodríguez"
     },
     {
      "inicio": "11:29",
      "fin": "11:30",
-     "seccion": "Lectura bíblica",
-     "encargado": "Pr. Eliezer Luna",
-     "detalle": "Proverbios 29:18"
+     "seccion": "Lectura bíblica — 2 Reyes 5:15",
+     "encargado": "Antonio Treviño"
     },
     {
      "inicio": "11:30",
      "fin": "12:06",
-     "seccion": "Tema: El espíritu de profecía",
-     "encargado": "C.P. Andrés Ríos",
+     "seccion": "Tema: «Un auténtico líder religioso»",
+     "encargado": "Pr. Roberto de Loera",
      "multimedia": "Transmisión en vivo"
     },
     {
      "inicio": "12:06",
      "fin": "12:09",
-     "seccion": "Himno #492 — Trabajad, trabajad",
-     "encargado": "José Velázquez",
+     "seccion": "Himno #368 — Padre amado",
+     "encargado": "Mario Rodríguez",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "12:09",
      "fin": "12:10",
      "seccion": "Oración final",
-     "encargado": "C.P. Andrés Ríos"
+     "encargado": "Pr. Roberto de Loera"
     },
     {
      "inicio": "12:10",
      "fin": "12:11",
      "seccion": "Cierre",
-     "encargado": "Pr. Eliezer Luna"
+     "encargado": "Antonio Treviño"
+    }
+   ],
+   "batuta": "Fernando Meza"
+  },
+  {
+   "titulo": "Noche Mexicana",
+   "tema": "Programa especial — Distrito Poniente",
+   "partes": [
+    {
+     "seccion": "Worship",
+     "encargado": "IASD Del Río"
+    },
+    {
+     "seccion": "Bienvenida",
+     "encargado": "Edwin y Geraldine",
+     "detalle": "IASD Lomas"
+    },
+    {
+     "seccion": "Bando de oración",
+     "encargado": "Fernando",
+     "detalle": "IASD Lomas"
+    },
+    {
+     "seccion": "Dinámica de integración",
+     "encargado": "Distrito Poniente"
+    },
+    {
+     "seccion": "Canto",
+     "encargado": "IASD Del Río"
+    },
+    {
+     "seccion": "Kahoot «Salmos 30-35»",
+     "encargado": "Distrito Poniente",
+     "multimedia": "Proyección — Kahoot"
+    },
+    {
+     "seccion": "Lectura bíblica — Juan 8:36",
+     "encargado": "Vanesa",
+     "detalle": "IASD Lomas"
+    },
+    {
+     "seccion": "Presentación del orador",
+     "encargado": "Lizbeth",
+     "detalle": "IASD Lomas"
+    },
+    {
+     "seccion": "Tema",
+     "encargado": "Pr. Jorge Antonio Dzul Ramírez"
+    },
+    {
+     "seccion": "Canto",
+     "encargado": "IASD Del Río"
+    },
+    {
+     "seccion": "Oración final",
+     "encargado": "Pr. Jorge Antonio Dzul Ramírez"
     }
    ]
   }
