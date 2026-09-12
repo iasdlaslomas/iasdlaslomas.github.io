@@ -1,10 +1,38 @@
 [
  {
+  "etiqueta": "Hoy · 11:00 AM",
+  "titulo": "Cierre de la Semana de Oración",
+  "detalle": "«Mensajeros de Esperanza», con énfasis en Publicaciones. Predica el Auditor del Noreste, C.P. Andrés Ríos.",
+  "estilo": "accent",
+  "hasta": "2026-09-05"
+ },
+ {
   "etiqueta": "Hoy · 4:30 PM",
   "titulo": "Junta Directiva",
-  "detalle": "Se convoca a la Junta Directiva hoy sábado 8 de agosto a las 4:30 PM.",
+  "detalle": "Se convoca a la Junta Directiva hoy sábado 5 de septiembre a las 4:30 PM.",
   "estilo": "ink",
-  "hasta": "2026-08-08"
+  "hasta": "2026-09-05"
+ },
+ {
+  "etiqueta": "Hoy · Culto Joven 6:00 PM",
+  "titulo": "Las publicaciones transforman vidas",
+  "detalle": "Te esperamos esta tarde en la Iglesia Las Lomas.",
+  "estilo": "tint",
+  "hasta": "2026-09-05"
+ },
+ {
+  "etiqueta": "Culto Joven · Sábado 12 de septiembre, 6:00 PM",
+  "titulo": "Libertad en Cristo",
+  "detalle": "«Si el Hijo os libertare, seréis verdaderamente libres» (Juan 8:36). Orador: Pastor Jorge Antonio Dzul Ramírez. Al finalizar, convivio y sociales.",
+  "estilo": "accent",
+  "hasta": "2026-09-12"
+ },
+ {
+  "etiqueta": "Domingo 13 de septiembre · 9:00 AM",
+  "titulo": "Convocatoria de Guías Mayores",
+  "detalle": "Se convoca a los Guías Mayores del club.",
+  "estilo": "tint",
+  "hasta": "2026-09-13"
  },
  {
   "etiqueta": "Hoy · Culto Joven 6:00 PM",
@@ -62,10 +90,5 @@
   "enlace": "https://www.youtube.com/@IASDLasLomas",
   "boton": "Ver canal",
   "estilo": "accent"
- },
- {
-  "tipo": "canva",
-  "enlace": "https://canva.link/96x5bmn3bi37rt5",
-  "hasta": "2026-09-05"
  }
 ]
