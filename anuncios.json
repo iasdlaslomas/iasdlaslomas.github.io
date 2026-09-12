@@ -1,5 +1,19 @@
 [
  {
+  "etiqueta": "Hoy · Culto Joven 6:00 PM",
+  "titulo": "Premiación",
+  "detalle": "Cerramos con la premiación del Kahoot. ¡No te lo pierdas!",
+  "estilo": "accent",
+  "hasta": "2026-08-08"
+ },
+ {
+  "etiqueta": "Ministerio Juvenil · 29 de agosto",
+  "titulo": "Conexión Bíblica 2026",
+  "detalle": "Un encuentro que transforma tu vida y tu relación con Dios, organizado por la Asociación del Noreste. Libro de estudio: Daniel. Categoría Jóvenes: Daniel 1–12 (RVR 1995) y Profetas y Reyes, capítulos 39 al 44.",
+  "estilo": "tint",
+  "hasta": "2026-08-29"
+ },
+ {
   "etiqueta": "Hoy · 11:00 AM",
   "titulo": "Cierre de la Semana de Oración",
   "detalle": "«Mensajeros de Esperanza», con énfasis en Publicaciones. Predica el Auditor del Noreste, C.P. Andrés Ríos.",
@@ -35,18 +49,18 @@
   "hasta": "2026-09-13"
  },
  {
-  "etiqueta": "Hoy · Culto Joven 6:00 PM",
-  "titulo": "Premiación",
-  "detalle": "Cerramos con la premiación del Kahoot. ¡No te lo pierdas!",
+  "etiqueta": "Ministerio Juvenil · Sábado 19 de septiembre",
+  "titulo": "Día Mundial del Conquistador",
+  "detalle": "«¡Habla Señor!» — 76° aniversario del Club de Conquistadores (1950-2026).",
   "estilo": "accent",
-  "hasta": "2026-08-08"
+  "hasta": "2026-09-19"
  },
  {
-  "etiqueta": "Ministerio Juvenil · 29 de agosto",
-  "titulo": "Conexión Bíblica 2026",
-  "detalle": "Un encuentro que transforma tu vida y tu relación con Dios, organizado por la Asociación del Noreste. Libro de estudio: Daniel. Categoría Jóvenes: Daniel 1–12 (RVR 1995) y Profetas y Reyes, capítulos 39 al 44.",
-  "estilo": "tint",
-  "hasta": "2026-08-29"
+  "etiqueta": "Sábado 19 de septiembre · 10:30 AM (hora centro)",
+  "titulo": "Gran Lanzamiento UnaVoz27",
+  "detalle": "Unión Mexicana del Norte. Conéctate desde tu iglesia: youtube.com/@AdventistasUMN o facebook.com/adventistasumn.",
+  "estilo": "ink",
+  "hasta": "2026-09-19"
  },
  {
   "etiqueta": "Cada día · 5 AM, 2 PM y 9 PM",
@@ -82,6 +96,13 @@
   "detalle": "Si estás comenzando a asistir o dejaste de asistir un tiempo, actualiza tus datos o tramita tu carta de membresía con la Secretaría de Iglesia.",
   "estilo": "tint",
   "hasta": "2026-09-30"
+ },
+ {
+  "etiqueta": "Domingo 18 de octubre · Vía Deportiva",
+  "titulo": "Carrera Alas del Conocimiento · 7ª edición",
+  "detalle": "10K, 5K y 1K infantil (5 a 13 años), frente al Palacio Municipal de Monterrey. Inscripciones en chronosport.mx.",
+  "estilo": "tint",
+  "hasta": "2026-10-18"
  },
  {
   "etiqueta": "Transmisión en vivo",
