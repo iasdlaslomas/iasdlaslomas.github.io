@@ -142,9 +142,64 @@
 </footer>
 
 <script>
+// Programa: lo que se publica desde el panel (Firebase) y, mientras tanto, programa.json.
+// La semana es la del sábado que viene (hoy, si es sábado). Con ?semana=AAAA-MM-DD se ve otra.
+function cargarPrograma() {
+  var FS = 'https://firestore.googleapis.com/v1/projects/iasdlaslomas/databases/(default)/documents';
+  var CLAVE = 'AIzaSyCDgVsWuUtPrE5oQT46-wNha5mWbI_yqes';
+  function iso(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  var pedida = (/[?&]semana=(\d{4}-\d{2}-\d{2})/.exec(location.search) || [])[1];
+  var base = pedida ? new Date(pedida + 'T12:00:00') : new Date();
+  base.setDate(base.getDate() + (6 - base.getDay() + 7) % 7);
+  var sabado = iso(base);
+  function valor(v) {
+    if (!v) return null;
+    if ('stringValue' in v) return v.stringValue;
+    if ('integerValue' in v) return Number(v.integerValue);
+    if ('doubleValue' in v) return v.doubleValue;
+    if ('booleanValue' in v) return v.booleanValue;
+    if ('timestampValue' in v) return v.timestampValue;
+    if ('arrayValue' in v) return (v.arrayValue.values || []).map(valor);
+    if ('mapValue' in v) { var o = {}, f = v.mapValue.fields || {}; for (var k in f) o[k] = valor(f[k]); return o; }
+    return null;
+  }
+  function norm(s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim(); }
+  var HORA = { 'escuela sabatica': '09:30', 'culto divino': '11:00', 'culto joven': '18:00' };
+  function clave(b) {
+    var ini = '';
+    (b.partes || []).some(function (x) { return (ini = x && x.inicio) ? true : false; });
+    var m = /^(\d{1,2}):(\d{2})/.exec(ini || '');
+    var h = m ? ('0' + m[1]).slice(-2) + ':' + m[2] : (HORA[norm(b.titulo)] || '23:59');
+    return (b.fecha || sabado) + ' ' + h;
+  }
+  var deFirebase = fetch(FS + '/semanas/' + sabado + '/bloques?pageSize=50&key=' + CLAVE, { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .then(function (j) {
+      return (j.documents || []).map(function (d) { var o = {}, f = d.fields || {}; for (var k in f) o[k] = valor(f[k]); return o; });
+    })
+    .catch(function () { return []; });
+  var delArchivo = fetch('programa.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; });
+  return Promise.all([deFirebase, delArchivo]).then(function (res) {
+    var bloques = res[0].slice(), pj = res[1];
+    var titulos = bloques.map(function (b) { return norm(b.titulo); });
+    if (pj && pj.bloques && pj.fecha === sabado) {
+      pj.bloques.forEach(function (b) { if (b && titulos.indexOf(norm(b.titulo)) < 0) bloques.push(b); });
+    }
+    if (!bloques.length) return pj;       // nada nuevo esta semana: programa.json tal cual (incluye el formato v1)
+    bloques.forEach(function (b) { if (!b.fecha) b.fecha = sabado; });
+    bloques.sort(function (a, b) { var x = clave(a), y = clave(b); return x < y ? -1 : x > y ? 1 : 0; });
+    return { version: 2, fecha: sabado, bloques: bloques };
+  });
+}
+function diaDeBloque(bl, p) {
+  var f = new Date(((bl && bl.fecha) || p.fecha) + 'T12:00:00');
+  var d = f.toLocaleDateString('es-MX', { weekday: 'long' }) + ' ' + f.toLocaleDateString('es-MX', { day: 'numeric', month: 'long' });
+  return d.charAt(0).toUpperCase() + d.slice(1);
+}
 (function () {
-  fetch('programa.json', { cache: 'no-store' })
-    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+  cargarPrograma()
     .then(function (p) {
       if (!p) throw 0;
       if (p.fecha && new Date(p.fecha + 'T23:59:59') < new Date()) throw 0;
@@ -202,7 +257,7 @@
 
           var card = document.createElement('div'); card.className = 'schedule';
           var head = document.createElement('div'); head.className = 'head';
-          var day = document.createElement('div'); day.className = 'day'; day.textContent = fechaLarga(); head.appendChild(day);
+          var day = document.createElement('div'); day.className = 'day'; day.textContent = diaDeBloque(bl, p); head.appendChild(day);
           var tit = document.createElement('div'); tit.className = 'title'; tit.textContent = bl.titulo; head.appendChild(tit);
           if (bl.tema) { var tm = document.createElement('div'); tm.className = 'tema'; tm.textContent = bl.tema; head.appendChild(tm); }
           if (bl.tema) {
@@ -243,7 +298,7 @@
             if (x.pista) {
               hayRecursos = true;
               var au = document.createElement('audio');
-              au.controls = true; au.preload = 'none'; au.src = x.pista;
+              au.controls = true; au.preload = 'none'; au.src = typeof x.pista === 'string' ? x.pista : (x.pista.url || '');
               au.style.cssText = 'display:block;margin-top:6px;width:100%;max-width:320px;height:32px;';
               w.appendChild(au);
             }
