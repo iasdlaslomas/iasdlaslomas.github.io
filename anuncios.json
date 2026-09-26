@@ -1,66 +1,24 @@
 [
  {
-  "etiqueta": "Hoy · Culto Joven 6:00 PM",
-  "titulo": "Premiación",
-  "detalle": "Cerramos con la premiación del Kahoot. ¡No te lo pierdas!",
+  "etiqueta": "Hoy · Escuela Sabática 9:30 AM",
+  "titulo": "Programa de Decimotercer Sábado",
+  "detalle": "«Jesús todo lo creó bueno», programa especial del Ministerio Infantil. «Y vio Dios todo lo que había hecho, y he aquí que era bueno en gran manera» (Génesis 1:31).",
   "estilo": "accent",
-  "hasta": "2026-08-08"
+  "hasta": "2026-09-26"
  },
  {
-  "etiqueta": "Ministerio Juvenil · 29 de agosto",
-  "titulo": "Conexión Bíblica 2026",
-  "detalle": "Un encuentro que transforma tu vida y tu relación con Dios, organizado por la Asociación del Noreste. Libro de estudio: Daniel. Categoría Jóvenes: Daniel 1–12 (RVR 1995) y Profetas y Reyes, capítulos 39 al 44.",
-  "estilo": "tint",
-  "hasta": "2026-08-29"
- },
- {
-  "etiqueta": "Hoy · 11:00 AM",
-  "titulo": "Cierre de la Semana de Oración",
-  "detalle": "«Mensajeros de Esperanza», con énfasis en Publicaciones. Predica el Auditor del Noreste, C.P. Andrés Ríos.",
-  "estilo": "accent",
-  "hasta": "2026-09-05"
- },
- {
-  "etiqueta": "Hoy · 4:30 PM",
-  "titulo": "Junta Directiva",
-  "detalle": "Se convoca a la Junta Directiva hoy sábado 5 de septiembre a las 4:30 PM.",
+  "etiqueta": "Hoy · Culto Divino 11:00 AM",
+  "titulo": "Cuando ya no hay fuerzas, todavía hay esperanza",
+  "detalle": "Predica el Pr. Jasai Cano. Salmo 34:18.",
   "estilo": "ink",
-  "hasta": "2026-09-05"
+  "hasta": "2026-09-26"
  },
  {
-  "etiqueta": "Hoy · Culto Joven 6:00 PM",
-  "titulo": "Las publicaciones transforman vidas",
-  "detalle": "Te esperamos esta tarde en la Iglesia Las Lomas.",
-  "estilo": "tint",
-  "hasta": "2026-09-05"
- },
- {
-  "etiqueta": "Culto Joven · Sábado 12 de septiembre, 6:00 PM",
-  "titulo": "Libertad en Cristo",
-  "detalle": "«Si el Hijo os libertare, seréis verdaderamente libres» (Juan 8:36). Orador: Pastor Jorge Antonio Dzul Ramírez. Al finalizar, convivio y sociales.",
+  "etiqueta": "Hoy · Culto Joven 5:00 PM",
+  "titulo": "Humor que sana",
+  "detalle": "Orador: Roberto De Loera. Kahoot: Salmos 34 al 39. Te esperamos en la Iglesia Las Lomas.",
   "estilo": "accent",
-  "hasta": "2026-09-12"
- },
- {
-  "etiqueta": "Domingo 13 de septiembre · 9:00 AM",
-  "titulo": "Convocatoria de Guías Mayores",
-  "detalle": "Se convoca a los Guías Mayores del club.",
-  "estilo": "tint",
-  "hasta": "2026-09-13"
- },
- {
-  "etiqueta": "Ministerio Juvenil · Sábado 19 de septiembre",
-  "titulo": "Día Mundial del Conquistador",
-  "detalle": "«¡Habla Señor!» — 76° aniversario del Club de Conquistadores (1950-2026).",
-  "estilo": "accent",
-  "hasta": "2026-09-19"
- },
- {
-  "etiqueta": "Sábado 19 de septiembre · 10:30 AM (hora centro)",
-  "titulo": "Gran Lanzamiento UnaVoz27",
-  "detalle": "Unión Mexicana del Norte. Conéctate desde tu iglesia: youtube.com/@AdventistasUMN o facebook.com/adventistasumn.",
-  "estilo": "ink",
-  "hasta": "2026-09-19"
+  "hasta": "2026-09-26"
  },
  {
   "etiqueta": "Semana de Salud y Evangelismo · 20 al 26 de septiembre",
@@ -70,25 +28,55 @@
   "hasta": "2026-09-26"
  },
  {
+  "etiqueta": "Domingo 27 de septiembre · 8:00 AM",
+  "titulo": "Reunión de oración para diáconos y diaconisas",
+  "detalle": "Oración, reconocimiento y fortalecimiento para diáconos y diaconisas de la Unión Mexicana del Norte. Modalidad virtual, por el canal de YouTube de la División Interamericana.",
+  "enlace": "https://www.youtube.com/c/InterAmericanDivision",
+  "boton": "Ver transmisión",
+  "estilo": "tint",
+  "hasta": "2026-09-27"
+ },
+ {
+  "etiqueta": "Viernes 2 de octubre · 7:00 a 9:30 PM",
+  "titulo": "Vigilia y Oración",
+  "detalle": "Programa especial de vigilia y oración. ¡Acompáñanos!",
+  "estilo": "ink",
+  "hasta": "2026-10-02"
+ },
+ {
+  "etiqueta": "Sábado 3 de octubre · 11:00 AM",
+  "titulo": "Servicio de Comunión",
+  "detalle": "Rito de humildad y Santa Cena.",
+  "estilo": "accent",
+  "hasta": "2026-10-03"
+ },
+ {
+  "etiqueta": "Domingo 18 de octubre · Vía Deportiva",
+  "titulo": "Carrera Alas del Conocimiento · 7ª edición",
+  "detalle": "10K, 5K y 1K infantil (6 a 9 años), frente al Palacio Municipal de Monterrey. Inscripciones en chronosport.mx.",
+  "estilo": "tint",
+  "hasta": "2026-10-18"
+ },
+ {
   "etiqueta": "Cada día · 5 AM, 2 PM y 9 PM",
   "titulo": "Plan de Oración 529",
   "detalle": "Únete donde te encuentres: casa, trabajo, escuela o viaje. Motivos: el derramamiento del Espíritu Santo en nuestra vida, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos (bautismo).",
   "estilo": "ink",
-  "hasta": "2026-09-30"
+  "hasta": "2026-10-03"
  },
  {
-  "etiqueta": "Miércoles · 8:00 PM",
-  "titulo": "Noches de Oración por Zoom",
+  "etiqueta": "Miércoles · 8:00 PM por Zoom",
+  "titulo": "Estudio de la Biblia y Momento de Oración",
   "detalle": "Un espacio especial para ti: un momento de reflexión, un espacio para conectarte y un momento para hablar con Dios. Te esperamos junto con toda la familia.",
   "estilo": "tint",
-  "hasta": "2026-09-30"
+  "hasta": "2026-10-03"
  },
  {
   "etiqueta": "Todos los miércoles",
   "titulo": "Study & Running · 6:30 PM",
   "detalle": "Corre con propósito, crece en fe. Nos vemos en el Parque Central TEC. ¡Intégrate al grupo!",
   "estilo": "accent",
-  "hasta": "2026-09-30"
+  "hasta": "2026-10-03"
  },
  {
   "etiqueta": "Viernes · 7:00 PM",
@@ -105,18 +93,16 @@
   "hasta": "2026-09-30"
  },
  {
-  "etiqueta": "Domingo 18 de octubre · Vía Deportiva",
-  "titulo": "Carrera Alas del Conocimiento · 7ª edición",
-  "detalle": "10K, 5K y 1K infantil (6 a 9 años), frente al Palacio Municipal de Monterrey. Inscripciones en chronosport.mx.",
-  "estilo": "tint",
-  "hasta": "2026-10-18"
- },
- {
   "etiqueta": "Transmisión en vivo",
   "titulo": "En vivo cada sábado desde las 9:30",
   "detalle": "Escuela Sabática y Culto Divino por YouTube, si no puedes asistir.",
   "enlace": "https://www.youtube.com/@IASDLasLomas",
   "boton": "Ver canal",
   "estilo": "accent"
+ },
+ {
+  "tipo": "canva",
+  "enlace": "https://canva.link/1xgehydfygaphf9",
+  "hasta": "2026-09-26"
  }
 ]
