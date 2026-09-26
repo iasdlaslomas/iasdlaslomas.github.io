@@ -1,85 +1,135 @@
 {
  "version": 2,
- "fecha": "2026-09-19",
+ "fecha": "2026-09-26",
  "bloques": [
   {
    "titulo": "Escuela Sabática",
-   "tema": "Cómo lidiar con falsos maestros",
+   "tema": "Gracia, amor y comunión",
    "piano": "Alejandra Medina",
-   "batuta": "Kenneth Rojas",
    "partes": [
     {
      "inicio": "9:30",
      "fin": "9:32",
      "seccion": "Bienvenida",
-     "encargado": "Viviana Santos"
+     "encargado": "Yomara Méndez"
     },
     {
      "inicio": "9:32",
      "fin": "9:35",
-     "seccion": "Himno #396 — Oh cuán dulce es fiar en Cristo",
-     "encargado": "Viviana Santos",
-     "detalle": "Anuncia: Viviana Santos",
+     "seccion": "Himno #374 — Dulce comunión",
+     "encargado": "Yomara Méndez",
+     "detalle": "Anuncia: Yomara Méndez",
      "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "9:35",
      "fin": "9:37",
      "seccion": "Lectura bíblica y oración de rodillas",
-     "encargado": "Viviana Santos",
-     "detalle": "2 Corintios 10:4 — «Porque las armas de nuestra milicia no son mundanas, sino poderosas en Dios, para destruir fortalezas»"
+     "encargado": "Yomara Méndez",
+     "detalle": "2 Corintios 13:14 — «La gracia del Señor Jesucristo, el amor de Dios y la comunión del Espíritu Santo sean con todos ustedes»"
     },
     {
      "inicio": "9:37",
      "fin": "9:41",
-     "seccion": "Nuevo Horizonte",
-     "encargado": "Michelle García",
-     "detalle": "Dios hará posible tu sueño"
+     "seccion": "Misionero — Video",
+     "detalle": "«Avanzar por fe, no por vista»",
+     "multimedia": "Video"
     },
     {
      "inicio": "9:42",
      "fin": "9:45",
-     "seccion": "Himno #508 — Contendamos siempre por nuestra fe",
-     "encargado": "Viviana Santos",
-     "detalle": "Anuncia: Viviana Santos",
-     "multimedia": "Letra en pantalla"
+     "seccion": "Especial",
+     "encargado": "Danna Torres",
+     "detalle": "Anuncia: Yomara Méndez"
     },
     {
      "inicio": "9:46",
      "fin": "9:48",
-     "seccion": "Misionero",
-     "encargado": "Daniela Benítez",
-     "detalle": "«Directora de dos padres»"
+     "seccion": "Ejercicio bíblico",
+     "encargado": "Benjamin Vidal"
     },
     {
      "inicio": "9:48",
-     "fin": "10:25",
-     "seccion": "Repaso de la lección y oración",
-     "encargado": "Viviana Santos",
-     "detalle": "Clase online: Nicolás Beltrán",
-     "multimedia": "Transmisión en vivo"
-    },
-    {
-     "inicio": "10:25",
-     "fin": "10:27",
-     "seccion": "Himno #432 — Como el siervo",
-     "encargado": "Viviana Santos",
-     "detalle": "Anuncia: Viviana Santos",
-     "multimedia": "Letra en pantalla"
-    },
-    {
-     "inicio": "10:27",
      "fin": "10:30",
-     "seccion": "Oración final y despedida",
-     "encargado": "Viviana Santos"
+     "seccion": "Repaso de la lección y oración",
+     "encargado": "Yomara Méndez",
+     "detalle": "Clase online: Mario Rodríguez",
+     "multimedia": "Transmisión en vivo"
+    }
+   ]
+  },
+  {
+   "titulo": "Décimo Tercer Sábado",
+   "tema": "Programa del Ministerio Infantil",
+   "partes": [
+    {
+     "inicio": "10:30",
+     "fin": "10:32",
+     "seccion": "Inicio",
+     "encargado": "Edith Sandoval",
+     "detalle": "Palabras del décimo tercer sábado"
+    },
+    {
+     "inicio": "10:32",
+     "fin": "10:34",
+     "seccion": "Bienvenida por adolescentes",
+     "encargado": "Luis Pérez",
+     "detalle": "Saludo a las visitas y a los miembros"
+    },
+    {
+     "inicio": "10:34",
+     "fin": "10:39",
+     "seccion": "Canto por menores",
+     "encargado": "Eliseo y Yuri",
+     "detalle": "«Mi Pastor» — acompañamiento solo de guitarra"
+    },
+    {
+     "inicio": "10:39",
+     "fin": "10:40",
+     "seccion": "Anuncia la participación de Jardín y Primarios",
+     "encargado": "Edith Sandoval"
+    },
+    {
+     "inicio": "10:40",
+     "fin": "10:46",
+     "seccion": "Participación de Jardín y Primarios",
+     "encargado": "Michel, Flor, Ana y Araceli",
+     "detalle": "Los niños repetirán los versículos del trimestre"
+    },
+    {
+     "inicio": "10:46",
+     "fin": "10:47",
+     "seccion": "Anuncia la participación de Cuna",
+     "encargado": "Edith Sandoval"
+    },
+    {
+     "inicio": "10:47",
+     "fin": "10:53",
+     "seccion": "Participación de Cuna",
+     "encargado": "Wendy y Geraldine",
+     "detalle": "Frases y canto «Mi Pastor» · Video de apoyo: https://youtu.be/maT2LSZo-ww",
+     "multimedia": "Reproducir desde YouTube"
+    },
+    {
+     "inicio": "10:53",
+     "fin": "10:58",
+     "seccion": "Informe de ofrendas y reconocimientos",
+     "encargado": "Edith Sandoval",
+     "detalle": "Entrega de reconocimientos a los niños que avanzan a otra clase"
+    },
+    {
+     "inicio": "10:58",
+     "fin": "11:00",
+     "seccion": "Oración final y cierre",
+     "encargado": "Luis Pérez"
     }
    ]
   },
   {
    "titulo": "Culto Divino",
-   "tema": "¡Habla, Señor! · Día Mundial del Conquistador",
+   "tema": "Cuando ya no hay fuerzas, todavía hay esperanza",
    "piano": "Alejandra Medina",
-   "batuta": "Grupo de Alabanza",
+   "batuta": "Jerson Cruz",
    "partes": [
     {
      "inicio": "11:00",
@@ -91,145 +141,152 @@
     {
      "inicio": "11:03",
      "fin": "11:06",
-     "seccion": "Himno #349 y Doxología",
-     "encargado": "Ensamble",
-     "detalle": "Dirigen: Maia y Deby",
-     "multimedia": "2 micrófonos"
+     "seccion": "Himno #33 y Doxología",
+     "encargado": "Jerson Cruz",
+     "detalle": "«Tu presencia, Padre amante, invocamos»",
+     "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:06",
      "fin": "11:07",
      "seccion": "Invocación",
-     "encargado": "Mario Rodríguez"
+     "encargado": "Pr. Jasai Cano"
     },
     {
      "inicio": "11:07",
      "fin": "11:08",
      "seccion": "Bienvenida",
-     "encargado": "Mauricio",
-     "detalle": "Se da la bienvenida a las personas que están en el templo y a las que están conectadas en Facebook y YouTube"
+     "encargado": "Antonio Treviño",
+     "detalle": "Se da la bienvenida a las personas que están en el templo y a quienes están conectados en Facebook y YouTube"
     },
     {
      "inicio": "11:08",
-     "fin": "11:12",
-     "seccion": "Especial: Piano",
-     "encargado": "Eli",
-     "detalle": "Anuncia: Axel · Clase de Amigo"
+     "fin": "11:11",
+     "seccion": "Himno #178 — Contemplé la gloria",
+     "encargado": "Jonathan Ledezma",
+     "detalle": "Dirige: Jerson Cruz",
+     "multimedia": "Letra en pantalla"
     },
     {
-     "inicio": "11:12",
+     "inicio": "11:11",
      "fin": "11:14",
-     "seccion": "Oración de rodillas",
-     "encargado": "Mauricio"
+     "seccion": "Himno #360 — En Jesucristo, mártir de paz",
+     "encargado": "Jonathan Ledezma",
+     "detalle": "Dirige: Jerson Cruz",
+     "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "11:14",
+     "fin": "11:16",
+     "seccion": "Oración de rodillas",
+     "encargado": "Antonio Treviño"
+    },
+    {
+     "inicio": "11:16",
      "fin": "11:20",
      "seccion": "Diezmos y ofrendas",
-     "encargado": "Carolina",
-     "detalle": "Anuncia: Carolina · Himno de los Conquistadores (Ensamble)",
+     "encargado": "Jonathan Ledezma",
+     "detalle": "Ofertorio: N/A",
      "multimedia": "Micrófonos"
     },
     {
      "inicio": "11:20",
-     "fin": "11:26",
+     "fin": "11:24",
+     "seccion": "Especial",
+     "encargado": "Antonio Treviño",
+     "detalle": "Tiene el especial: Danna Torres",
+     "multimedia": "Micrófono"
+    },
+    {
+     "inicio": "11:24",
+     "fin": "11:29",
      "seccion": "Rincón Infantil",
-     "encargado": "Ana Gabriela Custodio",
-     "detalle": "Anuncia: Carolina",
+     "encargado": "Jonathan Ledezma",
+     "detalle": "Tiene el rincón: Shara Ramírez",
      "multimedia": "Micrófonos"
     },
     {
-     "inicio": "11:26",
+     "inicio": "11:29",
      "fin": "11:30",
-     "seccion": "Canto tema: ¡Habla, Señor!",
-     "encargado": "Ensamble",
-     "detalle": "Anuncia: Axel · Dirigen: Maia y Deby · Reproducir desde YouTube",
-     "multimedia": "Letra en pantalla · 2 micrófonos"
+     "seccion": "Lectura bíblica",
+     "encargado": "Antonio Treviño",
+     "detalle": "Salmo 34:18"
     },
     {
      "inicio": "11:30",
-     "fin": "11:31",
-     "seccion": "Lectura bíblica — Lucas 1:38",
-     "encargado": "Carolina"
-    },
-    {
-     "inicio": "11:31",
      "fin": "12:06",
-     "seccion": "Tema: «¡Habla, Señor!»",
-     "encargado": "Mario Rodríguez",
-     "multimedia": "Micrófonos · Transmisión en vivo"
+     "seccion": "Tema: «Cuando ya no hay fuerzas, todavía hay esperanza»",
+     "encargado": "Pr. Jasai Cano",
+     "multimedia": "Micrófono y pista"
     },
     {
      "inicio": "12:06",
      "fin": "12:09",
-     "seccion": "Himno #379 — Habla, Señor, a mi alma",
-     "encargado": "Ensamble",
-     "detalle": "Anuncia: Axel · Dirigen: Maia y Deby",
-     "multimedia": "Letra en pantalla · 2 micrófonos"
+     "seccion": "Himno #435 — Dios sabe, Dios oye, Dios ve",
+     "encargado": "Jonathan Ledezma",
+     "detalle": "Dirige: Jerson Cruz",
+     "multimedia": "Letra en pantalla"
     },
     {
      "inicio": "12:09",
-     "fin": "12:11",
+     "fin": "12:10",
      "seccion": "Oración final",
-     "encargado": "Mario Rodríguez"
+     "encargado": "Pr. Jasai Cano"
     },
     {
-     "inicio": "12:11",
-     "fin": "12:12",
+     "inicio": "12:10",
+     "fin": "12:11",
      "seccion": "Cierre",
-     "encargado": "Mauricio",
+     "encargado": "Antonio Treviño",
      "detalle": "Se despide a la congregación y se agradece su presencia en el templo, en Facebook y YouTube"
     }
    ]
   },
   {
    "titulo": "Culto Joven",
-   "tema": "Orientando al Desorientado · 6:00 PM",
+   "tema": "Humor que sana",
    "partes": [
     {
-     "seccion": "Cantos",
-     "encargado": "",
-     "detalle": "«Mi pastor» y «Somos la luz» — https://youtu.be/t_Bmo_Wi_cw?si=IBhD6T8pXG3KiUhJ",
-     "multimedia": "Reproducir desde YouTube · Letra en pantalla"
+     "seccion": "Worship",
+     "encargado": "Jerson",
+     "multimedia": "Letra en pantalla"
     },
     {
      "seccion": "Bienvenida",
-     "encargado": "Liz"
+     "encargado": "Benjamin"
     },
     {
      "seccion": "Bando de oración",
-     "encargado": "Hna. Rosy"
+     "encargado": "Benjamin"
     },
     {
-     "seccion": "Canto",
-     "encargado": "",
-     "detalle": "«Todo por él» — https://youtu.be/Qq1bzdb7fGs?si=nBUq-bHAi5nZ0aG2",
-     "multimedia": "Reproducir desde YouTube · Letra en pantalla"
+     "seccion": "Worship",
+     "encargado": "Jerson",
+     "multimedia": "Letra en pantalla"
     },
     {
-     "seccion": "Kahoot — Salmos 28-33",
-     "encargado": "Edwin",
+     "seccion": "Dinámica de integración",
+     "encargado": "Roberto"
+    },
+    {
+     "seccion": "Kahoot — Salmos 34-39",
      "multimedia": "Proyección — Kahoot"
     },
     {
-     "seccion": "Lectura bíblica — Génesis 3:9",
-     "encargado": "",
-     "detalle": "«Y Jehová Dios llamó al hombre, y le dijo: ¿Dónde estás?»"
+     "seccion": "Lectura bíblica — Proverbios 11:22"
     },
     {
-     "seccion": "Tema: «Orientando al Desorientado»",
-     "encargado": "Nicolás Beltrán Sánchez",
-     "detalle": "Salmos 37:5 — «Encomienda a Jehová tu camino, y confía en él; y él hará»"
+     "seccion": "Tema: «Humor que sana»",
+     "encargado": "Roberto de Loera"
     },
     {
-     "seccion": "Canto",
-     "encargado": "",
-     "detalle": "«Transfórmame» — https://youtu.be/JZm5jW_YxhM?si=S4f8NDHZbqnwQMMC",
-     "multimedia": "Reproducir desde YouTube · Letra en pantalla"
+     "seccion": "Worship",
+     "encargado": "Jerson",
+     "multimedia": "Letra en pantalla"
     },
     {
      "seccion": "Oración final",
-     "encargado": "Nicolás Beltrán Sánchez"
+     "encargado": "Roberto de Loera"
     }
    ]
   }
