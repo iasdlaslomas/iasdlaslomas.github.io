@@ -71,6 +71,8 @@
   .slot .what a.abrir { display: inline-block; font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-wide); color: var(--accent-press); text-decoration: none; border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-pill); padding: 3px 12px; margin-top: 6px; margin-right: 6px; }
   .slot .what a.abrir:hover { background: var(--bg-tinted); }
   .schedule + .schedule { margin-top: var(--space-5); }
+  .ver-diseno-semana { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 var(--space-5); font-size: var(--text-sm); font-weight: 700; letter-spacing: var(--tracking-wide); color: var(--accent-press); text-decoration: none; background: var(--bg-elevated); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-pill); padding: 9px 18px; box-shadow: var(--shadow-sm, none); }
+  .ver-diseno-semana:hover { background: var(--bg-tinted); }
   .schedule .head .tema { font-family: var(--font-script); font-style: italic; font-size: var(--text-base); color: var(--color-cielo-300); margin-top: 2px; }
   .schedule .head .ver-diseno { display: inline-block; margin-top: var(--space-2); font-size: var(--text-xs); font-weight: 700; letter-spacing: var(--tracking-wide); color: var(--color-cielo-300); text-decoration: none; border: var(--line-thin) solid var(--color-carbon-600); border-radius: var(--radius-pill); padding: 5px 14px; }
   .schedule .head .ver-diseno:hover { color: var(--ink-on-dark); border-color: var(--color-cielo-300); }
@@ -183,19 +185,24 @@ function cargarPrograma() {
       return (j.documents || []).map(function (d) { var o = {}, f = d.fields || {}; for (var k in f) o[k] = valor(f[k]); return o; });
     })
     .catch(function () { return []; });
+  // El diseño del programa (Canva, presentación…) es uno por sábado y vive en el documento de la semana
+  var deSemana = fetch(FS + '/semanas/' + sabado + '?key=' + CLAVE, { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .then(function (j) { return (j.fields && j.fields.enlace && valor(j.fields.enlace)) || ''; })
+    .catch(function () { return ''; });
   var delArchivo = fetch('programa.json', { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .catch(function () { return null; });
-  return Promise.all([deFirebase, delArchivo]).then(function (res) {
-    var bloques = res[0].slice(), pj = res[1];
+  return Promise.all([deFirebase, delArchivo, deSemana]).then(function (res) {
+    var bloques = res[0].slice(), pj = res[1], enlace = res[2];
     var titulos = bloques.map(function (b) { return norm(b.titulo); });
     if (pj && pj.bloques && pj.fecha === sabado) {
       pj.bloques.forEach(function (b) { if (b && titulos.indexOf(norm(b.titulo)) < 0) bloques.push(b); });
     }
-    if (!bloques.length) return pj;       // nada nuevo esta semana: programa.json tal cual (incluye el formato v1)
+    if (!bloques.length) { if (pj && enlace) pj.enlace = enlace; return pj; }   // nada nuevo: programa.json tal cual (incluye el formato v1)
     bloques.forEach(function (b) { if (!b.fecha) b.fecha = sabado; });
     bloques.sort(function (a, b) { var x = clave(a), y = clave(b); return x < y ? -1 : x > y ? 1 : 0; });
-    return { version: 2, fecha: sabado, bloques: bloques };
+    return { version: 2, fecha: sabado, bloques: bloques, enlace: enlace };
   });
 }
 // Fondo del encabezado que cada bloque escoge en el panel. Solo se aceptan colores #RRGGBB
@@ -270,6 +277,14 @@ function diaDeBloque(bl, p) {
         // Formato v2: una tarjeta por bloque (Escuela Sabática, Culto Divino, Culto Joven…).
         var cont = document.getElementById('programa-bloques');
         var pinto = false, hayRecursos = false;
+        // Diseño del programa: un solo botón para todo el sábado (antes venía uno por bloque; se toma el primero)
+        var diseno = p.enlace || '', vd = null;
+        if (!diseno) p.bloques.some(function (bl) { return (diseno = (bl && bl.enlace) || ''); });
+        if (/^https?:\/\//i.test(diseno)) {
+          vd = document.createElement('a');
+          vd.className = 'ver-diseno-semana'; vd.href = diseno; vd.target = '_blank'; vd.rel = 'noopener';
+          vd.textContent = '🎨 Ver el programa diseñado ↗';
+        }
         p.bloques.forEach(function (bl) {
           if (!bl || !bl.titulo) return;
           var partes = (bl.partes || []).filter(function (x) { return x && x.seccion; });
@@ -290,12 +305,6 @@ function diaDeBloque(bl, p) {
               at.className = 'ver-diseno';
               head.appendChild(at);
             }
-          }
-          if (bl.enlace) {
-            var vd = document.createElement('a');
-            vd.className = 'ver-diseno'; vd.href = bl.enlace; vd.target = '_blank'; vd.rel = 'noopener';
-            vd.textContent = 'Ver programa diseñado ↗';
-            head.appendChild(vd);
           }
           card.appendChild(head);
 
@@ -338,6 +347,7 @@ function diaDeBloque(bl, p) {
           cont.appendChild(card);
         });
         if (!pinto) throw 0;
+        if (vd) cont.insertBefore(vd, cont.firstChild);   // el botón del diseño, arriba de los programas
       } else if (p.partes && p.partes.length) {
         // Formato v1 (compatibilidad).
         var lista = document.getElementById('programa-lista');
