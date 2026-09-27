@@ -327,13 +327,22 @@ function diaDeBloque(bl, p) {
               var m = document.createElement('span'); m.className = 'rec'; m.textContent = '🎤 Recursos: ' + rec;
               w.appendChild(m);
             }
-            if (x.pista) {
+            // Pistas (pueden ser varias; antes era una sola en «pista») y enlaces (videos, presentaciones…)
+            var pistasX = (x.pistas && x.pistas.length ? x.pistas : (x.pista ? [x.pista] : []))
+              .map(function (pp) { return typeof pp === 'string' ? pp : ((pp && pp.url) || ''); }).filter(Boolean);
+            pistasX.forEach(function (src) {
               hayRecursos = true;
               var au = document.createElement('audio');
-              au.controls = true; au.preload = 'none'; au.src = typeof x.pista === 'string' ? x.pista : (x.pista.url || '');
+              au.controls = true; au.preload = 'none'; au.src = src;
               au.style.cssText = 'display:block;margin-top:6px;width:100%;max-width:320px;height:32px;';
               w.appendChild(au);
-            }
+            });
+            ((x.recursos && x.recursos.enlaces) || []).forEach(function (e) {
+              if (!e || typeof e.url !== 'string' || !/^https?:\/\/[^\s"'<>]+$/i.test(e.url)) return;
+              hayRecursos = true;
+              var esVideo = /youtube\.com|youtu\.be|vimeo\.com/i.test(e.url);
+              w.appendChild(chipAbrir(e.url, (esVideo ? '🎬 ' : '🔗 ') + (e.nombre || 'Abrir') + ' ↗'));
+            });
             s.appendChild(w); card.appendChild(s);
           });
 
