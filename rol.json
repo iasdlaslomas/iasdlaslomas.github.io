@@ -1,5 +1,5 @@
 {
- "trimestre": "3er trimestre 2026",
+ "trimestre": "4to. trimestre 2026",
  "nota": "Los viernes (Recepción de sábado) no hay transmisión en vivo.",
  "fechas": [
   {
@@ -231,6 +231,259 @@
    "diacono": "José Barajas Chávez",
    "minutosMisioneros": "Secretaría",
    "cultoJoven": "Directiva de Culto Joven"
+  },
+  {
+   "fecha": "2026-10-02",
+   "dia": "viernes",
+   "culto": "Vigilia, Ayuno y Oración",
+   "transmision": false,
+   "predicador": "Pr. Eliezer Luna",
+   "anciano": "Luis Carlos Pérez",
+   "agenda": "Vigilia, Ayuno y Oración (Ministerio Personal)"
+  },
+  {
+   "fecha": "2026-10-03",
+   "dia": "sabado",
+   "predicador": "Pr. Eliezer Luna",
+   "anciano": "Luis Carlos Pérez",
+   "diacono": "José Velázquez",
+   "minutosMisioneros": "Ministerio Personal",
+   "cultoJoven": "Directiva de Culto Joven",
+   "agenda": "Evangelismo y Servicio de Comunión"
+  },
+  {
+   "fecha": "2026-10-09",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "Pr. Jasai Cano",
+   "anciano": "Nicolás Beltrán"
+  },
+  {
+   "fecha": "2026-10-10",
+   "dia": "sabado",
+   "predicador": "Pr. Esteban Medina",
+   "anciano": "Nicolás Beltrán",
+   "diacono": "Roberto de Loera",
+   "minutosMisioneros": "Mayordomía",
+   "cultoJoven": "Caravana de la Victoria (Asociación)",
+   "agenda": "Día de la familia pastoral / Junta Directiva"
+  },
+  {
+   "fecha": "2026-10-16",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "Ministerial Benjamín Vidal",
+   "anciano": "Missael Hernández"
+  },
+  {
+   "fecha": "2026-10-17",
+   "dia": "sabado",
+   "predicador": "Pr. Jasai Cano",
+   "anciano": "Missael Hernández",
+   "diacono": "Martín Naranjo Jr.",
+   "minutosMisioneros": "CAS",
+   "cultoJoven": "Directiva de Culto Joven",
+   "agenda": "Día del niño adventista y Evangelismo"
+  },
+  {
+   "fecha": "2026-10-18",
+   "dia": "domingo",
+   "transmision": false,
+   "cultoJoven": "Salud, Asociación del Noreste",
+   "agenda": "Carrera Alas del conocimiento, 7:30 am (Macroplaza)"
+  },
+  {
+   "fecha": "2026-10-23",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "Arq. Reyna Coronado",
+   "anciano": "José Velázquez"
+  },
+  {
+   "fecha": "2026-10-24",
+   "dia": "sabado",
+   "predicador": "Lic. Abimael Luna",
+   "anciano": "José Velázquez",
+   "diacono": "Alfonso Munguía",
+   "minutosMisioneros": "Secretaría",
+   "cultoJoven": "MIA, Asociación del Noreste",
+   "agenda": "Festival de niños predicadores, 2:00–7:00 pm (Las Lomas)"
+  },
+  {
+   "fecha": "2026-10-30",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "Ministerial Benjamín Vidal",
+   "anciano": "Antonio Treviño"
+  },
+  {
+   "fecha": "2026-10-31",
+   "dia": "sabado",
+   "predicador": "Mtra. Miriam",
+   "anciano": "Antonio Treviño",
+   "diacono": "Nemuel Shamir",
+   "minutosMisioneros": "Publicaciones",
+   "cultoJoven": "Directiva de Culto Joven",
+   "agenda": "Bautismo"
+  },
+  {
+   "fecha": "2026-11-06",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "Pr. Jasai Cano",
+   "anciano": "Luis Carlos Pérez"
+  },
+  {
+   "fecha": "2026-11-07",
+   "dia": "sabado",
+   "predicador": "Ministerial Benjamín Vidal",
+   "anciano": "Luis Carlos Pérez",
+   "diacono": "Miguel Illingworth",
+   "minutosMisioneros": "Ministerio Personal",
+   "cultoJoven": "Directiva de Culto Joven",
+   "agenda": "Evangelismo"
+  },
+  {
+   "fecha": "2026-11-13",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "Lic. Abimael Luna",
+   "anciano": "Nicolás Beltrán"
+  },
+  {
+   "fecha": "2026-11-14",
+   "dia": "sabado",
+   "predicador": "Pr. Eliezer Luna",
+   "anciano": "Nicolás Beltrán",
+   "diacono": "Jaime Ramos",
+   "minutosMisioneros": "Mayordomía",
+   "cultoJoven": "Directiva de Culto Joven",
+   "agenda": "Investidura de clubes y Junta Directiva"
+  },
+  {
+   "fecha": "2026-11-20",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "Martín Naranjo",
+   "anciano": "Missael Hernández"
+  },
+  {
+   "fecha": "2026-11-21",
+   "dia": "sabado",
+   "predicador": "Pr. Jasai Cano",
+   "anciano": "Missael Hernández",
+   "diacono": "José Barajas",
+   "minutosMisioneros": "CAS",
+   "cultoJoven": "Directiva de Culto Joven"
+  },
+  {
+   "fecha": "2026-11-27",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "anciano": "José Velázquez",
+   "agenda": "Campaña de Evangelismo Público e Infantil (Bautismo), 22–28 nov"
+  },
+  {
+   "fecha": "2026-11-28",
+   "dia": "sabado",
+   "predicador": "Ministerial Benjamín Vidal",
+   "anciano": "José Velázquez",
+   "diacono": "José Velázquez",
+   "minutosMisioneros": "Secretaría",
+   "cultoJoven": "Mayordomía, Asociación del Noreste",
+   "agenda": "Congreso de Mayordomía, 3:00–6:30 pm (Las Lomas) · Cierre de la Campaña de Evangelismo Público e Infantil (22–28 nov)"
+  },
+  {
+   "fecha": "2026-11-29",
+   "dia": "domingo",
+   "transmision": false,
+   "cultoJoven": "Asociación del Noreste",
+   "agenda": "Laboratorio Infantil en Zona"
+  },
+  {
+   "fecha": "2026-12-04",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "Pr. Jasai Cano",
+   "anciano": "Antonio Treviño"
+  },
+  {
+   "fecha": "2026-12-05",
+   "dia": "sabado",
+   "predicador": "Pr. Eliezer Luna",
+   "anciano": "Antonio Treviño",
+   "diacono": "Alfonso Munguía",
+   "minutosMisioneros": "Mayordomía",
+   "cultoJoven": "Semana de Gratitud",
+   "agenda": "Semana de Gratitud / Programa Navideño (5 al 12 de diciembre)"
+  },
+  {
+   "fecha": "2026-12-11",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "anciano": "Antonio Treviño",
+   "agenda": "Semana de Gratitud (5 al 12 de diciembre)"
+  },
+  {
+   "fecha": "2026-12-12",
+   "dia": "sabado",
+   "anciano": "Antonio Treviño",
+   "diacono": "Alfonso Munguía",
+   "cultoJoven": "Semana de Gratitud",
+   "agenda": "Semana de Gratitud (5 al 12 de diciembre)"
+  },
+  {
+   "fecha": "2026-12-18",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "predicador": "C.P. Viviana Naranjo",
+   "anciano": "Luis Carlos Pérez"
+  },
+  {
+   "fecha": "2026-12-19",
+   "dia": "sabado",
+   "predicador": "Pr. Jasai Cano",
+   "anciano": "Luis Carlos Pérez",
+   "diacono": "Martín Naranjo Jr.",
+   "minutosMisioneros": "CAS",
+   "cultoJoven": "Directiva de Culto Joven"
+  },
+  {
+   "fecha": "2026-12-25",
+   "dia": "viernes",
+   "culto": "Recepción de sábado",
+   "transmision": false,
+   "anciano": "Nicolás Beltrán"
+  },
+  {
+   "fecha": "2026-12-26",
+   "dia": "sabado",
+   "predicador": "Pr. Esteban Medina",
+   "anciano": "Nicolás Beltrán",
+   "diacono": "Roberto de Loera",
+   "minutosMisioneros": "Secretaría",
+   "cultoJoven": "Directiva de Culto Joven"
+  },
+  {
+   "fecha": "2026-12-31",
+   "dia": "jueves",
+   "transmision": false,
+   "cultoJoven": "Ancianos",
+   "agenda": "Acción de Gracias",
+   "culto": "Acción de Gracias",
+   "predicador": "Pr. Esteban Medina",
+   "anciano": "Antonio Treviño"
   }
  ]
 }
