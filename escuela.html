@@ -606,8 +606,8 @@
   }
   ['play', 'pause', 'ended'].forEach(function (ev) { audio.addEventListener(ev, sincronizarAudioLector); });
 
-  // En celular los paneles laterales empiezan plegados para no empujar la lectura hacia abajo.
-  if (window.matchMedia && matchMedia('(max-width: 900px)').matches) { $('panel-dias').open = false; $('panel-videos').open = false; }
+  // En celular el estudio diario empieza plegado (el lector ya tiene pestañas por día); los videos siempre desplegados.
+  if (window.matchMedia && matchMedia('(max-width: 900px)').matches) $('panel-dias').open = false;
 
   function pintarLista() {
     var cont = $('lista'), hoy = hoyISO();
