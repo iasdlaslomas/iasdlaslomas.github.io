@@ -1,0 +1,668 @@
+{
+ "trimestre": {
+  "id": "2026-04",
+  "anio": 2026,
+  "numero": 4,
+  "titulo": "El don de profecía",
+  "fechas": "Octubre · Noviembre · Diciembre 2026",
+  "descripcion": "Los neurocientíficos han comenzado a comprender la maravillosa facilidad con la que los bebés humanos adquieren el lenguaje. A los 6 meses, un bebé puede comprender los sonidos que componen las palabras de cualquiera de los más de 7 000 idiomas hablados. Si se los expone a una segunda lengua, también pueden adquirirla. Durante este período se abre una misteriosa puerta mental que permite a los bebés distinguir los aproximadamente 40 sonidos que generalmente componen una lengua materna de los 800 sonidos diferentes que pueden percibir al nacer. Pero eso requiere hablarles, como si se tratara de clases de fonética para recién nacidos.",
+  "portada": "https://sabbath-school.adventech.io/api/v1/es/quarterlies/2026-04/cover.png"
+ },
+ "lecciones": [
+  {
+   "n": 1,
+   "titulo": "El Creador habla",
+   "inicio": "2026-09-26",
+   "fin": "2026-10-02",
+   "clase": "2026-10-03",
+   "memorizar": "«En el pasado, Dios habló muchas veces y de muchas maneras a nuestros padres mediante los profetas; pero en estos últimos días nos habló por su Hijo, a quien constituyó heredero de todo, por medio de quien hizo el universo» (Heb. 1:1-2).",
+   "lecturas": "Génesis 1:27-28; 3:1-8; Lucas 15:11-32; Génesis 3:14-24; Éxodo 19:16-22; Juan 10:27-30",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=1",
+   "dias": [
+    {
+     "fecha": "2026-09-26",
+     "titulo": "El Creador Habla",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/d6bf3034c8036a3e1e78983eabcf3930c2595b22ec50ffdc923a095904635c4c/d6bf3034c8036a3e1e78983eabcf3930c2595b22ec50ffdc923a095904635c4c.mp3"
+    },
+    {
+     "fecha": "2026-09-27",
+     "titulo": "La Comunicación en el Edén",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/70125ab366ebbf50817dbf492624828cf2a5a06802fbd91ba20b26840bc3567b/70125ab366ebbf50817dbf492624828cf2a5a06802fbd91ba20b26840bc3567b.mp3"
+    },
+    {
+     "fecha": "2026-09-28",
+     "titulo": "Escondiéndose de Dios",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/788e556a46f73f2d86864399c2a8de9b5c1a7f4eea28ac7b146b0480e3a42195/788e556a46f73f2d86864399c2a8de9b5c1a7f4eea28ac7b146b0480e3a42195.mp3"
+    },
+    {
+     "fecha": "2026-09-29",
+     "titulo": "Dios Busca a la Humanidad",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/8efa944d58ef4a47b9ce6df6bae96d871ef392f84b2f2ddd065769ba19cc12d7/8efa944d58ef4a47b9ce6df6bae96d871ef392f84b2f2ddd065769ba19cc12d7.mp3"
+    },
+    {
+     "fecha": "2026-09-30",
+     "titulo": "Expulsados del Jardín",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/7fc01fb95b8849519f477ff6179b6571caf78314bba03519e8bf856898cd6f27/7fc01fb95b8849519f477ff6179b6571caf78314bba03519e8bf856898cd6f27.mp3"
+    },
+    {
+     "fecha": "2026-10-01",
+     "titulo": "El Pueblo Vocero de Dios",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/fcce0c2261bc04aa75012a26fdf6f03fcb94caa9f9c897a914030e4ec648cbad/fcce0c2261bc04aa75012a26fdf6f03fcb94caa9f9c897a914030e4ec648cbad.mp3"
+    },
+    {
+     "fecha": "2026-10-02",
+     "titulo": "Elena de White",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/eafbb416b7101d7d4ddd66de1dec7658a4e9e0278187e68f11814a8810f8da04/eafbb416b7101d7d4ddd66de1dec7658a4e9e0278187e68f11814a8810f8da04.mp3"
+    }
+   ],
+   "videos": [
+    {
+     "autor": "Escuela Sabática Viva",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/50eef0936f07eb9473da0a36ec10f48936189be9a0e59e015767ced18eb34145/50eef0936f07eb9473da0a36ec10f48936189be9a0e59e015767ced18eb34145.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/50eef0936f07eb9473da0a36ec10f48936189be9a0e59e015767ced18eb34145/thumb/50eef0936f07eb9473da0a36ec10f48936189be9a0e59e015767ced18eb34145.webp"
+    },
+    {
+     "autor": "Escrito Está",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/22a0c8a6b55df729a3e914ca781d44fef1e17152d9e57ca71e5a0f612518ba7f/22a0c8a6b55df729a3e914ca781d44fef1e17152d9e57ca71e5a0f612518ba7f.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/22a0c8a6b55df729a3e914ca781d44fef1e17152d9e57ca71e5a0f612518ba7f/thumb/22a0c8a6b55df729a3e914ca781d44fef1e17152d9e57ca71e5a0f612518ba7f.webp"
+    },
+    {
+     "autor": "Pastor Alejandro Bullon",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/fc36d90eaf13cb51b56bed5dbb2d086d7c445411779a6a3041fa3443026ca16a/fc36d90eaf13cb51b56bed5dbb2d086d7c445411779a6a3041fa3443026ca16a.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/fc36d90eaf13cb51b56bed5dbb2d086d7c445411779a6a3041fa3443026ca16a/thumb/fc36d90eaf13cb51b56bed5dbb2d086d7c445411779a6a3041fa3443026ca16a.webp"
+    },
+    {
+     "autor": "Pastor Daniel Herrera",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/21b8ea68954b5256e4d63d3bc4bcb82ac830fbee3495fee2cc1dcb8be6514c2e/21b8ea68954b5256e4d63d3bc4bcb82ac830fbee3495fee2cc1dcb8be6514c2e.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/21b8ea68954b5256e4d63d3bc4bcb82ac830fbee3495fee2cc1dcb8be6514c2e/thumb/21b8ea68954b5256e4d63d3bc4bcb82ac830fbee3495fee2cc1dcb8be6514c2e.webp"
+    },
+    {
+     "autor": "Nuevo Tiempo Chile",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/23dd922b3748086696bcb81bc22e7714e45331e0dae78e02c833a4a4f3f841e0/23dd922b3748086696bcb81bc22e7714e45331e0dae78e02c833a4a4f3f841e0.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/23dd922b3748086696bcb81bc22e7714e45331e0dae78e02c833a4a4f3f841e0/thumb/23dd922b3748086696bcb81bc22e7714e45331e0dae78e02c833a4a4f3f841e0.webp"
+    },
+    {
+     "autor": "SUMtv Latino",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/a6fef52affb111c407b63b970745ac56460ca318a91a939859693f8931428c4d/a6fef52affb111c407b63b970745ac56460ca318a91a939859693f8931428c4d.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/a6fef52affb111c407b63b970745ac56460ca318a91a939859693f8931428c4d/thumb/a6fef52affb111c407b63b970745ac56460ca318a91a939859693f8931428c4d.webp"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "titulo": "El llamado de un profeta",
+   "inicio": "2026-10-03",
+   "fin": "2026-10-09",
+   "clase": "2026-10-10",
+   "memorizar": "«Después oí la voz del Señor, que dijo: “¿A quién enviaré? ¿Quién irá de nuestra parte?”. Entonces respondí: “Aquí estoy, envíame a mí”» (Isa. 6:8).",
+   "lecturas": "Génesis 15:6; Gálatas 3:6-9; 1 Reyes 18:19-39; Isaías 53; Daniel 2:46-48; Marcos 1:2-5; Mateo 11:1-6",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=2",
+   "dias": [
+    {
+     "fecha": "2026-10-03",
+     "titulo": "El Llamado de un Profeta",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/a2fdd37f4ae762023ceadfe71d29017f60dc83e979f4f49d9b932ec23a707334/a2fdd37f4ae762023ceadfe71d29017f60dc83e979f4f49d9b932ec23a707334.mp3"
+    },
+    {
+     "fecha": "2026-10-04",
+     "titulo": "Abraham, el Defensor del Pacto",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/cfe8d4ef3aed6d997b502b42152f88f684e4926403b978e335fd073595247be7/cfe8d4ef3aed6d997b502b42152f88f684e4926403b978e335fd073595247be7.mp3"
+    },
+    {
+     "fecha": "2026-10-05",
+     "titulo": "El Mensaje de Elías",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/2c6931708471fc62b1a5e3d8039248a8bc86d4cd97b63b570824ce2af8337708/2c6931708471fc62b1a5e3d8039248a8bc86d4cd97b63b570824ce2af8337708.mp3"
+    },
+    {
+     "fecha": "2026-10-06",
+     "titulo": "Isaías, el Profeta Precursor del Evangelio",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/ee3698bdfb7dab8ef10af833ac31ee2a883fab815ed1ee2224e693334fa4c113/ee3698bdfb7dab8ef10af833ac31ee2a883fab815ed1ee2224e693334fa4c113.mp3"
+    },
+    {
+     "fecha": "2026-10-07",
+     "titulo": "Daniel, el Profeta Fiel",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/1a5b3e516b5adc8e8047a03df2df09ed165ff6dfba9c2ed5b0568a286889e4d3/1a5b3e516b5adc8e8047a03df2df09ed165ff6dfba9c2ed5b0568a286889e4d3.mp3"
+    },
+    {
+     "fecha": "2026-10-08",
+     "titulo": "Juan el Bautista y la Preparación de un Pueblo",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/1650b9279ca771954bdf5fab330c0285035ffa593017ac935280e13323cc5d6b/1650b9279ca771954bdf5fab330c0285035ffa593017ac935280e13323cc5d6b.mp3"
+    },
+    {
+     "fecha": "2026-10-09",
+     "titulo": "Llamados al Ministerio Profético",
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/38ffabff5d9e5a2dc9f2a869e0cbfc532ad651d4478b06d64d2c330ba9a411ef/38ffabff5d9e5a2dc9f2a869e0cbfc532ad651d4478b06d64d2c330ba9a411ef.mp3"
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 3,
+   "titulo": "Profetas del Antiguo Testamento",
+   "inicio": "2026-10-10",
+   "fin": "2026-10-16",
+   "clase": "2026-10-17",
+   "memorizar": "«Josafat se puso en pie y dijo: “Óiganme, Judá y habitantes de Jerusalén: crean al Señor su Dios y estarán seguros; crean a sus profetas y serán prosperados”» (2 Crón. 20:20).",
+   "lecturas": "Santiago 5:17-18; 1 Reyes 19:1-16; 22:1-14; Éxodo 15:20; 2 Reyes 22:11-14; Jeremías 14:1-15",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=3",
+   "dias": [
+    {
+     "fecha": "2026-10-10",
+     "titulo": "Profetas del Antiguo Testamento",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-11",
+     "titulo": "La Humanidad de los Profetas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-12",
+     "titulo": "Identificando a los Verdaderos Profetas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-13",
+     "titulo": "Funciones de los Profetas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-14",
+     "titulo": "Mujeres Profetas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-15",
+     "titulo": "Falsos Profetas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-16",
+     "titulo": "Imperfectos Pero Dispuestos",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 4,
+   "titulo": "Profetas del Nuevo Testamento",
+   "inicio": "2026-10-17",
+   "fin": "2026-10-23",
+   "clase": "2026-10-24",
+   "memorizar": "«Ahora bien, hay diversos dones, pero el Espíritu es el mismo. Hay diversos ministerios, pero el Señor es el mismo; y hay diversas actividades, pero Dios, que efectúa todas las cosas en todos, es el mismo» (1 Cor. 12:4-6).",
+   "lecturas": "Mateo 16:13-16; Efesios 2:20; Apocalipsis 22:6; Lucas 2:36-38; Hechos 21:9; Efesios 6:10-18",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=4",
+   "dias": [
+    {
+     "fecha": "2026-10-17",
+     "titulo": "Profetas del Nuevo Testamento",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-18",
+     "titulo": "Jesús Como Profeta",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-19",
+     "titulo": "Apóstoles y Profetas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-20",
+     "titulo": "Funciones de los Profetas del Nuevo Testamento",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-21",
+     "titulo": "Profetisas y Ayudantes Pastorales",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-22",
+     "titulo": "Falsos Profetas Mencionados en el Nuevo Testamento",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-23",
+     "titulo": "Manteniendo a Jesús y su Palabra en el Centro",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 5,
+   "titulo": "Revelación e inspiración",
+   "inicio": "2026-10-24",
+   "fin": "2026-10-30",
+   "clase": "2026-10-31",
+   "memorizar": "«La revelación de Jesucristo, que Dios le dio para manifestar a sus siervos lo que debe suceder pronto; y la declaró mediante su ángel a su siervo Juan. Y Juan testifica de todo lo que vio, de la palabra de Dios y del testimonio de Jesucristo» (Apoc. 1:1-2).",
+   "lecturas": "Hebreos 1:1-2; 2 Timoteo 3:15-17; 2 Pedro 1:18-21; Éxodo 17:14; Apocalipsis 1:19; Ezequiel 4:1-8",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=5",
+   "dias": [
+    {
+     "fecha": "2026-10-24",
+     "titulo": "Revelación e Inspiración",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-25",
+     "titulo": "Revelación General y Especial",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-26",
+     "titulo": "El Proceso de la Inspiración",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-27",
+     "titulo": "Mensajes Orales",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-28",
+     "titulo": "Mensajes Escritos",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-29",
+     "titulo": "Representaciones, Símbolos y Parábolas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-10-30",
+     "titulo": "Elena de White, la Revelación y la Inspiración",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 6,
+   "titulo": "Los escritos proféticos",
+   "inicio": "2026-10-31",
+   "fin": "2026-11-06",
+   "clase": "2026-11-07",
+   "memorizar": "«Todo lo que antes fue escrito, para nuestra enseñanza fue escrito, para que por la paciencia y el consuelo de las Escrituras tengamos esperanza» (Rom. 15:4).",
+   "lecturas": "Éxodo 17:14; Isaías 13:1; Jeremías 36:17-18; Romanos 16:22; Lucas 1:1-4; Judas 1:14-15; 2 Corintios 4:7",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=6",
+   "dias": [
+    {
+     "fecha": "2026-10-31",
+     "titulo": "Los Escritos Proféticos",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-01",
+     "titulo": "El Llamado a Escribir",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-02",
+     "titulo": "Géneros y Estilos Literarios",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-03",
+     "titulo": "Asistentes Literarios",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-04",
+     "titulo": "Fuentes Literarias",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-05",
+     "titulo": "El Mensaje Divino y las Imperfecciones Humanas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-06",
+     "titulo": "Los Escritos de Elena de White",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 7,
+   "titulo": "¡Escuchen esto!",
+   "inicio": "2026-11-07",
+   "fin": "2026-11-13",
+   "clase": "2026-11-14",
+   "memorizar": "«Estas cosas les sucedieron por ejemplo, y fueron escritas para advertirnos a nosotros, a los que han llegado al fin del tiempo» (1 Cor. 10:11).",
+   "lecturas": "Números 13:26-30; Jeremías 36:20-26; 2 Crónicas 36:15-16; Mateo 23:30-35; 1 Corintios 10:6-12",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=7",
+   "dias": [
+    {
+     "fecha": "2026-11-07",
+     "titulo": "¡escuchen Esto!",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-08",
+     "titulo": "Enojo Contra el Mensajero de Dios",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-09",
+     "titulo": "Destruyendo el Mensaje: Parte 1",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-10",
+     "titulo": "Destruyendo el Mensaje: Parte 2",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-11",
+     "titulo": "Hipocresía",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-12",
+     "titulo": "Para Nuestra Advertencia",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-13",
+     "titulo": "La Recepción y la Comunicación de los Mensajes de Elena de White",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 8,
+   "titulo": "Interpretación de los escritos proféticos",
+   "inicio": "2026-11-14",
+   "fin": "2026-11-20",
+   "clase": "2026-11-21",
+   "memorizar": "«Y empezando desde Moisés y todos los profetas, les explicó lo que toda la Escritura decía de él» (Luc. 24:27).",
+   "lecturas": "Mateo 5:17-48; 1 Corintios 16:20; Mateo 4:1-11; Lucas 10:25-28; 24:25-27, 44-49",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=8",
+   "dias": [
+    {
+     "fecha": "2026-11-14",
+     "titulo": "Interpretación de los Escritos Proféticos",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-15",
+     "titulo": "La Biblia Como su Propia Intérprete",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-16",
+     "titulo": "El Contexto Histórico-cultural",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-17",
+     "titulo": "El Contexto Literario",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-18",
+     "titulo": "El Significado del Texto",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-19",
+     "titulo": "La Presentación de las Escrituras",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-20",
+     "titulo": "Cómo Leer los Escritos de Elena de White",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 9,
+   "titulo": "Poniendo a prueba a los profetas",
+   "inicio": "2026-11-21",
+   "fin": "2026-11-27",
+   "clase": "2026-11-28",
+   "memorizar": "«Amados, no crean a todo espíritu, sino prueben los espíritus si son de Dios; porque muchos falsos profetas han salido al mundo» (1 Juan 4:1).",
+   "lecturas": "Daniel 10:7-19; Deuteronomio 13:1-5; Isaías 8:20; Juan 11:25; Hechos 15:36-39; Jeremías 28:9, 15-17",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=9",
+   "dias": [
+    {
+     "fecha": "2026-11-21",
+     "titulo": "Poniendo a Prueba a los Profetas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-22",
+     "titulo": "El Papel de lo Sobrenatural",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-23",
+     "titulo": "En Armonía con la Biblia",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-24",
+     "titulo": "La Encarnación de Cristo",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-25",
+     "titulo": "Frutos Positivos",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-26",
+     "titulo": "Profecías Cumplidas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-27",
+     "titulo": "«Gusten y Vean»",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 10,
+   "titulo": "Autoridad y relevancia proféticas",
+   "inicio": "2026-11-28",
+   "fin": "2026-12-04",
+   "clase": "2026-12-05",
+   "memorizar": "«Porque la palabra de Dios es viva y eficaz, más cortante que cualquier espada de dos filos. Penetra hasta partir el alma y el espíritu, las coyunturas y los tuétanos, y discierne los pensamientos y las intenciones del corazón» (Heb. 4:12).",
+   "lecturas": "Éxodo 4:10-16; Lucas 8:22-25; Juan 3:1-10; Hechos 16:25-34; 1 Corintios 5:1-5; Lucas 7:28",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=10",
+   "dias": [
+    {
+     "fecha": "2026-11-28",
+     "titulo": "Autoridad y Relevancia Proféticas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-29",
+     "titulo": "Representantes de la Autoridad Divina",
+     "audio": null
+    },
+    {
+     "fecha": "2026-11-30",
+     "titulo": "La Autoridad de Jesús",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-01",
+     "titulo": "La Autoridad Bíblica",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-02",
+     "titulo": "Autoridad Organizativa",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-03",
+     "titulo": "Profetas Canónicos y No Canónicos",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-04",
+     "titulo": "Hablando con Autoridad",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 11,
+   "titulo": "Manifestación profética en momentos cruciales",
+   "inicio": "2026-12-05",
+   "fin": "2026-12-11",
+   "clase": "2026-12-12",
+   "memorizar": "«Nada hace Dios, el Señor, sin revelar su secreto a sus siervos los profetas» (Amós 3:7).",
+   "lecturas": "2 Pedro 2:5; Jueces 4:4-16; 1 Reyes 18:21, 38-39; Isaías 59:1-4; Nehemías 9:30; Apocalipsis 1:1-3",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=11",
+   "dias": [
+    {
+     "fecha": "2026-12-05",
+     "titulo": "Manifestación Profética en Momentos Cruciales",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-06",
+     "titulo": "Advertencia de Desastre",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-07",
+     "titulo": "Una Madre en Israel",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-08",
+     "titulo": "Un Llamado al Arrepentimiento",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-09",
+     "titulo": "Esperanza en el Exilio",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-10",
+     "titulo": "Un Profeta para el Tiempo de Espera",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-11",
+     "titulo": "La Voz Profética",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 12,
+   "titulo": "Revelaciones proféticas del fin de los tiempos",
+   "inicio": "2026-12-12",
+   "fin": "2026-12-18",
+   "clase": "2026-12-19",
+   "memorizar": "«Después de esto derramaré mi Espíritu sobre toda carne; sus hijos e hijas profetizarán, sus ancianos tendrán sueños y sus jóvenes verán visiones; hasta sobre los siervos y las siervas derramaré mi Espíritu en esos días» (Joel 2:28-29).",
+   "lecturas": "Joel 2:28-32; Hechos 2:1-21; Efesios 4:11-14; Apocalipsis 12:17; 19:10; Hechos 2:36-42",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=12",
+   "dias": [
+    {
+     "fecha": "2026-12-12",
+     "titulo": "Revelaciones Proféticas del Fin de los Tiempos",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-13",
+     "titulo": "La Promesa de Joel",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-14",
+     "titulo": "Pentecostés",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-15",
+     "titulo": "Dones del Espíritu",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-16",
+     "titulo": "El Remanente del Tiempo del Fin",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-17",
+     "titulo": "Manifestaciones Modernas",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-18",
+     "titulo": "Todo Acerca de la Misión",
+     "audio": null
+    }
+   ],
+   "videos": []
+  },
+  {
+   "n": 13,
+   "titulo": "Bendiciones de la palabra profética",
+   "inicio": "2026-12-19",
+   "fin": "2026-12-25",
+   "clase": "2026-12-26",
+   "memorizar": "«Toda la Escritura es inspirada por Dios, y es útil para enseñar, reprender, enmendar e instruir en justicia, para que el hombre de Dios sea perfecto, cabalmente instruido para toda buena obra» (2 Tim. 3:16-17).",
+   "lecturas": "1 Corintios 2:2; Juan 1:1-5; 2 Timoteo 3:16-17; 4:1-5; Isaías 40:1-5; Juan 17:20-23; 1 Corintios 1:10-13",
+   "leer": "https://www.sabbath.school/Lesson?lang=2&year=2026&quarter=4&lesson=13",
+   "dias": [
+    {
+     "fecha": "2026-12-19",
+     "titulo": "Bendiciones de la Palabra Profética",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-20",
+     "titulo": "La Profecía Exalta a Cristo",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-21",
+     "titulo": "La Profecía Confirma la Biblia",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-22",
+     "titulo": "La Profecía Como Detector Divino de la Verdad",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-23",
+     "titulo": "La Profecía Consuela al Pueblo de Dios",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-24",
+     "titulo": "La Profecía Une al Cuerpo de la Iglesia en Cristo",
+     "audio": null
+    },
+    {
+     "fecha": "2026-12-25",
+     "titulo": "Inténtalo Nuevamente",
+     "audio": null
+    }
+   ],
+   "videos": []
+  }
+ ]
+}

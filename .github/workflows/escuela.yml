@@ -1,0 +1,21 @@
+name: Actualizar Escuela Sabática
+on:
+  schedule:
+    - cron: "0 11 * * *"   # diario, 5 AM Monterrey: el audio y los videos se publican durante la semana
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generar escuela.json desde la API de Sabbath School
+        run: python3 .github/escuela.py
+      - name: Publicar si cambio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add escuela.json
+          git diff --cached --quiet || git commit -m "Actualizar lección de Escuela Sabática"
+          git push

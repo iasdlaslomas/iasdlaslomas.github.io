@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escuela Sabática — IASD Las Lomas</title>
+  <meta name="description" content="La lección de Escuela Sabática de esta semana: versículo para memorizar, lecturas, audio diario y comentarios en video. Te esperamos cada sábado a las 9:30.">
+  <link rel="canonical" href="https://iasdlaslomas.com/escuela.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="IASD Las Lomas">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:title" content="Escuela Sabática — IASD Las Lomas">
+  <meta property="og:description" content="La lección de Escuela Sabática de esta semana: versículo para memorizar, lecturas, audio diario y comentarios en video.">
+  <meta property="og:url" content="https://iasdlaslomas.com/escuela.html">
+  <meta property="og:image" content="https://iasdlaslomas.com/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fachada de la Iglesia Adventista del Séptimo Día Las Lomas">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#EDEAE3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: var(--leading-normal); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 var(--space-6); }
+  section { padding: clamp(2.5rem, 6vh, 4rem) 0; }
+  @media (max-width: 640px) { .wrap { padding: 0 var(--space-4); } }
+
+  header { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--color-crema-100) 90%, transparent); backdrop-filter: blur(10px); border-bottom: var(--line-thin) solid var(--border); }
+  .nav { display: flex; align-items: center; gap: var(--space-5); padding: var(--space-3) var(--space-6); max-width: 1120px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--ink); }
+  .brand svg { width: 40px; height: auto; stroke: var(--accent-press); }
+  .brand .name { font-weight: 700; letter-spacing: var(--tracking-wider); font-size: var(--text-sm); text-transform: uppercase; }
+  .brand .desc { display: block; font-family: var(--font-script); font-style: italic; font-size: var(--text-xs); letter-spacing: 0; text-transform: none; color: var(--ink-muted); }
+  .nav nav { margin-left: auto; display: flex; gap: var(--space-5); align-items: center; }
+  .nav nav a { color: var(--ink-soft); text-decoration: none; font-size: var(--text-sm); font-weight: 600; }
+  .nav nav a:hover, .nav nav a.actual { color: var(--accent-press); }
+  .nav-toggle { display: none; margin-left: auto; background: transparent; border: none; cursor: pointer; padding: 6px; color: var(--ink); }
+  .nav-toggle svg { width: 24px; height: 24px; display: block; }
+  @media (max-width: 960px) {
+    .nav-toggle { display: block; }
+    .nav nav { display: none; position: absolute; top: 100%; left: 0; right: 0; margin: 0; flex-direction: column; align-items: flex-start; gap: 0; background: color-mix(in srgb, var(--color-crema-100) 97%, transparent); backdrop-filter: blur(10px); border-bottom: var(--line-thin) solid var(--border); padding: var(--space-2) var(--space-6) var(--space-4); box-shadow: var(--shadow-md); }
+    .nav nav.abierto { display: flex; }
+    .nav nav a { padding: 10px 0; font-size: var(--text-base); width: 100%; }
+  }
+
+  .hero-mini { background: var(--bg-inverted); color: var(--ink-on-dark); padding: clamp(2.5rem, 6vh, 4rem) 0; }
+  .hero-mini .kicker { color: var(--color-cielo-300); }
+  .hero-mini h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin: var(--space-2) 0 0; letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
+  .hero-mini p { color: var(--color-crema-200); margin: var(--space-3) 0 0; max-width: 56ch; }
+  .kicker { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; font-weight: 700; color: var(--accent-press); }
+  .loma { display: block; width: 100%; height: 48px; }
+
+  h2.sec { font-size: var(--text-2xl); margin: var(--space-2) 0 var(--space-5); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
+
+  /* ---- Trimestre ---- */
+  .trimestre { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); align-items: center; }
+  .trimestre img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); background: var(--color-carbon-700); }
+  .trimestre h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: var(--space-2) 0 var(--space-3); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
+  .trimestre { align-items: end; }
+  .trimestre img { grid-row: span 2; align-self: center; }
+  .trimestre p { grid-column: 2; align-self: start; margin: 0; color: var(--ink-soft); max-width: 62ch; }
+  @media (max-width: 640px) {
+    .trimestre { grid-template-columns: 110px 1fr; gap: var(--space-4); align-items: center; }
+    .trimestre img { grid-row: auto; }
+    .trimestre p { grid-column: 1 / -1; }
+  }
+
+  /* ---- Lección de la semana ---- */
+  .semana { display: grid; grid-template-columns: 3fr 2fr; gap: var(--space-6); align-items: start; }
+  @media (max-width: 900px) { .semana { grid-template-columns: 1fr; } }
+  .card { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
+  .card .head { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-4) var(--space-5); }
+  .card .head .day { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-cielo-300); }
+  .card .head .title { font-size: var(--text-xl); font-weight: 600; margin-top: 2px; line-height: var(--leading-tight); }
+  .card .body { padding: var(--space-5); }
+  .memo { margin: 0 0 var(--space-5); padding: var(--space-4) var(--space-5); background: var(--bg-tinted); border-left: var(--line-bold) solid var(--accent); }
+  .memo .kicker { display: block; margin-bottom: var(--space-2); }
+  .memo q { quotes: none; font-family: var(--font-script); font-style: italic; font-size: var(--text-xl); line-height: 1.35; color: var(--ink); }
+  @media (max-width: 640px) { .memo q { font-size: var(--text-lg); } }
+  .lecturas b { display: block; font-size: var(--text-xs); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--ink-muted); margin-bottom: 2px; }
+  .lecturas p { margin: 0 0 var(--space-5); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: var(--radius-md); font-weight: 600; font-size: var(--text-sm); text-decoration: none; border: var(--line-med) solid transparent; cursor: pointer; font-family: inherit; }
+  .btn-primary { background: var(--accent-press); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--color-carbon-800); }
+  .btn-sec { background: transparent; color: var(--accent-press); border-color: var(--border-strong); }
+  .btn-sec:hover { border-color: var(--accent-press); }
+  .acciones { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+  .dia { display: flex; gap: var(--space-3); align-items: center; padding: var(--space-3) var(--space-4); border-bottom: var(--line-thin) solid var(--border); }
+  .dia:last-child { border-bottom: none; }
+  .dia.hoy { background: var(--bg-tinted); }
+  .dia .f { flex: none; width: 46px; text-align: center; background: var(--bg); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-md); padding: 4px 2px; }
+  .dia.hoy .f { background: var(--accent); border-color: var(--accent); }
+  .dia .f .d { font-size: var(--text-lg); font-weight: 700; color: var(--accent-press); line-height: 1.1; }
+  .dia .f .m { font-size: 10px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--ink-muted); font-weight: 700; }
+  .dia.hoy .f .d, .dia.hoy .f .m { color: var(--on-accent); }
+  .dia .t { flex: 1; min-width: 0; }
+  .dia .t b { display: block; font-size: var(--text-sm); font-weight: 600; line-height: var(--leading-tight); }
+  .dia .t span { font-size: var(--text-xs); color: var(--ink-muted); }
+  .play { flex: none; width: 40px; height: 40px; border-radius: var(--radius-pill); border: var(--line-med) solid var(--border-strong); background: transparent; color: var(--accent-press); cursor: pointer; display: grid; place-items: center; }
+  .play:hover { border-color: var(--accent-press); }
+  .play[aria-pressed="true"] { background: var(--accent-press); border-color: var(--accent-press); color: var(--on-accent); }
+  .play svg { width: 16px; height: 16px; }
+  .play:disabled { opacity: .35; cursor: default; }
+  audio { display: block; width: 100%; }
+  .reproductor { padding: var(--space-3) var(--space-4); border-top: var(--line-thin) solid var(--border); background: var(--bg); }
+  .reproductor small { display: block; font-size: var(--text-xs); color: var(--ink-muted); margin-bottom: 4px; }
+
+  .videos { margin-top: var(--space-6); }
+  .videos h3 { font-size: var(--text-lg); margin: 0 0 var(--space-3); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+  .chip { padding: 8px 14px; border-radius: var(--radius-pill); border: var(--line-thin) solid var(--border-strong); background: var(--bg-elevated); color: var(--ink-soft); font: 600 var(--text-sm) var(--font-body); cursor: pointer; }
+  .chip:hover { color: var(--accent-press); border-color: var(--accent-press); }
+  .chip[aria-pressed="true"] { background: var(--accent-press); border-color: var(--accent-press); color: var(--on-accent); }
+  video { width: 100%; aspect-ratio: 16 / 9; background: var(--color-carbon-900); border-radius: var(--radius-lg); display: block; }
+  .vacio { color: var(--ink-muted); font-size: var(--text-sm); margin: 0; }
+
+  /* ---- Trimestre completo ---- */
+  .lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: var(--space-3); }
+  .lec { display: flex; gap: var(--space-3); align-items: center; text-align: left; padding: var(--space-3) var(--space-4); background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); cursor: pointer; font: inherit; color: var(--ink); }
+  .lec:hover { border-color: var(--border-strong); box-shadow: var(--shadow-sm); }
+  .lec .n { flex: none; width: 36px; height: 36px; border-radius: var(--radius-pill); display: grid; place-items: center; font-weight: 700; font-size: var(--text-sm); background: var(--bg-tinted); color: var(--accent-press); }
+  .lec b { display: block; font-size: var(--text-sm); font-weight: 600; line-height: var(--leading-tight); }
+  .lec span { font-size: var(--text-xs); color: var(--ink-muted); }
+  .lec.pasada { opacity: .6; }
+  .lec.actual { border-color: var(--accent); background: var(--bg-tinted); }
+  .lec.actual .n { background: var(--accent); color: var(--on-accent); }
+  .lec[aria-current="true"] { outline: var(--line-bold) solid var(--accent-press); outline-offset: 1px; }
+
+  .nota { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); align-items: center; justify-content: space-between; background: var(--bg-tinted); border-left: var(--line-bold) solid var(--accent); padding: var(--space-4) var(--space-5); margin-top: var(--space-6); color: var(--ink-soft); font-size: var(--text-sm); }
+  .nota a { color: var(--accent-press); font-weight: 600; }
+
+  :focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+
+  footer { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-6) 0; margin-top: var(--space-8); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: var(--space-5); align-items: center; justify-content: space-between; }
+  footer small { color: var(--color-gris-400); font-size: var(--text-xs); }
+  footer a { color: var(--color-cielo-300); text-decoration: none; font-size: var(--text-sm); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 160 120" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14,102 Q80,88 146,102"/><path d="M36,22 L54,16 L54,94 L36,94 Z"/><line x1="54" y1="12" x2="54" y2="94"/><line x1="42" y1="48" x2="98" y2="48"/><path d="M62,48 L110,48 L110,94 L62,94 Z"/><line x1="110" y1="48" x2="74" y2="94"/>
+      </svg>
+      <span>
+        <span class="name">Las Lomas</span>
+        <span class="desc">Iglesia Adventista del Séptimo Día</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="anuncios.html">Anuncios</a>
+      <a href="programa.html">Programa</a>
+      <a href="escuela.html" class="actual">Escuela Sabática</a>
+      <a href="calendario.html">Calendario</a>
+      <a href="ministerios.html">Ministerios</a>
+      <a href="redes.html">Redes</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-mini">
+  <div class="wrap">
+    <span class="kicker">Guía de estudio de la Biblia · Adultos</span>
+    <h1>Escuela Sabática</h1>
+    <p>Cada sábado a las 9:30 estudiamos juntos la lección por clases. Estúdiala un poco cada día de la semana y llega listo para compartir lo que aprendiste.</p>
+  </div>
+</div>
+<svg class="loma" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,48 L0,40 Q720,-22 1440,40 L1440,48 Z" fill="var(--color-carbon-800)" transform="scale(1,-1) translate(0,-48)"/>
+</svg>
+
+<section style="padding-top: var(--space-5);">
+  <div class="wrap">
+    <div class="trimestre">
+      <img id="t-portada" alt="" width="180" height="270">
+      <div>
+        <span class="kicker" id="t-fechas">Este trimestre</span>
+        <h2 id="t-titulo">Cargando la lección…</h2>
+      </div>
+      <p id="t-desc"></p>
+    </div>
+  </div>
+</section>
+
+<section id="leccion" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker" id="l-kicker">Esta semana</span>
+    <h2 class="sec" id="l-encabezado">Lección de la semana</h2>
+    <div class="semana">
+      <div>
+        <div class="card">
+          <div class="head">
+            <div class="day" id="l-clase">—</div>
+            <div class="title" id="l-titulo">—</div>
+          </div>
+          <div class="body">
+            <div class="memo" id="l-memo-box">
+              <span class="kicker">Para memorizar</span>
+              <q id="l-memo"></q>
+            </div>
+            <div class="lecturas">
+              <b>Lee para el estudio de esta semana</b>
+              <p id="l-lecturas"></p>
+            </div>
+            <div class="acciones">
+              <a class="btn btn-primary" id="l-leer" href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">Leer la lección completa ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="videos">
+          <h3>Comentarios en video</h3>
+          <div class="chips" id="v-chips"></div>
+          <video id="v-player" controls preload="none" playsinline hidden></video>
+          <p class="vacio" id="v-vacio" hidden>Los videos de esta lección se publican durante la semana. Vuelve pronto.</p>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="head">
+          <div class="day">Estudio diario</div>
+          <div class="title">Escucha la lección</div>
+        </div>
+        <div id="dias"></div>
+        <div class="reproductor" id="reproductor" hidden>
+          <small id="r-titulo"></small>
+          <audio id="r-audio" controls preload="none"></audio>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="trimestre" style="padding-top: 0;">
+  <div class="wrap">
+    <span class="kicker">Todo el trimestre</span>
+    <h2 class="sec">Las 13 lecciones</h2>
+    <div class="lista" id="lista"></div>
+
+    <div class="nota">
+      <span>Material oficial de la Iglesia Adventista. También en la app <b>Sabbath School</b>, con la lección completa y sin conexión.</span>
+      <span>
+        <a href="https://play.google.com/store/apps/details?id=com.cryart.sabbathschool" target="_blank" rel="noopener">Android</a> ·
+        <a href="https://apps.apple.com/app/id895272167" target="_blank" rel="noopener">iPhone</a> ·
+        <a href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">sabbath.school</a>
+      </span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al inicio</a>
+    <small>© 2026 IASD Las Lomas · iasdlaslomas.com</small>
+  </div>
+</footer>
+
+<script>
+// Menú móvil
+(function () {
+  var t = document.querySelector('.nav-toggle'), n = document.querySelector('.nav nav');
+  if (t && n) t.addEventListener('click', function () {
+    var abierto = n.classList.toggle('abierto');
+    t.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+  });
+})();
+
+// Escuela Sabática: escuela.json lo genera a diario la Action "Actualizar Escuela Sabática".
+(function () {
+  var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  var MES_CORTO = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  var DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  var MEDIA = 'https://sabbath-school-media.adventech.io/';
+  var PLAY = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>';
+  var PAUSA = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11"/><rect x="9.5" y="2.5" width="3" height="11"/></svg>';
+  var $ = function (id) { return document.getElementById(id); };
+  var lecciones = [], actual = 0;
+  var audio = $('r-audio'), botonSonando = null;
+
+  function aFecha(s) { return new Date(s + 'T12:00:00'); }
+  function hoyISO() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function larga(s) { var d = aFecha(s); return DIAS[d.getDay()] + ' ' + d.getDate() + ' de ' + MESES[d.getMonth()]; }
+  function seguro(url, prefijo) { return typeof url === 'string' && url.indexOf(prefijo) === 0 && !/["'()\\\s<>]/.test(url); }
+
+  function marcarBoton(b, sonando) {
+    if (!b) return;
+    b.setAttribute('aria-pressed', sonando ? 'true' : 'false');
+    b.innerHTML = sonando ? PAUSA : PLAY;
+  }
+  // Audio y video no suenan a la vez: al iniciar uno se pausa el otro.
+  audio.addEventListener('play', function () { marcarBoton(botonSonando, true); $('v-player').pause(); });
+  $('v-player').addEventListener('play', function () { audio.pause(); });
+  audio.addEventListener('pause', function () { marcarBoton(botonSonando, false); });
+  audio.addEventListener('ended', function () { marcarBoton(botonSonando, false); });
+
+  function pintarLeccion(i) {
+    var l = lecciones[i], hoy = hoyISO();
+    var esActual = i === actual;
+    $('l-kicker').textContent = esActual ? 'Esta semana' : (l.clase < hoy ? 'Lección anterior' : 'Próxima lección');
+    $('l-encabezado').textContent = 'Lección ' + l.n + ': ' + l.titulo;
+    $('l-clase').textContent = 'Clase: ' + larga(l.clase) + ' · 9:30';
+    $('l-titulo').textContent = 'Se estudia del ' + larga(l.inicio) + ' al ' + larga(l.fin);
+    $('l-memo').textContent = l.memorizar || '';
+    $('l-memo-box').hidden = !l.memorizar;
+    $('l-lecturas').textContent = l.lecturas ? l.lecturas + '.' : '';
+    if (seguro(l.leer, 'https://www.sabbath.school/')) $('l-leer').href = l.leer;
+
+    // Estudio diario con audio
+    audio.pause(); audio.removeAttribute('src'); botonSonando = null; $('reproductor').hidden = true;
+    var cont = $('dias'); cont.innerHTML = '';
+    (l.dias || []).forEach(function (d) {
+      var fila = document.createElement('div');
+      fila.className = 'dia' + (d.fecha === hoy ? ' hoy' : '');
+      var f = aFecha(d.fecha);
+      var fe = document.createElement('div'); fe.className = 'f';
+      fe.innerHTML = '<div class="d">' + f.getDate() + '</div><div class="m">' + MES_CORTO[f.getMonth()] + '</div>';
+      var t = document.createElement('div'); t.className = 't';
+      var b = document.createElement('b'); b.textContent = d.titulo;
+      var s = document.createElement('span'); s.textContent = d.fecha === hoy ? 'Hoy · ' + DIAS[f.getDay()] : DIAS[f.getDay()];
+      t.appendChild(b); t.appendChild(s);
+      var p = document.createElement('button');
+      p.type = 'button'; p.className = 'play'; p.innerHTML = PLAY;
+      var ok = seguro(d.audio, MEDIA);
+      p.disabled = !ok;
+      p.setAttribute('aria-label', ok ? 'Escuchar: ' + d.titulo : 'Audio aún no disponible');
+      p.title = ok ? 'Escuchar' : 'El audio de este día aún no se publica';
+      if (ok) p.addEventListener('click', function () {
+        if (botonSonando === p) { audio.paused ? audio.play() : audio.pause(); return; }
+        marcarBoton(botonSonando, false);
+        botonSonando = p;
+        audio.src = d.audio;
+        $('r-titulo').textContent = larga(d.fecha) + ' · ' + d.titulo;
+        $('reproductor').hidden = false;
+        audio.play();
+      });
+      fila.appendChild(fe); fila.appendChild(t); fila.appendChild(p);
+      cont.appendChild(fila);
+    });
+
+    // Videos
+    var chips = $('v-chips'), player = $('v-player');
+    chips.innerHTML = ''; player.pause(); player.removeAttribute('src'); player.hidden = true;
+    var vids = (l.videos || []).filter(function (v) { return seguro(v.src, MEDIA); });
+    $('v-vacio').hidden = vids.length > 0;
+    vids.forEach(function (v) {
+      var c = document.createElement('button');
+      c.type = 'button'; c.className = 'chip'; c.textContent = v.autor;
+      c.setAttribute('aria-pressed', 'false');
+      c.addEventListener('click', function () {
+        chips.querySelectorAll('.chip').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        c.setAttribute('aria-pressed', 'true');
+        player.src = v.src;
+        if (seguro(v.miniatura, MEDIA)) player.poster = v.miniatura; else player.removeAttribute('poster');
+        player.hidden = false;
+        player.play();
+      });
+      chips.appendChild(c);
+    });
+
+    document.querySelectorAll('.lec').forEach(function (x, k) { x.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+  }
+
+  function pintarLista() {
+    var cont = $('lista'), hoy = hoyISO();
+    lecciones.forEach(function (l, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'lec' + (i === actual ? ' actual' : (l.clase < hoy ? ' pasada' : ''));
+      var n = document.createElement('span'); n.className = 'n'; n.textContent = l.n;
+      var t = document.createElement('div');
+      var ti = document.createElement('b'); ti.textContent = l.titulo;
+      var s = document.createElement('span');
+      var c = aFecha(l.clase);
+      s.textContent = (i === actual ? 'Esta semana · ' : '') + 'sábado ' + c.getDate() + ' de ' + MESES[c.getMonth()];
+      t.appendChild(ti); t.appendChild(s);
+      b.appendChild(n); b.appendChild(t);
+      b.addEventListener('click', function () {
+        pintarLeccion(i);
+        $('leccion').scrollIntoView({ behavior: 'smooth' });
+      });
+      cont.appendChild(b);
+    });
+  }
+
+  fetch('escuela.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (data) {
+      var t = data.trimestre || {};
+      lecciones = (data.lecciones || []).filter(function (l) { return l && l.titulo && l.clase; });
+      if (!lecciones.length) throw 0;
+      $('t-titulo').textContent = t.titulo;
+      $('t-fechas').textContent = (t.numero ? t.numero + '.º trimestre · ' : '') + (t.fechas || '');
+      $('t-desc').textContent = t.descripcion || '';
+      if (seguro(t.portada, 'https://sabbath-school.adventech.io/')) { $('t-portada').src = t.portada; $('t-portada').alt = 'Portada del trimestre: ' + t.titulo; }
+      else $('t-portada').hidden = true;
+      // La lección vigente es la primera cuya clase (sábado) es hoy o después.
+      var hoy = hoyISO();
+      actual = lecciones.findIndex(function (l) { return l.clase >= hoy; });
+      if (actual < 0) actual = lecciones.length - 1;
+      pintarLista();
+      pintarLeccion(actual);
+    })
+    .catch(function () {
+      $('t-titulo').textContent = 'No pudimos cargar la lección';
+      $('t-desc').innerHTML = 'Puedes leerla en <a href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">sabbath.school</a>.';
+      $('t-portada').hidden = true;
+      $('leccion').hidden = true; $('trimestre').hidden = true;
+    });
+})();
+</script>
+<!-- Asistente por WhatsApp: botón flotante -->
+<a class="wa-flotante" href="https://wa.me/528134151149?text=Hola" target="_blank" rel="noopener" aria-label="Escríbele al Asistente de la iglesia por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg><span>Escríbenos</span></a>
+<style>
+  .wa-flotante { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: 10px; height: 56px; min-width: 56px; padding: 0 16px; justify-content: center; border-radius: 999px; background: #25D366; color: #fff; text-decoration: none; font: 600 15px/1 "Hanken Grotesk", system-ui, sans-serif; box-shadow: 0 6px 20px rgba(0,0,0,.22); transition: transform .15s ease, box-shadow .15s ease; }
+  .wa-flotante svg { width: 26px; height: 26px; flex: none; }
+  .wa-flotante span { display: none; }
+  .wa-flotante:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.26); }
+  .wa-flotante:focus-visible { outline: 3px solid #0b3d2a; outline-offset: 3px; }
+  @media (min-width: 820px) { .wa-flotante { padding: 0 20px 0 16px; } .wa-flotante span { display: inline; } }
+  @media (prefers-reduced-motion: reduce) { .wa-flotante { transition: none; } .wa-flotante:hover { transform: none; } }
+  footer::after { content: ""; display: block; height: 64px; }  /* que el botón no tape el pie */
+  @media print { .wa-flotante { display: none; } footer::after { display: none; } }
+</style>
+</body>
+</html>
