@@ -59,21 +59,61 @@
   h2.sec { font-size: var(--text-2xl); margin: var(--space-2) 0 var(--space-5); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
 
   /* ---- Trimestre ---- */
-  .trimestre { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); align-items: center; }
-  .trimestre img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); background: var(--color-carbon-700); }
-  .trimestre h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: var(--space-2) 0 var(--space-3); letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
-  .trimestre { align-items: end; }
-  .trimestre img { grid-row: span 2; align-self: center; }
-  .trimestre p { grid-column: 2; align-self: start; margin: 0; color: var(--ink-soft); max-width: 62ch; }
+  /* Portada a la izquierda; a la derecha: título, desplegable de lecciones y descripción */
+  .trimestre { display: grid; grid-template-columns: 180px minmax(0, 1fr); column-gap: var(--space-6); row-gap: var(--space-4); align-items: start; }
+  .trimestre img { grid-row: 1 / span 3; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); background: var(--color-carbon-700); }
+  .trimestre h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: var(--space-2) 0 0; letter-spacing: var(--tracking-tight); line-height: var(--leading-tight); }
+  .trimestre .temario, .trimestre .desc { grid-column: 2; }
+  .desc p { margin: 0; color: var(--ink-soft); max-width: 72ch; }
+  .desc p.corto { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .mas { all: unset; cursor: pointer; margin-top: var(--space-1); color: var(--accent-press); font-weight: 600; font-size: var(--text-sm); }
+  .mas:hover { text-decoration: underline; }
+  .mas:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
   @media (max-width: 640px) {
-    .trimestre { grid-template-columns: 110px 1fr; gap: var(--space-4); align-items: center; }
-    .trimestre img { grid-row: auto; }
-    .trimestre p { grid-column: 1 / -1; }
+    .trimestre { grid-template-columns: 96px minmax(0, 1fr); column-gap: var(--space-4); align-items: center; }
+    .trimestre img { grid-row: 1; }
+    .trimestre .temario, .trimestre .desc { grid-column: 1 / -1; }
   }
 
   /* ---- Lección de la semana ---- */
-  .semana { display: grid; grid-template-columns: 3fr 2fr; gap: var(--space-6); align-items: start; }
-  @media (max-width: 900px) { .semana { grid-template-columns: 1fr; } }
+  .semana { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--space-6); align-items: start; }
+  /* Escritorio: la columna lateral (estudio diario + videos) acompaña la lectura */
+  .lateral { display: flex; flex-direction: column; gap: var(--space-4); }
+  @media (min-width: 901px) {
+    .lateral { position: sticky; top: 84px; max-height: calc(100vh - 100px); overflow-y: auto; scrollbar-width: thin; padding-bottom: var(--space-2); }
+  }
+  /* Celular: tarjeta → paneles plegados → lector, para no tener que bajar hasta el final */
+  @media (max-width: 900px) {
+    .semana { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+    .principal { display: contents; }
+    .principal > .card { order: 1; }
+    .lateral { order: 2; }
+    .lector { order: 3; margin-top: 0; }
+  }
+  .panel summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+  .panel summary::-webkit-details-marker { display: none; }
+  .panel summary .day, .panel summary .title { display: block; }
+  .panel summary .title { font-size: var(--text-lg); }
+  @media (max-width: 640px) { .panel summary .title { font-size: var(--text-base); } }
+  .chev { flex: none; width: 20px; height: 20px; color: var(--color-cielo-300); transition: transform .2s ease; }
+  details[open] > summary .chev { transform: rotate(180deg); }
+  .panel-body { padding: var(--space-4); }
+
+  /* ---- Desplegable de las 13 lecciones ---- */
+  .temario { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+  .temario summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-4) var(--space-5); }
+  .temario summary::-webkit-details-marker { display: none; }
+  .temario-txt { min-width: 0; }
+  .temario-txt .kicker { display: block; }
+  .temario-txt b { display: block; font-size: var(--text-lg); font-weight: 600; margin-top: 2px; line-height: var(--leading-tight); }
+  .temario-ver { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--radius-pill); border: var(--line-thin) solid var(--border-strong); color: var(--accent-press); font-size: var(--text-sm); font-weight: 600; }
+  .temario-ver svg { width: 16px; height: 16px; transition: transform .2s ease; }
+  .temario[open] .temario-ver svg { transform: rotate(180deg); }
+  .temario .cerrar, .temario[open] .abrir { display: none; }
+  .temario[open] .cerrar { display: inline; }
+  .temario summary:hover .temario-ver { border-color: var(--accent-press); }
+  .temario .lista { padding: 0 var(--space-5) var(--space-5); }
+  @media (max-width: 640px) { .temario summary, .temario .lista { padding-left: var(--space-4); padding-right: var(--space-4); } .temario-ver { padding: 8px 10px; } }
   .card { background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); }
   .card .head { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-4) var(--space-5); }
   .card .head .day { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--color-cielo-300); }
@@ -112,7 +152,6 @@
   .reproductor { padding: var(--space-3) var(--space-4); border-top: var(--line-thin) solid var(--border); background: var(--bg); }
   .reproductor small { display: block; font-size: var(--text-xs); color: var(--ink-muted); margin-bottom: 4px; }
 
-  @media (min-width: 901px) { .dias-card { position: sticky; top: 84px; } }
   .dia .t button { all: unset; cursor: pointer; display: block; }
   .dia .t button:hover b { color: var(--accent-press); text-decoration: underline; }
   .dia .t button:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
@@ -160,9 +199,8 @@
   .v-texto h4:first-child { margin-top: 0; }
   .v-texto sup { color: var(--accent-press); font-weight: 700; margin-right: 2px; }
 
-  .videos { margin-top: var(--space-6); }
-  .videos h3 { font-size: var(--text-lg); margin: 0 0 var(--space-3); }
-  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .chips:not(:empty) + video:not([hidden]) { margin-top: var(--space-4); }
   .chip { padding: 8px 14px; border-radius: var(--radius-pill); border: var(--line-thin) solid var(--border-strong); background: var(--bg-elevated); color: var(--ink-soft); font: 600 var(--text-sm) var(--font-body); cursor: pointer; }
   .chip:hover { color: var(--accent-press); border-color: var(--accent-press); }
   .chip[aria-pressed="true"] { background: var(--accent-press); border-color: var(--accent-press); color: var(--on-accent); }
@@ -240,7 +278,20 @@
         <span class="kicker" id="t-fechas">Este trimestre</span>
         <h2 id="t-titulo">Cargando la lección…</h2>
       </div>
-      <p id="t-desc"></p>
+      <details class="temario" id="temario">
+        <summary>
+          <span class="temario-txt">
+            <span class="kicker">Todo el trimestre · 13 lecciones</span>
+            <b id="temario-actual">Cargando…</b>
+          </span>
+          <span class="temario-ver"><span class="abrir">Ver todas</span><span class="cerrar">Cerrar</span> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span>
+        </summary>
+        <div class="lista" id="lista"></div>
+      </details>
+      <div class="desc">
+        <p id="t-desc" class="corto"></p>
+        <button type="button" class="mas" id="t-mas" hidden>Leer más</button>
+      </div>
     </div>
   </div>
 </section>
@@ -250,7 +301,7 @@
     <span class="kicker" id="l-kicker">Esta semana</span>
     <h2 class="sec" id="l-encabezado">Lección de la semana</h2>
     <div class="semana">
-      <div>
+      <div class="principal">
         <div class="card">
           <div class="head">
             <div class="day" id="l-clase">—</div>
@@ -288,25 +339,42 @@
           <p class="credito">Guía de Estudio de la Biblia para adultos, de la Iglesia Adventista del Séptimo Día. El texto se muestra directamente desde <a id="lector-fuente" href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">sabbath.school</a>.</p>
         </div>
 
-        <div class="videos">
-          <h3>Comentarios en video</h3>
-          <div class="chips" id="v-chips"></div>
-          <video id="v-player" controls preload="none" playsinline hidden></video>
-          <p class="vacio" id="v-vacio" hidden>Los videos de esta lección se publican durante la semana. Vuelve pronto.</p>
-        </div>
       </div>
 
-      <aside class="card dias-card">
-        <div class="head">
-          <div class="day">Estudio diario</div>
-          <div class="title">Lee o escucha cada día</div>
-        </div>
-        <div id="dias"></div>
-        <div class="reproductor" id="reproductor" hidden>
-          <small id="r-titulo"></small>
-          <audio id="r-audio" controls preload="none"></audio>
-        </div>
+      <aside class="lateral">
+        <details class="card panel" id="panel-dias" open>
+          <summary class="head">
+            <span><span class="day">Estudio diario</span><span class="title">Lee o escucha cada día</span></span>
+            <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+          </summary>
+          <div id="dias"></div>
+          <div class="reproductor" id="reproductor" hidden>
+            <small id="r-titulo"></small>
+            <audio id="r-audio" controls preload="none"></audio>
+          </div>
+        </details>
+
+        <details class="card panel" id="panel-videos" open>
+          <summary class="head">
+            <span><span class="day">Comentarios en video</span><span class="title" id="v-resumen">Elige un comentarista</span></span>
+            <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+          </summary>
+          <div class="panel-body">
+            <div class="chips" id="v-chips"></div>
+            <video id="v-player" controls preload="none" playsinline hidden></video>
+            <p class="vacio" id="v-vacio" hidden>Los videos de esta lección se publican durante la semana. Vuelve pronto.</p>
+          </div>
+        </details>
       </aside>
+    </div>
+
+    <div class="nota">
+      <span>Material oficial de la Iglesia Adventista. También en la app <b>Sabbath School</b>, para leerla sin conexión.</span>
+      <span>
+        <a href="https://play.google.com/store/apps/details?id=com.cryart.sabbathschool" target="_blank" rel="noopener">Android</a> ·
+        <a href="https://apps.apple.com/app/id895272167" target="_blank" rel="noopener">iPhone</a> ·
+        <a href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">sabbath.school</a>
+      </span>
     </div>
   </div>
 </section>
@@ -319,23 +387,6 @@
   <h3 id="versiculo-ref"></h3>
   <div class="v-texto" id="versiculo-texto"></div>
 </dialog>
-
-<section id="trimestre" style="padding-top: 0;">
-  <div class="wrap">
-    <span class="kicker">Todo el trimestre</span>
-    <h2 class="sec">Las 13 lecciones</h2>
-    <div class="lista" id="lista"></div>
-
-    <div class="nota">
-      <span>Material oficial de la Iglesia Adventista. También en la app <b>Sabbath School</b>, con la lección completa y sin conexión.</span>
-      <span>
-        <a href="https://play.google.com/store/apps/details?id=com.cryart.sabbathschool" target="_blank" rel="noopener">Android</a> ·
-        <a href="https://apps.apple.com/app/id895272167" target="_blank" rel="noopener">iPhone</a> ·
-        <a href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">sabbath.school</a>
-      </span>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
@@ -392,6 +443,7 @@
     var esActual = i === actual;
     $('l-kicker').textContent = esActual ? 'Esta semana' : (l.clase < hoy ? 'Lección anterior' : 'Próxima lección');
     $('l-encabezado').textContent = 'Lección ' + l.n + ': ' + l.titulo;
+    $('temario-actual').textContent = (esActual ? 'Esta semana · ' : '') + 'Lección ' + l.n + ' de ' + lecciones.length + ': ' + l.titulo;
     $('l-clase').textContent = 'Clase: ' + larga(l.clase) + ' · 9:30';
     $('l-titulo').textContent = 'Se estudia del ' + larga(l.inicio) + ' al ' + larga(l.fin);
     $('l-memo').textContent = l.memorizar || '';
@@ -459,6 +511,7 @@
     chips.innerHTML = ''; player.pause(); player.removeAttribute('src'); player.hidden = true;
     var vids = (l.videos || []).filter(function (v) { return seguro(v.src, MEDIA); });
     $('v-vacio').hidden = vids.length > 0;
+    $('v-resumen').textContent = vids.length ? vids.length + ' comentaristas · elige uno' : 'Se publican durante la semana';
     vids.forEach(function (v) {
       var c = document.createElement('button');
       c.type = 'button'; c.className = 'chip'; c.textContent = v.autor;
@@ -466,6 +519,7 @@
       c.addEventListener('click', function () {
         chips.querySelectorAll('.chip').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
         c.setAttribute('aria-pressed', 'true');
+        $('v-resumen').textContent = v.autor;
         player.src = v.src;
         if (seguro(v.miniatura, MEDIA)) player.poster = v.miniatura; else player.removeAttribute('poster');
         player.hidden = false;
@@ -519,6 +573,7 @@
     $('lector-fecha').textContent = etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1);
     $('lector-titulo').textContent = d.titulo;
     $('lector-audio').hidden = !botonesAudio[k];
+    sincronizarAudioLector();
     $('lector-prev').disabled = k === 0;
     $('lector-sig').disabled = k === l.dias.length - 1;
 
@@ -544,6 +599,15 @@
   $('lector-prev').addEventListener('click', function () { abrirDia(diaVisto - 1, true); });
   $('lector-sig').addEventListener('click', function () { abrirDia(diaVisto + 1, true); });
   $('lector-audio').addEventListener('click', function () { if (botonesAudio[diaVisto]) botonesAudio[diaVisto].click(); });
+  // El botón del lector refleja si está sonando el audio del día que se lee (el panel puede estar plegado).
+  function sincronizarAudioLector() {
+    var suena = !audio.paused && botonSonando && botonSonando === botonesAudio[diaVisto];
+    $('lector-audio').textContent = suena ? '❚❚ Pausar' : '▶ Escuchar';
+  }
+  ['play', 'pause', 'ended'].forEach(function (ev) { audio.addEventListener(ev, sincronizarAudioLector); });
+
+  // En celular los paneles laterales empiezan plegados para no empujar la lectura hacia abajo.
+  if (window.matchMedia && matchMedia('(max-width: 900px)').matches) { $('panel-dias').open = false; $('panel-videos').open = false; }
 
   function pintarLista() {
     var cont = $('lista'), hoy = hoyISO();
@@ -561,6 +625,7 @@
       b.appendChild(n); b.appendChild(t);
       b.addEventListener('click', function () {
         pintarLeccion(i);
+        $('temario').open = false;
         $('leccion').scrollIntoView({ behavior: 'smooth' });
       });
       cont.appendChild(b);
@@ -578,6 +643,17 @@
       $('t-titulo').textContent = t.titulo;
       $('t-fechas').textContent = (t.numero ? t.numero + '.º trimestre · ' : '') + (t.fechas || '');
       $('t-desc').textContent = t.descripcion || '';
+      // "Leer más" solo si la descripción no cabe en 3 líneas
+      (function () {
+        var p = $('t-desc'), mas = $('t-mas');
+        if (p.scrollHeight > p.clientHeight + 2) {
+          mas.hidden = false;
+          mas.onclick = function () {
+            var corto = p.classList.toggle('corto');
+            mas.textContent = corto ? 'Leer más' : 'Leer menos';
+          };
+        }
+      })();
       if (seguro(t.portada, 'https://sabbath-school.adventech.io/')) { $('t-portada').src = t.portada; $('t-portada').alt = 'Portada del trimestre: ' + t.titulo; }
       else $('t-portada').hidden = true;
       // La lección vigente es la primera cuya clase (sábado) es hoy o después.
@@ -591,7 +667,7 @@
       $('t-titulo').textContent = 'No pudimos cargar la lección';
       $('t-desc').innerHTML = 'Puedes leerla en <a href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">sabbath.school</a>.';
       $('t-portada').hidden = true;
-      $('leccion').hidden = true; $('trimestre').hidden = true;
+      $('leccion').hidden = true; $('temario').hidden = true;
     });
 })();
 </script>
