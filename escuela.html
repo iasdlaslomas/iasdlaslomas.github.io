@@ -112,6 +112,54 @@
   .reproductor { padding: var(--space-3) var(--space-4); border-top: var(--line-thin) solid var(--border); background: var(--bg); }
   .reproductor small { display: block; font-size: var(--text-xs); color: var(--ink-muted); margin-bottom: 4px; }
 
+  @media (min-width: 901px) { .dias-card { position: sticky; top: 84px; } }
+  .dia .t button { all: unset; cursor: pointer; display: block; }
+  .dia .t button:hover b { color: var(--accent-press); text-decoration: underline; }
+  .dia .t button:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+  .dia.leyendo { box-shadow: inset 3px 0 0 var(--accent-press); }
+
+  /* ---- Lector de la lección ---- */
+  .lector { margin-top: var(--space-6); background: var(--bg-elevated); border: var(--line-thin) solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); scroll-margin-top: 84px; }
+  .tabs { display: flex; overflow-x: auto; border-bottom: var(--line-thin) solid var(--border); scrollbar-width: thin; }
+  .tab { flex: 1 1 0; min-width: 44px; padding: var(--space-3) var(--space-2); background: transparent; border: none; border-bottom: 3px solid transparent; cursor: pointer; font: inherit; color: var(--ink-muted); text-align: center; line-height: 1.2; }
+  .tab b { display: block; font-size: var(--text-xs); letter-spacing: var(--tracking-wide); text-transform: uppercase; }
+  .tab span { font-size: var(--text-lg); font-weight: 700; }
+  .tab:hover { color: var(--accent-press); }
+  .tab[aria-selected="true"] { color: var(--accent-press); border-bottom-color: var(--accent-press); background: var(--bg-tinted); }
+  .tab.hoy b::after { content: " · hoy"; }
+  .lector-meta { display: flex; gap: var(--space-4); align-items: flex-end; justify-content: space-between; flex-wrap: wrap; padding: var(--space-5) var(--space-5) 0; }
+  .lector-meta h3 { font-size: var(--text-xl); margin: var(--space-1) 0 0; line-height: var(--leading-tight); }
+  .lectura { padding: var(--space-3) var(--space-5) var(--space-5); font-size: 1.0625rem; line-height: 1.7; max-width: 68ch; min-height: 240px; }
+  .lectura p { margin: 0 0 var(--space-4); }
+  .lectura h3 { font-size: var(--text-lg); margin: var(--space-5) 0 var(--space-3); }
+  .lectura h4 { font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; color: var(--accent-press); margin: var(--space-6) 0 var(--space-3); }
+  .lectura hr { border: none; border-top: var(--line-thin) solid var(--border); margin: var(--space-6) 0 0; }
+  .lectura blockquote { margin: 0 0 var(--space-5); padding: var(--space-4) var(--space-5); background: var(--bg-tinted); border-left: var(--line-bold) solid var(--accent); font-family: var(--font-script); font-style: italic; font-size: var(--text-xl); line-height: 1.4; }
+  .lectura blockquote p:first-child { font-family: var(--font-body); font-style: normal; font-size: var(--text-xs); letter-spacing: var(--tracking-wider); text-transform: uppercase; font-weight: 700; color: var(--accent-press); margin-bottom: var(--space-2); }
+  .lectura .pregunta { display: block; padding: var(--space-3) var(--space-4); background: var(--bg-tinted); border-left: var(--line-bold) solid var(--accent-press); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-weight: 600; color: var(--ink); }
+  .lectura .ref { all: unset; cursor: pointer; color: var(--accent-press); font-weight: 600; text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; }
+  .lectura .ref:hover { text-decoration-color: var(--accent-press); }
+  .lectura .ref:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+  .lectura .estado { color: var(--ink-muted); font-size: var(--text-sm); }
+  .lector-pie { display: flex; justify-content: space-between; gap: var(--space-3); padding: 0 var(--space-5) var(--space-4); }
+  .lector-pie .btn:disabled { visibility: hidden; }
+  .credito { margin: 0; padding: var(--space-3) var(--space-5); border-top: var(--line-thin) solid var(--border); font-size: var(--text-xs); color: var(--ink-muted); }
+  .credito a { color: var(--accent-press); }
+  @media (max-width: 640px) {
+    .lector-meta, .lectura, .lector-pie, .credito { padding-left: var(--space-4); padding-right: var(--space-4); }
+    .lectura blockquote { font-size: var(--text-lg); }
+  }
+
+  dialog#versiculo { width: min(560px, calc(100vw - 32px)); max-height: min(70vh, 640px); padding: 0; border: none; border-radius: var(--radius-xl); background: var(--bg-elevated); color: var(--ink); box-shadow: var(--shadow-lg); }
+  dialog#versiculo::backdrop { background: rgba(22, 22, 22, .45); }
+  .v-head { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; padding: var(--space-4) var(--space-5) var(--space-2); background: var(--bg-elevated); }
+  .v-cerrar { width: 36px; height: 36px; border-radius: var(--radius-pill); border: var(--line-thin) solid var(--border-strong); background: transparent; cursor: pointer; font-size: var(--text-base); color: var(--ink-soft); }
+  #versiculo-ref { margin: 0; padding: 0 var(--space-5); font-size: var(--text-xl); }
+  .v-texto { padding: var(--space-3) var(--space-5) var(--space-5); line-height: 1.7; }
+  .v-texto h4 { margin: var(--space-4) 0 var(--space-1); font-size: var(--text-sm); color: var(--accent-press); }
+  .v-texto h4:first-child { margin-top: 0; }
+  .v-texto sup { color: var(--accent-press); font-weight: 700; margin-right: 2px; }
+
   .videos { margin-top: var(--space-6); }
   .videos h3 { font-size: var(--text-lg); margin: 0 0 var(--space-3); }
   .chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
@@ -218,9 +266,26 @@
               <p id="l-lecturas"></p>
             </div>
             <div class="acciones">
-              <a class="btn btn-primary" id="l-leer" href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">Leer la lección completa ↗</a>
+              <a class="btn btn-primary" href="#lector">Leer la lección ↓</a>
             </div>
           </div>
+        </div>
+
+        <div class="lector" id="lector">
+          <div class="tabs" id="lector-tabs" role="tablist" aria-label="Día de la lección"></div>
+          <div class="lector-meta">
+            <div>
+              <span class="kicker" id="lector-fecha"></span>
+              <h3 id="lector-titulo"></h3>
+            </div>
+            <button class="btn btn-sec" type="button" id="lector-audio" hidden>▶ Escuchar</button>
+          </div>
+          <article class="lectura" id="lectura" aria-live="polite"></article>
+          <div class="lector-pie">
+            <button class="btn btn-sec" type="button" id="lector-prev">← Día anterior</button>
+            <button class="btn btn-sec" type="button" id="lector-sig">Día siguiente →</button>
+          </div>
+          <p class="credito">Guía de Estudio de la Biblia para adultos, de la Iglesia Adventista del Séptimo Día. El texto se muestra directamente desde <a id="lector-fuente" href="https://www.sabbath.school/LessonBook?lang=2" target="_blank" rel="noopener">sabbath.school</a>.</p>
         </div>
 
         <div class="videos">
@@ -231,10 +296,10 @@
         </div>
       </div>
 
-      <aside class="card">
+      <aside class="card dias-card">
         <div class="head">
           <div class="day">Estudio diario</div>
-          <div class="title">Escucha la lección</div>
+          <div class="title">Lee o escucha cada día</div>
         </div>
         <div id="dias"></div>
         <div class="reproductor" id="reproductor" hidden>
@@ -245,6 +310,15 @@
     </div>
   </div>
 </section>
+
+<dialog id="versiculo" aria-labelledby="versiculo-ref">
+  <div class="v-head">
+    <span class="kicker" id="versiculo-version">Reina-Valera 1960</span>
+    <button type="button" class="v-cerrar" id="versiculo-cerrar" aria-label="Cerrar">✕</button>
+  </div>
+  <h3 id="versiculo-ref"></h3>
+  <div class="v-texto" id="versiculo-texto"></div>
+</dialog>
 
 <section id="trimestre" style="padding-top: 0;">
   <div class="wrap">
@@ -291,6 +365,11 @@
   var $ = function (id) { return document.getElementById(id); };
   var lecciones = [], actual = 0;
   var audio = $('r-audio'), botonSonando = null;
+  // Lector: el texto de cada día se pide en vivo a la API oficial (no se copia al sitio).
+  var API = 'https://sabbath-school.adventech.io/api/v2/es/quarterlies/';
+  var DIA_CORTO = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  var qid = '', leccionVista = 0, diaVisto = 0, cache = {}, botonesAudio = [];
+  function dos(n) { return String(n).padStart(2, '0'); }
 
   function aFecha(s) { return new Date(s + 'T12:00:00'); }
   function hoyISO() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
@@ -318,12 +397,13 @@
     $('l-memo').textContent = l.memorizar || '';
     $('l-memo-box').hidden = !l.memorizar;
     $('l-lecturas').textContent = l.lecturas ? l.lecturas + '.' : '';
-    if (seguro(l.leer, 'https://www.sabbath.school/')) $('l-leer').href = l.leer;
+    if (seguro(l.leer, 'https://www.sabbath.school/')) $('lector-fuente').href = l.leer;
+    leccionVista = i;
 
-    // Estudio diario con audio
+    // Estudio diario: el título abre la lectura del día; el botón reproduce el audio
     audio.pause(); audio.removeAttribute('src'); botonSonando = null; $('reproductor').hidden = true;
-    var cont = $('dias'); cont.innerHTML = '';
-    (l.dias || []).forEach(function (d) {
+    var cont = $('dias'); cont.innerHTML = ''; botonesAudio = [];
+    (l.dias || []).forEach(function (d, k) {
       var fila = document.createElement('div');
       fila.className = 'dia' + (d.fecha === hoy ? ' hoy' : '');
       var f = aFecha(d.fecha);
@@ -331,8 +411,12 @@
       fe.innerHTML = '<div class="d">' + f.getDate() + '</div><div class="m">' + MES_CORTO[f.getMonth()] + '</div>';
       var t = document.createElement('div'); t.className = 't';
       var b = document.createElement('b'); b.textContent = d.titulo;
-      var s = document.createElement('span'); s.textContent = d.fecha === hoy ? 'Hoy · ' + DIAS[f.getDay()] : DIAS[f.getDay()];
-      t.appendChild(b); t.appendChild(s);
+      var s = document.createElement('span'); s.textContent = (d.fecha === hoy ? 'Hoy · ' + DIAS[f.getDay()] : DIAS[f.getDay()]) + ' · leer';
+      var abrir = document.createElement('button'); abrir.type = 'button';
+      abrir.setAttribute('aria-label', 'Leer: ' + d.titulo);
+      abrir.appendChild(b); abrir.appendChild(s);
+      abrir.addEventListener('click', function () { abrirDia(k, true); });
+      t.appendChild(abrir);
       var p = document.createElement('button');
       p.type = 'button'; p.className = 'play'; p.innerHTML = PLAY;
       var ok = seguro(d.audio, MEDIA);
@@ -350,7 +434,25 @@
       });
       fila.appendChild(fe); fila.appendChild(t); fila.appendChild(p);
       cont.appendChild(fila);
+      botonesAudio.push(ok ? p : null);
     });
+
+    // Lector: pestañas por día; abre hoy si cae en esta lección, si no el sábado de inicio
+    var tabs = $('lector-tabs'); tabs.innerHTML = '';
+    (l.dias || []).forEach(function (d, k) {
+      var f = aFecha(d.fecha);
+      var tb = document.createElement('button');
+      tb.type = 'button'; tb.className = 'tab' + (d.fecha === hoy ? ' hoy' : '');
+      tb.setAttribute('role', 'tab');
+      tb.setAttribute('aria-label', larga(d.fecha) + ': ' + d.titulo);
+      var tn = document.createElement('b'); tn.textContent = DIA_CORTO[f.getDay()];
+      var td = document.createElement('span'); td.textContent = f.getDate();
+      tb.appendChild(tn); tb.appendChild(td);
+      tb.addEventListener('click', function () { abrirDia(k, false); });
+      tabs.appendChild(tb);
+    });
+    var deHoy = (l.dias || []).findIndex(function (d) { return d.fecha === hoy; });
+    abrirDia(deHoy >= 0 ? deHoy : 0, false);
 
     // Videos
     var chips = $('v-chips'), player = $('v-player');
@@ -374,6 +476,74 @@
 
     document.querySelectorAll('.lec').forEach(function (x, k) { x.setAttribute('aria-current', k === i ? 'true' : 'false'); });
   }
+
+  // Copia solo etiquetas de texto conocidas, sin atributos: nada del HTML de origen se ejecuta.
+  // Las citas bíblicas se vuelven botones que abren el versículo; las preguntas (<code>) se resaltan.
+  var PERMITIDAS = { P: 1, EM: 1, STRONG: 1, B: 1, I: 1, HR: 1, H3: 1, H4: 1, BLOCKQUOTE: 1, UL: 1, OL: 1, LI: 1, BR: 1, SUP: 1 };
+  function limpiar(origen, destino, versos) {
+    Array.prototype.forEach.call(origen.childNodes, function (n) {
+      if (n.nodeType === 3) { destino.appendChild(document.createTextNode(n.nodeValue)); return; }
+      if (n.nodeType !== 1 || n.tagName === 'SCRIPT' || n.tagName === 'STYLE') return;
+      var el, tag = n.tagName;
+      if (tag === 'A' && n.getAttribute('class') === 'verse' && versos && versos[n.getAttribute('verse')]) {
+        var cita = n.textContent, texto = versos[n.getAttribute('verse')];
+        el = document.createElement('button'); el.type = 'button'; el.className = 'ref';
+        el.addEventListener('click', function () { mostrarVersiculo(cita, texto); });
+      } else if (tag === 'CODE') { el = document.createElement('span'); el.className = 'pregunta'; }
+      else if (tag === 'H2') el = document.createElement('h4');
+      else if (PERMITIDAS[tag]) el = document.createElement(tag);
+      else { limpiar(n, destino, versos); return; }
+      limpiar(n, el, versos);
+      destino.appendChild(el);
+    });
+  }
+
+  var dlg = $('versiculo'), versionBiblia = '';
+  function mostrarVersiculo(cita, html) {
+    $('versiculo-ref').textContent = cita;
+    $('versiculo-version').textContent = versionBiblia === 'RVR1960' ? 'Reina-Valera 1960' : versionBiblia;
+    var cont = $('versiculo-texto'); cont.innerHTML = '';
+    limpiar(new DOMParser().parseFromString(html, 'text/html').body, cont, null);
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  $('versiculo-cerrar').addEventListener('click', function () { dlg.close ? dlg.close() : dlg.removeAttribute('open'); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+
+  function abrirDia(k, desplazar) {
+    var l = lecciones[leccionVista], d = l && l.dias && l.dias[k];
+    if (!d) return;
+    diaVisto = k;
+    document.querySelectorAll('#lector-tabs .tab').forEach(function (x, j) { x.setAttribute('aria-selected', j === k ? 'true' : 'false'); });
+    document.querySelectorAll('#dias .dia').forEach(function (x, j) { x.classList.toggle('leyendo', j === k); });
+    var etiqueta = larga(d.fecha);
+    $('lector-fecha').textContent = etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1);
+    $('lector-titulo').textContent = d.titulo;
+    $('lector-audio').hidden = !botonesAudio[k];
+    $('lector-prev').disabled = k === 0;
+    $('lector-sig').disabled = k === l.dias.length - 1;
+
+    var art = $('lectura');
+    var url = API + qid + '/lessons/' + dos(l.n) + '/days/' + dos(k + 1) + '/read/index.json';
+    art.dataset.pedido = url;
+    art.innerHTML = '<p class="estado">Cargando la lectura…</p>';
+    if (!cache[url]) cache[url] = fetch(url).then(function (r) { if (!r.ok) throw 0; return r.json(); });
+    cache[url].then(function (r) {
+      if (art.dataset.pedido !== url) return;
+      var biblias = r.bible || [];
+      var b = biblias.filter(function (x) { return x.name === 'RVR1960'; })[0] || biblias[0];
+      versionBiblia = b ? b.name : '';
+      art.innerHTML = '';
+      limpiar(new DOMParser().parseFromString(r.content || '', 'text/html').body, art, b ? b.verses : null);
+    }).catch(function () {
+      delete cache[url];
+      if (art.dataset.pedido !== url) return;
+      art.innerHTML = '<p class="estado">No pudimos cargar la lectura de este día. Revisa tu conexión e inténtalo de nuevo.</p>';
+    });
+    if (desplazar) $('lector').scrollIntoView({ behavior: 'smooth' });
+  }
+  $('lector-prev').addEventListener('click', function () { abrirDia(diaVisto - 1, true); });
+  $('lector-sig').addEventListener('click', function () { abrirDia(diaVisto + 1, true); });
+  $('lector-audio').addEventListener('click', function () { if (botonesAudio[diaVisto]) botonesAudio[diaVisto].click(); });
 
   function pintarLista() {
     var cont = $('lista'), hoy = hoyISO();
@@ -403,6 +573,8 @@
       var t = data.trimestre || {};
       lecciones = (data.lecciones || []).filter(function (l) { return l && l.titulo && l.clase; });
       if (!lecciones.length) throw 0;
+      qid = /^\d{4}-\d{2}$/.test(t.id || '') ? t.id : '';
+      if (!qid) $('lector').hidden = true;
       $('t-titulo').textContent = t.titulo;
       $('t-fechas').textContent = (t.numero ? t.numero + '.º trimestre · ' : '') + (t.fechas || '');
       $('t-desc').textContent = t.descripcion || '';
