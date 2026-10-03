@@ -1,0 +1,93 @@
+/* ============================================================
+   IASD Las Lomas — Tema claro / oscuro
+   tema.js pone data-theme="light|dark" en <html> antes de pintar
+   (según lo que eligió la persona o, si no eligió, el modo del teléfono).
+   Todo lo oscuro va prefijado con :root[data-theme="dark"] para ganarle
+   en especificidad a los estilos propios de cada página.
+   ============================================================ */
+
+/* ---- Botón ☀ / ☾ (lo inserta tema.js en la cabecera) ---- */
+.tema-btn { order: 10; flex: none; width: 38px; height: 38px; padding: 0; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--ink-soft); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-pill); cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+.tema-btn:hover { color: var(--accent-press); background: var(--bg-tinted); }
+.tema-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--focus-ring); }
+.nav .tema-btn svg { width: 18px; height: 18px; display: block; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tema-btn .sol { display: none; }
+:root[data-theme="dark"] .tema-btn .sol { display: block; }
+:root[data-theme="dark"] .tema-btn .luna { display: none; }
+@media (max-width: 820px) {
+  .tema-btn { margin-left: auto; }
+  header .nav .nav-toggle { order: 11; margin-left: 4px; }
+}
+
+/* ---- Tokens oscuros ---- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:            #1A1B1A;
+  --bg-elevated:   #232423;
+  --bg-inverted:   #0F1213;
+  --bg-tinted:     #1C272A;
+  --ink:           #EDEAE3;
+  --ink-soft:      #C3BEB3;
+  --ink-muted:     #9C978D;
+  --ink-on-dark:   #EDEAE3;
+  --accent:        #8DB0BB;   /* cielo-400: más luminoso sobre fondo oscuro */
+  --accent-hover:  #A3C0C9;
+  --accent-press:  #B0C9D0;   /* se usa como texto de acento → cielo-300 */
+  --on-accent:     #0F1213;
+  --border:        #2E302F;
+  --border-strong: #34494F;
+  --focus-ring:    color-mix(in srgb, #8DB0BB 55%, transparent);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+}
+:root[data-theme="dark"] ::selection { background: #34494F; color: #EDEAE3; }
+
+/* ---- Común a todas las páginas ---- */
+:root[data-theme="dark"] header { background: color-mix(in srgb, var(--bg) 88%, transparent); }
+@media (max-width: 820px) {
+  :root[data-theme="dark"] .nav nav { background: color-mix(in srgb, var(--bg) 97%, transparent); }
+}
+:root[data-theme="dark"] .loma path { fill: var(--bg-inverted); }   /* la curva empata con el hero */
+:root[data-theme="dark"] .btn-secondary:hover { color: var(--bg); }
+:root[data-theme="dark"] .btn-on-dark:hover { color: var(--bg-inverted); }
+:root[data-theme="dark"] .banner-ink { border: var(--line-thin) solid var(--border); }
+:root[data-theme="dark"] .banner-accent { background: #3F6A78; color: var(--ink); }   /* cielo profundo, sin deslumbrar */
+:root[data-theme="dark"] .banner-accent .cta { background: var(--ink); color: #2C4E59; }
+:root[data-theme="dark"] .wa-flotante:focus-visible { outline-color: var(--accent); }
+
+/* ---- Inicio ---- */
+:root[data-theme="dark"] .hero .facade { filter: brightness(.85) saturate(.9); }
+:root[data-theme="dark"] .hero .facade::after {
+  background:
+    linear-gradient(to right, var(--bg-inverted) 2%, color-mix(in srgb, var(--bg-inverted) 55%, transparent) 32%, transparent 60%),
+    linear-gradient(to bottom, color-mix(in srgb, var(--bg-inverted) 85%, transparent) 0%, transparent 38%),
+    linear-gradient(to top, var(--bg-inverted) 0%, transparent 34%),
+    radial-gradient(120% 90% at 70% 45%, transparent 55%, color-mix(in srgb, var(--bg-inverted) 65%, transparent) 100%);
+}
+:root[data-theme="dark"] .step,
+:root[data-theme="dark"] .contact-list li { border-top-color: var(--border); }
+:root[data-theme="dark"] .step:last-child,
+:root[data-theme="dark"] .contact-list li:last-child { border-bottom-color: var(--border); }
+:root[data-theme="dark"] .band .masonry { opacity: .12; }
+:root[data-theme="dark"] .player { background: #0A0C0C; border-color: var(--border); }
+:root[data-theme="dark"] .pastor-foto img { filter: brightness(.95); }
+:root[data-theme="dark"] .map iframe { filter: invert(.9) hue-rotate(180deg) saturate(.6) brightness(.95); }   /* mapa en tonos oscuros */
+
+/* ---- Programa: encabezados con fondo claro elegido en el panel ---- */
+:root[data-theme="dark"] .schedule .head.claro { color: #272727; }
+:root[data-theme="dark"] .schedule .head.claro .day,
+:root[data-theme="dark"] .schedule .head.claro .tema,
+:root[data-theme="dark"] .schedule .head.claro .ver-diseno { color: #3F6A78; }
+:root[data-theme="dark"] .schedule .head.claro .ver-diseno { border-color: #B0C9D0; }
+
+/* ---- Escuela Sabática ---- */
+:root[data-theme="dark"] .btn-primary:hover { background: var(--accent-hover); }   /* escuela.html lo oscurece a carbón */
+
+/* ---- Calendario ---- */
+:root[data-theme="dark"] .cal-celda.otro-mes .num { color: #5F5B55; }
+
+/* ---- Solicitar ---- */
+:root[data-theme="dark"] .plazo.tarde { background: #2E2614; border-color: #6B5626; color: #E3C88F; }
+:root[data-theme="dark"] #estado.ok { color: #8BC46A; }
+:root[data-theme="dark"] #estado.error { color: #F2847C; }
