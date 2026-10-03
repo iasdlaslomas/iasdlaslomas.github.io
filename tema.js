@@ -44,5 +44,13 @@
     });
     nav.appendChild(b);
     aplicar(raiz.getAttribute('data-theme') || actual());
+
+    // Marca la cabecera cuando el menú ☰ está visible, sin importar el corte de cada página.
+    var toggle = nav.querySelector('.nav-toggle');
+    if (toggle) {
+      var marcar = function () { nav.classList.toggle('con-hamburguesa', getComputedStyle(toggle).display !== 'none'); };
+      marcar();
+      window.addEventListener('resize', marcar);
+    }
   });
 })();
