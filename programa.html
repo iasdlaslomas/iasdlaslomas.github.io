@@ -84,6 +84,7 @@
   .schedule .head.claro .day, .schedule .head.claro .tema, .schedule .head.claro .ver-diseno { color: var(--accent-press); }
   .schedule .head.claro .ver-diseno { border-color: var(--border-strong); }
   .schedule .pie { padding: var(--space-3) var(--space-5); background: var(--bg-tinted); font-size: var(--text-sm); color: var(--ink-soft); border-top: var(--line-thin) solid var(--border); }
+  .nota-nohay { text-align: center; color: var(--ink-soft); font-size: var(--text-sm); margin: var(--space-4) 0 0; }
   .nota-prep { display: flex; gap: var(--space-3); align-items: start; background: var(--bg-tinted); border: var(--line-thin) solid var(--border-strong); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); margin-bottom: var(--space-5); font-size: var(--text-sm); color: var(--accent-press); }
 
   footer { background: var(--bg-inverted); color: var(--ink-on-dark); padding: var(--space-6) 0; margin-top: var(--space-8); }
@@ -188,24 +189,33 @@ function cargarPrograma() {
       return (j.documents || []).map(function (d) { var o = {}, f = d.fields || {}; for (var k in f) o[k] = valor(f[k]); return o; });
     })
     .catch(function () { return []; });
-  // El diseño del programa (Canva, presentación…) es uno por sábado y vive en el documento de la semana
+  // El diseño del programa (Canva, presentación…) es uno por sábado y vive en el documento de la semana,
+  // igual que los programas que ese sábado no hay (sinPrograma: lo marcan en el panel)
   var deSemana = fetch(FS + '/semanas/' + sabado + '?key=' + CLAVE, { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : {}; })
-    .then(function (j) { return (j.fields && j.fields.enlace && valor(j.fields.enlace)) || ''; })
-    .catch(function () { return ''; });
+    .then(function (j) {
+      var f = j.fields || {};
+      return { enlace: (f.enlace && valor(f.enlace)) || '', sinPrograma: Object.keys((f.sinPrograma && valor(f.sinPrograma)) || {}) };
+    })
+    .catch(function () { return { enlace: '', sinPrograma: [] }; });
+  var FIJOS = { 'escuela-sabatica': 'Escuela Sabática', 'culto-divino': 'Culto Divino', 'culto-joven': 'Culto Joven' };
   var delArchivo = fetch('programa.json', { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .catch(function () { return null; });
   return Promise.all([deFirebase, delArchivo, deSemana]).then(function (res) {
-    var bloques = res[0].slice(), pj = res[1], enlace = res[2];
+    var bloques = res[0].slice(), pj = res[1], enlace = res[2].enlace;
+    var noHay = res[2].sinPrograma.filter(function (k) { return FIJOS[k]; });
+    var fuera = noHay.map(function (k) { return norm(FIJOS[k]); });
+    function siHay(b) { return b && noHay.indexOf(b.id) < 0 && fuera.indexOf(norm(b.titulo)) < 0; }
+    bloques = bloques.filter(siHay);
     var titulos = bloques.map(function (b) { return norm(b.titulo); });
     if (pj && pj.bloques && pj.fecha === sabado) {
-      pj.bloques.forEach(function (b) { if (b && titulos.indexOf(norm(b.titulo)) < 0) bloques.push(b); });
+      pj.bloques.forEach(function (b) { if (siHay(b) && titulos.indexOf(norm(b.titulo)) < 0) bloques.push(b); });
     }
     if (!bloques.length) { if (pj && enlace) pj.enlace = enlace; return pj; }   // nada nuevo: programa.json tal cual (incluye el formato v1)
     bloques.forEach(function (b) { if (!b.fecha) b.fecha = sabado; });
     bloques.sort(function (a, b) { var x = clave(a), y = clave(b); return x < y ? -1 : x > y ? 1 : 0; });
-    return { version: 2, fecha: sabado, bloques: bloques, enlace: enlace };
+    return { version: 2, fecha: sabado, bloques: bloques, enlace: enlace, noHay: noHay.map(function (k) { return FIJOS[k]; }) };
   });
 }
 // Fondo del encabezado que cada bloque escoge en el panel. Solo se aceptan colores #RRGGBB
@@ -358,6 +368,11 @@ function diaDeBloque(bl, p) {
           }
           cont.appendChild(card);
         });
+        if (pinto && p.noHay && p.noHay.length) {
+          var nh = document.createElement('p'); nh.className = 'nota-nohay';
+          nh.textContent = 'Este sábado no hay ' + p.noHay.join(' ni ') + '.';
+          cont.appendChild(nh);
+        }
         if (!pinto) throw 0;
         if (vd) cont.insertBefore(vd, cont.firstChild);   // el botón del diseño, arriba de los programas
       } else if (p.partes && p.partes.length) {
