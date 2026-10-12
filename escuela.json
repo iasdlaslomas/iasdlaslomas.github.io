@@ -213,7 +213,33 @@
      "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/96ae32c33fac39f0725a5f0981fa1e009ad9df09764d7ce0dd9766ce7bb026c4/96ae32c33fac39f0725a5f0981fa1e009ad9df09764d7ce0dd9766ce7bb026c4.mp3"
     }
    ],
-   "videos": []
+   "videos": [
+    {
+     "autor": "Escuela Sabática Viva",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/25fe3873a2800a807e68e09ac4a4943fac1b4d0ef95ec436857a23a8dd772b30/25fe3873a2800a807e68e09ac4a4943fac1b4d0ef95ec436857a23a8dd772b30.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/25fe3873a2800a807e68e09ac4a4943fac1b4d0ef95ec436857a23a8dd772b30/thumb/25fe3873a2800a807e68e09ac4a4943fac1b4d0ef95ec436857a23a8dd772b30.webp"
+    },
+    {
+     "autor": "Escrito Está",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/918f7faab39dbf15e0637b8081183edb511a7dc594ca47b82765ddd95cb03da5/918f7faab39dbf15e0637b8081183edb511a7dc594ca47b82765ddd95cb03da5.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/918f7faab39dbf15e0637b8081183edb511a7dc594ca47b82765ddd95cb03da5/thumb/918f7faab39dbf15e0637b8081183edb511a7dc594ca47b82765ddd95cb03da5.webp"
+    },
+    {
+     "autor": "Pastor Alejandro Bullon",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/b37d2005ed98ddb1ce0e43e6b83591e03e97b442753ea260fd1cf35745dd23a8/b37d2005ed98ddb1ce0e43e6b83591e03e97b442753ea260fd1cf35745dd23a8.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/b37d2005ed98ddb1ce0e43e6b83591e03e97b442753ea260fd1cf35745dd23a8/thumb/b37d2005ed98ddb1ce0e43e6b83591e03e97b442753ea260fd1cf35745dd23a8.webp"
+    },
+    {
+     "autor": "Pastor Daniel Herrera",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/fbcdbb6dafe57f5f01a508724e84b387b8dab225ee20b9d3f566dfb54fb30085/fbcdbb6dafe57f5f01a508724e84b387b8dab225ee20b9d3f566dfb54fb30085.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/fbcdbb6dafe57f5f01a508724e84b387b8dab225ee20b9d3f566dfb54fb30085/thumb/fbcdbb6dafe57f5f01a508724e84b387b8dab225ee20b9d3f566dfb54fb30085.webp"
+    },
+    {
+     "autor": "Nuevo Tiempo Chile",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/f55395abe89f43f39583ccfaa73e1805fe9cdc16d503ebc9e55889091feef354/f55395abe89f43f39583ccfaa73e1805fe9cdc16d503ebc9e55889091feef354.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/f55395abe89f43f39583ccfaa73e1805fe9cdc16d503ebc9e55889091feef354/thumb/f55395abe89f43f39583ccfaa73e1805fe9cdc16d503ebc9e55889091feef354.webp"
+    }
+   ]
   },
   {
    "n": 4,
@@ -238,7 +264,7 @@
     {
      "fecha": "2026-10-19",
      "titulo": "Apóstoles y Profetas",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/3f6b8f6fdedaa61c5bfee062e119993d6b404e12227607c37a0c4bde8be7523b/3f6b8f6fdedaa61c5bfee062e119993d6b404e12227607c37a0c4bde8be7523b.mp3"
     },
     {
      "fecha": "2026-10-20",
