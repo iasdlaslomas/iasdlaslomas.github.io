@@ -625,11 +625,21 @@ function cargarPrograma() {
   var delArchivo = fetch('programa.json', { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .catch(function () { return null; });
-  return Promise.all([deFirebase, delArchivo]).then(function (res) {
-    var bloques = res[0].slice(), pj = res[1];
+  // Los programas que ese sábado no hay (sinPrograma del documento de la semana; lo marcan en el panel)
+  var FIJOS = { 'escuela-sabatica': 'Escuela Sabática', 'culto-divino': 'Culto Divino', 'culto-joven': 'Culto Joven' };
+  var deSemana = fetch(FS + '/semanas/' + sabado + '?key=' + CLAVE, { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .then(function (j) { var f = j.fields || {}; return Object.keys((f.sinPrograma && valor(f.sinPrograma)) || {}); })
+    .catch(function () { return []; });
+  return Promise.all([deFirebase, delArchivo, deSemana]).then(function (res) {
+    var pj = res[1];
+    var noHay = res[2].filter(function (k) { return FIJOS[k]; });
+    var fuera = noHay.map(function (k) { return norm(FIJOS[k]); });
+    function siHay(b) { return b && noHay.indexOf(b.id) < 0 && fuera.indexOf(norm(b.titulo)) < 0; }
+    var bloques = res[0].filter(siHay);
     var titulos = bloques.map(function (b) { return norm(b.titulo); });
     if (pj && pj.bloques && pj.fecha === sabado) {
-      pj.bloques.forEach(function (b) { if (b && titulos.indexOf(norm(b.titulo)) < 0) bloques.push(b); });
+      pj.bloques.forEach(function (b) { if (siHay(b) && titulos.indexOf(norm(b.titulo)) < 0) bloques.push(b); });
     }
     if (!bloques.length) return pj;       // nada nuevo esta semana: programa.json tal cual (incluye el formato v1)
     bloques.forEach(function (b) { if (!b.fecha) b.fecha = sabado; });
