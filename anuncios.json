@@ -1,54 +1,31 @@
 [
  {
   "etiqueta": "Hoy · Escuela Sabática 9:30 AM",
-  "titulo": "Programa de Decimotercer Sábado",
-  "detalle": "«Jesús todo lo creó bueno», programa especial del Ministerio Infantil. «Y vio Dios todo lo que había hecho, y he aquí que era bueno en gran manera» (Génesis 1:31).",
+  "titulo": "Lección 3: Profetas del Antiguo Testamento",
+  "detalle": "Trimestre «El don de profecía». «Crean al Señor su Dios y estarán seguros; crean a sus profetas y serán prosperados» (2 Crónicas 20:20).",
   "estilo": "accent",
-  "hasta": "2026-09-26"
+  "hasta": "2026-10-17"
  },
  {
   "etiqueta": "Hoy · Culto Divino 11:00 AM",
-  "titulo": "Cuando ya no hay fuerzas, todavía hay esperanza",
-  "detalle": "Predica el Pr. Jasai Cano. Salmo 34:18.",
+  "titulo": "Día del Niño Adventista",
+  "detalle": "«Los niños también son parte del reino», predica el Pr. Jasai Cano. Mateo 19:13-14.",
   "estilo": "ink",
-  "hasta": "2026-09-26"
+  "hasta": "2026-10-17"
  },
  {
-  "etiqueta": "Hoy · Culto Joven 5:00 PM",
-  "titulo": "Humor que sana",
-  "detalle": "Orador: Roberto De Loera. Kahoot: Salmos 34 al 39. Te esperamos en la Iglesia Las Lomas.",
+  "etiqueta": "Hoy · Culto Joven 5:30 PM",
+  "titulo": "Procesando las emociones a la luz de la fe",
+  "detalle": "Oradora: Rocío García Ibarra. Kahoot: Salmos 46 al 51. «Tú guardarás en completa paz a aquel cuyo pensamiento en ti persevera» (Isaías 26:3).",
   "estilo": "accent",
-  "hasta": "2026-09-26"
+  "hasta": "2026-10-17"
  },
  {
-  "etiqueta": "Semana de Salud y Evangelismo · 20 al 26 de septiembre",
-  "titulo": "Vida en Equilibrio",
-  "detalle": "Paz, familia y espiritualidad, por UMtv. Herramientas para reducir el estrés, mejorar tu hogar y cuidar cuerpo, mente y espíritu. Invita a un familiar o a un amigo.",
+  "etiqueta": "Recolección 2026 · Octubre",
+  "titulo": "Juntos cambiamos vidas",
+  "detalle": "Únete a la campaña de Recolección: cada donativo es una pieza que transforma vidas. Tu apoyo multiplica esperanza, amor y transformación. ¡Sé parte de esta misión!",
   "estilo": "tint",
-  "hasta": "2026-09-26"
- },
- {
-  "etiqueta": "Domingo 27 de septiembre · 8:00 AM",
-  "titulo": "Reunión de oración para diáconos y diaconisas",
-  "detalle": "Oración, reconocimiento y fortalecimiento para diáconos y diaconisas de la Unión Mexicana del Norte. Modalidad virtual, por el canal de YouTube de la División Interamericana.",
-  "enlace": "https://www.youtube.com/c/InterAmericanDivision",
-  "boton": "Ver transmisión",
-  "estilo": "tint",
-  "hasta": "2026-09-27"
- },
- {
-  "etiqueta": "Viernes 2 de octubre · 7:00 a 9:30 PM",
-  "titulo": "Vigilia y Oración",
-  "detalle": "Programa especial de vigilia y oración. ¡Acompáñanos!",
-  "estilo": "ink",
-  "hasta": "2026-10-02"
- },
- {
-  "etiqueta": "Sábado 3 de octubre · 11:00 AM",
-  "titulo": "Servicio de Comunión",
-  "detalle": "Rito de humildad y Santa Cena.",
-  "estilo": "accent",
-  "hasta": "2026-10-03"
+  "hasta": "2026-10-31"
  },
  {
   "etiqueta": "Domingo 18 de octubre · Vía Deportiva",
@@ -62,35 +39,21 @@
   "titulo": "Plan de Oración 529",
   "detalle": "Únete donde te encuentres: casa, trabajo, escuela o viaje. Motivos: el derramamiento del Espíritu Santo en nuestra vida, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos (bautismo).",
   "estilo": "ink",
-  "hasta": "2026-10-03"
+  "hasta": "2026-10-24"
  },
  {
-  "etiqueta": "Miércoles · 8:00 PM por Zoom",
-  "titulo": "Estudio de la Biblia y Momento de Oración",
-  "detalle": "Un espacio especial para ti: un momento de reflexión, un espacio para conectarte y un momento para hablar con Dios. Te esperamos junto con toda la familia.",
-  "estilo": "tint",
-  "hasta": "2026-10-03"
- },
- {
-  "etiqueta": "Todos los miércoles",
-  "titulo": "Study & Running · 6:30 PM",
-  "detalle": "Corre con propósito, crece en fe. Nos vemos en el Parque Central TEC. ¡Intégrate al grupo!",
+  "etiqueta": "Domingo 25 de octubre · IVS",
+  "titulo": "Certificación de clubes · Zona Metro",
+  "detalle": "Aventureros, Conquistadores y Guías Mayores. Ministerios Juveniles de la Asociación del Noreste.",
   "estilo": "accent",
-  "hasta": "2026-10-03"
+  "hasta": "2026-10-25"
  },
  {
-  "etiqueta": "Viernes · 7:00 PM",
-  "titulo": "Recepción de sábado",
-  "detalle": "Recibe el sábado en comunidad cada viernes por la tarde.",
+  "etiqueta": "6 al 8 de noviembre · La Morita, N.L.",
+  "titulo": "Campamento de Guías Mayores",
+  "detalle": "«Transformados para servir». Club Soldiers.",
   "estilo": "ink",
-  "hasta": "2026-09-30"
- },
- {
-  "etiqueta": "Secretaría de Iglesia",
-  "titulo": "¿Comenzando o regresando? Actualiza tus datos",
-  "detalle": "Si estás comenzando a asistir o dejaste de asistir un tiempo, actualiza tus datos o tramita tu carta de membresía con la Secretaría de Iglesia.",
-  "estilo": "tint",
-  "hasta": "2026-09-30"
+  "hasta": "2026-11-08"
  },
  {
   "etiqueta": "Transmisión en vivo",
@@ -102,7 +65,7 @@
  },
  {
   "tipo": "canva",
-  "enlace": "https://canva.link/1xgehydfygaphf9",
-  "hasta": "2026-09-26"
+  "enlace": "https://canva.link/f0wh41ej53u43au",
+  "hasta": "2026-10-17"
  }
 ]
