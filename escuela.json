@@ -238,6 +238,11 @@
      "autor": "Nuevo Tiempo Chile",
      "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/f55395abe89f43f39583ccfaa73e1805fe9cdc16d503ebc9e55889091feef354/f55395abe89f43f39583ccfaa73e1805fe9cdc16d503ebc9e55889091feef354.mp4",
      "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/f55395abe89f43f39583ccfaa73e1805fe9cdc16d503ebc9e55889091feef354/thumb/f55395abe89f43f39583ccfaa73e1805fe9cdc16d503ebc9e55889091feef354.webp"
+    },
+    {
+     "autor": "Escuela Sabática Like",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/84604b88719cf308ec0525188d46e5c6bd19578ee31abac08d841c8e98bc5345/84604b88719cf308ec0525188d46e5c6bd19578ee31abac08d841c8e98bc5345.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/84604b88719cf308ec0525188d46e5c6bd19578ee31abac08d841c8e98bc5345/thumb/84604b88719cf308ec0525188d46e5c6bd19578ee31abac08d841c8e98bc5345.webp"
     }
    ]
   },
@@ -287,7 +292,33 @@
      "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/09de50e3a031b7b3ecbfb5c3f612a6c33127d86a23ba74825a4451fd2d7883c1/09de50e3a031b7b3ecbfb5c3f612a6c33127d86a23ba74825a4451fd2d7883c1.mp3"
     }
    ],
-   "videos": []
+   "videos": [
+    {
+     "autor": "Escuela Sabática Viva",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/e29430fe3371c9d89b3affabbca641a30082963a36e79799a42b06deb45b0f69/e29430fe3371c9d89b3affabbca641a30082963a36e79799a42b06deb45b0f69.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/e29430fe3371c9d89b3affabbca641a30082963a36e79799a42b06deb45b0f69/thumb/e29430fe3371c9d89b3affabbca641a30082963a36e79799a42b06deb45b0f69.webp"
+    },
+    {
+     "autor": "Escrito Está",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/88bea0b5c8fe5e53daab36dd841f54f6d1c53a2e54aee85df453a967289a9d63/88bea0b5c8fe5e53daab36dd841f54f6d1c53a2e54aee85df453a967289a9d63.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/88bea0b5c8fe5e53daab36dd841f54f6d1c53a2e54aee85df453a967289a9d63/thumb/88bea0b5c8fe5e53daab36dd841f54f6d1c53a2e54aee85df453a967289a9d63.webp"
+    },
+    {
+     "autor": "Pastor Alejandro Bullon",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/8ab5fa88a3de9650185a4b64273ad4466b366c223d920333864776145cf8f52b/8ab5fa88a3de9650185a4b64273ad4466b366c223d920333864776145cf8f52b.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/8ab5fa88a3de9650185a4b64273ad4466b366c223d920333864776145cf8f52b/thumb/8ab5fa88a3de9650185a4b64273ad4466b366c223d920333864776145cf8f52b.webp"
+    },
+    {
+     "autor": "Pastor Daniel Herrera",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/c355c02dab6b39accae706990b3bdf5625b69d7cd113ade09cd7ba2c8d511866/c355c02dab6b39accae706990b3bdf5625b69d7cd113ade09cd7ba2c8d511866.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/c355c02dab6b39accae706990b3bdf5625b69d7cd113ade09cd7ba2c8d511866/thumb/c355c02dab6b39accae706990b3bdf5625b69d7cd113ade09cd7ba2c8d511866.webp"
+    },
+    {
+     "autor": "SUMtv Latino",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/76156a20e5a7017a311b0466fd2962bbf6c4b3fc0950487476b4e3055ff5876c/76156a20e5a7017a311b0466fd2962bbf6c4b3fc0950487476b4e3055ff5876c.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/76156a20e5a7017a311b0466fd2962bbf6c4b3fc0950487476b4e3055ff5876c/thumb/76156a20e5a7017a311b0466fd2962bbf6c4b3fc0950487476b4e3055ff5876c.webp"
+    }
+   ]
   },
   {
    "n": 5,
@@ -312,7 +343,7 @@
     {
      "fecha": "2026-10-26",
      "titulo": "El Proceso de la Inspiración",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/d1adb4ea1dc3e55731c35a780fb0c0a470bb2477a2f2e60c79d4a36504734767/d1adb4ea1dc3e55731c35a780fb0c0a470bb2477a2f2e60c79d4a36504734767.mp3"
     },
     {
      "fecha": "2026-10-27",
