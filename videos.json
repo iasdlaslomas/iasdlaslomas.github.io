@@ -1,16 +1,40 @@
 {
  "videos": [
   {
-   "id": "TaAB_tOMkl4",
-   "titulo": "Culto Joven | 17 de Octubre de 2026",
-   "fecha": "2026-10-18",
-   "cat": "joven"
+   "id": "FtHyQOBQE9s",
+   "titulo": "Programa Especial | IASD Las Lomas 24 de Octubre 2026",
+   "fecha": "2026-10-24",
+   "cat": "especial"
+  },
+  {
+   "id": "A9FdbsuQPMw",
+   "titulo": "Programa Especial | IASD Las Lomas 24 de Octubre 2026",
+   "fecha": "2026-10-24",
+   "cat": "especial"
+  },
+  {
+   "id": "lw0Jml170to",
+   "titulo": "Programa Especial | IASD Las Lomas 24 de Octubre 2026",
+   "fecha": "2026-10-24",
+   "cat": "especial"
   },
   {
    "id": "bFZ2W4y1PSY",
    "titulo": "Escuela Sabática y Culto Divino",
-   "fecha": "2026-10-17",
+   "fecha": "2026-10-24",
    "cat": "divino"
+  },
+  {
+   "id": "0K2fBnlVM5Y",
+   "titulo": "Escuela Sabática y Culto Divino | 24 Octubre 2026",
+   "fecha": "2026-10-24",
+   "cat": "divino"
+  },
+  {
+   "id": "TaAB_tOMkl4",
+   "titulo": "Culto Joven | 17 de Octubre de 2026",
+   "fecha": "2026-10-18",
+   "cat": "joven"
   },
   {
    "id": "H2LDJ-6MoJI",
@@ -64,30 +88,6 @@
    "id": "-OESKA1_KYE",
    "titulo": "Culto Joven | 19 de Septiembre de 2026",
    "fecha": "2026-09-20",
-   "cat": "joven"
-  },
-  {
-   "id": "AW_P3Z1EnLE",
-   "titulo": "Escuela Sabática y Culto Divino | 19 de Septiembre 2026",
-   "fecha": "2026-09-19",
-   "cat": "divino"
-  },
-  {
-   "id": "HM9i0BuqaWk",
-   "titulo": "Culto Joven | 12 de Septiembre de 2026",
-   "fecha": "2026-09-13",
-   "cat": "joven"
-  },
-  {
-   "id": "Lj2bYmUG3Jw",
-   "titulo": "Escuela Sabática y Culto Divino | 12 de Septiembre 2026",
-   "fecha": "2026-09-12",
-   "cat": "divino"
-  },
-  {
-   "id": "lMU9S-yZwDU",
-   "titulo": "Culto Joven | 5 de Septiembre de 2026",
-   "fecha": "2026-09-06",
    "cat": "joven"
   }
  ]
