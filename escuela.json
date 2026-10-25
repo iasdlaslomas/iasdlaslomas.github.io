@@ -314,9 +314,19 @@
      "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/c355c02dab6b39accae706990b3bdf5625b69d7cd113ade09cd7ba2c8d511866/thumb/c355c02dab6b39accae706990b3bdf5625b69d7cd113ade09cd7ba2c8d511866.webp"
     },
     {
+     "autor": "Nuevo Tiempo Chile",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/e7ab5d475026d2ae6cd4b194786f7abe589a1ee29c8f3ea5e8a60dcaa3ed4562/e7ab5d475026d2ae6cd4b194786f7abe589a1ee29c8f3ea5e8a60dcaa3ed4562.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/e7ab5d475026d2ae6cd4b194786f7abe589a1ee29c8f3ea5e8a60dcaa3ed4562/thumb/e7ab5d475026d2ae6cd4b194786f7abe589a1ee29c8f3ea5e8a60dcaa3ed4562.webp"
+    },
+    {
      "autor": "SUMtv Latino",
      "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/76156a20e5a7017a311b0466fd2962bbf6c4b3fc0950487476b4e3055ff5876c/76156a20e5a7017a311b0466fd2962bbf6c4b3fc0950487476b4e3055ff5876c.mp4",
      "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/76156a20e5a7017a311b0466fd2962bbf6c4b3fc0950487476b4e3055ff5876c/thumb/76156a20e5a7017a311b0466fd2962bbf6c4b3fc0950487476b4e3055ff5876c.webp"
+    },
+    {
+     "autor": "Escuela Sabática Like",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/92ebd41f4a5ba9f2e5630d1ba8c9a9caa07107012187c58071258c77aba1f39c/92ebd41f4a5ba9f2e5630d1ba8c9a9caa07107012187c58071258c77aba1f39c.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/92ebd41f4a5ba9f2e5630d1ba8c9a9caa07107012187c58071258c77aba1f39c/thumb/92ebd41f4a5ba9f2e5630d1ba8c9a9caa07107012187c58071258c77aba1f39c.webp"
     }
    ]
   },
@@ -366,7 +376,23 @@
      "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/6959673bb54d8d5460e47cffd6f46f2a20a2fb17ed3a37634f66b9b81114f3a4/6959673bb54d8d5460e47cffd6f46f2a20a2fb17ed3a37634f66b9b81114f3a4.mp3"
     }
    ],
-   "videos": []
+   "videos": [
+    {
+     "autor": "Escuela Sabática Viva",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/9942284d4bb90bfe6f1e73637cc7ad9c3a8e39278de5225b211ce11249390e19/9942284d4bb90bfe6f1e73637cc7ad9c3a8e39278de5225b211ce11249390e19.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/9942284d4bb90bfe6f1e73637cc7ad9c3a8e39278de5225b211ce11249390e19/thumb/9942284d4bb90bfe6f1e73637cc7ad9c3a8e39278de5225b211ce11249390e19.webp"
+    },
+    {
+     "autor": "Escrito Está",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/d7ebed17e45f645dff782879f304f82eb8c93c969961438fe425d874290f8be4/d7ebed17e45f645dff782879f304f82eb8c93c969961438fe425d874290f8be4.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/d7ebed17e45f645dff782879f304f82eb8c93c969961438fe425d874290f8be4/thumb/d7ebed17e45f645dff782879f304f82eb8c93c969961438fe425d874290f8be4.webp"
+    },
+    {
+     "autor": "Pastor Daniel Herrera",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/e4a0292ac07bbe099c1890875461856f6e9af1922b6422afc8194c3d776face5/e4a0292ac07bbe099c1890875461856f6e9af1922b6422afc8194c3d776face5.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/e4a0292ac07bbe099c1890875461856f6e9af1922b6422afc8194c3d776face5/thumb/e4a0292ac07bbe099c1890875461856f6e9af1922b6422afc8194c3d776face5.webp"
+    }
+   ]
   },
   {
    "n": 6,
@@ -381,12 +407,12 @@
     {
      "fecha": "2026-10-31",
      "titulo": "Los Escritos Proféticos",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/1f440dfe238c3f2656439b63faa0ac84d0c69307b687fb48fa232f8e4e076027/1f440dfe238c3f2656439b63faa0ac84d0c69307b687fb48fa232f8e4e076027.mp3"
     },
     {
      "fecha": "2026-11-01",
      "titulo": "El Llamado a Escribir",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/b5e46cfbeb470c0575efe3c4a7693ad3e8afeea57ebf97719bd2303c6875fed7/b5e46cfbeb470c0575efe3c4a7693ad3e8afeea57ebf97719bd2303c6875fed7.mp3"
     },
     {
      "fecha": "2026-11-02",
