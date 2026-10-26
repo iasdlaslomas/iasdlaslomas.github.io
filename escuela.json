@@ -391,6 +391,16 @@
      "autor": "Pastor Daniel Herrera",
      "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/e4a0292ac07bbe099c1890875461856f6e9af1922b6422afc8194c3d776face5/e4a0292ac07bbe099c1890875461856f6e9af1922b6422afc8194c3d776face5.mp4",
      "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/e4a0292ac07bbe099c1890875461856f6e9af1922b6422afc8194c3d776face5/thumb/e4a0292ac07bbe099c1890875461856f6e9af1922b6422afc8194c3d776face5.webp"
+    },
+    {
+     "autor": "Nuevo Tiempo Chile",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/c6bd16ef6f753487f8d631401f2ef3ba0698cff639665e8a271ab9ba4442e7d0/c6bd16ef6f753487f8d631401f2ef3ba0698cff639665e8a271ab9ba4442e7d0.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/c6bd16ef6f753487f8d631401f2ef3ba0698cff639665e8a271ab9ba4442e7d0/thumb/c6bd16ef6f753487f8d631401f2ef3ba0698cff639665e8a271ab9ba4442e7d0.webp"
+    },
+    {
+     "autor": "SUMtv Latino",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/1f8a5448ab6748a4b0205fc1c7202c93b687bd7ccdb85b97b8316099bd11612e/1f8a5448ab6748a4b0205fc1c7202c93b687bd7ccdb85b97b8316099bd11612e.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/1f8a5448ab6748a4b0205fc1c7202c93b687bd7ccdb85b97b8316099bd11612e/thumb/1f8a5448ab6748a4b0205fc1c7202c93b687bd7ccdb85b97b8316099bd11612e.webp"
     }
    ]
   },
@@ -417,7 +427,7 @@
     {
      "fecha": "2026-11-02",
      "titulo": "Géneros y Estilos Literarios",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/9e591a1c1b9d5973907d5ab94601e6667135b12be7b43a0aa9f0e680092c00ad/9e591a1c1b9d5973907d5ab94601e6667135b12be7b43a0aa9f0e680092c00ad.mp3"
     },
     {
      "fecha": "2026-11-03",
