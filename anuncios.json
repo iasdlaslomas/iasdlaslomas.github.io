@@ -1,71 +1,73 @@
 [
- {
-  "etiqueta": "Hoy · Escuela Sabática 9:30 AM",
-  "titulo": "Lección 3: Profetas del Antiguo Testamento",
-  "detalle": "Trimestre «El don de profecía». «Crean al Señor su Dios y estarán seguros; crean a sus profetas y serán prosperados» (2 Crónicas 20:20).",
-  "estilo": "accent",
-  "hasta": "2026-10-17"
- },
- {
-  "etiqueta": "Hoy · Culto Divino 11:00 AM",
-  "titulo": "Día del Niño Adventista",
-  "detalle": "«Los niños también son parte del reino», predica el Pr. Jasai Cano. Mateo 19:13-14.",
-  "estilo": "ink",
-  "hasta": "2026-10-17"
- },
- {
-  "etiqueta": "Hoy · Culto Joven 5:30 PM",
-  "titulo": "Procesando las emociones a la luz de la fe",
-  "detalle": "Oradora: Rocío García Ibarra. Kahoot: Salmos 46 al 51. «Tú guardarás en completa paz a aquel cuyo pensamiento en ti persevera» (Isaías 26:3).",
-  "estilo": "accent",
-  "hasta": "2026-10-17"
- },
- {
-  "etiqueta": "Recolección 2026 · Octubre",
-  "titulo": "Juntos cambiamos vidas",
-  "detalle": "Únete a la campaña de Recolección: cada donativo es una pieza que transforma vidas. Tu apoyo multiplica esperanza, amor y transformación. ¡Sé parte de esta misión!",
-  "estilo": "tint",
-  "hasta": "2026-10-31"
- },
- {
-  "etiqueta": "Domingo 18 de octubre · Vía Deportiva",
-  "titulo": "Carrera Alas del Conocimiento · 7ª edición",
-  "detalle": "10K, 5K y 1K infantil (6 a 9 años), frente al Palacio Municipal de Monterrey. Inscripciones en chronosport.mx.",
-  "estilo": "tint",
-  "hasta": "2026-10-18"
- },
- {
-  "etiqueta": "Cada día · 5 AM, 2 PM y 9 PM",
-  "titulo": "Plan de Oración 529",
-  "detalle": "Únete donde te encuentres: casa, trabajo, escuela o viaje. Motivos: el derramamiento del Espíritu Santo en nuestra vida, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos (bautismo).",
-  "estilo": "ink",
-  "hasta": "2026-10-24"
- },
- {
-  "etiqueta": "Domingo 25 de octubre · Instituto Vicente Suárez",
-  "titulo": "Certificación de clubes · Zona Metro",
-  "detalle": "Aventureros, Conquistadores y Guías Mayores. Ministerios Juveniles de la Asociación del Noreste. ¡Acompáñalos!",
-  "estilo": "accent",
-  "hasta": "2026-10-25"
- },
- {
-  "etiqueta": "6 al 8 de noviembre · La Morita, N. L.",
-  "titulo": "Campamento de Guías Mayores «Soldiers»",
-  "detalle": "Transformados para servir.",
-  "estilo": "ink",
-  "hasta": "2026-11-08"
- },
- {
-  "etiqueta": "Transmisión en vivo",
-  "titulo": "En vivo cada sábado desde las 9:30",
-  "detalle": "Escuela Sabática y Culto Divino por YouTube, si no puedes asistir.",
-  "enlace": "https://www.youtube.com/@IASDLasLomas",
-  "boton": "Ver canal",
-  "estilo": "accent"
- },
- {
-  "tipo": "canva",
-  "enlace": "https://canva.link/f0wh41ej53u43au",
-  "hasta": "2026-10-17"
- }
+  {
+    "etiqueta": "Hoy · Escuela Sabática 9:30 AM",
+    "titulo": "Lección: Revelación e inspiración",
+    "detalle": "Trimestre «El don de profecía». Estudiemos juntos cómo Dios se comunica con su pueblo por medio de sus profetas.",
+    "estilo": "accent",
+    "hasta": "2026-10-31"
+  },
+  {
+    "etiqueta": "Hoy · Culto Divino 11:00 AM",
+    "titulo": "La salud mental",
+    "detalle": "Nos acompaña la Hna. Miriam, del Ministerio de la Mujer. Si hoy llegaste cargado, llegaste al lugar correcto.",
+    "estilo": "ink",
+    "hasta": "2026-10-31"
+  },
+  {
+    "etiqueta": "Hoy · Culto Joven 5:30 PM",
+    "titulo": "«Dios vivo»",
+    "detalle": "Con el Pr. Eliezer Luna. Habrá Kahoot de Salmos 78 al 85: ¡estudia los 8 capítulos!",
+    "estilo": "accent",
+    "hasta": "2026-10-31"
+  },
+  {
+    "etiqueta": "Cada día · 5 AM, 2 PM y 9 PM",
+    "titulo": "Plan de Oración 529",
+    "detalle": "Únete donde te encuentres: casa, trabajo, escuela o viaje. Motivos: el derramamiento del Espíritu Santo en nuestra vida, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos (bautismo).",
+    "estilo": "ink",
+    "hasta": "2026-11-07"
+  },
+  {
+    "etiqueta": "Divisiones infantiles · Abril–junio 2027",
+    "titulo": "Pide las lecciones de los niños",
+    "detalle": "En un sobre de diezmo anota tu nombre, el importe y las lecciones que necesitas, y déjalo en la ofrenda. Los precios están en los anuncios del sábado.",
+    "estilo": "tint",
+    "hasta": "2026-11-07"
+  },
+  {
+    "etiqueta": "Recolección 2026 · Octubre",
+    "titulo": "Juntos cambiamos vidas",
+    "detalle": "Únete a la campaña de Recolección: cada donativo es una pieza que transforma vidas. Tu apoyo multiplica esperanza, amor y transformación. ¡Sé parte de esta misión!",
+    "estilo": "tint",
+    "hasta": "2026-10-31"
+  },
+  {
+    "etiqueta": "6 al 8 de noviembre · La Morita, N. L.",
+    "titulo": "Campamento de Guías Mayores «Soldiers»",
+    "detalle": "Transformados para servir.",
+    "estilo": "ink",
+    "hasta": "2026-11-08"
+  },
+  {
+    "etiqueta": "WhatsApp · 81 3415 1149",
+    "titulo": "Asistente de WhatsApp de la iglesia",
+    "detalle": "Escríbele para ver los anuncios, los horarios y la ubicación, o para pedir oración. El programa completo está en iasdlaslomas.com.",
+    "enlace": "https://wa.me/528134151149",
+    "boton": "Escribir",
+    "estilo": "tint",
+    "hasta": "2026-11-07"
+  },
+  {
+    "etiqueta": "Transmisión en vivo",
+    "titulo": "En vivo cada sábado desde las 9:30",
+    "detalle": "Escuela Sabática y Culto Divino por YouTube, si no puedes asistir.",
+    "enlace": "https://www.youtube.com/@IASDLasLomas",
+    "boton": "Ver canal",
+    "estilo": "accent"
+  },
+  {
+    "tipo": "canva",
+    "enlace": "https://canva.link/qju0jhkwnp6ls8q",
+    "hasta": "2026-10-31"
+  }
 ]
