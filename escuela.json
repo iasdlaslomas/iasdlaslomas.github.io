@@ -455,7 +455,38 @@
      "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/59da0c3a6a2faf1d5cc620f31182524349f31c6bcf2b29b712029353f69f8627/59da0c3a6a2faf1d5cc620f31182524349f31c6bcf2b29b712029353f69f8627.mp3"
     }
    ],
-   "videos": []
+   "videos": [
+    {
+     "autor": "Escuela Sabática Viva",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/c3f1674b04b3b59156507a73683688b3e8fa2a75dc4b26e3ef91bcc576a1c50f/c3f1674b04b3b59156507a73683688b3e8fa2a75dc4b26e3ef91bcc576a1c50f.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/c3f1674b04b3b59156507a73683688b3e8fa2a75dc4b26e3ef91bcc576a1c50f/thumb/c3f1674b04b3b59156507a73683688b3e8fa2a75dc4b26e3ef91bcc576a1c50f.webp"
+    },
+    {
+     "autor": "Escrito Está",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/98a2f01ec6cafe615d4a90868affc0c9df82c77c6c6f5fcbb203c925d7839102/98a2f01ec6cafe615d4a90868affc0c9df82c77c6c6f5fcbb203c925d7839102.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/98a2f01ec6cafe615d4a90868affc0c9df82c77c6c6f5fcbb203c925d7839102/thumb/98a2f01ec6cafe615d4a90868affc0c9df82c77c6c6f5fcbb203c925d7839102.webp"
+    },
+    {
+     "autor": "Pastor Alejandro Bullon",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/5d16d3138653578f0c1bf5c3a621680708126e9135b0229721ebbe94e1bf39f1/5d16d3138653578f0c1bf5c3a621680708126e9135b0229721ebbe94e1bf39f1.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/5d16d3138653578f0c1bf5c3a621680708126e9135b0229721ebbe94e1bf39f1/thumb/5d16d3138653578f0c1bf5c3a621680708126e9135b0229721ebbe94e1bf39f1.webp"
+    },
+    {
+     "autor": "Pastor Daniel Herrera",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/ad1ea480ad574989c296e16c51909d344aae48812beefe6bf6394a697a0070fa/ad1ea480ad574989c296e16c51909d344aae48812beefe6bf6394a697a0070fa.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/ad1ea480ad574989c296e16c51909d344aae48812beefe6bf6394a697a0070fa/thumb/ad1ea480ad574989c296e16c51909d344aae48812beefe6bf6394a697a0070fa.webp"
+    },
+    {
+     "autor": "Nuevo Tiempo Chile",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/b6a9ba4ad8da33b5c3bee32420c443e3c71dc34e8e85d7a34157efce07b08c1a/b6a9ba4ad8da33b5c3bee32420c443e3c71dc34e8e85d7a34157efce07b08c1a.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/b6a9ba4ad8da33b5c3bee32420c443e3c71dc34e8e85d7a34157efce07b08c1a/thumb/b6a9ba4ad8da33b5c3bee32420c443e3c71dc34e8e85d7a34157efce07b08c1a.webp"
+    },
+    {
+     "autor": "SUMtv Latino",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/287373ec93a50513c4941431c892d6704b35184cbca84b467464c9f0352670d9/287373ec93a50513c4941431c892d6704b35184cbca84b467464c9f0352670d9.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/287373ec93a50513c4941431c892d6704b35184cbca84b467464c9f0352670d9/thumb/287373ec93a50513c4941431c892d6704b35184cbca84b467464c9f0352670d9.webp"
+    }
+   ]
   },
   {
    "n": 7,
@@ -490,7 +521,7 @@
     {
      "fecha": "2026-11-11",
      "titulo": "Hipocresía",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/320b5741c4a9c92ec16b4b4419105e3700f0ad5aa3fe0bdc6dc59da639c16f17/320b5741c4a9c92ec16b4b4419105e3700f0ad5aa3fe0bdc6dc59da639c16f17.mp3"
     },
     {
      "fecha": "2026-11-12",
