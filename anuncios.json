@@ -1,31 +1,31 @@
 [
   {
     "etiqueta": "Hoy · Escuela Sabática 9:30 AM",
-    "titulo": "Lección: Revelación e inspiración",
+    "titulo": "Lección: Los escritos proféticos",
     "detalle": "Trimestre «El don de profecía». Estudiemos juntos cómo Dios se comunica con su pueblo por medio de sus profetas.",
     "estilo": "accent",
-    "hasta": "2026-10-31"
+    "hasta": "2026-11-07"
   },
   {
     "etiqueta": "Hoy · Culto Divino 11:00 AM",
-    "titulo": "La salud mental",
-    "detalle": "Nos acompaña la Hna. Miriam, del Ministerio de la Mujer. Si hoy llegaste cargado, llegaste al lugar correcto.",
+    "titulo": "Cuando todos están equivocados",
+    "detalle": "Con el Dr. Carlos Mora. Lectura: Génesis 25:19-28.",
     "estilo": "ink",
-    "hasta": "2026-10-31"
+    "hasta": "2026-11-07"
   },
   {
     "etiqueta": "Hoy · Culto Joven 5:30 PM",
-    "titulo": "«Dios vivo»",
-    "detalle": "Con el Pr. Eliezer Luna. Habrá Kahoot de Salmos 78 al 85: ¡estudia los 8 capítulos!",
+    "titulo": "«Esperanza para ti»",
+    "detalle": "Con el Pr. Jorge Antonio Dzul. Habrá bautismo y Kahoot de Salmos 86 al 91: ¡estudia los 6 capítulos!",
     "estilo": "accent",
-    "hasta": "2026-10-31"
+    "hasta": "2026-11-07"
   },
   {
     "etiqueta": "Cada día · 5 AM, 2 PM y 9 PM",
     "titulo": "Plan de Oración 529",
     "detalle": "Únete donde te encuentres: casa, trabajo, escuela o viaje. Motivos: el derramamiento del Espíritu Santo en nuestra vida, quienes estudian un curso bíblico, las campañas de evangelismo y los nuevos discípulos (bautismo).",
     "estilo": "ink",
-    "hasta": "2026-11-07"
+    "hasta": "2026-11-14"
   },
   {
     "etiqueta": "Divisiones infantiles · Abril–junio 2027",
@@ -35,11 +35,11 @@
     "hasta": "2026-11-07"
   },
   {
-    "etiqueta": "Recolección 2026 · Octubre",
+    "etiqueta": "Recolección 2026",
     "titulo": "Juntos cambiamos vidas",
     "detalle": "Únete a la campaña de Recolección: cada donativo es una pieza que transforma vidas. Tu apoyo multiplica esperanza, amor y transformación. ¡Sé parte de esta misión!",
     "estilo": "tint",
-    "hasta": "2026-10-31"
+    "hasta": "2026-11-07"
   },
   {
     "etiqueta": "6 al 8 de noviembre · La Morita, N. L.",
@@ -47,6 +47,13 @@
     "detalle": "Transformados para servir.",
     "estilo": "ink",
     "hasta": "2026-11-08"
+  },
+  {
+    "etiqueta": "Aventureros · Conquistadores · Guías Mayores",
+    "titulo": "Investidura 2026 «Soldiers»",
+    "detalle": "Celebremos juntos la investidura de nuestros clubes.",
+    "estilo": "tint",
+    "hasta": "2026-11-07"
   },
   {
     "etiqueta": "WhatsApp · 81 3415 1149",
@@ -67,7 +74,7 @@
   },
   {
     "tipo": "canva",
-    "enlace": "https://canva.link/qju0jhkwnp6ls8q",
-    "hasta": "2026-10-31"
+    "enlace": "https://canva.link/k4axbzmyaynevfy",
+    "hasta": "2026-11-07"
   }
 ]
