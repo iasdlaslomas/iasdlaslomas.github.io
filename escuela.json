@@ -534,7 +534,28 @@
      "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/196e9e9584c5e54ced13657356d591d2f4482631dbce9db20f861d629d2614af/196e9e9584c5e54ced13657356d591d2f4482631dbce9db20f861d629d2614af.mp3"
     }
    ],
-   "videos": []
+   "videos": [
+    {
+     "autor": "Escuela Sabática Viva",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/c3a7a2ef3f6cf1fde11fe62b09c75c3ea5df684aa9914359027e68a5dff5fe8d/c3a7a2ef3f6cf1fde11fe62b09c75c3ea5df684aa9914359027e68a5dff5fe8d.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/c3a7a2ef3f6cf1fde11fe62b09c75c3ea5df684aa9914359027e68a5dff5fe8d/thumb/c3a7a2ef3f6cf1fde11fe62b09c75c3ea5df684aa9914359027e68a5dff5fe8d.webp"
+    },
+    {
+     "autor": "Escrito Está",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/661207d91a7325011de41321ed7372d4f98dbc7602e5843657c0b52ee05730ab/661207d91a7325011de41321ed7372d4f98dbc7602e5843657c0b52ee05730ab.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/661207d91a7325011de41321ed7372d4f98dbc7602e5843657c0b52ee05730ab/thumb/661207d91a7325011de41321ed7372d4f98dbc7602e5843657c0b52ee05730ab.webp"
+    },
+    {
+     "autor": "Pastor Daniel Herrera",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/74a3b6c2168745cd0bbdb893bd738e46ab9b6567b6c3e5ff7c109c3409433a4b/74a3b6c2168745cd0bbdb893bd738e46ab9b6567b6c3e5ff7c109c3409433a4b.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/74a3b6c2168745cd0bbdb893bd738e46ab9b6567b6c3e5ff7c109c3409433a4b/thumb/74a3b6c2168745cd0bbdb893bd738e46ab9b6567b6c3e5ff7c109c3409433a4b.webp"
+    },
+    {
+     "autor": "Nuevo Tiempo Chile",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/12661c7d54239614f3263053546d0ea51c36b9214e1fd53d2e917f0a47da11b8/12661c7d54239614f3263053546d0ea51c36b9214e1fd53d2e917f0a47da11b8.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/12661c7d54239614f3263053546d0ea51c36b9214e1fd53d2e917f0a47da11b8/thumb/12661c7d54239614f3263053546d0ea51c36b9214e1fd53d2e917f0a47da11b8.webp"
+    }
+   ]
   },
   {
    "n": 8,
@@ -549,12 +570,12 @@
     {
      "fecha": "2026-11-14",
      "titulo": "Interpretación de los Escritos Proféticos",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/181f6fb0a1b706aed3028ffed85f33e6fb42018ff6f676096c6407b06b984f59/181f6fb0a1b706aed3028ffed85f33e6fb42018ff6f676096c6407b06b984f59.mp3"
     },
     {
      "fecha": "2026-11-15",
      "titulo": "La Biblia Como su Propia Intérprete",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/892d236f43bc05714e4d05401197e7e5eb581710021046ec346aad40b222e428/892d236f43bc05714e4d05401197e7e5eb581710021046ec346aad40b222e428.mp3"
     },
     {
      "fecha": "2026-11-16",
