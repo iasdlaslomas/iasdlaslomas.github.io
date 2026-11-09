@@ -546,6 +546,11 @@
      "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/661207d91a7325011de41321ed7372d4f98dbc7602e5843657c0b52ee05730ab/thumb/661207d91a7325011de41321ed7372d4f98dbc7602e5843657c0b52ee05730ab.webp"
     },
     {
+     "autor": "Pastor Alejandro Bullon",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/89292debeac18f6baed1837c08749f817c5430cce8bd7cccee76e67f62425a07/89292debeac18f6baed1837c08749f817c5430cce8bd7cccee76e67f62425a07.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/89292debeac18f6baed1837c08749f817c5430cce8bd7cccee76e67f62425a07/thumb/89292debeac18f6baed1837c08749f817c5430cce8bd7cccee76e67f62425a07.webp"
+    },
+    {
      "autor": "Pastor Daniel Herrera",
      "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/74a3b6c2168745cd0bbdb893bd738e46ab9b6567b6c3e5ff7c109c3409433a4b/74a3b6c2168745cd0bbdb893bd738e46ab9b6567b6c3e5ff7c109c3409433a4b.mp4",
      "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/74a3b6c2168745cd0bbdb893bd738e46ab9b6567b6c3e5ff7c109c3409433a4b/thumb/74a3b6c2168745cd0bbdb893bd738e46ab9b6567b6c3e5ff7c109c3409433a4b.webp"
@@ -554,6 +559,11 @@
      "autor": "Nuevo Tiempo Chile",
      "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/12661c7d54239614f3263053546d0ea51c36b9214e1fd53d2e917f0a47da11b8/12661c7d54239614f3263053546d0ea51c36b9214e1fd53d2e917f0a47da11b8.mp4",
      "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/12661c7d54239614f3263053546d0ea51c36b9214e1fd53d2e917f0a47da11b8/thumb/12661c7d54239614f3263053546d0ea51c36b9214e1fd53d2e917f0a47da11b8.webp"
+    },
+    {
+     "autor": "SUMtv Latino",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/192a14265cdd01024f693b58477961bbda6f87012eb2977ca59bd166c3bbc140/192a14265cdd01024f693b58477961bbda6f87012eb2977ca59bd166c3bbc140.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/192a14265cdd01024f693b58477961bbda6f87012eb2977ca59bd166c3bbc140/thumb/192a14265cdd01024f693b58477961bbda6f87012eb2977ca59bd166c3bbc140.webp"
     }
    ]
   },
@@ -580,7 +590,7 @@
     {
      "fecha": "2026-11-16",
      "titulo": "El Contexto Histórico-cultural",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/7c6440eab90f77f94f6cb601e86d79a766f8f93113cc269221e44201d692f022/7c6440eab90f77f94f6cb601e86d79a766f8f93113cc269221e44201d692f022.mp3"
     },
     {
      "fecha": "2026-11-17",
