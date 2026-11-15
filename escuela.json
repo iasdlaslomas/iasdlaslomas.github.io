@@ -613,7 +613,33 @@
      "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/d63d8d13ca539f3816e6433a146ef678212877f52a443cbc0bb20ab0296273f4/d63d8d13ca539f3816e6433a146ef678212877f52a443cbc0bb20ab0296273f4.mp3"
     }
    ],
-   "videos": []
+   "videos": [
+    {
+     "autor": "Escuela Sabática Viva",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/ef4c94c4499d25b385c7fe175d70eb0984bb16295305a4a4abbc799eafda14f0/ef4c94c4499d25b385c7fe175d70eb0984bb16295305a4a4abbc799eafda14f0.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/ef4c94c4499d25b385c7fe175d70eb0984bb16295305a4a4abbc799eafda14f0/thumb/ef4c94c4499d25b385c7fe175d70eb0984bb16295305a4a4abbc799eafda14f0.webp"
+    },
+    {
+     "autor": "Escrito Está",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/c3c1cbbf61260d14b77e280833059ebb626979f35557f8bdd772ade07bb576ec/c3c1cbbf61260d14b77e280833059ebb626979f35557f8bdd772ade07bb576ec.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/c3c1cbbf61260d14b77e280833059ebb626979f35557f8bdd772ade07bb576ec/thumb/c3c1cbbf61260d14b77e280833059ebb626979f35557f8bdd772ade07bb576ec.webp"
+    },
+    {
+     "autor": "Pastor Daniel Herrera",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/4c11eb2f6f5fc88ee4f44beaf71d7a540ae3eb440a95027872010b17eb2f6312/4c11eb2f6f5fc88ee4f44beaf71d7a540ae3eb440a95027872010b17eb2f6312.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/4c11eb2f6f5fc88ee4f44beaf71d7a540ae3eb440a95027872010b17eb2f6312/thumb/4c11eb2f6f5fc88ee4f44beaf71d7a540ae3eb440a95027872010b17eb2f6312.webp"
+    },
+    {
+     "autor": "Nuevo Tiempo Chile",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/6a89ec9303fbc0d9f9edee00241f9076232dcb1daba410a567f56ec0fb3e9311/6a89ec9303fbc0d9f9edee00241f9076232dcb1daba410a567f56ec0fb3e9311.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/6a89ec9303fbc0d9f9edee00241f9076232dcb1daba410a567f56ec0fb3e9311/thumb/6a89ec9303fbc0d9f9edee00241f9076232dcb1daba410a567f56ec0fb3e9311.webp"
+    },
+    {
+     "autor": "SUMtv Latino",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/804d9fb06a7c3d61bcf05488e6e00a6e06615dd42ebc9bb744b6ea1507e9874a/804d9fb06a7c3d61bcf05488e6e00a6e06615dd42ebc9bb744b6ea1507e9874a.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/804d9fb06a7c3d61bcf05488e6e00a6e06615dd42ebc9bb744b6ea1507e9874a/thumb/804d9fb06a7c3d61bcf05488e6e00a6e06615dd42ebc9bb744b6ea1507e9874a.webp"
+    }
+   ]
   },
   {
    "n": 9,
@@ -633,7 +659,7 @@
     {
      "fecha": "2026-11-22",
      "titulo": "El Papel de lo Sobrenatural",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/93ed423bd7176e3a2d08ab6b4018e7fc629ef57860429dcf79e9e63c674e373c/93ed423bd7176e3a2d08ab6b4018e7fc629ef57860429dcf79e9e63c674e373c.mp3"
     },
     {
      "fecha": "2026-11-23",
