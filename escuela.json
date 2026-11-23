@@ -692,7 +692,38 @@
      "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/3541cae4895f6129232cc521af4a1342718717cc61817a72af26ccaa0ded79d2/3541cae4895f6129232cc521af4a1342718717cc61817a72af26ccaa0ded79d2.mp3"
     }
    ],
-   "videos": []
+   "videos": [
+    {
+     "autor": "Escuela Sabática Viva",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/7ae2906fe1de615bc410ba3bae49e220b0f82beb7b8617f989ddd9fa43a86607/7ae2906fe1de615bc410ba3bae49e220b0f82beb7b8617f989ddd9fa43a86607.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/7ae2906fe1de615bc410ba3bae49e220b0f82beb7b8617f989ddd9fa43a86607/thumb/7ae2906fe1de615bc410ba3bae49e220b0f82beb7b8617f989ddd9fa43a86607.webp"
+    },
+    {
+     "autor": "Escrito Está",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/00fbf228188fe1078bea36da9ed7cfa7680861ade0f8c95566bb840f03209e15/00fbf228188fe1078bea36da9ed7cfa7680861ade0f8c95566bb840f03209e15.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/00fbf228188fe1078bea36da9ed7cfa7680861ade0f8c95566bb840f03209e15/thumb/00fbf228188fe1078bea36da9ed7cfa7680861ade0f8c95566bb840f03209e15.webp"
+    },
+    {
+     "autor": "Pastor Alejandro Bullon",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/e941c5339f67159ba99ef58cdcb451856a28fdb00b7309590ed6e552524d1485/e941c5339f67159ba99ef58cdcb451856a28fdb00b7309590ed6e552524d1485.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/e941c5339f67159ba99ef58cdcb451856a28fdb00b7309590ed6e552524d1485/thumb/e941c5339f67159ba99ef58cdcb451856a28fdb00b7309590ed6e552524d1485.webp"
+    },
+    {
+     "autor": "Pastor Daniel Herrera",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/df4cd6455df0a2d4a4ce556c2d02c29b7457ccf4869e0763c69c9680cff65671/df4cd6455df0a2d4a4ce556c2d02c29b7457ccf4869e0763c69c9680cff65671.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/df4cd6455df0a2d4a4ce556c2d02c29b7457ccf4869e0763c69c9680cff65671/thumb/df4cd6455df0a2d4a4ce556c2d02c29b7457ccf4869e0763c69c9680cff65671.webp"
+    },
+    {
+     "autor": "Nuevo Tiempo Chile",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/d9e6b96de7ee0488baf2978b6b2f582e36b4a68e7c7f00df6aeca1602e4bb5c8/d9e6b96de7ee0488baf2978b6b2f582e36b4a68e7c7f00df6aeca1602e4bb5c8.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/d9e6b96de7ee0488baf2978b6b2f582e36b4a68e7c7f00df6aeca1602e4bb5c8/thumb/d9e6b96de7ee0488baf2978b6b2f582e36b4a68e7c7f00df6aeca1602e4bb5c8.webp"
+    },
+    {
+     "autor": "SUMtv Latino",
+     "src": "https://sabbath-school-media.adventech.io/video/es/2026-04/0669c96ae51cb2d14d508b5c2516048ece5ac686d1affa2422f5c6f5786c3885/0669c96ae51cb2d14d508b5c2516048ece5ac686d1affa2422f5c6f5786c3885.mp4",
+     "miniatura": "https://sabbath-school-media.adventech.io/video/es/2026-04/0669c96ae51cb2d14d508b5c2516048ece5ac686d1affa2422f5c6f5786c3885/thumb/0669c96ae51cb2d14d508b5c2516048ece5ac686d1affa2422f5c6f5786c3885.webp"
+    }
+   ]
   },
   {
    "n": 10,
@@ -717,7 +748,7 @@
     {
      "fecha": "2026-11-30",
      "titulo": "La Autoridad de Jesús",
-     "audio": null
+     "audio": "https://sabbath-school-media.adventech.io/audio/es/2026-04/d8e57b84c35f38ff3586598aebf8b62426f19f55876b56c064ee0ac9ef400afe/d8e57b84c35f38ff3586598aebf8b62426f19f55876b56c064ee0ac9ef400afe.mp3"
     },
     {
      "fecha": "2026-12-01",
